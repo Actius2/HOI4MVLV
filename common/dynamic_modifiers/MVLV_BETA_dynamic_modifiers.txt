@@ -1,0 +1,25 @@
+beta_no_pop_modifier= {
+	enable = {
+		always = yes
+	}
+	# remove_trigger = {
+	# 	check_variable = {
+	# 		state_population = 0
+	# 	}
+	# }
+	# local_manpower = -1
+	# local_non_core_manpower = -1
+	recruitable_population_factor = -10
+
+	icon = GFX_modifiers_demilitarize_zone
+}
+
+"BETA_tactical_improvements" = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_hive_recently_phaseUp
+	army_attack_factor = global.BETA_tactical_improv
+	army_defence_factor = global.BETA_tactical_improv
+	army_strength_factor  = global.BETA_alternative_hell_improv
+}

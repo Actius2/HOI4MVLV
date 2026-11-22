@@ -1,0 +1,188 @@
+characters = {
+
+	#ユリウス・レイ・ドラクロア
+	SRD_Julius = {
+		name = SRD_Julius
+
+		portraits = {
+			army = {
+				large = GFX_SRD_Julius_pic
+				small = GFX_SRD_Julius_pic_small
+			}
+		}
+		field_marshal = {
+			traits = {
+				MVLV_1stx_unicorns
+				thorough_planner
+				trait_cautious
+				harsh_leader
+				brilliant_strategist
+				inflexible_strategist
+				tsf_officer
+				commander_aptitude
+				tsf_leader
+				tsf_commander
+				organizer
+				commando
+			}
+
+			skill = 7
+			
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 6
+			logistics_skill = 5
+		
+			legacy_id = -1
+		}
+	}
+	
+	#ローザ・デバーヌ
+	SRD_Roza = {
+		name = SRD_Roza
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SRD_Roza_pic
+				small = GFX_SRD_Roza_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				MVLV_1st_unicorns
+				inflexible_strategist
+				trait_cautious
+				tsf_officer
+				tsf_leader
+			}
+			
+			skill = 6
+			
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+	#ニーナ・デュジー
+	SRD_Nina = {
+		name = SRD_Nina
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SRD_Nina_pic
+				small = GFX_SRD_Nina_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				MVLV_2nd_unicorns
+				trait_reckless
+				tsf_officer
+				tsf_leader
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	#ルイアベリア・デュジー
+	SRD_Louiabelia = {
+		name = SRD_Louiabelia
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SRD_Louiabelia_pic
+				small = GFX_SRD_Louiabelia_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				MVLV_2nd_unicorns
+				trait_reckless
+				tsf_officer
+				tsf_leader
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	#ザイーナ・デュジー
+	SRD_Zaina = {
+		name = SRD_Zaina
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SRD_Zaina_pic
+				small = GFX_SRD_Zaina_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				MVLV_2nd_unicorns
+				trait_cautious
+				tsf_officer
+				tsf_leader
+			}
+			
+			skill = 4
+			
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	#ニーシャ・トゥエージ
+	SRD_Nisha = {
+		name = SRD_Nisha
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SRD_Nisha_pic
+				small = GFX_SRD_Nisha_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				MVLV_3rd_unicorns
+				tsf_officer
+				tsf_leader
+				hive_attacker
+				true_genius
+			}
+			
+			skill = 2
+			
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+
+}

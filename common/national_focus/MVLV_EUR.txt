@@ -1,0 +1,899 @@
+focus_tree = {
+	id = EUR_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = EUR
+		}
+	}
+	default = no
+	focus = {
+		# 加固海峡防线
+		id = EUR_FortifyChannelDefence
+		icon = GFX_goal_generic_fortify_city
+		cost = 1
+		x = 10
+		y = 0
+		completion_reward = {
+			add_timed_idea = {
+				idea = EUR_bunker
+				days = 180
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		# 重建伦敦
+		id = EUR_RebuildLondon
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = EUR_FortifyChannelDefence
+		}
+		x = 10
+		y = 1
+		completion_reward = {
+			126 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 10
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		# 增援西西里
+		id = EUR_ReinforceSicily
+		icon = GFX_goal_generic_construct_military
+		cost = 5
+		prerequisite = {
+			focus = EUR_RebuildLondon
+		}
+		x = 10
+		y = 2
+		completion_reward = {
+			115 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 4159
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		# 欧洲联合指挥部
+		id = EUR_JointEuroCommand
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = EUR_ReinforceSicily
+		}
+		x = 10
+		y = 3
+		completion_reward = {
+			add_political_power = 150
+			add_ideas = EUR_joint_euro_command
+			add_stability = 0.1
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		# 与非联的交易
+		id = EUR_aDealMadewithAfrica
+		icon = GFX_goal_generic_production2
+		cost = 5
+		prerequisite = {
+			focus = EUR_JointEuroCommand
+		}
+		x = 6
+		y = 4
+		completion_reward = {
+			AFR = {
+				swap_ideas = {
+					remove_idea = AFR_eua
+					add_idea = AFR_EUR
+				}
+			}
+			EUR = {
+				swap_ideas = {
+					remove_idea = mvlv_leased_land
+					add_idea = EUR_afr_concession_bill
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 情报交流
+		id = EUR_exchangeIntel
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		prerequisite = {
+			focus = EUR_aDealMadewithAfrica
+		}
+		x = 6
+		y = 5
+		completion_reward = {
+			add_political_power = 50
+			AFR = {
+				army_experience = 50
+			}
+			EUR = {
+				army_experience = 50
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = EUR_NorthAfricaArmyGroup
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = EUR_exchangeIntel
+		}
+		x = 6
+		y = 6
+		available = {
+			115 = {
+				is_controlled_by = EUR
+			}
+		}
+		completion_reward = {
+			division_template = {
+				name = "戦術機師団"
+				division_names_group = MVLV_TSF_01
+				regiments = {
+					MVLV_tsf_battalion= { x = 0 y = 0 }
+					MVLV_tsf_battalion= { x = 0 y = 1 }
+					MVLV_tsf_battalion= { x = 0 y = 2 }
+					MVLV_tsf_battalion= { x = 1 y = 0 }
+					MVLV_tsf_battalion= { x = 1 y = 1 }
+					MVLV_tsf_battalion= { x = 1 y = 2 }
+					MVLV_tsf_battalion= { x = 2 y = 0 }
+					MVLV_tsf_battalion= { x = 2 y = 1 }
+					MVLV_tsf_battalion= { x = 2 y = 2 }
+					MVLV_tsf_battalion= { x = 2 y = 3 }
+				}
+				priority = 1
+				support = {
+					engineer = { x = 0 y = 0 }  
+					maintenance_company = { x = 0 y = 1 }
+					field_hospital =  { x = 0 y = 2 }
+				}
+			}
+			115 = {
+				create_unit = {
+					division = "name = \"戦術機師団\" division_template = \"戦術機師団\" start_experience_factor = 0.1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"戦術機師団\" division_template = \"戦術機師団\" start_experience_factor = 0.1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"戦術機師団\" division_template = \"戦術機師団\" start_experience_factor = 0.1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"戦術機師団\" division_template = \"戦術機師団\" start_experience_factor = 0.1"
+					owner = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		# 与国联的合作
+		id = EUR_CoopWithUN
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 5
+		prerequisite = {
+			focus = EUR_JointEuroCommand
+		}
+		x = 8
+		y = 4
+		completion_reward = {
+			add_ideas = EUR_tech_collaboration_with_uni
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		# 主动增加分担金
+		id = EUR_IncreaseOurShare
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = EUR_CoopWithUN
+		}
+		x = 8
+		y = 5
+		completion_reward = {
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = MVLV_UNF
+				add_idea = EUR_uni
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		# 秘密参与AL4
+		id = EUR_ParticipateinAL4
+		icon = GFX_focus_research
+		cost = 5
+		prerequisite = {
+			focus = EUR_IncreaseOurShare
+		}
+		x = 8
+		y = 6
+		completion_reward = {
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		# 亲近东欧
+		id = EUR_IntimateEEA
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5
+		prerequisite = {
+			focus = EUR_JointEuroCommand
+		}
+		mutually_exclusive = {
+			focus = EUR_AlienateEEA
+		}
+
+		x = 11
+		y = 4
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.1
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			EEA = {
+				add_stability = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 提供援助
+		id = EUR_OfferAid
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		prerequisite = {
+			focus = EUR_IntimateEEA
+		}
+		x = 11
+		y = 5
+		completion_reward = {
+			add_political_power = 50
+			EEA = {
+				add_political_power = 50
+				add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 提供欧制战术机
+		id = EUR_OfferEuroMadeTSF
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		prerequisite = {
+			focus = EUR_OfferAid
+		}
+		available = {
+			has_equipment = {
+				MVLV_TSF_chassis > 119
+			}
+		}
+		x = 11
+		y = 6
+		completion_reward = {
+			add_political_power = 100
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				send_equipment = {
+					equipment = MVLV_TSF_chassis
+					amount = 120
+					target = EEA
+				}
+			}
+			else = {
+				send_equipment = {
+					equipment = MVLV_TSF_chassis
+					amount = 120
+					target = EEA
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 增加消费品配额
+		id = EUR_IncreaseConsumableGoods
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = EUR_OfferEuroMadeTSF
+		}
+		x = 11
+		y = 7
+		completion_reward = {
+			EUR = {
+				add_political_power = 100
+				add_stability = -0.1
+				add_ideas = EUR_aid_the_eea
+			}
+			EEA = {
+				add_ideas = EEA_generous_aid_from_eur
+			}
+		}
+	}
+	focus = {
+		# 战术交流
+		id = EUR_ExchangeTactics
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		prerequisite = {
+			focus = EUR_IncreaseConsumableGoods
+		}
+		x = 11
+		y = 8
+		completion_reward = {
+			EUR = {
+				add_political_power = 50
+				army_experience = 50
+				add_ideas = EUR_tatical_exchange
+			}
+			EEA = {
+				army_experience = 50
+				add_ideas = EUR_tatical_exchange
+			}
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		# 政治影响
+		id = EUR_PoliticalAffection
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		prerequisite = {
+			focus = EUR_ExchangeTactics
+		}
+		x = 11
+		y = 9
+		completion_reward = {
+			EUR = {
+				add_political_power = -50
+			}
+			EEA = {
+				add_political_power = 100
+				add_stability = -0.1
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		# 调和意识形态分歧
+		id = EUR_ReconcilingIdeologyDifference
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = EUR_PoliticalAffection
+		}
+		x = 11
+		y = 10
+		completion_reward = {
+			EUR = {
+				add_political_power = -100
+				#remove_ideas=EUR_eng
+				add_popularity = {
+					ideology = communism
+					popularity = 0.25
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		# 真正的欧洲联合
+		id = EUR_TheTrueEuropeanUnion
+		icon = GFX_goal_generic_demand_territory
+		available = {
+			OR = {
+				EEA = {
+					has_opinion = {
+						target = ROOT
+						value > 99
+					}
+				}
+				is_ai = yes
+			}
+		}
+		cost = 20
+		prerequisite = {
+			focus = EUR_ReconcilingIdeologyDifference
+		}
+
+		x = 11
+		y = 11
+		completion_reward = {
+
+		swap_ideas = {
+				remove_idea = EUR_eng
+				add_idea = EUR_the_true_european_union
+			}
+
+
+		}
+	}
+	
+	focus = {
+		# 疏远东欧
+		id = EUR_AlienateEEA
+		icon = GFX_goal_anti_comintern_pact
+		cost = 5
+		prerequisite = {
+			focus = EUR_JointEuroCommand
+		}
+		mutually_exclusive = {
+			focus = EUR_IntimateEEA
+		}
+
+		x = 14
+		y = 4
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 有限帮助
+		id = EUR_LimitedAid
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		prerequisite = {
+			focus = EUR_AlienateEEA
+		}
+		x = 14
+		y = 5
+		completion_reward = {
+			add_political_power = 75
+			EEA = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 5
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+			}
+		}
+	}
+	focus = {
+		# 向美国靠拢
+		id = EUR_IntimateUSA
+		icon = GFX_goal_anschluss
+		cost = 5
+		prerequisite = {
+			focus = EUR_LimitedAid
+		}
+		x = 14
+		y = 6
+		completion_reward = {
+			add_political_power = -50
+			USA = {
+				add_political_power = 100
+			}
+		}
+	}
+	focus = {
+		# 战斗数据交易
+		id = EUR_ExchangeCombatData
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		prerequisite = {
+			focus = EUR_IntimateUSA
+		}
+		x = 14
+		y = 7
+		completion_reward = {
+			USA = {
+				army_experience = 100
+			}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = MVLV_TSF_chassis_2_heavy
+					amount = 600
+					producer = USA
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = tsf_equipment_F-15E
+					amount = 600
+					producer = USA
+				}
+			}
+		}
+	}
+	focus = {
+		# 美国援助
+		id = EUR_AidFromUS
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = EUR_ExchangeCombatData
+		}
+		x = 14
+		y = 8
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 10
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 10
+			}
+		}
+	}
+	focus = {
+		# 扩充轨道部队
+		id = EUR_ExpandOrbitalDivers
+		icon = GFX_goal_generic_air_doctrine
+		cost = 5
+		prerequisite = {
+			focus = EUR_AidFromUS
+		}
+		x = 14
+		y = 9
+		completion_reward = {
+			add_political_power = 100
+			add_equipment_to_stockpile = {
+				type = transport_plane_equipment_1
+				amount = 10
+				producer = ROOT
+			}
+		}
+	}
+	focus = {
+		# 援助加拿大
+		id = EUR_AidCanada
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = EUR_LimitedAid
+		}
+		x = 16
+		y = 6
+		completion_reward = {
+			add_political_power = 100
+			CAN = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 10
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 10
+				}
+			}
+		}
+	}
+	focus = {
+		# 向加拿大租借地投资工业
+		id = EUR_CanadaIndustrialInvestment
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = EUR_AidCanada
+		}
+		x = 16
+		y = 7
+		completion_reward = {
+			add_stability = 0.1
+			add_offsite_building = {
+				type = arms_factory
+				level = 10
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 10
+			}
+		}
+	}
+	focus = {
+		# 伦敦保卫战的经验
+		id = EUR_LessonsFromBattleofLondon
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
+		x = 23
+		y = 0
+		completion_reward = {
+			army_experience = 100
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	focus = {
+		# 反思大陆战役
+		id = EUR_ReflectOnBattleofEurope
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = EUR_LessonsFromBattleofLondon
+		}
+		x = 23
+		y = 1
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doctrine
+				cost_reduction = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	focus = {
+		# 引进A10生产线
+		id = EUR_ImportA10ProductionLine
+		icon = GFX_goal_generic_production
+		cost = 5
+		prerequisite = {
+			focus = EUR_ReflectOnBattleofEurope
+		}
+		x = 21
+		y = 2
+		completion_reward = {
+			USA = {
+				add_political_power = 50
+			}
+			add_ideas = EUR_a10_production_line
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		# 投资A12项目
+		id = EUR_InvestInA12Development
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5
+		prerequisite = {
+			focus = EUR_ImportA10ProductionLine
+		}
+		x = 21
+		y = 3
+		completion_reward = {
+			add_political_power = -50
+			add_tech_bonus = {
+				name = "EUR focus bonus"
+				bonus = 1
+				uses = 1
+				technology = generic_A-12
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		# 地狱犬战术推广
+		id = EUR_PromoteJA44Tactic
+		icon = GFX_goal_generic_special_forces
+		cost = 5
+		prerequisite = {
+			focus = EUR_ReflectOnBattleofEurope
+		}
+		x = 23
+		y = 2
+		completion_reward = {
+			add_ideas = EUR_ja44_tatic
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 新骑士训练
+		id = EUR_TheNewGenKnights
+		icon = GFX_goal_generic_secret_weapon
+		cost = 5
+		prerequisite = {
+			focus = EUR_PromoteJA44Tactic
+		}
+		x = 23
+		y = 3
+		completion_reward = {
+			add_ideas = EUR_new_knight_training
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 支援炮改进
+		id = EUR_ImproveMk57Cannon
+		icon = GFX_goal_generic_army_artillery
+		cost = 5
+		prerequisite = {
+			focus = EUR_TheNewGenKnights
+		}
+		x = 23
+		y = 4
+		completion_reward = {
+			add_ideas = EUR_improve_mk57_cannon
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 改造人投入试验战
+		id = EUR_DeployModifiedHuman
+		icon = GFX_goal_generic_special_forces
+		cost = 5
+		prerequisite = {
+			focus = EUR_ReflectOnBattleofEurope
+		}
+		x = 25
+		y = 2
+		completion_reward = {
+			add_timed_idea = {
+				idea = EUR_modified_human_field_test
+				days = 90
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 先进战地医疗
+		id = EUR_AdvancedFieldMedicalTreatment
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		prerequisite = {
+			focus = EUR_DeployModifiedHuman
+		}
+		x = 25
+		y = 3
+		completion_reward = {
+			add_ideas = EUR_advance_field_medic
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 有限运用改造人技术
+		id = EUR_LimitedUsageOfHumanModification
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5
+		prerequisite = {
+			focus = EUR_AdvancedFieldMedicalTreatment
+		}
+		x = 25
+		y = 4
+		completion_reward = {
+			add_ideas = EUR_deploy_modified_human
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		# 与日本的军事交流
+		id = EUR_MilitaryCooperationWithJapan
+		icon = GFX_goal_generic_military_deal
+		cost = 5
+		prerequisite = {
+			focus = EUR_ReflectOnBattleofEurope
+		}
+		x = 27
+		y = 2
+		completion_reward = {
+			army_experience = 50
+			add_political_power = 50
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = tsf_equipment_T94
+					amount = 120
+					producer = JAP
+				}
+			}
+			JAP = {
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+					}
+
+				}
+				else = {
+					add_equipment_to_stockpile = {
+						type = tsf_equipment_JA-39
+						amount = 120
+						producer = EUR
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+}

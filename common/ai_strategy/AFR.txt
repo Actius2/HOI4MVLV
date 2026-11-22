@@ -1,0 +1,212 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+AFR_area_priority = {
+	allowed = {
+		original_tag = AFR
+	}
+	enable = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = area_priority
+		id = suez
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 5
+	}
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 5
+	}
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = -100
+	}
+}
+
+AFR_defend_doctrine = {
+	allowed = {
+		original_tag = AFR
+	}
+	enable = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CAN
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = USA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CEA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SOA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SOV
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = JAP
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = OSE
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = EEA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CHI
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = EUR
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = GEU
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = AFR
+		value = -100
+	}
+}
+
+
+
+AFR_suez_frontline = {
+	enable = {
+		original_tag = AFR
+		date > 1998.12.31
+		has_full_control_of_state = 446
+		has_full_control_of_state = 457
+		NOT = {
+
+			453 = {
+				is_controlled_by = AFR
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers	
+		ratio = 0.9	
+		states = {
+			446
+			457
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+AFR_suez_secondline = {
+	enable = {
+		original_tag = AFR
+		date > 1998.12.31
+		has_full_control_of_state = 446
+		has_full_control_of_state = 457
+		453 = {
+			is_controlled_by = AFR
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			446
+			457
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+
+AFR_moroco_defense = {
+	enable = {
+		original_tag = AFR
+		date > 1998.12.31
+		has_full_control_of_state = 290
+		Not = {
+			118 = {
+				is_controlled_by = EUR
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2	
+		states = {
+			290
+		}
+		subtract_fronts_from_need = yes	
+	}
+}

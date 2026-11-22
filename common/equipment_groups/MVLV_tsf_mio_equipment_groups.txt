@@ -1,0 +1,51 @@
+
+MVLV_mio_cat_eq_all_tsf = { 
+	equipment_type = {
+		MVLV_TSF_chassis
+		MVLV_TSF_support_chassis
+		jeg_equipment
+		tsa_equipment
+		asa_equipment
+		sov_equipment
+	}
+}
+
+MVLV_mio_cat_eq_1st_tsf = { 
+	equipment_type = {
+		MVLV_TSF_chassis_1_light
+		MVLV_TSF_chassis_1_light_mod
+		MVLV_TSF_chassis_1_heavy
+		MVLV_TSF_support_chassis_1_light
+		MVLV_TSF_support_chassis_1_light_mod
+		MVLV_TSF_support_chassis_1_heavy
+	}
+}
+
+MVLV_mio_cat_eq_2nd_tsf = { 
+	equipment_type = {
+		MVLV_TSF_chassis_2_light
+		MVLV_TSF_chassis_2_heavy
+		MVLV_TSF_chassis_2_maneuver
+		MVLV_TSF_support_chassis_2_maneuver
+		MVLV_TSF_support_chassis_2_light
+		MVLV_TSF_support_chassis_2_heavy
+	}
+}
+
+MVLV_mio_cat_eq_3rd_tsf = { 
+	equipment_type = {
+		MVLV_TSF_chassis_3_light
+		MVLV_TSF_chassis_3_heavy
+		MVLV_TSF_chassis_3_maneuver
+		MVLV_TSF_support_chassis_3_light
+		MVLV_TSF_support_chassis_3_heavy
+		MVLV_TSF_support_chassis_3_maneuver
+	}
+}
+
+MVLV_mio_cat_eq_4th_tsf = { 
+	equipment_type = {
+		MVLV_TSF_chassis_4
+		MVLV_TSF_support_chassis_4
+	}
+}

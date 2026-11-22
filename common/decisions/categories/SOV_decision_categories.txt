@@ -1,0 +1,24 @@
+SOV_red_storm_category = {
+	icon = generic_prepare_civil_war
+
+	picture = GFX_decision_cat_naval_blockade
+	allowed = {
+		tag = SOV
+	}
+
+	visible = {
+		is_puppet = no
+	}
+}
+MVLV_SOV_pravka_plan_category = {
+	icon = generic_prepare_civil_war
+	priority = 998
+	picture = GFX_decision_cat_naval_blockade
+	allowed = {
+		tag = SOV
+	}
+
+	visible = {
+		has_completed_focus = SOV_rs21
+	}
+}

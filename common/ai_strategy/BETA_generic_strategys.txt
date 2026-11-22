@@ -1,0 +1,207 @@
+BETA_generic_strategy = {
+	enable = {
+		OR = {
+			is_in_faction_with = BET
+			tag = h00
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = spare_unit_factor
+		value = -10
+	}
+	ai_strategy = {
+		type = garrison
+		value = -999
+	}
+	ai_strategy = {
+		type = garrison_reinforcement_priority
+		value = -999
+	}
+	ai_strategy = {
+		type = spare_unit_factor
+		value = -999
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = beta_tank
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = beta_soldier
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = beta_warrior
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = beta_grappler
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = beta_destroyer
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = beta_fort
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = build_army
+		id = beta_tank
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = beta_soldier
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = beta_warrior
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = beta_grappler
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = beta_fort
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = beta_destroyer
+		value = -300
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = BET
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H00
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H02
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H03
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H04
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H05
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H06
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H07
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H08
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H09
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H10
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H11
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H12
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H13
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H16
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H17
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H19
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H20
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H21
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H22
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H23
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H24
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H25
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		Id = H26
+		value = -100
+	}
+}

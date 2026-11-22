@@ -1,0 +1,831 @@
+MVLV_BETA_gushing_effect = {
+	ROOT = {
+		if = {
+			limit = { tag = H02 }
+			load_oob = H02_empop
+		}
+		else_if = {
+			limit = { tag = H03 }
+			load_oob = H03_empop
+		}
+		else_if = {
+			limit = { tag = H04 }
+			load_oob = H04_empop
+		}
+		else_if = {
+			limit = { tag = H05 }
+			load_oob = H05_empop
+		}
+		else_if = {
+			limit = { tag = H06 }
+			load_oob = H06_empop
+		}
+		else_if = {
+			limit = { tag = H07 }
+			load_oob = H07_empop
+		}
+		else_if = {
+			limit = { tag = H08 }
+			load_oob = H08_empop
+		}
+		else_if = {
+			limit = { tag = H09 }
+			load_oob = H09_empop
+		}
+		else_if = {
+			limit = { tag = H10 }
+			load_oob = H10_empop
+		}
+		else_if = {
+			limit = { tag = H11 }
+			load_oob = H11_empop
+		}
+		else_if = {
+			limit = { tag = H12 }
+			load_oob = H12_empop
+		}
+		else_if = {
+			limit = { tag = H13 }
+			load_oob = H13_empop
+		}
+		else_if = {
+			limit = { tag = H14 }
+			load_oob = H14_empop
+		}
+		else_if = {
+			limit = { tag = H15 }
+			load_oob = H15_empop
+		}
+		else_if = {
+			limit = { tag = H16 }
+			load_oob = H16_empop
+		}
+		else_if = {
+			limit = { tag = H17 }
+			load_oob = H17_empop
+		}
+		else_if = {
+			limit = { tag = H18 }
+			load_oob = H18_empop
+		}
+		else_if = {
+			limit = { tag = H19 }
+			load_oob = H19_empop
+		}
+		else_if = {
+			limit = { tag = H20 }
+			load_oob = H20_empop
+		}
+
+		else_if = {
+			limit = { tag = H23 }
+			load_oob = H23_empop
+		}
+		else_if = {
+			limit = { tag = H24 }
+			load_oob = H24_empop
+		}
+		else_if = {
+			limit = { tag = H25 }
+			load_oob = H25_empop
+		}
+		else_if = {
+			limit = { tag = H26 }
+			load_oob = H26_empop
+		}
+	}
+}
+
+
+
+MVLV_BETA_G_penalty_effect = {
+	capital_scope = {
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Soldier class division\" division_template = \"Soldier class division\" start_experience_factor = 0.5"
+			owner = BET
+			count = 15
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Warrior class division\" division_template = \"Warrior class division\" start_experience_factor = 0.5"
+			owner = BET
+			count = 15
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Tank class division\" division_template = \"Tank class division\" start_experience_factor = 0.5"
+			owner = BET
+			count = 45
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Grappler class division\" division_template = \"Grappler class division\" start_experience_factor = 0.5"
+			owner = BET
+			count = 15
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Destroyer class division\" division_template = \"Destroyer class division\" start_experience_factor = 0.5"
+			owner = BET
+			count = 9
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Fort class division\" division_template = \"Fort class division\" start_experience_factor = 0.5"
+			owner = BET
+			count = 1
+		}
+	}
+	add_equipment_to_stockpile = {
+		type = laser_equipment
+		amount = 500
+		producer = BET
+	}
+	add_equipment_to_stockpile = {
+		type = heavy_laser_equipment
+		amount = 100
+		producer = BET
+	}
+}
+
+MVLV_BETA_start_deploy100_effect = {
+	capital_scope = {
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Soldier class division\" division_template = \"Soldier class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 15
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Warrior class division\" division_template = \"Warrior class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 15
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Tank class division\" division_template = \"Tank class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 45
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Grappler class division\" division_template = \"Grappler class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 15
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Destroyer class division\" division_template = \"Destroyer class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 9
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Fort class division\" division_template = \"Fort class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 1
+		}
+	}
+	add_equipment_to_stockpile = {
+		type = laser_equipment
+		amount = 500
+		producer = THIS
+	}
+	add_equipment_to_stockpile = {
+		type = heavy_laser_equipment
+		amount = 100
+		producer = THIS
+	}
+}
+MVLV_BETA_start_deploy50_effect = {
+	capital_scope = {
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Soldier class division\" division_template = \"Soldier class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 7
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Warrior class division\" division_template = \"Warrior class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 8
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Tank class division\" division_template = \"Tank class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 24
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Grappler class division\" division_template = \"Grappler class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 7
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Destroyer class division\" division_template = \"Destroyer class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 4
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Fort class division\" division_template = \"Fort class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 1
+		}
+	}
+	add_equipment_to_stockpile = {
+		type = laser_equipment
+		amount = 200
+		producer = THIS
+	}
+	add_equipment_to_stockpile = {
+		type = heavy_laser_equipment
+		amount = 50
+		producer = THIS
+	}
+}
+MVLV_BETA_weekly_deploy_effect = {
+
+	add_to_variable = { BETA_deploy_count = 1 }
+	capital_scope = {
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Soldier class division\" division_template = \"Soldier class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 3
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Warrior class division\" division_template = \"Warrior class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 3
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Tank class division\" division_template = \"Tank class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 9
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Grappler class division\" division_template = \"Grappler class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 3
+		}
+		create_unit = {
+			allow_spawning_on_enemy_provs = yes
+			division = "name = \"Destroyer class division\" division_template = \"Destroyer class division\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 2
+		}
+		PREV = {
+			if = {
+				limit = {
+					has_equipment = {
+						motorized_equipment_1 < 2000
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 1000
+					producer = PREV
+				}
+			}
+		}
+
+
+		if = {
+			limit = {
+				PREV = { check_variable  = { BETA_deploy_count > 6 } }	
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				division = "name = \"Fort class division\" division_template = \"Fort class division\" start_experience_factor = 0.5"
+				owner = PREV
+				count = 1
+			}
+			if = {
+				limit = {
+					#特定時期でない場合レーザー補給
+					OR = {
+						NOT = { has_global_flag = MVLV_underground_flag }
+						NOT = { has_global_flag = mvlv_alternative_hell_news_flag }
+						has_global_flag = mvlv_alternative_hell_laser_flag
+					}
+				}
+				PREV = { 
+					add_equipment_to_stockpile = {
+						type = laser_equipment
+						amount = 500
+						producer = PREV
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_laser_equipment
+						amount = 100
+						producer = PREV
+					}
+					set_variable = { BETA_deploy_count = 0 }
+				}
+			}
+		}
+
+	}
+}
+MVLV_invasion_effect = {
+
+}
+MVLV_underground_invasion_pop_effect = {
+
+}
+MVLV_underground_invasion_effect = {
+	every_neighbor_country = {
+		limit = {
+			is_in_faction_with = UNI
+		}
+		every_controlled_state = {
+			limit = {
+				is_controlled_by = PREV
+				num_owned_neighbour_states ={
+					owner = ROOT
+					count > 0
+				}
+			}
+			set_state_flag = underground_invasion_flag_@ROOT
+		}
+		every_controlled_state = {
+			limit = {
+				has_state_flag = underground_invasion_flag_@ROOT
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				division = "name = \"Soldier class division\" division_template = \"Soldier class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 7
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				division = "name = \"Warrior class division\" division_template = \"Warrior class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 8
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				division = "name = \"Tank class division\" division_template = \"Tank class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 24
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				division = "name = \"Grappler class division\" division_template = \"Grappler class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 7
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				division = "name = \"Destroyer class division\" division_template = \"Destroyer class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 4
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				division = "name = \"Fort class division\" division_template = \"Fort class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 1
+			}
+			clr_state_flag = underground_invasion_flag_@ROOT
+		}
+	}
+}
+MVLV_underground_invasion_effect_Test = {
+	every_neighbor_country = {
+		limit = {
+			is_in_faction_with = UNI
+		}
+		every_controlled_state = {
+			limit = {
+				is_controlled_by = PREV
+				num_owned_neighbour_states ={
+					owner = ROOT
+					count > 0
+				}
+			}
+			set_state_flag = underground_invasion_flag_@ROOT
+		}
+		every_controlled_state = {
+			limit = {
+				has_state_flag = underground_invasion_flag_@ROOT
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				country_score = {
+					#base = 1
+					modifier = {
+						factor = 0
+						is_in_faction_with = BET
+					}
+				}
+				division = "name = \"Soldier class division\" division_template = \"Soldier class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 7
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				country_score = {
+					#base = 1
+					modifier = {
+						factor = 0
+						is_in_faction_with = BET
+					}
+				}
+				division = "name = \"Warrior class division\" division_template = \"Warrior class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 8
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				country_score = {
+					#base = 1
+					modifier = {
+						factor = 0
+						is_in_faction_with = BET
+					}
+				}
+				division = "name = \"Tank class division\" division_template = \"Tank class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 24
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				country_score = {
+					#base = 1
+					modifier = {
+						factor = 0
+						is_in_faction_with = BET
+					}
+				}
+				division = "name = \"Grappler class division\" division_template = \"Grappler class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 7
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				country_score = {
+					#base = 1
+					modifier = {
+						factor = 0
+						is_in_faction_with = BET
+					}
+				}
+				division = "name = \"Destroyer class division\" division_template = \"Destroyer class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 4
+			}
+			create_unit = {
+				allow_spawning_on_enemy_provs = yes
+				country_score = {
+					#base = 1
+					modifier = {
+						factor = 0
+						is_in_faction_with = BET
+					}
+				}
+				division = "name = \"Fort class division\" division_template = \"Fort class division\" start_experience_factor = 0.5"
+				owner = ROOT
+				count = 1
+			}
+			clr_state_flag = underground_invasion_flag_@ROOT
+		}
+	}
+}
+
+
+
+
+BETA_commander_set_effect = {
+	create_field_marshal = {
+		name = BET_Fort							#要塞級
+		gfx = GFX_BET_Fort_pic
+		traits = {
+			offensive_doctrine
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+
+	create_field_marshal = {
+		name = BET_zunou						#頭脳級
+		gfx = "GFX_BET_zunou_pic"
+		traits = {
+			offensive_doctrine
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	BETA_commander_set_effect2 = yes
+}
+BETA_commander_set_effect2 = {
+	create_corps_commander = {
+		name = BET_soldier						#兵士級		これを✕３
+		gfx = "GFX_BET_soldier_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_soldier2						#兵士級		これを✕３
+		gfx = "GFX_BET_soldier_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_soldier3					#兵士級		これを✕３
+		gfx = "GFX_BET_soldier_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Laser						#光線級		これを✕３
+		gfx = "GFX_BET_Laser_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Laser2						#光線級		これを✕３
+		gfx = "GFX_BET_Laser_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Laser3						#光線級		これを✕３
+		gfx = "GFX_BET_Laser_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+
+	create_corps_commander = {
+		name = BET_tank						#戦車級		これを✕３
+		gfx = "GFX_BET_tank_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+
+	create_corps_commander = {
+		name = BET_Destroyer						#突撃級		これを✕３
+		gfx = "GFX_BET_Destroyer_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Destroyer2						#突撃級		これを✕３
+		gfx = "GFX_BET_Destroyer_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Destroyer3						#突撃級		これを✕３
+		gfx = "GFX_BET_Destroyer_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+
+	create_corps_commander = {
+		name = BET_Warrior						#突撃級		これを✕３
+		gfx = "GFX_BET_Warrior_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Warrior2						#突撃級		これを✕３
+		gfx = "GFX_BET_Warrior_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Warrior3						#突撃級		これを✕３
+		gfx = "GFX_BET_Warrior_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+
+	create_corps_commander = {
+		name = BET_Grappler						#要撃級		これを✕３
+		gfx = "GFX_BET_Grappler_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Grappler2						#要撃級		これを✕３
+		gfx = "GFX_BET_Grappler_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Grappler3					#要撃級		これを✕３
+		gfx = "GFX_BET_Grappler_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+
+	create_corps_commander = {
+		name = BET_Heavy_Laser						#要撃級		これを✕３
+		gfx = "GFX_BET_Heavy_Laser_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Heavy_Laser2						#要撃級		これを✕３
+		gfx = "GFX_BET_Heavy_Laser_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+	create_corps_commander = {
+		name = BET_Heavy_Laser3						#要撃級		これを✕３
+		gfx = "GFX_BET_Heavy_Laser_pic"
+		traits = {
+			trickster
+			trait_engineer
+			brilliant_strategist
+			politically_connected
+		}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+
+}

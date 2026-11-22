@@ -1,0 +1,233 @@
+characters = {
+
+
+	CEA_Gorter = {
+#タチアナ・デ・ホルテル
+		name = CEA_Gorter
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_CEA_Gorter_pic
+				small = GFX_CEA_Gorter_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				brilliant_strategist
+				politically_connected
+				war_hero
+				career_officer
+				trait_reckless
+				media_personality
+				harsh_leader
+				cavalry_officer
+				
+				offensive_doctrine
+				aggressive_assaulter
+				
+				tsf_officer
+				commander_aptitude
+				true_genius
+				
+				tsf_leader
+				tsf_commander
+				
+				trickster
+				panzer_leader
+				panzer_expert
+				commando
+				
+				paratrooper
+				jaeger
+		
+			}
+			
+			skill = 6
+			
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	CEA_atena = {
+#イオニアス・アテナ
+		name = CEA_atena
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_CEA_atena_pic
+				small = GFX_CEA_atena_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				war_hero
+				career_officer
+				trait_cautious
+				media_personality
+				harsh_leader
+				cavalry_officer
+				armor_officer
+				
+				commander_aptitude
+				
+				trickster
+				skilled_staffer
+				panzer_leader
+		
+			}
+			
+			skill = 5
+			
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 2
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	CEA_Lux = {
+#ビクトリアーノ・ラクスライン
+		name = CEA_Lux
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_CEA_Lux_pic
+				small = GFX_CEA_Lux_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				politically_connected
+				trait_reckless
+				
+				tsf_officer
+				
+				skilled_staffer
+				tsf_leader
+				
+				commando
+				paratrooper
+				
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	CEA_Emmanuel = {
+#エマヌエル・ガウマン
+		name = CEA_Emmanuel
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_CEA_Emmanuel_pic
+				small = GFX_CEA_Emmanuel_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				politically_connected
+				career_officer
+				trait_reckless
+				harsh_leader
+				
+				tsf_officer
+				
+				tsf_leader
+				trickster
+				trait_engineer
+				
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	CEA_Mariano = {
+#マリアノ・デ・アルミホ
+		name = CEA_Mariano
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_CEA_Mariano_pic
+				small = GFX_CEA_Mariano_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				
+				old_guard
+				inflexible_strategist
+				trait_cautious
+				media_personality
+				harsh_leader
+				infantry_officer
+				tsf_officer
+				
+				trait_engineer
+				tsf_leader
+				trickster
+				organizer
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+
+	
+
+}

@@ -1,0 +1,283 @@
+characters = {
+
+	AFR_Ibrahim = {
+#イブラヒム・ドーゥル
+	name = AFR_Ibrahim
+	portraits = {
+		army = {
+			large = GFX_AFR_Ibrahim_pic
+			small = GFX_AFR_Ibrahim_pic_small
+		}
+	}
+	field_marshal = {
+		traits = {
+		
+			desert_fox
+			war_hero
+			inflexible_strategist
+			tsf_officer
+			commander_aptitude
+			tsf_leader
+			tsf_commander
+			organizer
+			
+			
+		}
+
+		skill = 8
+		
+		attack_skill = 7
+		defense_skill = 7
+		planning_skill = 6
+		logistics_skill = 5
+	
+			legacy_id = -1
+		}
+	}
+	
+	AFR_Peres = {
+#レヴィ・ペレス
+		name = AFR_Peres
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_AFR_Peres_pic
+				small = GFX_AFR_Peres_pic_small
+			}
+		}
+		
+		field_marshal = {
+	
+			traits = {
+	
+					old_guard
+					brilliant_strategist
+					politically_connected
+					war_hero
+					career_officer
+					trait_reckless
+					media_personality
+					harsh_leader
+					armor_officer
+					
+					offensive_doctrine
+					aggressive_assaulter
+					
+					desert_fox
+					
+		
+					}
+			
+		skill = 5
+	
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 2
+		logistics_skill = 4
+	
+			legacy_id = -1
+		}
+	}
+	
+#アラブの戦姫
+	AFR_ArabQe = {
+		name = AFR_ArabQe
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_AFR_ArabQe_pic
+				small = GFX_AFR_ArabQe_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				tsf_officer
+				brilliant_strategist
+				politically_connected
+				trait_reckless
+				media_personality
+				war_hero
+				harsh_leader
+
+				
+				desert_fox
+				trickster
+				
+				tsf_leader
+
+			}
+			
+	skill = 6
+	
+	attack_skill = 6
+	defense_skill = 8
+	planning_skill = 2
+	logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+#サアド・アラーヴィ
+	AFR_Aravi = {
+		name = AFR_Aravi
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_AFR_Aravi_pic
+				small = GFX_AFR_Aravi_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				tsf_officer
+				
+				career_officer
+				trait_cautious
+				
+				desert_fox
+				
+				tsf_leader
+				commander_aptitude
+
+			}
+			
+	skill = 4
+	
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+#ホルシス
+	AFR_Horisis = {
+		name = AFR_Horisis
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_AFR_Horisis_pic
+				small = GFX_AFR_Horisis_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				tsf_officer
+				tsf_leader
+				
+				inflexible_strategist
+				politically_connected
+				
+				trait_reckless
+				harsh_leader
+				
+				desert_fox
+				
+				
+
+			}
+			
+	skill = 3
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	AFR_Rita = {
+#リタ・カナレス
+		name = AFR_Rita
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_AFR_Rita_pic
+				small = GFX_AFR_Rita_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				desert_fox
+			}
+			
+	skill = 3
+	
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	AFR_Varelio = {
+#ヴァレリオ・ジアコーザ	
+		name = AFR_Varelio
+		portraits = {
+			army = {
+				large = GFX_AFR_Varelio_pic
+				small = GFX_AFR_Varelio_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				tsf_officer
+				tsf_leader
+			}
+			
+			skill = 5
+			
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+	
+	AFR_Monika = {
+#モニカ・ジアコーザ
+		name = AFR_Monika
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_AFR_Monika_pic
+				small = GFX_AFR_Monika_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				tsf_officer
+				tsf_leader
+			}
+			
+			skill = 5
+			
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+
+
+}

@@ -1,0 +1,414 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			UNI = {
+
+			}
+			BET = {
+				country_event = mvlv_generic.99
+				country_event = mvlv_beta_eat.0
+				country_event = mvlv_init.0
+			}
+			
+			every_country = {
+				IF = {
+					limit = {
+						is_in_faction_with = BET
+					}
+					set_grand_doctrine = beta_doctrine
+					country_event = beta_var.1
+					BETA_commander_set_effect = yes
+
+					set_rule = {
+						can_puppet = no
+					}
+					set_rule = {
+						can_create_collaboration_government = no
+					}
+					every_controlled_state = {
+						limit = {
+							is_fully_controlled_by = PREV
+						}
+						set_state_flag = betaland_flag #no use
+					}
+					add_manpower = 100000000 #100M
+				}
+				IF = {
+					limit = {
+						original_tag = BET
+					}
+					BET = {
+						country_event = BETA.1
+					}
+					BET = {
+						country_event = mvlv_generic.2
+					}
+				}
+				if = {
+					limit = { is_in_faction_with = UNI }
+					add_timed_idea = { idea = mvlv_start_up days = 30 }
+					add_command_power = 50
+					set_grand_doctrine = human_doctrine
+					army_experience = 200
+					if = { 
+						limit = {
+								NOT = { tag = CEA }
+								NOT = { tag = SOA }
+						}
+						MVLV_initial_design_flag_set_effect = yes
+					}
+				}
+				country_event = mvlv_generic.17
+				country_event = mvlv_generic.98
+
+				if = { 
+					limit = {
+						is_in_faction_with = BET
+						NOT = {
+							tag = H22
+							tag = H26
+						}
+					}
+					MVLV_BETA_start_deploy100_effect = yes
+				}
+				if = { 
+					limit = {
+						is_in_faction_with = BET
+						NOT = {
+							tag = H22
+							BETA_stay_home_trigger = yes
+						}
+					}
+					set_country_flag = BETA_stay_home_flag
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = AFR
+							tag = CAN
+							tag = CHI
+							tag = CEA
+							tag = GEU
+							tag = OSE
+							tag = SOA
+						}
+					}
+					mvlv_navy_setup_effect = yes
+				}
+				
+				MVLV_decision_cost_calculation = yes	
+			}
+			467 = {
+				set_state_flag = CAN_nuclear_explosion_flag
+				add_dynamic_modifier = {
+					modifier = MVLV_CAN_nuclear_explosion_strait
+				}
+			}
+			469 = {
+				set_state_flag = CAN_nuclear_explosion_flag
+				add_dynamic_modifier = {
+					modifier = MVLV_CAN_nuclear_explosion_strait
+				}
+			}
+			682 = {
+				set_state_flag = CAN_nuclear_explosion_flag
+				add_dynamic_modifier = {
+					modifier = MVLV_CAN_nuclear_explosion_strait
+				}
+			}
+			683 = {
+				set_state_flag = CAN_nuclear_explosion_flag
+				add_dynamic_modifier = {
+					modifier = MVLV_CAN_nuclear_explosion_strait
+				}
+			}
+			470 = {
+				set_state_flag = CAN_nuclear_explosion_flag
+				add_dynamic_modifier = {
+					modifier = MVLV_CAN_nuclear_explosion_strait
+				}
+			}
+			472 = {
+				set_state_flag = CAN_nuclear_explosion_flag
+				add_dynamic_modifier = {
+					modifier = MVLV_CAN_nuclear_explosion_strait
+				}
+			}
+			
+			set_variable = {
+				var = global.nuke_drop_num
+				value = -2
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+
+		
+			#target:元の所有国がBETA陣営
+			#effect:BETA陣営で降伏値が上がったら陥落アイデア付与
+			#________________________________________________________
+			#target:今の所有国がBETA陣営
+			#effect:BETA陣営で降伏値が下がっていれば陥落アイデア剥奪
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							is_in_faction_with = BET
+							tag = H00
+						}
+						surrender_progress > 0.3
+						not = {
+							has_idea = mvlv_brokenhive
+						}
+					}
+				}
+				FROM = {
+					country_event = BETA.98
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_in_faction_with = BET
+						tag = H00
+					}
+					surrender_progress < 0.1
+					has_idea = mvlv_brokenhive
+				}
+				country_event = BETA.98
+			}
+			
+			#########保険
+			if = {
+				limit = {
+					H00 = {
+						NOT = { is_in_faction_with = BET }
+						num_divisions < 1
+					}
+				}
+				BET = { add_to_faction = H00 }
+				UNI = {
+					annex_country = {
+						target = H00
+						transfer_troops = no
+					}
+				}
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		#########保険
+		effect = {
+			if = {
+				limit = {
+					H00 = {
+						NOT = { is_in_faction_with = BET }
+						num_divisions < 1
+					}
+				}
+				BET = { add_to_faction = H00 }
+				UNI = {
+					annex_country = {
+						target = H00
+						transfer_troops = no
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			#target:降伏したBETA陣営で発生
+			#effect:BETA陣営で降伏値が上がったら陥落アイデア付与
+			#effect:BETA陣営で降伏値が下がっていれば陥落アイデア剥奪
+			if = {
+				limit = {
+					OR = {
+						is_in_faction_with = BET
+						tag = H00
+					}
+					not = {
+						has_idea = mvlv_brokenhive
+					}
+				}
+				country_event = BETA.98
+			}
+		}
+	}
+	on_uncapitulation = {
+		effect = {
+			#target:降伏したBETA陣営で発生
+			#effect:BETA陣営で降伏値が下がっていれば陥落アイデア剥奪
+			if = {
+				limit = {
+					OR = {
+						is_in_faction_with = BET
+						tag = H00
+					}
+					has_idea = mvlv_brokenhive
+				}
+				country_event = BETA.98
+			}
+		}
+	}
+	on_nuke_drop = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = mvlv_sado_G_flag
+					FROM = { state = 789 }
+				}
+				H21 = { transfer_state = 801 }
+				SRD = {
+					transfer_state = 789
+					#set_state_owner = 789
+					#set_state_controller = 789
+					#set_province_name = { id = 789 name = LOC_KEY }
+					division_template = {
+						name = "Infantry Division"
+						is_locked = yes
+						division_cap = 3 
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+						}
+					}
+				}
+				789 = {
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+						owner = SRD
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				SRD = {
+					delete_unit = {
+						state = 789
+						disband = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						NOT = {
+							OR = {
+								is_in_faction_with = BET
+								tag = SRD
+								has_global_flag = mvlv_sado_G_flag
+							}
+						}
+					}
+				}
+				##BETAかSRD以外が落とした場合に発生
+				add_to_variable = { global.nuke_drop_num = 1 }
+				if = {
+					limit = {
+						check_variable = { global.nuke_drop_num > 0 }
+					}
+					if = {
+						limit = {
+							check_variable = { global.nuke_drop_num = 1 }
+						}
+						every_country = {
+							limit = {
+								is_in_faction_with = UNI
+							}
+							set_variable = { global.MVLV_effect_G_Lancher_modifier_value = -0.05 }
+							add_dynamic_modifier = { modifier = MVLV_effect_G_Lancher_modifier }
+						}
+					}
+					if = {
+						limit = {
+							check_variable = { global.nuke_drop_num = 2 }
+						}
+						subtract_from_variable = { global.MVLV_effect_G_Lancher_modifier_value = 0.05 }
+					}
+					if = {
+						limit = {
+							check_variable = { global.nuke_drop_num > 2 }
+						}
+						subtract_from_variable = { global.MVLV_effect_G_Lancher_modifier_value = 0.1 }
+					}
+					if = {
+						limit = {
+							check_variable = { global.nuke_drop_num = 7 }
+						}
+						every_country = {
+							limit = {
+								is_in_faction_with = UNI
+							}
+							country_event = mvlv_generic.38
+						}
+					}
+					FROM = {
+						#ニュース
+						every_country = {
+							if = {
+								limit = {
+									PREV = { is_core_of = THIS }
+									tag = ROOT
+								}
+								country_event = mvlv_generic.37
+							}
+							if = {
+								limit = {
+									controls_state = PREV
+									OR = {
+										tag = BET
+										tag = H00
+									}
+								}
+								#BETAなら自身のBETAPOP
+								BET = {
+									MVLV_BETA_start_deploy100_effect = yes
+								}
+							}
+							if = {
+								limit = {
+									is_in_faction_with = BET
+									owns_state = PREV
+									PREV = {
+										NOT = { is_core_of = THIS }
+									}
+								}
+								#BETAなら自身のBETAPOP
+								MVLV_BETA_start_deploy100_effect = yes
+							}
+							if = {
+								limit = {
+									is_in_faction_with = BET
+									owns_state = PREV
+									PREV = { is_core_of = THIS }
+								}
+								#BETAなら周囲のBETAPOP
+								#一旦保留
+							}
+							if = {
+								limit = {
+									is_in_faction_with = UNI
+									NOT = { has_full_control_of_state = PREV }
+									PREV = { is_core_of = PREV }
+									NOT = { tag = ROOT }
+								}
+								ROOT = {
+									PREV = {
+										#event
+										country_event = mvlv_generic.34
+									}
+								}
+							}			
+						}
+					}
+				}
+			}
+		}
+	}
+}

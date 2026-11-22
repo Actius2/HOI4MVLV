@@ -1,0 +1,36 @@
+#list all modifiers that will be used for specific sub unit or sub unit categories
+# modifier_army_sub_unit_[sub_unit or sub_unit_category]_attack_factor
+# modifier_army_sub_unit_[sub_unit or sub_unit_category]_defence_factor
+# modifier_army_sub_unit_[sub_unit or sub_unit_category]_speed_factor
+# modifier_army_sub_unit_[sub_unit or sub_unit_category]_max_org_factor
+# modifier_army_sub_unit_[sub_unit or sub_unit_category]_org_recovery_cap_factor
+# will be being used by armies if they are included here
+sub_unit_modifiers = {
+	# tsf_battalions
+	modifier_army_sub_unit_category_MVLV_tsf_family_attack_factor
+	modifier_army_sub_unit_category_MVLV_tsf_family_defence_factor
+	modifier_army_sub_unit_category_MVLV_tsf_family_speed_factor
+	#modifier_army_sub_unit_category_MVLV_tsf_max_org_factor
+
+	# tsf_specialForces_battalion
+	modifier_army_sub_unit_MVLV_tsf_specialForces_battalion_attack_factor
+	modifier_army_sub_unit_MVLV_tsf_specialForces_battalion_defence_factor
+	modifier_army_sub_unit_MVLV_tsf_specialForces_battalion_speed_factor
+	
+	###戦闘ヘリ
+	modifier_army_sub_unit_light_armor_attack_factor
+	modifier_army_sub_unit_light_armor_defence_factor
+	modifier_army_sub_unit_light_armor_speed_factor
+	###戦車師団
+	modifier_army_sub_unit_medium_armor_attack_factor
+	modifier_army_sub_unit_medium_armor_defence_factor
+	modifier_army_sub_unit_medium_armor_speed_factor
+	###諸兵科師団
+	modifier_army_sub_unit_MVLV_combined_arms_battalion_attack_factor
+	modifier_army_sub_unit_MVLV_combined_arms_battalion_defence_factor
+	# xg
+	modifier_army_sub_unit_category_MVLV_xg_attack_factor
+	modifier_army_sub_unit_category_MVLV_xg_defence_factor
+	modifier_army_sub_unit_category_MVLV_xg_speed_factor
+	modifier_army_sub_unit_category_MVLV_xg_max_org_factor
+}

@@ -1,0 +1,79 @@
+EUR_core_change_decizion_category = {
+	EUR_core_change_decizion = {
+		icon = generic_operation
+		available = { 
+			always = no
+		}
+		activation = {
+			tag = EUR
+			126 ={ is_capital = no }
+			has_full_control_of_state = 126
+		}
+		cancel_trigger = {
+			126 ={ is_capital = yes }
+			NOT = { has_full_control_of_state = 126 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		is_good = yes
+		days_mission_timeout = 1
+		timeout_effect = {
+			set_capital = { state = 126 }
+		}
+	}
+	EUR_core_change_decizion_2 = {
+		icon = generic_operation
+		available = { 
+			always = no
+		}
+		activation = {
+			tag = EUR
+			332 ={ is_capital = no }
+			has_full_control_of_state = 332
+			NOT = { has_full_control_of_state = 126 }
+		}
+		cancel_trigger = {
+			332 ={ is_capital = yes }
+			has_full_control_of_state = 126
+			NOT = { has_full_control_of_state = 332 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		is_good = yes
+		days_mission_timeout = 1
+		timeout_effect = {
+			set_capital = { state = 332 }
+		}
+	}
+	EUR_core_change_decizion_3 = {
+		icon = generic_operation
+		available = { 
+			always = no
+		}
+		activation = {
+			tag = EUR
+			696 ={ is_capital = no }
+			has_full_control_of_state = 696
+			NOT = { has_full_control_of_state = 332 }
+			NOT = { has_full_control_of_state = 126 }
+		}
+		cancel_trigger = {
+			696 ={ is_capital = yes }
+			has_full_control_of_state = 126
+			has_full_control_of_state = 332
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		is_good = yes
+		days_mission_timeout = 1
+		timeout_effect = {
+			set_capital = { state = 696 }
+		}
+	}
+}

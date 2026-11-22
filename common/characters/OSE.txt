@@ -1,0 +1,415 @@
+characters = {
+	OSE_Hawrei = {
+#デイヴィッド・ハーレイ（ディアナ・ハーレイ）
+		name = OSE_Hawrei
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_OSE_Hawrei_pic
+				small = GFX_OSE_Hawrei_pic_small
+			}
+		}
+		
+		field_marshal = {
+			traits = {
+				panzer_leader
+				brilliant_strategist
+				career_officer
+				trait_reckless
+				harsh_leader
+				
+				
+				offensive_doctrine
+				aggressive_assaulter
+				inspirational_leader
+			}
+			
+			skill = 4
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	OSE_Megan = {
+#ミーガン・ノースコット（ジョン・ノースコット）
+		name = OSE_Megan
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_OSE_Megan_pic
+				small = GFX_OSE_Megan_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+				
+				brilliant_strategist
+				politically_connected
+				war_hero
+				trait_reckless
+				media_personality
+				harsh_leader
+				cavalry_officer
+				armor_officer
+				commander_aptitude
+				
+				offensive_doctrine
+				defensive_doctrine
+				
+				trickster
+				commando
+				naval_invader
+				expert_improviser
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 2
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	OSE_Mervina = {
+#メルヴィナ アードバニー
+		name = OSE_Mervina
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_OSE_Mervina_pic
+				small = GFX_OSE_Mervina_pic_small
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				desert_fox
+				trickster
+				trait_engineer
+				
+				true_genius
+			}
+			
+			skill = 5
+			
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	OSE_Matty = {
+#マット・ホール（マリィ・ホール）
+		name = OSE_Matty
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_OSE_Matty_pic
+				small = GFX_OSE_Matty_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				tsf_officer
+				commander_aptitude
+				
+				career_officer
+				media_personality
+				trait_reckless
+				
+				
+				tsf_leader
+				trickster
+				
+				tsf_commander
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+	
+
+	OSE_Mateparae = {
+#ジェリー・マテパラエ	
+		name = OSE_Mateparae
+
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_OSE_Mateparae_pic
+				small = GFX_OSE_Mateparae_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				tsf_officer
+				commander_aptitude
+				
+				career_officer
+				trait_cautious
+				
+				
+				tsf_leader
+				trickster
+				
+				tsf_commander
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 6
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	OSE_Odilette = {
+#オフィーリア・オディレット
+		name = OSE_Odilette
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_OSE_Odilette_pic
+				small = GFX_OSE_Odilette_pic_small
+			}
+		}
+		corps_commander = {
+			 traits = {
+			 
+			 	tsf_officer
+				brilliant_strategist
+				trait_reckless
+				
+			 }
+			
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	OSE_Isabella = {
+#イザベラ・グリーン
+		name = OSE_Isabella
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_OSE_Isabella_pic
+				small = GFX_OSE_Isabella_pic_small
+			}
+		}
+		corps_commander = {
+			 traits = {
+			 
+			 	tsf_officer
+				inflexible_strategist
+				trait_cautious
+				
+			 }
+			 
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	OSE_sirakawa = {
+#白川・美乃莉
+		name = OSE_sirakawa
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_OSE_sirakawa_pic
+				small = GFX_OSE_sirakawa_pic_small
+			}
+		}
+		corps_commander = {
+			 traits = {
+			 
+			 	tsf_officer
+
+				
+			 }
+			 
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	OSE_Valentine = {
+#ヴァレンタイン
+		name = OSE_Valentine
+		
+		gender = female
+		portraits = {
+			army = {
+				large = gfx/leaders/OSE/OSE_Valentine_pic.dds
+				small = gfx/leaders/OSE/OSE_Valentine_pic_small.dds
+			}
+		}
+		
+		field_marshal = {
+			traits = {
+				inflexible_strategist
+				politically_connected
+				trait_cautious
+				media_personality
+				
+				defensive_doctrine
+				unyielding_defender
+				inspirational_leader
+				
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+			visible = {
+				has_character_flag = unlock_character_flag
+			}
+		}
+	}
+	
+	OSE_Giselle = {
+#ジゼル・アジャーニ
+		name = OSE_Giselle
+		
+		gender = female
+		portraits = {
+			army = {
+				large = gfx/leaders/OSE/OSE_Giselle_pic.dds
+				small = gfx/leaders/OSE/OSE_Giselle_pic_small.dds
+			}
+		}
+		corps_commander = {
+			traits = {
+				tsf_officer
+				commander_aptitude
+				tsf_commander
+				
+				brilliant_strategist
+				politically_connected
+				trait_reckless
+				media_personality
+				harsh_leader
+				
+				jaeger
+				
+				trickster
+				urban_assault_specialist
+				scavenger
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+			visible = {
+				has_character_flag = unlock_character_flag
+			}
+		}
+	}
+	
+	OSE_natary = {
+#ナタリー
+		name = OSE_natary
+		
+		gender = female
+		portraits = {
+			army = {
+				large = gfx/leaders/OSE/OSE_natary_pic.dds
+				small = gfx/leaders/OSE/OSE_natary_pic_small.dds
+			}
+		}
+		corps_commander = {
+			traits = {
+				brilliant_strategist
+				politically_connected
+				trait_cautious
+				media_personality
+				infantry_officer
+				
+				cavalry_leader
+				infantry_leader
+				camouflage_expert
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+			visible = {
+				has_character_flag = unlock_character_flag
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,3260 @@
+#### COMBAT TACTICS ###########################################################
+#
+# NOTE: tactics must start with "tactic_" in their name to work with techs.
+###############################################################################
+phases = {
+	close_combat
+	tactical_withdrawal
+	seize_bridge
+	hold_bridge
+	hive_war
+	hive_in_war
+	amphibious_war
+	invasion_war
+}
+
+#基本攻撃
+tactic_basic_attack = {
+	is_attacker = yes
+	trigger = {
+		# combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = yes
+	base = {
+		factor = 4
+	}
+	picture = attack
+	countered_by = tactic_counterattack
+	attacker = 0.05
+}
+#基本防御
+tactic_basic_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = yes
+	base = {
+		factor = 4
+	}
+	picture = defend
+	defender = 0.05
+}
+#反撃(防御)
+tactic_counterattack = {
+	# counters basic attack, assault
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		skill_advantage > 0
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = yes
+	base = {
+		factor = 4
+		modifier = {
+			add = 4
+			has_trait = unyielding_defender
+		}
+	}
+	picture = counterattack
+	defender = 0.25
+}
+#強襲(攻撃)
+tactic_assault = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = yes
+	base = {
+		factor = 2
+		modifier = {
+			add = 2
+			has_trait = aggressive_assaulter
+		}
+	}
+	#Revisit ideally this should be more common in urban terrain
+	picture = assault
+	countered_by = tactic_counterattack
+	phase = close_combat	#changes phase to close combat
+	attacker = 0.25	#attacker gets a bonus to doing damage
+}
+#包囲
+tactic_encirclement = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		frontage_full = yes
+		has_reserves = yes
+		OR = {
+			skill_advantage > 0
+			has_trait = panzer_leader
+			has_trait = trickster
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = yes
+	base = {
+		factor = 4
+		modifier = {
+			add = 4
+			OR = {
+				has_trait = panzer_expert
+				has_trait = combined_arms_expert
+			}
+		}
+	}
+	picture = encircle
+	countered_by = tactic_tactical_withdrawal
+	combat_width = 0.5	#increased combat_width
+	attacker = 0.25
+	defender = 0.05
+}
+
+#衝撃
+tactic_shock = {
+	#counters delay
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = yes
+	base = {
+		factor = 4
+		modifier = {
+			add = 4
+			has_trait = aggressive_assaulter
+		}
+	}
+	picture = shock
+	countered_by = tactic_ambush
+	defender = -0.25
+}
+#突破
+tactic_breakthrough = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		OR = {
+			hardness > 0.5
+			skill_advantage > 1
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = breakthrough
+	countered_by = tactic_backhand_blow
+	attacker_movement_speed = 0.5
+	attacker = 0.25
+	defender = -0.15
+}
+#執拗攻撃
+tactic_relentless_assault = {
+	#Deep battle attacker tactic
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_relentless_assault
+	attacker_movement_speed = 0.15
+	attacker = 0.2
+	defender = 0.05
+}
+#想定外の一撃
+tactic_unexpected_thrust = {
+	#Mobile warfare attacker tactic
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_unexpected_thrust
+	attacker_movement_speed = 0.15
+	attacker = 0.15
+}
+
+tactic_cc_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+	}
+	active = yes
+	base = {
+		factor = 4
+	}
+	picture = cc_attack
+	display_phase = close_combat
+	attacker = 0.1	#attacker gets a bonus to doing damage
+	defender = 0.05
+}
+#近接防御
+tactic_cc_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+	}
+	active = yes
+	base = {
+		factor = 4
+	}
+	picture = cc_defend
+	display_phase = close_combat
+	attacker = 0.05
+	defender = 0.1	#defender gets a bonus to doing damage
+}
+#強襲突撃
+tactic_cc_storm = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+	}
+	active = yes
+	base = {
+		factor = 2
+	}
+	picture = cc_storm
+	display_phase = close_combat
+	attacker = 0.2	#attacker gets a bonus to doing damage
+	defender = 0.2
+}
+#重心防御
+tactic_cc_local_strong_point = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+	}
+	active = yes
+	display_phase = close_combat
+	base = {
+		factor = 2
+	}
+	picture = cc_local_strong_point
+	attacker = -0.2	#attacker gets a penalty to doing damage
+}
+#撤退攻撃
+tactic_tw_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = tactical_withdrawal
+	}
+	base = {
+		factor = 4
+	}
+	picture = tw_attack
+	display_phase = tactical_withdrawal
+	combat_width = -0.25
+	attacker = -0.25
+	defender = -0.1
+}
+#撤退防御
+tactic_tw_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = tactical_withdrawal
+	}
+	base = {
+		factor = 4
+	}
+	picture = tw_defend
+	display_phase = tactical_withdrawal
+	combat_width = -0.25
+	attacker = -0.3
+	defender = -0.05
+}
+#追撃
+tactic_tw_chase = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = tactical_withdrawal
+	}
+	base = {
+		factor = 4
+	}
+	picture = tw_chase
+	display_phase = tactical_withdrawal
+	combat_width = -0.25
+	attacker = -0.15
+	defender = -0.05
+}
+#捕捉
+tactic_tw_intercept = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = tactical_withdrawal
+	}
+	base = {
+		factor = 4
+	}
+	picture = tw_intercept
+	display_phase = tactical_withdrawal
+	phase = no
+	attacker = -0.05
+	defender = -0.1
+}
+
+#基本ハイヴ攻撃
+tactic_hive_attack = {
+	is_attacker = yes
+	trigger = {
+		# combined scope for both country and combatant
+		is_attacker = yes
+		NOT = { has_combat_modifier = paradrop }
+		phase = no
+		OR = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+		}
+	}
+	active = yes
+	base = {
+		factor = 100
+	}
+	picture = hive_attack
+	phase = hive_war
+	attacker = 0.05
+}
+#基本ハイヴ防御
+tactic_hive_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+		}
+	}
+	active = yes
+	base = {
+		factor = 100
+	}
+	picture = hive_defend
+	phase = hive_war
+	defender = 0.05
+}
+
+#基本ハイヴ内攻撃
+tactic_hive_in_attack = {
+	is_attacker = yes
+	trigger = {
+		# combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+		OR = {
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = yes
+	base = {
+		factor = 100
+	}
+	picture = tactic_sf_storm
+	phase = hive_in_war
+	attacker = 0.05
+}
+#基本ハイヴ内防御
+tactic_hive_in_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = yes
+	base = {
+		factor = 100
+	}
+	picture = tactic_sf_defense
+	phase = hive_in_war
+	defender = 0.05
+}
+#___
+#ハイヴ外攻撃
+tactic_hv_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+	}
+	active = yes
+	base = {
+		factor = 0
+	}
+	picture = hive_attack
+	display_phase = hive_war
+	attacker = 0.05
+}
+#ハイヴ外防御
+tactic_hv_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_war
+	}
+	active = yes
+	base = {
+		factor = 0
+	}
+	picture = hive_defend
+	display_phase = hive_war
+	defender = 0.05
+}
+#ハイヴ内攻撃
+tactic_hvin_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = yes
+	base = {
+		factor = 0
+	}
+	picture = tactic_sf_storm
+	display_phase = hive_in_war
+	attacker = 0.05
+}
+#ハイヴ内防御
+tactic_hvin_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_in_war
+	}
+	active = yes
+	base = {
+		factor = 0
+	}
+	picture = tactic_sf_defense
+	display_phase = hive_in_war
+	defender = 0.05
+}
+
+
+#__Human_____________________
+#軌道降下
+tactic_human_diver_attack  = {
+	trigger = {
+		is_attacker = yes
+		has_combat_modifier = paradrop
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+		}
+	}
+	is_attacker = yes
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = orbitdiver
+	combat_width = 0.5
+	attacker = 0.1
+	attacker_movement_speed = 0.2
+}
+tactic_human_hive_diver_attack  = {
+	trigger = {
+		is_attacker = yes
+		has_combat_modifier = paradrop
+		phase = no
+		OR = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+		}
+	}
+	is_attacker = yes
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = orbitdiver
+	phase = hive_war
+	combat_width = 0.5
+	attacker = 0.3
+	attacker_movement_speed = 0.3
+}
+tactic_human_hv_diver_attack  = {
+	trigger = {
+		is_attacker = yes
+		has_combat_modifier = paradrop
+		phase = hive_war
+		OR = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+		}
+	}
+	is_attacker = yes
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = orbitdiver
+	display_phase = hive_war
+	combat_width = 0.5
+	attacker = 0.3
+	attacker_movement_speed = 0.3
+}
+#降下兵団の増援
+tactic_human_hv_in_diver_attack  = {
+	trigger = {
+		is_attacker = yes
+		has_combat_modifier = paradrop
+		phase = hive_in_war
+		OR = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+		}
+	}
+	is_attacker = yes
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = orbitdiver
+	display_phase = hive_in_war
+	combat_width = 0.5
+	attacker = 0.2
+	attacker_movement_speed = 0.2
+}
+
+tactic_human_diver_defend  = {
+	trigger = {
+		is_attacker = no
+		has_combat_modifier = paradrop
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+		}
+	}
+	is_attacker = no
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = orbitdiver
+	combat_width = 0.5
+	defender = 0.1
+}
+tactic_human_hive_diver_defend  = {
+	trigger = {
+		is_attacker = no
+		has_combat_modifier = paradrop
+		phase = no
+		OR = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+		}
+	}
+	is_attacker = no
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = orbitdiver
+	phase = hive_war
+	combat_width = 0.5
+	defender = 0.3
+}
+tactic_human_hv_diver_defend  = {
+	trigger = {
+		is_attacker = no
+		has_combat_modifier = paradrop
+		phase = hive_war
+		OR = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+		}
+	}
+	is_attacker = no
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = orbitdiver
+	display_phase = hive_war
+	combat_width = 0.5
+	defender = 0.3
+
+}
+#降下兵団の増援
+tactic_human_hv_in_diver_defend  = {
+	trigger = {
+		is_attacker = no
+		has_combat_modifier = paradrop
+		phase = hive_in_war
+		OR = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+		}
+	}
+	is_attacker = no
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = orbitdiver
+	display_phase = hive_in_war
+	combat_width = 0.5
+	defender = 0.2
+}
+#_______________________________________
+#ハイヴ攻略戦
+tactic_human_hv_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = hive_attack
+	display_phase = hive_war
+	attacker = -0.05
+	defender = 0.05
+}
+#ハイヴ防衛戦
+tactic_human_hv_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = hive_defend
+	display_phase = hive_war
+	defender = -0.05
+}
+#水陸連携ハイヴ攻略
+tactic_human_hv_navy_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+		AND = {
+			has_trait = naval_liason
+			has_combat_modifier = shore_bombard
+		}
+	}
+	active = no
+	base = {
+		factor = 8
+	}
+	picture = hive_attack
+	display_phase = hive_war
+	attacker = 0.15
+	defender = -0.1
+}
+#門へ侵攻
+tactic_human_hv_gate_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = hive_attack
+	display_phase = hive_war
+	attacker = 0.01
+	defender = 0.05
+	attacker_movement_speed = 0.1
+}
+#一時後退
+tactic_human_hv_withdrawal_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 3
+	}
+	picture = tactic_planned_attack
+	display_phase = hive_war
+	attacker = -0.2
+	defender = -0.2
+	attacker_movement_speed = -0.6
+}
+#近接突撃
+tactic_human_hv_combat_assault = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 10
+	}
+	picture = attacker_hb_rush
+	display_phase = hive_war
+	phase = hive_in_war
+	attacker = 0.10
+	defender = -0.05
+	attacker_movement_speed = 0.3
+}
+#火力を投射
+tactic_human_hv_arty_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+		has_artillery_ratio > 0.2
+	}
+	active = no
+	base = {
+		factor = 6
+	}
+	picture = tactic_barrage
+	display_phase = hive_war
+	countered_by = tactic_beta_hv_ambush_gate_attack
+	attacker = 0.15
+	attacker_movement_speed = -0.4
+}
+#入念な火力投射
+tactic_human_hv_barrage_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+		has_artillery_ratio > 0.3
+	}
+	active = no
+	base = {
+		factor = 8
+	}
+	picture = tactic_barrage
+	display_phase = hive_war
+	countered_by = tactic_beta_hv_ambush_gate_attack
+	attacker = 0.25
+	attacker_movement_speed = -0.6
+}
+
+#門を確保
+tactic_human_hv_gate_secure = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = attacker_sb_hold
+	display_phase = hive_war
+	phase = hive_in_war
+	attacker = 0.01
+	attacker_movement_speed = -0.6
+}
+
+#-----------------------------
+#ハイヴ内攻略戦
+tactic_human_hvin_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_sf_storm
+	display_phase = hive_in_war
+	attacker = -0.05
+	defender = 0.05
+	attacker_movement_speed = -0.2
+}
+#ハイヴ内防衛線
+tactic_human_hvin_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_sf_fortify
+	display_phase = hive_in_war
+	defender = -0.05
+	attacker_movement_speed = 0.2
+}
+#ハイヴ内から撤退
+tactic_human_hvin_withdrawal = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 1
+	}
+	picture = withdraw
+	display_phase = hive_in_war
+	phase = hive_war
+	attacker = -0.30
+	defender = -0.20
+	attacker_movement_speed = -0.9
+}
+#前進
+tactic_human_hvin_move = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_sf_storm
+	display_phase = hive_in_war
+	attacker = 0.01
+	defender = 0.05
+	attacker_movement_speed = 0.1
+}
+#侵攻路を掃討
+tactic_human_hvin_fire = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_sf_armor_supported_assault
+	display_phase = hive_in_war
+	attacker = 0.05
+	defender = 0.05
+	attacker_movement_speed = -0.4
+}
+#強行突破
+tactic_human_hvin_assault = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 3
+	}
+	picture = tactic_sf_barrage
+	display_phase = hive_in_war
+	attacker = 0.10
+	defender = 0.15
+	attacker_movement_speed = 0.3
+}
+#警戒進撃
+tactic_human_hvin_caution = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_planned_attack
+	display_phase = hive_in_war
+	attacker = -0.05
+	defender = -0.15
+	attacker_movement_speed = -0.3
+}
+#ハイヴ内密集近接戦
+tactic_human_hvin_combat_assault = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 12
+	}
+	picture = cc_storm
+	display_phase = hive_in_war
+	attacker = 0.10
+	defender = -0.05
+	attacker_movement_speed = 0.3
+}
+
+#ハイヴ内遅滞
+tactic_human_hvin_delay = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = delay
+	display_phase = hive_in_war
+	attacker = -0.05
+	defender = -0.10
+	attacker_movement_speed = -0.2
+}
+#ハイヴ内反攻
+tactic_human_hvin_counterattack = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 3
+	}
+	picture = tactic_sf_defense
+	display_phase = hive_in_war
+	attacker = 0.10
+	defender = 0.05
+}
+#ハイヴ内近接遅滞戦
+tactic_human_hvin_combat_defence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 12
+	}
+	picture = cc_withdraw
+	display_phase = hive_in_war
+	attacker = -0.15
+	defender = 0.05
+	attacker_movement_speed = -0.2
+}
+
+#________BETA____________
+#奪還行動
+
+tactic_beta_hv_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = hive_attack
+	display_phase = hive_war
+	phase = hive_in_war
+	attacker = 0.30
+	defender = -0.30
+	attacker_movement_speed = 0.5
+}
+#防衛行動
+tactic_beta_hv_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = hive_defend
+	display_phase = hive_war
+	defender = 0.30
+}
+
+
+#門からの増援
+tactic_beta_hv_reinforcements = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_war
+		frontage_full = no
+		has_reserves = yes
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = defender_sb_retake_bridge
+	display_phase = hive_war
+	combat_width = 0.5
+	attacker = -0.20
+	defender = 0.05
+}
+
+#偽装門からの奇襲
+tactic_beta_hv_ambush_gate_attack = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_war
+		has_reserves = yes
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = ambush
+	display_phase = hive_war
+	countered_by = tactic_human_hv_combat_assault
+	attacker = -0.20
+	defender = 0.4
+}
+#BETAの逆攻勢
+tactic_beta_hv_counterattack = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = defender_sb_assault
+	display_phase = hive_war
+	combat_width = 0.5
+	attacker = -0.05
+	defender = 0.35
+}
+#大規模な逆攻勢
+tactic_beta_hv_High_counterattack = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_war
+	}
+	active = no
+	base = {
+		factor = 3
+	}
+	picture = defender_sb_reckless_assault
+	display_phase = hive_war
+	combat_width = 0.5
+	attacker = -0.05
+	defender = 0.4
+}
+
+
+#---------------------------------------
+#ハイヴ内防衛行動
+tactic_beta_hvin_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_sf_fortify
+	display_phase = hive_in_war
+	attacker = -0.20
+	defender = 0.3
+}
+#偽装横坑からの出現
+tactic_beta_hvin_ambush_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 3
+	}
+	picture = tactic_sf_ambush
+	display_phase = hive_in_war
+	attacker_movement_speed = -0.2
+	combat_width = 0.5
+	attacker = -0.30
+	defender = 0.4
+}
+#補給路の寸断
+tactic_beta_hvin_cutoff = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_sf_ambush
+	display_phase = hive_in_war
+	attacker = -0.3
+	defender = 0.25
+}
+#ハイヴ内増援
+tactic_beta_hvin_reinforcements_defend = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_war
+		frontage_full = no
+		has_reserves = yes
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_sf_defense
+	display_phase = hive_war
+	attacker = -0.50
+	defender = 0.1
+}
+#偽装縦坑からの崩落
+tactic_beta_hvin_ambush_drift = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_in_war
+		has_reserves = yes
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = tactic_sf_barrage
+	display_phase = hive_in_war
+	attacker_movement_speed = -0.4
+	combat_width = 0.5
+	attacker = -0.40
+	defender = 0.5
+}
+
+#ハイヴ内奪還行動
+tactic_beta_hvin_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_sf_storm
+	display_phase = hive_in_war
+	attacker = 0.50
+	defender = -0.2
+	attacker_movement_speed = 0.5
+}
+#ハイヴへの増援
+tactic_beta_hvin_reinforcements = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = hive_war
+		frontage_full = no
+		has_reserves = yes
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = elastic_defence
+	display_phase = hive_war
+	attacker = -0.20
+	defender = 0.05
+	attacker_movement_speed = 0.8
+}
+#大規模な奪還行動
+tactic_beta_hvin_high_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_human_wave_tactics
+	display_phase = hive_in_war
+	combat_width = 0.5
+	attacker = 0.60
+	defender = -0.25
+	attacker_movement_speed = 0.5
+}
+#ハイヴ内包囲行動
+tactic_beta_hvin_encirclement = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+		has_flanked_opponent = yes
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = encircle
+	display_phase = hive_in_war
+	combat_width = 0.5
+	attacker = 0.60
+	defender = -0.4
+	attacker_movement_speed = 0.2
+}
+#発狂的噴出
+tactic_beta_hvin_gushing = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = hive_in_war
+	}
+	active = no
+	base = {
+		factor = 1
+	}
+	picture = tactic_banzai_charge
+	display_phase = hive_in_war
+	combat_width = 0.5
+	attacker = 0.70
+	defender = -0.4
+	attacker_movement_speed = 0.8
+}
+
+
+
+#BETA接近戦
+#不意の反撃
+tactic_cc_bt_suddenAttack = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = cc_local_strong_point
+	display_phase = close_combat
+	countered_by = tactic_cc_hm_CloseQuarters
+	attacker = -0.3
+	defender = 0.20
+}
+#突出点への殺到
+tactic_cc_bt_RushingToPoint = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_guerrilla_tactics
+	display_phase = close_combat
+	countered_by = tactic_cc_hm_HighlyMobile
+	combat_width = 0.25
+	attacker = -0.20
+	defender = 0.15
+}
+#近接迎撃
+tactic_cc_bt_Interception = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = cc_defend
+	display_phase = close_combat
+	countered_by = tactic_cc_hm_CloseQuarters
+	attacker = -0.40
+	defender = 0.10
+}
+#波状攻撃
+tactic_cc_bt_WaveAttack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_relentless_assault
+	display_phase = close_combat
+	countered_by = tactic_cc_hm_MutualCooperation
+	combat_width = 0.25
+	attacker = 0.30
+	defender = 0.10
+}
+#局所的突破
+tactic_cc_bt_LocalBreakthrough = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = breakthrough
+	display_phase = close_combat
+	countered_by = tactic_cc_hm_HighlyManeuveEvac
+	attacker = 0.35
+}
+
+#撤退戦強制終了保険
+#増援
+tactic_tw_bt_Reinforce = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = tactical_withdrawal
+	}
+	base = {
+		factor = 4
+	}
+	picture = tw_intercept
+	display_phase = tactical_withdrawal
+	phase = no
+	combat_width = 0.25
+	attacker = -0.3
+	defender = -0.1
+}
+
+#通常戦術
+#突撃級突撃
+tactic_bt_DestroyerAttack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		hardness > 0.5
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = breakthrough
+	countered_by = tactic_hm_MobileEvac
+	attacker_movement_speed = 0.5
+	attacker = 0.30
+	defender = -0.15
+}
+
+#大規模な攻勢
+tactic_bt_LargeOffensive = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		has_reserves = yes
+		frontage_full = yes
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = shock
+	attacker_movement_speed = 0.25
+	combat_width = 0.5
+	attacker = 0.20
+}
+
+#散発的な攻勢
+tactic_bt_SporadicOffensive = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		has_reserves = no
+		frontage_full = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_relentless_assault
+	attacker = -0.10
+	defender = -0.2
+}
+
+#破砕
+tactic_bt_CrushingCounter = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = cc_local_strong_point
+	defender = 0.4
+}
+
+#大規模な反攻
+tactic_bt_LargeCounter = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		has_reserves = yes
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = defender_sb_reckless_assault
+	attacker_movement_speed = 0.25
+	combat_width = 0.5
+	defender = 0.20
+}
+
+#散発的な反攻
+tactic_bt_SporadicCounter = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		has_reserves = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = defend
+	attacker = -0.20
+	defender = -0.1
+}
+
+
+
+#地下からの強襲
+tactic_bt_underground_assault = {
+	is_attacker = yes
+	trigger = {
+		# combined scope for both country and combatant
+		is_attacker = yes
+		reserves > 5
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 3
+	}
+	picture = flank
+	countered_by = tactic_hm_CloseCounter
+	phase = close_combat #chenge_cc
+	combat_width = 0.75
+	attacker = 0.5
+	defender = -0.1
+	attacker_movement_speed = 0.5
+}
+
+#地下からの奇襲
+tactic_bt_underground_Surprise = {
+	is_attacker = no
+	trigger = {
+		# combined scope for both country and combatant
+		is_attacker = no
+		reserves > 5
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 3
+	}
+	picture = ambush
+	countered_by = tactic_hm_CloseQuarters
+	phase = close_combat #chenge_cc
+	combat_width = 0.75
+	attacker = -0.1
+	defender = 0.5
+}
+
+##----------------------------------
+#基本上陸攻撃
+tactic_df_amphibiousAttack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		OR = {
+			has_combat_modifier = amphibious_attack
+			opponent = {
+				has_combat_modifier = amphibious_attack
+			}		
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = yes
+	base = {
+		factor = 0
+	}
+	picture = attacker_hb_attack
+	phase = amphibious_war
+	attacker = -0.10
+	defender = -0.2
+}
+
+#基本上陸防衛
+tactic_df_amphibiousDefence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+		OR = {
+			has_combat_modifier = amphibious_attack
+			opponent = {
+				has_combat_modifier = amphibious_attack
+			}		
+		}
+	}
+	active = yes
+	base = {
+		factor = 0
+	}
+	picture = defender_hb_skillful_defence
+	phase = amphibious_war
+	attacker = -0.10
+	defender = -0.2
+}
+#BETA上陸行動
+tactic_bt_amphibiousInvasion = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		OR = {
+			has_combat_modifier = amphibious_attack
+			opponent = {
+				has_combat_modifier = amphibious_attack
+			}		
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = attacker_hb_storm
+	phase = amphibious_war
+	attacker = 0.1
+	defender = -0.2
+}
+
+#BETA上陸侵攻
+tactic_ab_bt_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = attacker_hb_storm
+	display_phase = amphibious_war
+	attacker = 0.1
+	defender = -0.2
+}
+
+#大規模な上陸行動
+tactic_ab_bt_LargeOffensive = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+		has_reserves = yes
+		frontage_full = yes
+
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = attacker_hb_rush
+	display_phase = amphibious_war
+	countered_by = tactic_ab_hm_reconnaissance
+	combat_width = 0.50
+	attacker = 0.3
+}
+
+#散発的な上陸行動
+tactic_ab_bt_SporadicOffensive = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+		has_reserves = no
+		frontage_full = no
+
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_hold_bridge
+	display_phase = amphibious_war
+	attacker = -0.1
+	defender = -0.4
+}
+
+#BETA上陸
+tactic_ab_bt_Invasion = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = attacker_sb_hold
+	display_phase = amphibious_war
+	phase = invasion_war
+	attacker = 0.1
+}
+#想定外の上陸
+tactic_ab_bt_surpriseInvasion = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = flank
+	display_phase = amphibious_war
+	phase = invasion_war
+	attacker = 0.3
+	defender = -0.1
+}
+#上陸侵攻
+tactic_iv_bt_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = attack
+	display_phase = invasion_war
+	attacker = 0.3
+}
+
+#大規模な上陸侵攻
+tactic_iv_bt_LargeOffensive = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+		has_reserves = yes
+		frontage_full = yes
+
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = shock
+	display_phase = invasion_war
+	combat_width = 0.50
+	attacker = 0.5
+	defender = 0.2
+}
+
+#奇襲的な上陸侵攻
+tactic_iv_bt_surpriseOffensive = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+		has_flanked_opponent = yes
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = tactic_unexpected_thrust
+	display_phase = amphibious_war
+	countered_by = tactic_iv_hm_elastic_defense
+	attacker = 0.4
+	defender = -0.1
+}
+
+#散発的な上陸侵攻
+tactic_iv_bt_SporadicOffensive = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+		has_reserves = no
+		frontage_full = no
+
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = elastic_defence
+	display_phase = invasion_war
+	phase = amphibious_war
+	attacker = -0.1
+	defender = -0.2
+}
+
+
+#対上陸行動
+tactic_bt_amphibiousDefence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+		OR = {
+			has_combat_modifier = amphibious_attack
+			opponent = {
+				has_combat_modifier = amphibious_attack
+			}		
+		}
+	}
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = defender_sb_assault
+	phase = amphibious_war
+	defender = 0.1
+}
+#BETA上陸侵攻
+tactic_ab_bt_deffence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = amphibious_war
+
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = defender_sb_assault
+	display_phase = amphibious_war
+	defender = 0.1
+}
+#大規模な対上陸行動
+tactic_ab_bt_LargeDeffencive = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = amphibious_war
+		has_reserves = yes
+		frontage_full = yes
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = defender_sb_reckless_assault
+	display_phase = amphibious_war
+	combat_width = 0.50
+	defender = 0.25
+}
+#水際逆襲
+tactic_iv_bt_counter = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = defender_sb_assault
+	display_phase = invasion_war
+	attacker = 0.1
+	defender = 0.20
+}
+#大規模な水際逆襲
+tactic_iv_bt_LargeCounter = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+		has_reserves = yes
+		frontage_full = yes
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = defender_sb_reckless_assault
+	display_phase = invasion_war
+	combat_width = 0.50
+	attacker = 0.1
+	defender = 0.4
+}
+
+#対上陸包囲
+tactic_iv_bt_encirclement = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+		has_reserves = yes
+		frontage_full = yes
+		less_combat_width_than_opponent = no
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = tactic_guerrilla_tactics
+	display_phase = invasion_war
+	combat_width = 0.50
+	attacker = -0.1
+	defender = 0.4
+}
+
+#対上陸増援
+tactic_iv_bt_SporadicDeffence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+		has_reserves = no
+		frontage_full = no
+
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = elastic_defence
+	display_phase = invasion_war
+	attacker = -0.4
+	defender = -0.2
+}
+
+
+####----------------------------
+
+#人類上陸戦
+tactic_hm_amphibiousInvasion = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		OR = {
+			has_combat_modifier = amphibious_attack
+			opponent = {
+				has_combat_modifier = amphibious_attack
+			}		
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = seize_bridge
+	phase = amphibious_war
+	attacker = 0.1
+}
+
+#陽陸攻撃
+tactic_ab_hm_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = seize_bridge
+	display_phase = amphibious_war
+	attacker = 0.1
+}
+#追加部隊の揚陸
+tactic_ab_hm_Reinforcements = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+		has_reserves = yes
+		frontage_full = yes
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = flank
+	display_phase = amphibious_war
+	combat_width = 0.25
+	attacker = 0.15
+	defender = -0.05
+}
+#計画的な上陸
+tactic_ab_hm_planedAttack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+		min_planning > 0.45
+	}
+	active = no
+	base = {
+		factor = 15
+	}
+	picture = tactic_planned_attack
+	display_phase = amphibious_war
+	combat_width = 0.5
+	attacker = 0.20
+}
+
+#水陸連携上陸
+tactic_ab_hm_navyAttack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+		AND = {
+			has_trait = naval_liason
+			has_combat_modifier = shore_bombard
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_barrage
+	display_phase = amphibious_war
+	attacker = 0.20
+	defender = -0.15
+}
+#陽陸地点の確保
+tactic_ab_hm_SecuringSpot = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = attacker_sb_skillful_defence
+	display_phase = amphibious_war
+	phase = invasion_war
+	attacker = 0.20
+}
+#陽陸地域の拡大
+tactic_iv_hm_attack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = attacker_hb_rush
+	display_phase = invasion_war
+	attacker = 0.30
+	defender = 0.10
+}
+
+#陽陸地域の防衛
+tactic_iv_hm_maintain = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = attacker_sb_hold
+	display_phase = invasion_war
+	attacker = 0.20
+	defender = -0.10
+}
+
+#陽陸地点を固守
+tactic_iv_hm_clinging = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture =attacker_sb_hold
+	display_phase = invasion_war
+	attacker = 0.25
+	defender = 0.15
+}
+
+#陽陸地域での遅滞
+tactic_iv_hm_delay = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_planned_attack
+	display_phase = invasion_war
+	attacker = -0.1
+	defender = -0.30
+}
+#水陸連携維持
+tactic_iv_hm_navyAttack = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = amphibious_war
+		AND = {
+			has_trait = naval_liason
+			has_combat_modifier = shore_bombard
+		}
+	}
+	active = no
+	base = {
+		factor = 6
+	}
+	picture = tactic_barrage
+	display_phase = amphibious_war
+	attacker = 0.40
+	defender = -0.15
+}
+#陽陸地点の失陥
+tactic_iv_hm_Loss = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+		skill < 6
+	}
+	active = no
+	base = {
+		factor = 1
+	}
+	picture = cc_local_strong_point
+	display_phase = invasion_war
+	phase = amphibious_war
+	attacker = -0.1
+	defender = 0.10
+}
+
+#戦略的撤退
+tactic_iv_hm_withdrawal = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = invasion_war
+		skill > 4
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = cc_defend
+	display_phase = invasion_war
+	phase = amphibious_war
+	attacker = 0.10
+	defender = -0.30
+}
+
+#対上陸防衛
+tactic_hm_amphibiousDefence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+		OR = {
+			has_combat_modifier = amphibious_attack
+			opponent = {
+				has_combat_modifier = amphibious_attack
+			}		
+		}
+	}
+	active = no
+	base = {
+		factor = 100
+	}
+	picture = hold_bridge
+	phase = amphibious_war
+	defender = 0.1
+}
+tactic_ab_hm_deffence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = amphibious_war
+
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = hold_bridge
+	display_phase = amphibious_war
+	defender = 0.1
+}
+#火力投射
+tactic_ab_hm_barrage = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = amphibious_war
+
+	}
+	active = no
+	base = {
+		factor = 8
+	}
+	picture = tactic_overwhelming_fire
+	display_phase = amphibious_war
+	countered_by = tactic_ab_bt_surpriseInvasion
+	defender = 0.3
+}
+#入念な偵察
+tactic_ab_hm_reconnaissance = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = amphibious_war
+		recon_advantage > 0
+	}
+	active = no
+	base = {
+		factor = 6
+	}
+	picture = elastic_defence
+	display_phase = amphibious_war
+	attacker = -0.10
+	defender = 0.2
+}
+#対上陸遅滞
+tactic_ab_hm_dlayDeffence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = amphibious_war
+
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = delay
+	display_phase = amphibious_war
+	countered_by = tactic_ab_bt_surpriseInvasion
+	attacker = -0.15
+	defender = 0.1
+}
+#引き込み戦術
+tactic_ab_hm_decoy = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = amphibious_war
+
+	}
+	active = no
+	base = {
+		factor = 12
+	}
+	picture = tw_attack
+	display_phase = amphibious_war
+	phase = invasion_war
+	attacker = -0.10
+	defender = 0.1
+}
+#水陸連携防衛
+tactic_ab_hm_navyDeffence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = amphibious_war
+		AND = {
+			has_trait = naval_liason
+			has_combat_modifier = shore_bombard
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_overwhelming_fire
+	display_phase = amphibious_war
+	attacker = -0.20
+	defender = 0.3
+}
+#水際防衛線
+tactic_iv_hm_deffence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = hold_bridge
+	display_phase = invasion_war
+	defender = 0.20
+}
+#集中打撃
+tactic_iv_hm_overwhelming_fire = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_overwhelming_fire
+	display_phase = invasion_war
+	defender = 0.30
+}
+
+#柔軟な対応
+tactic_iv_hm_elastic_defense = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 2
+		modifier = {
+			skill > 4
+			factor = 6
+		}
+	}
+	picture = tw_defend
+	display_phase = invasion_war
+	attacker_movement_speed = -0.25
+	attacker = -0.25
+	defender = 0.1
+}
+#遅延戦術
+tactic_iv_hm_delay_defense = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = delay
+	display_phase = invasion_war
+	attacker = -0.10
+	defender = 0.1
+}
+#強襲反攻
+tactic_iv_hm_AssaultCounter = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = defender_sb_reckless_assault
+	display_phase = invasion_war
+	attacker = 0.05
+	defender = 0.3
+}
+#局所的掃討
+tactic_iv_hm_ClearUp = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+		opponent = {
+			has_reserves = no
+			frontage_full = no
+		}
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = defender_sb_retake_bridge
+	display_phase = invasion_war
+	phase = amphibious_war
+	attacker = -0.05
+	defender = 0.4
+}
+#水陸連携打撃
+tactic_iv_hm_navyFire = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+		AND = {
+			has_trait = naval_liason
+			has_combat_modifier = shore_bombard
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_overwhelming_fire
+	display_phase = invasion_war
+	phase = amphibious_war
+	attacker = -0.05
+	defender = 0.30
+}
+#引き込み打撃
+tactic_iv_hm_decoy = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = invasion_war
+	}
+	active = no
+	base = {
+		factor = 12
+	}
+	picture = tw_defend
+	display_phase = invasion_war
+	phase = invasion_war
+	attacker = -0.05
+	defender = 0.35
+}
+##---------------------------
+
+#撤退
+tactic_cc_withdraw = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 1
+	}
+	picture = cc_withdraw
+	display_phase = close_combat
+	phase = tactical_withdrawal
+	attacker = -0.05
+	defender = -0.05
+}
+
+#遅滞
+tactic_delay = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = delay
+	countered_by = tactic_shock
+	attacker_movement_speed = -0.25	#
+	attacker = -0.25
+	defender = -0.15
+}
+
+#戦術的撤退
+tactic_tactical_withdrawal = {
+	#counters encirclement
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			skill_advantage > 0
+			has_trait = trickster
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = withdraw
+	phase = tactical_withdrawal
+	combat_width = -0.25
+	attacker = -0.25
+	defender = -0.05
+}
+
+
+#回避
+tactic_tw_evade = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = tactical_withdrawal
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tw_evade
+	display_phase = tactical_withdrawal
+	combat_width = -0.25
+	attacker = -0.4
+	defender = -0.1
+}
+
+#待ち伏せ
+tactic_ambush = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			skill_advantage > 1
+			skill > 2
+			has_trait = trickster
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = ambush
+	countered_by = tactic_breakthrough
+	attacker = -0.25
+}
+#電撃戦
+tactic_blitz = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		hardness > 0.5
+		phase = no
+		OR = {
+			skill > 2
+			has_trait = panzer_leader
+			skill_advantage > 1
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+		modifier = {
+			add = 4
+			OR = {
+				has_trait = panzer_expert
+				has_trait = combined_arms_expert
+			}
+		}
+	}
+	picture = blitz
+	countered_by = tactic_elastic_defense
+	attacker_movement_speed = 0.5
+	attacker = 0.15
+	defender = -0.15
+}
+#弾性防御
+tactic_elastic_defense = {
+	#counters blitz
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			has_trait = defensive_doctrine
+			skill > 2
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = elastic_defence
+	attacker_movement_speed = -0.25
+	attacker = -0.15
+	defender = 0.1
+}
+#後手からの一撃
+tactic_backhand_blow = {
+	#counters breakthrough
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			skill > 4
+			AND = {
+				has_trait = defensive_doctrine
+				skill > 3
+			}
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = backhand_blow
+	attacker_movement_speed = -0.3
+	attacker = -0.2
+	defender = 0.25
+}
+#よく練られた攻撃
+tactic_planned_attack = {
+	#GBP -> Armor attacker tactic
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_planned_attack
+	attacker = 0.15
+}
+
+#圧倒的火力
+tactic_overwhelming_fire = {
+	# Counters Banzai charge
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 2
+	}
+	picture = tactic_overwhelming_fire
+	countered_by = tactic_bt_underground_assault
+	attacker = -0.1
+	defender = 0.1
+}
+#優勢火力
+tactic_barrage = {
+	#Superior firepower attacker tactic
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_barrage
+	countered_by = tactic_bt_underground_Surprise
+	attacker = 0.1
+	defender = -0.2
+}
+
+#戦術的後退
+tactic_cc_tactical_withdrawal = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 1
+	}
+	picture = cc_withdraw
+	display_phase = close_combat
+	phase = no	#changes phase to no
+	attacker = -0.05
+	defender = -0.05
+}
+
+
+#____________________________________________________________
+##密集近接（一部機動突撃）
+#対BETA突撃
+tactic_hm_CloseQuarters = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 15
+	}
+	picture = cc_attack
+	display_phase = close_combat
+	attacker = 0.15	
+	defender = 0.05
+}
+
+#近接迎撃
+tactic_hm_CloseCounter = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 15
+	}
+	picture = cc_defend
+	display_phase = close_combat
+	attacker = 0.05
+	defender = 0.15
+}
+
+
+#密集近接
+tactic_cc_hm_CloseQuarters = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 15
+	}
+	picture = cc_storm
+	display_phase = close_combat
+	attacker_movement_speed = -0.2
+	attacker = 0.3	#attacker gets a bonus to doing damage
+	defender = 0.05
+}
+
+#高機動格闘
+tactic_cc_hm_HighlyMobile = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 10
+	}
+	picture = cc_storm
+	display_phase = close_combat
+	attacker_movement_speed = 0.5
+	attacker = 0.15
+	defender = -0.05
+}
+
+#相互連携
+tactic_cc_hm_MutualCooperation = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	display_phase = close_combat
+	base = {
+		factor = 12
+	}
+	picture = cc_local_strong_point
+	attacker = -0.05
+	defender = 0.15
+}
+
+#高機動回避
+tactic_cc_hm_HighlyManeuveEvac = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	display_phase = close_combat
+	base = {
+		factor = 12
+	}
+	picture = cc_withdraw
+	attacker = -0.20
+	defender = 0.05
+}
+
+
+
+
+##機動突撃
+#機動回避
+tactic_hm_MobileEvac = {
+	#Deep battle attacker tactic
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 12
+	}
+	picture = tw_defend
+	attacker = -0.2
+	defender = 0.05
+}
+
+#機動突撃
+tactic_hm_MobileAttack = {
+	#Deep battle attacker tactic
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 12
+	}
+	picture = tactic_relentless_assault
+	attacker_movement_speed = 0.25
+	attacker = 0.2
+	defender = 0.05
+}
+
+######--------------
+#計画的な統合戦術
+tactic_hm_jointTactics = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		min_planning > 0.6
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 10
+	}
+	picture = tactic_planned_attack
+	attacker = 0.20
+	defender = -0.10
+}
+#人海遅滞
+tactic_hm_guerrillaDeffence = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		has_reserves = yes
+		dig_in < 0.5
+		armor < 0.5
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 8
+	}
+	picture = tactic_guerrilla_tactics
+	attacker = -0.20
+	defender = -0.10
+}
+#柔軟な機動運用
+tactic_mobility_elastic_defense = {
+	#counters blitz
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			has_trait = defensive_doctrine
+			skill > 2
+		}
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 12
+	}
+	picture = elastic_defence
+	attacker_movement_speed = -0.25
+	attacker = -0.20
+	defender = 0.1
+}
+
+#機動強襲
+tactic_mobility_Assault = {
+
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 12
+	}
+	picture = SOV_tank_desant_blitz
+	attacker_movement_speed = 0.25
+	attacker = 0.20
+	defender = -0.10
+}
+
+
+##################
+tactic_human_wave_tactics = {
+	#People's army attacker tactic
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		frontage_full = yes
+		has_reserves = yes
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_human_wave_tactics
+	combat_width = 0.5
+	attacker = 0.1
+	defender = 0.1
+}
+
+
+tactic_infantry_charge = {
+	#GBP -> Infantry attacker tactic
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		NOT = {
+			is_fighting_in_terrain = hive_mainhall
+			is_fighting_in_terrain = hive_gate
+			is_fighting_in_terrain = hive_gateclass
+			is_fighting_in_terrain = hive_drift
+			is_fighting_in_terrain = hive_super_mainhall
+		}
+	}
+	active = no
+	base = {
+		factor = 4
+	}
+	picture = tactic_infantry_charge
+	attacker = 0.1
+	defender = -0.05
+}

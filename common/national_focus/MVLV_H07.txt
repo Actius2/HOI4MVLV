@@ -1,0 +1,10 @@
+focus_tree = {
+	id = surgut_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			TAG = H07
+		}
+	}
+}

@@ -1,0 +1,509 @@
+characters = {
+
+
+	EUR_Daw = {
+#アーサー・ダウディング
+		name = EUR_Daw
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EUR_Daw_pic
+				small = GFX_EUR_Daw_pic_small
+			}
+		}
+		field_marshal = {
+			traits = {
+				inflexible_strategist
+				brilliant_strategist
+				war_hero
+				career_officer
+				trait_cautious
+				media_personality
+				harsh_leader
+				armor_officer
+				true_genius
+				commander_aptitude
+				
+				defensive_doctrine
+				unyielding_defender
+				organisational_leader
+				inspirational_leader
+				
+				engineer_officer
+
+			}
+			
+			skill = 5
+			
+			attack_skill = 4
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Alexander = {
+#エリー・アレクサンダー
+		name = EUR_Alexander
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EUR_Alexander_pic
+				small = GFX_EUR_Alexander_pic_small
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+			
+				inflexible_strategist
+				brilliant_strategist
+				war_hero
+				career_officer
+				trait_cautious
+				media_personality
+				harsh_leader
+				cavalry_officer
+				commander_aptitude
+				
+				
+				offensive_doctrine
+				skilled_staffer
+				trickster
+				panzer_leader
+				commando
+				naval_invader
+				
+				engineer_officer
+
+			}
+			
+			skill = 4
+			
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+
+	EUR_Villefried = {
+#ヴィルフリート・アイヒベルガー
+		name = EUR_Villefried
+		portraits = {
+			army = {
+				large = GFX_EUR_Villefried_pic
+				small = GFX_EUR_Villefried_pic_small
+			}
+		}
+		
+		field_marshal = {
+			traits = {
+				media_personality
+				brilliant_strategist
+				inflexible_strategist
+				war_hero
+				career_officer
+				trait_cautious	
+				tsf_officer
+				commander_aptitude
+				MVLV_TEF_lineage
+				
+				tsf_leader
+				tsf_commander
+				offensive_doctrine
+				expert_delegator
+			}
+			
+			skill = 7
+			
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 6
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Sieglinde = {
+#ジークリンデ・フォン・ファーレンホルスト
+		name = EUR_Sieglinde
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EUR_Sieglinde_pic
+				small = GFX_EUR_Sieglinde_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				inflexible_strategist
+				war_hero
+				career_officer
+				trait_cautious
+				tsf_officer
+				commander_aptitude
+				MVLV_TEF_lineage
+				
+				tsf_leader
+				tsf_commander
+				
+				defensive_doctrine
+				thorough_planner
+				
+			}
+			
+			skill = 7
+			
+			attack_skill = 4
+			defense_skill = 6
+			planning_skill = 6
+			logistics_skill = 6
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Gerhard = {
+#ゲルハルト・ララーシュタイン
+		name = EUR_Gerhard
+		
+		portraits = {
+			army = {
+				large = GFX_EUR_Gerhard_pic
+				small = GFX_EUR_Gerhard_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				MVLV_TEF_lineage
+				war_hero
+				true_genius
+				commander_aptitude
+				tsf_officer
+				tsf_leader
+				tsf_commander
+				trickster
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	EUR_Brigitte = {
+#ブリギッテ・ヴェスターナッハ
+		name = EUR_Brigitte
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EUR_Brigitte_pic
+				small = GFX_EUR_Brigitte_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				MVLV_TEF_lineage
+				career_officer
+				harsh_leader
+				tsf_officer
+				tsf_leader
+			}
+			
+			skill = 5
+			
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Bernadette = {
+#ベルナデット・リヴィエール
+		name = EUR_Bernadette
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EUR_Bernadette_pic
+				small = GFX_EUR_Bernadette_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				media_personality
+				brilliant_strategist
+				harsh_leader
+				organizer
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 7
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Ilfriede = {
+#イルフリーデ・フォイルナー
+		name = EUR_Ilfriede
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EUR_Ilfriede_pic
+				small = GFX_EUR_Ilfriede_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				inflexible_strategist
+				MVLV_TEF_lineage
+				trait_reckless
+				tsf_officer
+				trickster
+			}
+			
+			skill = 5
+			
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Lunateresia = {
+#ルナテレジア・ヴィッツレーベン
+		name = EUR_Lunateresia
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EUR_Lunateresia_pic
+				small = GFX_EUR_Lunateresia_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+			
+				inflexible_strategist
+				MVLV_TEF_lineage
+				trait_cautious
+				
+				tsf_officer
+				trait_engineer
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Helgarose = {
+#ヘルガローゼ・フォン・ファルケンマイヤー
+		name = EUR_Helgarose
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EUR_Helgarose_pic
+				small = GFX_EUR_Helgarose_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				brilliant_strategist
+				MVLV_TEF_lineage
+				trait_cautious
+				tsf_officer
+				commando
+			}
+			
+			skill = 5
+			
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Stella = {
+#ステラ・ブレーメル
+		name = EUR_Stella
+		
+		gender = female
+		portraits = {
+		
+			army = {
+				large = GFX_EUR_Stella_pic
+				small = GFX_EUR_Stella_pic_small
+			}
+			
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+
+	EUR_Wolfgang = {
+#ヴォルフガング・ブラウアー
+		name = EUR_Wolfgang
+		
+		portraits = {
+			army = {
+				large = GFX_EUR_Wolfgang_pic
+				small = GFX_EUR_Wolfgang_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+			
+				MVLV_TEF_lineage
+				tsf_officer
+				trait_reckless
+				
+			}
+			
+			skill = 2
+			
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Winston = {
+#ヒュー・ウィンストン
+		name = EUR_Winston
+		
+		portraits = {
+			army = {
+				large = GFX_EUR_Winston_pic
+				small = GFX_EUR_Winston_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				commander_aptitude
+				tsf_officer
+				
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	EUR_Auvergne = {
+#ヴィヴィアン・D・オービニュ
+		name = EUR_Auvergne
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EUR_Auvergne_pic
+				small = GFX_EUR_Auvergne_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			 traits = {
+			 
+			 	tsf_officer
+				
+			 }
+			 
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+}

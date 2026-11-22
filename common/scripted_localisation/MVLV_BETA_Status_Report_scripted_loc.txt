@@ -1,0 +1,1310 @@
+
+defined_text = {
+    name = H01_scripted_loc
+    text = {
+        trigger = {
+            BET = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = BET_broken_original_hive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            BET = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = BET_broken_original_hive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            BET = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = BET_broken_original_hive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            BET = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = BET_broken_original_hive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+
+#hive_thinning_state
+
+}
+
+defined_text = {
+    name = H02_scripted_loc
+    text = {
+        trigger = {
+            H02 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H02 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H02 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H02 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+
+defined_text = {
+    name = H03_scripted_loc
+    text = {
+        trigger = {
+            H03 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H03 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H03 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H03 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H04_scripted_loc
+    text = {
+        trigger = {
+            H04 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H04 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H04 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H04 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H05_scripted_loc
+    text = {
+        trigger = {
+            H05 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H05 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H05 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H05 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H06_scripted_loc
+    text = {
+        trigger = {
+            H06 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H06 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H06 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H06 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H07_scripted_loc
+    text = {
+        trigger = {
+            H07 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H07 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H07 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H07 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H08_scripted_loc
+    text = {
+        trigger = {
+            H08 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H08 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H08 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H08 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H09_scripted_loc
+    text = {
+        trigger = {
+            H09 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H09 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H09 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H09 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H10_scripted_loc
+    text = {
+        trigger = {
+            H10 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H10 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H10 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H10 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H11_scripted_loc
+    text = {
+        trigger = {
+            H11 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H11 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H11 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H11 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H12_scripted_loc
+    text = {
+        trigger = {
+            H12 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H12 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H12 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H12 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H13_scripted_loc
+    text = {
+        trigger = {
+            H13 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H13 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H13 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H13 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H14_scripted_loc
+    text = {
+        trigger = {
+            H14 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H14 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H14 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H14 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H15_scripted_loc
+    text = {
+        trigger = {
+            H15 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H15 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H15 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H15 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+
+defined_text = {
+    name = H16_scripted_loc
+    text = {
+        trigger = {
+            H16 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H16 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H16 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H16 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H17_scripted_loc
+    text = {
+        trigger = {
+            H17 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H17 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H17 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H17 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H18_scripted_loc
+    text = {
+        trigger = {
+            H18 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H18 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H18 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H18 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H19_scripted_loc
+    text = {
+        trigger = {
+            H19 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H19 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H19 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H19 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H20_scripted_loc
+    text = {
+        trigger = {
+            H20 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H20 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H20 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H20 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+
+defined_text = {
+    name = H21_scripted_loc
+    text = {
+        trigger = {
+            H21 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H21 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H21 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H21 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H22_scripted_loc
+    text = {
+        trigger = {
+            H22 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H22 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H22 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H22 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H23_scripted_loc
+    text = {
+        trigger = {
+            H23 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H23 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H23 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H23 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H24_scripted_loc
+    text = {
+        trigger = {
+            H24 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H24 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H24 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H24 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H25_scripted_loc
+    text = {
+        trigger = {
+            H25 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H25 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H25 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H25 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+defined_text = {
+    name = H26_scripted_loc
+    text = {
+        trigger = {
+            H26 = {
+				has_idea = mvlv_aggressive_beta
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_A_F_KEY
+    }
+    text = {
+        trigger = {
+            H26 = {
+				has_idea = mvlv_aggressive_beta
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_A_N_KEY
+    }
+    text = {
+        trigger = {
+            H26 = {
+				NOT = { has_idea = mvlv_aggressive_beta }
+				has_idea = mvlv_brokenhive
+			}
+        }
+        localization_key = MVLV_N_F_KEY
+    }
+    text = {
+        trigger = {
+            H26 = {
+				has_country_flag = MVLV_aggressive_preparation_flag
+				NOT = { has_idea = mvlv_brokenhive }
+			}
+        }
+        localization_key = MVLV_P_N_KEY
+    }
+    text = { localization_key = MVLV_N_N_KEY }
+}
+
+#############
+defined_text = {
+    name = H01_scripted_thinning_loc
+    text = {
+        trigger = {
+            BET = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H02_scripted_thinning_loc
+    text = {
+        trigger = {
+            H02 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H03_scripted_thinning_loc
+    text = {
+        trigger = {
+            H03 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H04_scripted_thinning_loc
+    text = {
+        trigger = {
+            H04 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H05_scripted_thinning_loc
+    text = {
+        trigger = {
+            H05 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H06_scripted_thinning_loc
+    text = {
+        trigger = {
+            H06 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H07_scripted_thinning_loc
+    text = {
+        trigger = {
+            H07 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H08_scripted_thinning_loc
+    text = {
+        trigger = {
+            H08 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H09_scripted_thinning_loc
+    text = {
+        trigger = {
+            H09 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H10_scripted_thinning_loc
+    text = {
+        trigger = {
+            H10 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H11_scripted_thinning_loc
+    text = {
+        trigger = {
+            H11 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H12_scripted_thinning_loc
+    text = {
+        trigger = {
+            H12 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H13_scripted_thinning_loc
+    text = {
+        trigger = {
+            H13 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H14_scripted_thinning_loc
+    text = {
+        trigger = {
+            H14 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H15_scripted_thinning_loc
+    text = {
+        trigger = {
+            H15 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H16_scripted_thinning_loc
+    text = {
+        trigger = {
+            H16 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H17_scripted_thinning_loc
+    text = {
+        trigger = {
+            H17 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H18_scripted_thinning_loc
+    text = {
+        trigger = {
+            H18 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H19_scripted_thinning_loc
+    text = {
+        trigger = {
+            H19 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H20_scripted_thinning_loc
+    text = {
+        trigger = {
+            H20 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H21_scripted_thinning_loc
+    text = {
+        trigger = {
+            H21 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H22_scripted_thinning_loc
+    text = {
+        trigger = {
+            H22 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H23_scripted_thinning_loc
+    text = {
+        trigger = {
+            H23 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H24_scripted_thinning_loc
+    text = {
+        trigger = {
+            H24 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H25_scripted_thinning_loc
+    text = {
+        trigger = {
+            H25 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}
+defined_text = {
+    name = H26_scripted_thinning_loc
+    text = {
+        trigger = {
+            H26 = { has_idea = hive_thinning_state }
+        }
+        localization_key = MVLV_hive_thinning_key
+    }
+    text = { localization_key = MVLV_not_hive_thinning_key }
+}

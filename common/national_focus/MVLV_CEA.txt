@@ -1,0 +1,933 @@
+# focus_tree = {
+	# id = CEA_focus_tree
+	# country = {
+		# factor = 0
+		# modifier = {
+			# add = 10
+			# tag = CEA
+		# }
+	# }
+	# default = no
+	# continuous_focus_position = {
+		# x = 20
+		# y = 1000
+	# }
+	# reset_on_civilwar = no
+	# shared_focus = common_refugee_tech_sharing
+	# shared_focus = common_adopt_powered_suits
+	# shared_focus = common_experience_of_BETA_war
+	# shared_focus = common_refugee_support_request
+	# focus = {
+		# id = CEA_start
+		# icon = GFX_goal_generic_demand_territory
+		# x = 20
+		# y = 0
+		# mutually_exclusive = {
+			# focus = CEA_request
+		# }
+		# cost = 8
+		# available = {
+			# NOT = {
+				# has_idea = betawar_situation_4
+			# }
+			# NOT = {
+				# has_idea = betawar_situation_3
+			# }
+		# }
+		# completion_reward = {
+			# add_political_power = 300
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_man
+		# icon = GFX_focus_generic_steel
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_start
+		# prerequisite = {
+			# focus = CEA_start
+		# }
+		# cost = 4
+		# #select_effect = { }
+		# completion_reward = {
+			# add_offsite_building = {
+				# type = arms_factory
+				# level = 5
+			# }
+			# add_war_support = 0.05
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_mans
+		# icon = GFX_focus_generic_tank_production
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_man
+		# prerequisite = {
+			# focus = CEA_man
+		# }
+		# cost = 8
+		# #select_effect = { }
+		# completion_reward = {
+			# remove_ideas = SOA_happy
+			# replace_civ_with_arms_factories = yes
+			# if = {
+				# limit = {
+					# has_dlc = "No Step Back"
+				# }
+
+			# }
+			# else = {
+				# add_equipment_to_stockpile = {
+					# producer = EUR
+					# type = tsf_equipment_JA-37
+					# amount = 500
+				# }
+			# }
+			# add_war_support = 0.05
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_nous
+		# icon = GFX_focus_generic_strike_at_democracy3
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_mans
+		# prerequisite = {
+			# focus = CEA_mans
+		# }
+		# bypass = {
+			# has_completed_focus = SOA_Unity
+		# }
+		# cost = 8
+		# available = {
+			# NOT = {
+				# has_idea = betawar_situation_4
+			# }
+			# NOT = {
+				# has_idea = betawar_situation_3
+			# }
+		# }
+		# completion_reward = {
+			# add_tech_bonus = {
+				# bonus = 4.5
+				# uses = 1
+				# name = mech_army_bonus
+				# category = MVLV_tsf_tech
+			# }
+			# remove_ideas = mvlv_saast
+			# add_timed_idea = {
+				# idea = SOA_usa
+				# days = 365
+			# }
+			# CEA = {
+				# country_event = mvlv_soa.1
+			# }
+			# USA = {
+				# country_event = mvlv_soa.2
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_nouni
+		# icon = GFX_focus_AST_war_japan
+		# x = -1
+		# y = 1
+		# relative_position_id = CEA_nous
+		# prerequisite = {
+			# focus = CEA_nous
+		# }
+		# mutually_exclusive = {
+			# focus = CEA_yesus
+		# }
+		# cost = 10
+		# completion_reward = {
+			# add_research_slot = 1
+			# add_doctrine_cost_reduction = {
+				# name = land_doctrine
+				# cost_reduction = 0.7
+				# uses = 3
+				# category = land_doctrine
+			# }
+			# add_tech_bonus = {
+				# name = "CEA focus bonus"
+				# bonus = 2.5
+				# uses = 3
+				# category = MVLV_tsf_tech
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_noatom
+		# icon = GFX_focus_generic_support_the_left_right
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_nouni
+		# prerequisite = {
+			# focus = CEA_nouni
+		# }
+		# cost = 5
+		# completion_reward = {
+			# every_owned_state = {
+				# add_extra_state_shared_building_slots = 5
+			# }
+			# add_ideas = SOA_nosaast
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_yesus
+		# icon = GFX_goal_molotov_ribbentrop_pact
+		# x = 2
+		# y = 1
+		# relative_position_id = CEA_nous
+		# prerequisite = {
+			# focus = CEA_nous
+		# }
+		# mutually_exclusive = {
+			# focus = CEA_nouni
+		# }
+		# cost = 4
+		# completion_reward = {
+			# add_ideas = mvlv_license
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_tsf
+		# icon = GFX_goal_generic_national_unity
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_yesus
+		# prerequisite = {
+			# focus = CEA_yesus
+		# }
+		# cost = 8
+		# completion_reward = {
+			# add_political_power = -300
+			# if = {
+				# limit = {
+					# has_dlc = "No Step Back"
+				# }
+
+			# }
+			# else = {
+				# add_equipment_to_stockpile = {
+					# type = tsf_equipment_F-15E
+					# amount = 850
+					# producer = UNI
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 2
+		# }
+	# }
+	# focus = {
+		# id = CEA_yeswar
+		# icon = GFX_focus_generic_strike_at_democracy1
+		# x = -1
+		# y = 1
+		# relative_position_id = CEA_tsf
+		# prerequisite = {
+			# focus = CEA_tsf
+		# }
+		# #mutually_exclusive = { focus = CEA_nowar }
+		# cost = 8
+		# completion_reward = {
+			# add_doctrine_cost_reduction = {
+				# name = land_doctrine
+				# cost_reduction = 0.6
+				# uses = 3
+				# category = land_doctrine
+			# }
+			# add_war_support = 0.1
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_nowar
+		# icon = GFX_focus_generic_the_giant_wakes
+		# x = 1
+		# y = 1
+		# relative_position_id = CEA_tsf
+		# prerequisite = {
+			# focus = CEA_tsf
+		# }
+		# #mutually_exclusive = { focus = CEA_yeswar }
+		# cost = 8
+		# completion_reward = {
+			# add_stability = 0.2
+			# add_political_power = 200
+			# random_owned_controlled_state = {
+				# add_extra_state_shared_building_slots = 15
+				# add_building_construction = {
+					# type = arms_factory
+					# level = 15
+					# instant_build = yes
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 2
+		# }
+	# }
+	# focus = {
+		# id = CEA_request
+		# icon = GFX_focus_chi_mission_to_the_us
+		# x = 27
+		# y = 0
+		# mutually_exclusive = {
+			# focus = CEA_start
+		# }
+		# cost = 8
+		# completion_reward = {
+			# add_political_power = 300
+		# }
+		# ai_will_do = {
+			# factor = 5
+		# }
+	# }
+	# focus = {
+		# id = CEA_mediation
+		# icon = GFX_goal_generic_territory_or_war
+		# x = -1
+		# y = 1
+		# relative_position_id = CEA_request
+		# prerequisite = {
+			# focus = CEA_request
+		# }
+		# cost = 8
+		# available = {
+			# has_idea = betawar_situation_1
+		# }
+		# completion_reward = {
+			# remove_ideas = mvlv_saast
+			# remove_ideas = SOA_happy
+		# }
+		# ai_will_do = {
+			# factor = 5
+		# }
+	# }
+	# focus = {
+		# id = CEA_refugee
+		# icon = GFX_goal_generic_national_unity
+		# x = 1
+		# y = 1
+		# relative_position_id = CEA_request
+		# prerequisite = {
+			# focus = CEA_request
+		# }
+		# cost = 8
+		# available = {
+			# has_idea = mvlv_saast
+		# }
+		# completion_reward = {
+			# add_war_support = 0.3
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_conscription
+		# icon = GFX_goal_generic_production
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_refugee
+		# prerequisite = {
+			# focus = CEA_refugee
+		# }
+		# cost = 8
+		# available = {
+			# has_idea = mvlv_saast
+		# }
+		# completion_reward = {
+			# add_war_support = 0.2
+			# random_owned_controlled_state = {
+				# add_extra_state_shared_building_slots = 10
+				# add_building_construction = {
+					# type = arms_factory
+					# level = 10
+					# instant_build = yes
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_UNI_forces
+		# icon = GFX_focus_AST_never_gallipoli
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_conscription
+		# prerequisite = {
+			# focus = CEA_conscription
+		# }
+		# cost = 8
+		# available = {
+			# has_idea = mvlv_saast
+		# }
+		# completion_reward = {
+			# add_tech_bonus = {
+				# name = "CEA focus bonus"
+				# bonus = 3.5
+				# uses = 3
+				# category = MVLV_tsf_tech
+			# }
+			# add_war_support = 0.4
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_XM3
+		# icon = GFX_goal_tripartite_pact
+		# x = 2
+		# y = 1
+		# relative_position_id = CEA_UNI_forces
+		# prerequisite = {
+			# focus = CEA_UNI_forces
+		# }
+		# cost = 8
+		# available = {
+			# has_idea = mvlv_saast
+		# }
+		# completion_reward = {
+			# CEA = {
+				# load_oob = CEA_tsf
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# id = CEA_unification
+		# icon = GFX_goal_tfv_generic_tech_sharing
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_UNI_forces
+		# prerequisite = {
+			# focus = CEA_UNI_forces
+		# }
+		# cost = 8
+		# available = {
+			# is_subject = no
+			# has_idea = mvlv_saast
+		# }
+		# completion_reward = {
+			# add_doctrine_cost_reduction = {
+				# name = land_doctrine
+				# cost_reduction = 0.8
+				# uses = 4
+				# category = land_doctrine
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# # id = 中美难民工人
+		# id = CEA_RefugeeLabourers
+		# icon = GFX_goal_generic_production2
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_noatom
+		# prerequisite = {
+			# focus = CEA_noatom
+		# }
+		# cost = 4
+		# completion_reward = {
+			# every_owned_state = {
+				# add_extra_state_shared_building_slots = 5
+			# }
+			# add_ideas = MVLV_refugee_labor
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	
+	
+	# #######
+	# focus = {
+		# id = CEA_Unity
+		# icon = GFX_goal_molotov_ribbentrop_pact
+		# cost = 1
+		# available = {
+			# OR = {
+				# #AFR={NOT={controls_state = 462}}
+				# EEA = {
+					# NOT = {
+						# controls_state = 805
+					# }
+				# }
+				# EUR = {
+					# NOT = {
+						# controls_state = 101
+					# }
+				# }
+				# USA = {
+					# NOT = {
+						# controls_state = 631
+					# }
+				# }
+			# }
+		# }
+		# x = 28
+		# y = 6
+		# completion_reward = {
+			# remove_ideas = mvlv_saast
+			# remove_ideas = SOA_happy
+			# country_event = mvlv_LA.2
+			# hidden_effect = {
+				# set_cosmetic_tag = Latin_America
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 100
+		# }
+	# }
+	# focus = {
+		# # id = 紧急动员
+		# id = CEA_EmergencyMobilization
+		# icon = GFX_goal_generic_production2
+		# x = -2
+		# y = 1
+		# relative_position_id = CEA_Unity
+		# prerequisite = {
+			# focus = CEA_Unity
+		# }
+		# cost = 1
+		# completion_reward = {
+			# add_stability = -0.1
+			# add_manpower = 1000000
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# # id = 购买退役战术机
+		# id = CEA_PurchaseRetiredTSF
+		# icon = GFX_goal_generic_production2
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_Unity
+		# prerequisite = {
+			# focus = CEA_Unity
+		# }
+		# cost = 2
+		# completion_reward = {
+			# add_political_power = -300
+			# if = {
+				# limit = {
+					# has_dlc = "No Step Back"
+				# }
+
+			# }
+			# else = {
+				# add_equipment_to_stockpile = {
+					# type = tsf_equipment_T94
+					# amount = 600
+					# producer = UNI
+				# }
+				# add_equipment_to_stockpile = {
+					# type = tsf_equipment_F-15E
+					# amount = 600
+					# producer = USA
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# # id = 吸收流亡卫士
+		# id = CEA_AbsorbExiledPilots
+		# icon = GFX_goal_generic_production2
+		# x = 2
+		# y = 1
+		# relative_position_id = CEA_Unity
+		# prerequisite = {
+			# focus = CEA_Unity
+		# }
+		# cost = 2
+		# completion_reward = {
+			# add_political_power = -300
+			# if = {
+				# limit = {
+					# has_dlc = "No Step Back"
+				# }
+
+			# }
+			# else = {
+				# add_equipment_to_stockpile = {
+					# producer = UNI
+					# type = tsf_equipment_F-5EADV
+					# amount = 1000
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# #id = 新卫士训练基地
+		# id = CEA_NewTSFPilotTrainingCentre
+		# icon = GFX_goal_generic_production2
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_AbsorbExiledPilots
+		# prerequisite = {
+			# focus = CEA_AbsorbExiledPilots
+		# }
+		# available = {
+			# check_variable = {
+				# 卫士训练规模 > 100
+			# }
+		# }
+		# cost = 4
+		# completion_reward = {
+			# add_to_variable = {
+				# 卫士训练规模 = 200
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# # id = 要求战术机生产许可
+		# id = CEA_DemandTSFProductionLicense
+		# icon = GFX_goal_generic_production2
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_PurchaseRetiredTSF
+		# prerequisite = {
+			# focus = CEA_PurchaseRetiredTSF
+		# }
+		# cost = 5
+		# completion_reward = {
+			# remove_ideas = mvlv_license
+			# add_ideas = MVLV_unconditional_tsf_license
+			# if = {
+				# limit = {
+					# has_dlc = "No Step Back"
+				# }
+
+			# }
+			# if = {
+				# limit = {
+					# NOT = {
+						# has_dlc = "No Step Back"
+					# }
+				# }
+				# set_technology = {
+					# USA_F-15E = 1
+					# UNI_T94 = 1
+					# USA_F-18EF = 1
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 50
+		# }
+	# }
+	# focus = {
+		# # id = 接收科研机构转移
+		# id = CEA_AcceptExternalResearchers
+		# icon = GFX_goal_generic_production2
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_DemandTSFProductionLicense
+		# prerequisite = {
+			# focus = CEA_DemandTSFProductionLicense
+		# }
+		# cost = 4
+		# completion_reward = {
+			# add_ideas = MVLV_gathered_researchers
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# # id = 修筑防卫线
+		# id = CEA_ConstructDefenceLine
+		# icon = GFX_goal_generic_production2
+		# x = 4
+		# y = 1
+		# relative_position_id = CEA_Unity
+		# prerequisite = {
+			# focus = CEA_Unity
+		# }
+		# cost = 5
+		# completion_reward = {
+			# 484 = {
+				# add_building_construction = {
+					# type = bunker
+					# province = 12461
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 13215
+					# level = 4
+					# instant_build = yes
+				# }
+			# }
+			# 483 = {
+				# add_building_construction = {
+					# type = bunker
+					# province = 12833
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 2069
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 8012
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 5071
+					# level = 4
+					# instant_build = yes
+				# }
+			# }
+			# 482 = {
+				# add_building_construction = {
+					# type = bunker
+					# province = 10809
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 8097
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 2037
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 12897
+					# level = 4
+					# instant_build = yes
+				# }
+			# }
+			# 480 = {
+				# add_building_construction = {
+					# type = bunker
+					# province = 2104
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 12811
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 2060
+					# level = 4
+					# instant_build = yes
+				# }
+				# add_building_construction = {
+					# type = bunker
+					# province = 10769
+					# level = 4
+					# instant_build = yes
+				# }
+			# }
+			# 479 = {
+				# add_building_construction = {
+					# type = bunker
+					# province = 5015
+					# level = 4
+					# instant_build = yes
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# # id = 加固节点
+		# id = CEA_ReinforceStrategicStrongholds
+		# icon = GFX_goal_generic_production2
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_ConstructDefenceLine
+		# prerequisite = {
+			# focus = CEA_ConstructDefenceLine
+		# }
+		# cost = 4
+		# completion_reward = {
+			# 512 = {
+				# add_building_construction = {
+					# type = coastal_bunker
+					# province = 12952
+					# level = 6
+					# instant_build = yes
+				# }
+			# }
+			# 498 = {
+				# add_building_construction = {
+					# type = coastal_bunker
+					# province = 2227
+					# level = 6
+					# instant_build = yes
+				# }
+			# }
+			# 484 = {
+				# add_building_construction = {
+					# type = coastal_bunker
+					# province = 12736
+					# level = 6
+					# instant_build = yes
+				# }
+			# }
+			# 685 = {
+				# add_building_construction = {
+					# type = bunker
+					# province = 7617
+					# level = 6
+					# instant_build = yes
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 20
+		# }
+	# }
+	# focus = {
+		# # id = 紧急转化军工
+		# id = CEA_EmergencyCivilianFactoryConscription
+		# icon = GFX_goal_generic_production2
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_EmergencyMobilization
+		# prerequisite = {
+			# focus = CEA_EmergencyMobilization
+		# }
+		# cost = 4
+		# completion_reward = {
+			# random_owned_controlled_state = {
+				# add_extra_state_shared_building_slots = 3
+				# add_building_construction = {
+					# type = arms_factory
+					# level = 3
+					# instant_build = yes
+				# }
+			# }
+			# random_owned_controlled_state = {
+				# add_extra_state_shared_building_slots = 3
+				# add_building_construction = {
+					# type = arms_factory
+					# level = 3
+					# instant_build = yes
+				# }
+			# }
+			# random_owned_controlled_state = {
+				# add_extra_state_shared_building_slots = 3
+				# add_building_construction = {
+					# type = arms_factory
+					# level = 3
+					# instant_build = yes
+				# }
+			# }
+			# random_owned_controlled_state = {
+				# add_extra_state_shared_building_slots = 3
+				# add_building_construction = {
+					# type = arms_factory
+					# level = 3
+					# instant_build = yes
+				# }
+			# }
+			# random_owned_controlled_state = {
+				# add_extra_state_shared_building_slots = 3
+				# add_building_construction = {
+					# type = arms_factory
+					# level = 3
+					# instant_build = yes
+				# }
+			# }
+			# random_owned_controlled_state = {
+				# add_extra_state_shared_building_slots = 3
+				# add_building_construction = {
+					# type = arms_factory
+					# level = 3
+					# instant_build = yes
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	# focus = {
+		# # id = 三班倒
+		# id = CEA_AllInProduction
+		# icon = GFX_goal_generic_production2
+		# x = 0
+		# y = 1
+		# relative_position_id = CEA_EmergencyCivilianFactoryConscription
+		# prerequisite = {
+			# focus = CEA_EmergencyCivilianFactoryConscription
+		# }
+		# cost = 4
+		# completion_reward = {
+			# add_stability = -0.1
+			# add_ideas = MVLV_three_shift_system
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+# }

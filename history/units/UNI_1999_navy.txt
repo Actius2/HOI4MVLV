@@ -1,0 +1,274 @@
+﻿
+units = {
+
+	####### NAVAL UNITS #######
+	##### ATRANTIC FLEET #####
+	fleet = {
+		name = "1st Atlantic Fleet"
+		naval_base = 3878
+		task_force = {				
+			name = "1st Squadron"
+			location = 3878
+			ship = { name = "USS Wisconsin" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class"} } }
+			ship = { name = "HMS King George V" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class"} } }
+			ship = { name = "HMS Duke of York" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class"} } }
+		}
+		task_force = {
+			name = "7th squadron" 
+			location = 3878
+			ship = { name = "USS Des Moines" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = UNI version_name = "Mogami Class"} } }
+			ship = { name = "USS Salem" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = UNI version_name = "Mogami Class"} } }
+			ship = { name = "USS Dallas" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = UNI version_name = "Mogami Class"} } }
+			ship = { name = "USS Newport" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = UNI version_name = "Mogami Class"} } }
+		}
+		task_force = {
+			name = "8th Squadron" 
+			location = 3878
+			ship = { name = "USS Worcester" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = UNI version_name = "Mogami Class" } } }
+			ship = { name = "USS Roanoke" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = UNI version_name = "Mogami Class" } } }
+		}
+		task_force = {
+			name = "1st Light Squadron"
+			location = 3878
+			#Flagship
+			ship = { name = "USS Vincennes" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = UNI version_name = "Sendai Class" } } }
+			#第一駆逐隊
+			ship = { name = "USS William V. Pratt" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "USS Dahlgren" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "USS Mahan" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "USS King" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			#第六駆逐隊
+			ship = { name = "USS Kontz" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "USS McDonough" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "USS Ruth" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "USS Farragut" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			#第十一駆逐隊
+			ship = { name = "USS Wilkinson" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "USS Willis A. Lee" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "USS John S. McCain" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "USS Mitscher" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+		}
+		task_force = {
+			name = "5th squadron"
+			location = 3878
+			#Flagship
+			ship = { name = "IJN Yagi" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = UNI version_name = "Sendai Class"} } }
+			#第四駆逐隊
+			ship = { name = "IJN Hatsuyuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "IJN Shirayuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "IJN Mineyuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "IJN Hamayuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			#第九駆逐隊
+			ship = { name = "IJN Isoyuki" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "IJN Sawagiri" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "IJN Asagiri" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "IJN Hamagiri" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			#第十五駆逐隊
+			ship = { name = "IJN Yukiri" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "IJN Umikiri" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "IJN Shimayuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "IJN Matsuyuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+		}
+	}
+	
+	##### 第二艦隊 #####
+	fleet = {
+		name = "2nd Atlantic Fleet"
+		task_force = {
+			name = "4th Squadron" 
+			location = 4180
+			ship = { name = "USS Alaska" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = UNI version_name = "Kongo Class" } } }
+			ship = { name = "USS Guam" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = UNI version_name = "Kongo Class" } } }
+			ship = { name = "USS Hawaii" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = UNI version_name = "Kongo Class" } } }
+			ship = { name = "USS Philippines" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = UNI version_name = "Kongo Class" } } }
+			ship = { name = "USS Puerto Rico" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = UNI version_name = "Kongo Class" } } }
+			ship = { name = "USS Samoa" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = UNI version_name = "Kongo Class" } } }
+		}
+		task_force = {
+			name = "5th Squadron" 
+			base = 4180
+			location = 4180
+			ship = { name = "USS Pensacola" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = UNI version_name = "Mogami Class" } } }
+			ship = { name = "USS Salt Lake City" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = UNI version_name = "Mogami Class" } } }
+		}
+		task_force = {
+			name = "2nd Torpedo Squadron"
+			location = 4180
+			#Flagship
+			ship = { name = "USS Gettysburg" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = UNI version_name = "Sendai Class" } } }
+			#第二駆逐隊
+			ship = { name = "USS Claude V. Ricketts" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Lawrence" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS John King" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Charles F. Adams" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			#第七駆逐隊
+			ship = { name = "USS Parsons" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }		
+			ship = { name = "USS Summers" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Decatur" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS John Paul Jones" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			#第十二駆逐隊
+			ship = { name = "IJN Asashimo" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class" } } }		
+			ship = { name = "IJN Okinami" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class" } } }
+			ship = { name = "IJN Amatsukaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class" } } }
+			ship = { name = "IJN Sazanami" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class" } } }
+		}
+		task_force = {
+			name = "4th Torpedo Squadron"
+			location = 4180
+			#Flagship
+			ship = { name = "USS Yorktown" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = UNI version_name = "Sendai Class" } } }
+			#第十七駆逐隊
+			ship = { name = "IJN Suzunami" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "IJN Kyokujitsu" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "USS Cunningham" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			ship = { name = "USS Joseph Strauss" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class"} } }
+			#第十駆逐隊
+			ship = { name = "USS Berkeley" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }		
+			ship = { name = "USS Buchanan" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "HMAS Sydney" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "HMAS Hobart" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			#第七駆逐隊
+			ship = { name = "USS Orec" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }		
+			ship = { name = "USS Brinkley Bus" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Stickel" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS O'Hare" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+		}
+	}
+	
+	##### 国連太平洋艦隊 #####
+	fleet = {
+		name = "United Nations Far East Fleet	"
+		naval_base = 7169
+		task_force = {
+			name = "第二戦隊"
+			location = 7169
+			ship = { name = "USS New Jersey" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class"} } }
+			ship = { name = "USS Iowa" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class"} } }
+			ship = { name = "USS Missouri" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class" } } }
+			ship = { name = "USS Illinois" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class" } } }
+			ship = { name = "USS Kentucky" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class" } } }
+		}
+		task_force = {
+			name = "6th Squadron" 
+			location = 7169
+			ship = { name = "USS Portland" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = UNI version_name = "Mogami Class" } } }
+			ship = { name = "USS Indianapolis" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = UNI version_name = "Mogami Class" } } }
+		}
+		task_force = {
+			name = "3rd Torpedo Squadron"
+			location = 7169
+			#Flagship
+			ship = { name = "USS Long Beach" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UNI version_name = "Sendai Class" } } }
+			#第二駆逐隊
+			ship = { name = "USS Fechterer" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Damate" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Forest Royal" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Hawkins" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			#第七駆逐隊
+			ship = { name = "USS Duncan" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }		
+			ship = { name = "USS Henry W. Tucker" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Rogers" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Perkins" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			#第十二駆逐隊
+			ship = { name = "USS Vesol" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class" } } }		
+			ship = { name = "USS Realy" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class" } } }
+			ship = { name = "USS Dice" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class" } } }
+			ship = { name = "USS Bordelon" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class" } } }
+			#第二駆逐隊
+			ship = { name = "USS Firth" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Newman K. Perry" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS Floyd B. Parks" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "USS John R. Craig" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+		}
+		task_force = {
+			name = "1st Submarine Squadron" 
+			location = 7169
+			#第一潜水隊
+			ship = { name = "USS Pin" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			ship = { name = "USS Darado" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			ship = { name = "USS Cumber" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			#第三潜水隊
+			ship = { name = "USS Panther" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			ship = { name = "USS Tiburon" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			ship = { name = "USS Barracuda" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			#第五潜水隊
+			ship = { name = "USS Bus" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+			ship = { name = "USS Bonita" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+			ship = { name = "USS Needlefish" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+		}
+		task_force = {
+			name = "2nd Submarine Squadron"
+			location = 7169
+			#第二潜水隊
+			ship = { name = "USS Uni" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			ship = { name = "USS Wolffish" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			ship = { name = "USS Whiting" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			#第四潜水隊
+			ship = { name = "USS Pickerel" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			ship = { name = "USS Grenadier" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			ship = { name = "USS Ulua" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UNI version_name = "Ro-26 Class" } } }
+			#第六潜水隊
+			ship = { name = "USS Wallrus" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+			ship = { name = "USS Amber jack" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+			ship = { name = "USS Volador" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+		}
+	}
+
+	##### 国連地中海艦隊 #####
+	fleet = {
+		name = "Mediterranean fleet"
+		naval_base = 4076
+		task_force = {
+			name = "第二戦隊"
+			location = 4076
+			ship = { name = "FS Clemenceau" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class" } } }
+			ship = { name = "FS Richelieu" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class" } } }
+			ship = { name = "FS Jean Bart" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI version_name = "Yamato Class" } } }
+			ship = { name = "MMI Italy" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI  version_name = "Yamato Class" } } }
+			ship = { name = "MMI Vittorio Veneto" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = UNI  version_name = "Yamato Class" } } }
+		}
+		task_force = {
+			name = "7th squadron" 
+			location = 4076
+			ship = { name = "FGS Berlin" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = UNI version_name = "Mogami Class" } } }
+			ship = { name = "FGS Cologne" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = UNI version_name = "Mogami Class" } } }
+		}
+		task_force = {
+			name = "Third Torpedo Squadron"
+			location = 4076
+			#Flagship
+			ship = { name = "FS Seine" definition = light_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = UNI version_name = "Katori Class" } } }
+			#
+			ship = { name = "HMAS Darwin" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "INS Mumbai" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }		
+			ship = { name = "SNG Singapore" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "HS Athens" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			#
+			ship = { name = "HNLMS Amsterdam" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }		
+			ship = { name = "FNS Helsinki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }		
+			ship = { name = "BNS Brussels" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "SPS Madrid" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			#
+			ship = { name = "NRP Lisbon" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class" } } }
+			ship = { name = "KD Kuala Lumpur" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+			ship = { name = "ROS Bucharest" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }	
+			ship = { name = "UMS Rangoon" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			#
+			ship = { name = "ARA Buenos Aires" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "BRP Manila" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "BRP Leyte" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = UNI version_name = "Fubuki Class" } } }
+			ship = { name = "INS Delhi" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = UNI version_name = "Kagero Class"} } }
+		}
+		task_force = {
+			name = "Transport Submarine Squadron" 
+			location = 4076 
+			#タイフーン型
+			ship = { name = "SOV Dmitry Donskoy" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+			ship = { name = "SOV Vladimir Monomakh" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+			ship = { name = "SOV Simbirsk" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+			ship = { name = "SOV Sevastopol" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+			ship = { name = "SOV Arkhangelsk" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+			ship = { name = "SOV Severstari" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = UNI version_name = "A1/B1 Class" } } }
+		}
+	}
+}

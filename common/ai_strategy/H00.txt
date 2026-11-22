@@ -1,0 +1,15 @@
+
+BET_area_priority = {
+	enable = {
+		original_tag = H00
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 10
+		states = {
+			812
+		}
+		subtract_fronts_from_need = no
+	}
+}

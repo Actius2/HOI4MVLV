@@ -1,0 +1,920 @@
+﻿units = {
+	####ドーバー 3501
+	division = {
+		location = 3501
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light_mod = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "TornadeADV（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 3501
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "JA-37（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 3501
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "JAS-39（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 3501
+		division_template = "TSA Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "TSA Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "TSA Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+
+	division = {
+		location = 3501
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3501
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	
+	##間 11446
+	division = {
+		name = "131TSF Regiment"
+		location = 11446
+		division_template = "TSF Regiment"
+		start_experience_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_maneuver = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "Rafale（欧州）"
+			}
+		}
+	}
+	division = {
+		name = "Zerbers Battalion"
+		location = 11446
+		division_template = "TSF Regiment"
+		start_experience_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_maneuver = {
+				owner = "EUR"
+				creator = SRD
+				version_name = "EF-2000 Trial Model"
+			}
+		}
+	}
+	division = {
+		name = "13th Tactical Dragoon Regiment"
+		location = 11446
+		division_template = "TSF Regiment"
+		start_experience_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_maneuver = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "Rafale（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 11446
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11446
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11446
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11446
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11446
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11446
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+
+	##後ろ 13070
+	division = {
+		location = 13070
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 13070
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 13070
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 13070
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 13070
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 13070
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+
+	####ポーツマス 9458
+	division = {
+		location = 9458
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "JA-37（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 9458
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light_mod = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "TornadeADV（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 9458
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "JAS-39（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 9458
+		division_template = "TSA Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "TSA Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "TSA Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9458
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	
+	## 6489
+	division = {
+		location = 6489
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 6489
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 6489
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 6489
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 6489
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 6489
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+
+	## 507
+	division = {
+		location = 507
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 507
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 507
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 507
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 507
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 507
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+
+	
+	####シチリア  4159
+	division = {
+		location = 4159
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light_mod = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "Mirage2000（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 4159
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light_mod = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "TornadeADV（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 4159
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "JA-37（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 4159
+		division_template = "TSA Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4159
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4159
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4159
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4159
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4159
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4159
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4159
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4159
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4159
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+
+	## 1156
+	division = {
+		location = 1156
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 1156
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 1156
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 1156
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 1156
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+
+	## 4014
+	division = {
+		location = 4014
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4014
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4014
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4014
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 4014
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	
+	## 12047
+	division = {
+		name = "Rain Dance Squadron"
+		location = 12047
+		division_template = "TSF Regiment"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light_mod = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "TornadeADV（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 12047
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 12047
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 12047
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 12047
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 12047
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	
+	####ポートサイド 12049
+	division = {
+		location = 12049
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light_mod = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "Mirage2000（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 12049
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light_mod = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "Mirage2000（欧州）"
+			}
+		}
+	}
+
+	####スエズ 4073
+	division = {
+		location = 4073
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "MirageIII（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 4073
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light_mod = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "Mirage2000（欧州）"
+			}
+		}
+	}
+	
+	
+	####セウタ 9945
+	division = {
+		location = 9945
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "MirageIII（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 9945
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_light_mod = {
+				owner = "EUR"
+				creator = EUR
+				version_name = "Mirage2000（欧州）"
+			}
+		}
+	}
+	division = {
+		location = 9945
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9945
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 9945
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+
+
+	###11374
+	division = {
+		location = 11374
+		division_template = "ASA Division"
+		start_experience_factor = 0.3
+	}
+
+	division = {
+		location = 11374
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Tank Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11374
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	#____________________________________________________________
+
+
+
+
+
+
+}
+
+### Air oob
+air_wings = {
+	125 = {
+		
+		MVLV_AL_shell_equipment_1  = {
+			owner = "EUR"
+			amount = 1000
+		}
+		name = "AL砲撃部隊"
+		
+		
+		transport_plane_equipment_1 = {
+			owner = "EUR"
+			amount = 5
+		}
+		name = "欧州連合宇宙軍"
+		
+		
+		MVLV_shell_equipment_1 = {
+			owner = "EUR"
+			amount = 1000
+		}
+		name = "砲撃部隊"
+		
+	}
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "EUR"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "EUR"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "EUR"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = train_equipment_2
+			creator = "EUR"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_2
+			creator = "EUR"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = rocket_artillery_equipment_1
+			creator = "EUR"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 60
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_equipment_3
+			creator = "EUR"
+		}
+		requested_factories = 15
+		progress = 0.3
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_1_light
+			creator = "EUR" 
+			version_name = "MirageIII（欧州）"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_1_light_mod
+			creator = "EUR" 
+			version_name = "Mirage2000（欧州）"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_1_light_mod
+			creator = "EUR" 
+			version_name = "TornadeADV（欧州）"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_light
+			creator = "EUR" 
+			version_name = "JA-37（欧州）"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_light
+			creator = "EUR" 
+			version_name = "JAS-39（欧州）"
+		}
+		requested_factories = 20
+		progress = 0.1
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_maneuver
+			creator = "EUR" 
+			version_name = "Rafale（欧州）"
+		}
+		requested_factories = 15
+		progress = 0.1
+		efficiency = 40
+	}
+	add_equipment_production = {
+		equipment = {
+			type = tsa_equipment_A-10
+			creator = "EUR"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 60
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_AL_shell_equipment_1
+			creator = "EUR"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_shell_equipment_1
+			creator = "EUR"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = transport_plane_equipment_1
+			creator = "EUR"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 90
+	}
+}

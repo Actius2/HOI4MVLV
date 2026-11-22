@@ -1,0 +1,102 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_doctrine_high_level_warfare_medium"
+		texturefile = "gfx/interface/doctrines/icons/doctrine_assault_infantry.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_all_tsf_medium"
+		texturefile = "gfx/interface/doctrines/icons/regimental_combat_teamsX.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_trench_warfare_medium"
+		texturefile = "gfx/interface/doctrines/icons/peoples_army.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_breakwater_of_humanity_medium"
+		texturefile = "gfx/interface/doctrines/icons/doctrine_defensive_postures.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_artillery_goddess_medium"
+		texturefile = "gfx/interface/doctrines/icons/overwhelming_firepower.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_general_support_medium"
+		texturefile = "gfx/interface/doctrines/icons/regimental_combat_teams.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_thorough_maintenance_medium"
+		texturefile = "gfx/interface/doctrines/icons/tactical_control.dds"
+		alwaystransparent = yes
+	}
+	
+	SpriteType = {
+		name = "GFX_doctrine_mobile_defense_medium"
+		texturefile = "gfx/interface/doctrines/icons/large_front_operations.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_attrition_strategy_medium"
+		texturefile = "gfx/interface/doctrines/icons/continuous_offensive.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_high_rotation_medium"
+		texturefile = "gfx/interface/doctrines/icons/overwhelming_firepower3.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_arms_cooperation_medium"
+		texturefile = "gfx/interface/doctrines/icons/doctrine_armored_infantry_support.dds"
+		alwaystransparent = yes
+	}
+	
+	SpriteType = {
+		name = "GFX_support_tsf_operation_medium"
+		texturefile = "gfx/interface/doctrines/icons/regimental_combat_teams1.dds"
+		alwaystransparent = yes
+	}	
+	SpriteType = {
+		name = "GFX_doctrine_mobile_assault_medium"
+		texturefile = "gfx/interface/doctrines/icons/overwhelming_firepower1.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_close_quarters_combat_medium"
+		texturefile = "gfx/interface/doctrines/icons/overwhelming_firepower2.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_laser_jagd_tactics_medium"
+		texturefile = "gfx/interface/doctrines/icons/mechanised_offensive2.dds"
+		alwaystransparent = yes
+	}
+	
+	SpriteType = {
+		name = "GFX_doctrine_absolute_defense_line_medium"
+		texturefile = "gfx/interface/doctrines/icons/doctrine_great_war_infantry.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_flexible_operation_medium"
+		texturefile = "gfx/interface/doctrines/icons/branch_interoperation.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_thorough_guidance_medium"
+		texturefile = "gfx/interface/doctrines/icons/doctrine_commandos.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_doctrine_comprehensive_support_medium"
+		texturefile = "gfx/interface/doctrines/icons/sp_armored_lc_weapon_fire_control.dds"
+		alwaystransparent = yes
+	}
+}
+

@@ -1,0 +1,11 @@
+# Broken, may fix it later, though it needs a lot of work.
+
+bookmarks = {
+	bookmark = {
+		name = "1973_START_NAME"
+		desc = "1973_START_DESC"
+		date = 2073.1.1.12
+		picture = "GFX_select_date_1939"
+
+	}
+}

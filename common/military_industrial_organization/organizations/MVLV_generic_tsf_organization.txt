@@ -1,0 +1,671 @@
+#MVLV TSF MIO Model
+generic_tsf_organization = {
+	icon = GFX_idea_generic_air_manufacturer_1
+
+	allowed = {
+		always = no # Archetype only - countries using it have their own verisons
+	}
+
+	equipment_type = {
+		MVLV_mio_cat_eq_all_tsf
+	}
+
+	research_categories = {	
+		MVLV_tsf_tech
+	}
+	
+	tree_header_text = {
+		text = mio_header_tsf_original
+		x = 2
+	}
+
+	tree_header_text = {
+		text = mio_header_tsf_basic
+		x = 5
+	}
+
+	tree_header_text = {
+		text = mio_header_tsf_special
+		x = 8
+	}
+
+
+	initial_trait = {
+		name = generic_mio_initial_trait_tsf_designer
+
+		# equipment_bonus = {
+		# 	air_agility = 0.05
+		# 	maximum_speed = 0.05
+		# 	air_attack = 0.05
+		# }
+	}
+
+	# trait = {
+	# 	token = generic_mio_trait_country_original_traits
+	# 	name = generic_mio_trait_country_original_traits
+	# 	icon = GFX_generic_mio_department_icon_plane_fighter_line_efficiency
+
+	# 	position = { x=2 y=0 }
+
+	# 	production_bonus = {
+	# 		production_efficiency_gain_factor = 0.05
+	# 	}
+	# }
+
+	trait = {
+		token = generic_mio_trait_gun_fighter_tsf
+		name = generic_mio_trait_gun_fighter_tsf
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+
+		mutually_exclusive = { generic_mio_trait_CQB_tsf }
+
+		position = { x=4 y=0 }
+		
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			fuel_consumption = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_reliabity_upgrade
+		name = generic_mio_trait_reliabity_upgrade
+		icon = GFX_generic_mio_trait_icon_reliability
+
+
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_gun_fighter_tsf
+
+		all_parents = { generic_mio_trait_gun_fighter_tsf }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_CQB_tsf
+		name = generic_mio_trait_CQB_tsf
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		mutually_exclusive = { generic_mio_trait_gun_fighter_tsf }
+
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_gun_fighter_tsf
+
+		equipment_bonus = {
+			breakthrough = 0.1
+			maximum_speed = 0.05
+			fuel_consumption = -0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_ammo_package_upgrade
+		name = generic_mio_trait_ammo_package_upgrade
+		icon = GFX_generic_mio_trait_icon_defense
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_CQB_tsf
+
+		all_parents = { generic_mio_trait_CQB_tsf }
+
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_base_production_upgrade
+		name = generic_mio_trait_base_production_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_gun_fighter_tsf
+
+		any_parent = { generic_mio_trait_gun_fighter_tsf generic_mio_trait_CQB_tsf }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_armour_upgrade
+		name = generic_mio_trait_armour_upgrade
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+
+		position = { x=-2 y=1 }
+		relative_position_id = generic_mio_trait_base_production_upgrade
+
+		all_parents = { generic_mio_trait_base_production_upgrade }
+
+		mutually_exclusive = { generic_mio_trait_gun_upgrade generic_mio_trait_production_upgrade }
+
+		equipment_bonus = {
+			armor_value = 0.1
+			defense = 0.075
+			maximum_speed = -0.01
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_gun_upgrade
+		name = generic_mio_trait_gun_upgrade
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_base_production_upgrade
+
+		all_parents = { generic_mio_trait_base_production_upgrade }
+
+		mutually_exclusive = { generic_mio_trait_armour_upgrade generic_mio_trait_production_upgrade }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.05
+			fuel_consumption = 0.01
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_production_upgrade
+		name = generic_mio_trait_production_upgrade
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x=2 y=1 }
+		relative_position_id = generic_mio_trait_base_production_upgrade
+
+		all_parents = { generic_mio_trait_base_production_upgrade }
+
+		mutually_exclusive = { generic_mio_trait_armour_upgrade generic_mio_trait_gun_upgrade }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.01
+			production_efficiency_cap_factor = 0.03
+			production_cost_factor = -0.03
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_armour_upgrade_2
+		name = generic_mio_trait_armour_upgrade_2
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_armour_upgrade
+
+		any_parent = { generic_mio_trait_armour_upgrade generic_mio_trait_gun_upgrade generic_mio_trait_production_upgrade }
+
+		mutually_exclusive = { generic_mio_trait_gun_upgrade_2 generic_mio_trait_production_upgrade_2 }
+
+		equipment_bonus = {
+			armor_value = 0.1
+			defense = 0.075
+			maximum_speed = -0.01
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_gun_upgrade_2
+		name = generic_mio_trait_gun_upgrade_2
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_gun_upgrade
+
+		any_parent = { generic_mio_trait_armour_upgrade generic_mio_trait_gun_upgrade generic_mio_trait_production_upgrade }
+
+		mutually_exclusive = { generic_mio_trait_armour_upgrade_2 generic_mio_trait_production_upgrade_2 }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.05
+			fuel_consumption = 0.01
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_production_upgrade_2
+		name = generic_mio_trait_production_upgrade_2
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_production_upgrade
+
+		any_parent = { generic_mio_trait_armour_upgrade generic_mio_trait_gun_upgrade generic_mio_trait_production_upgrade }
+
+		mutually_exclusive = { generic_mio_trait_armour_upgrade_2 generic_mio_trait_gun_upgrade_2 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.01
+			production_efficiency_cap_factor = 0.03
+			production_cost_factor = -0.03
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_agility_upgrade
+		name = generic_mio_trait_agility_upgrade
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_armour_upgrade_2
+
+		any_parent = { generic_mio_trait_armour_upgrade_2 generic_mio_trait_gun_upgrade_2 generic_mio_trait_production_upgrade_2 }
+
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_antihuman_upgrade
+		name = generic_mio_trait_antihuman_upgrade
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_gun_upgrade_2
+
+		any_parent = { generic_mio_trait_armour_upgrade_2 generic_mio_trait_gun_upgrade_2 generic_mio_trait_production_upgrade_2 }
+
+		equipment_bonus = {
+			ap_attack = 0.08
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_cutting_resource_production_upgrade
+		name = generic_mio_trait_cutting_resource_production_upgrade
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_production_upgrade_2
+
+		any_parent = { generic_mio_trait_armour_upgrade_2 generic_mio_trait_gun_upgrade_2 generic_mio_trait_production_upgrade_2 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+			production_resource_penalty_factor = -0.1
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_resource_cutting
+		name = generic_mio_trait_resource_cutting
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x=8 y=0 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.03
+		}
+
+		production_bonus = {
+			production_resource_need_factor = -0.1
+		}
+
+		equipment_bonus = {
+			reliability = -0.1
+		}
+	}
+}
+
+JAP_generic_tsf_design_organization = {
+	include = generic_tsf_organization
+	icon = GFX_idea_nakajima
+
+	allowed = {	
+		OR = {
+			tag = JAP
+			tag = UNI
+		}		
+		has_dlc = "Arms Against Tyranny"
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+	}
+
+	trait = { 
+		token = JAP_hard_controle_tsf_system
+		name = JAP_hard_controle_tsf_system
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		
+		available = {
+			has_mio_size > 1
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+			hardness = -0.05
+		}
+
+		# organization_modifier = {
+			# training_time_factor = 0.05
+		# }
+	}
+}
+
+SOV_generic_tsf_design_organization = {
+	include = generic_tsf_organization
+	icon = GFX_idea_mig_design_bureau
+
+	allowed = {	
+		OR = {
+			tag = EEA
+			tag = SOV
+		}	
+		has_dlc = "Arms Against Tyranny"
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	trait = { 
+		token = SOV_Efficient_Manufacturing
+		name = SOV_Efficient_Manufacturing
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		
+		available = {
+			has_mio_size > 1
+		}
+
+		equipment_bonus = {
+			breakthrough = -0.02
+			defense = -0.01
+			soft_attack = -0.02
+			hard_attack = -0.02
+			armor_value = -0.03
+			build_cost_ic = -0.05
+		}
+
+
+	}
+}
+
+USA_generic_tsf_design_organization = {
+	include = generic_tsf_organization
+	icon = GFX_idea_grumman
+
+	allowed = {	
+		OR = {
+			tag = USA
+			tag = UNI
+		}		
+		has_dlc = "Arms Against Tyranny"
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+		}
+	}
+
+	trait = { 
+		token = USA_Advanced_Tactical_Equipment
+		name = USA_Advanced_Tactical_Equipment
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		
+		available = {
+			has_mio_size > 1
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			breakthrough = 0.05
+			defense = 0.05
+			fuel_consumption = 0.05
+			build_cost_ic = 0.05
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.1
+		}
+
+
+	}
+}
+
+EUR_generic_tsf_design_organization = {
+	include = generic_tsf_organization
+	icon = GFX_idea_supermarine
+
+	allowed = {	
+		OR = {
+			tag = UNI
+			tag = EUR
+			tag = OSE
+			tag = CAN
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
+
+	trait = { 
+		token = EUR_long_term_combat_capability
+		name = EUR_long_term_combat_capability
+		icon = GFX_generic_mio_trait_icon_naval_range
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		
+		available = {
+			has_mio_size > 1
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.07
+			hard_attack = 0.03
+			breakthrough = 0.05
+			fuel_consumption = -0.05
+			build_cost_ic = 0.05
+		}
+	}
+}
+
+AFR_generic_tsf_design_organization = {
+	include = generic_tsf_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+
+	allowed = {	
+		OR = {
+			tag = EEA
+			tag = AFR
+			tag = OSE
+			tag = CAN
+			tag = CEA
+			tag = SOA
+			tag = GEU
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	trait = { 
+		token = AFR_Reinforcement_refurbishment_technology_1
+		name = AFR_Reinforcement_refurbishment_technology_1
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		
+		available = {
+			has_mio_size > 1
+		}
+		limit_to_equipment_type = {
+			MVLV_mio_cat_eq_1st_tsf
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.05
+			soft_attack = 0.06
+			hard_attack = 0.06
+			ap_attack = 0.06
+			defense = 0.06
+			armor_value = 0.06
+			breakthrough = 0.06
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.04
+		}
+
+	}
+
+	trait = { 
+		token = AFR_Reinforcement_refurbishment_technology_2
+		name = AFR_Reinforcement_refurbishment_technology_2
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+
+		position = { x=2 y=1 }
+		
+		available = {
+			is_mio_trait_completed = AFR_Reinforcement_refurbishment_technology_1
+			has_mio_size > 3
+		}
+		limit_to_equipment_type = {
+			MVLV_mio_cat_eq_2nd_tsf
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.05
+			soft_attack = 0.04
+			hard_attack = 0.04
+			ap_attack = 0.04
+			defense = 0.04
+			armor_value = 0.04
+			breakthrough = 0.04
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.04
+		}
+
+
+	}
+
+	trait = { 
+		token = AFR_Reinforcement_refurbishment_technology_3
+		name = AFR_Reinforcement_refurbishment_technology_3
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+
+		position = { x=2 y=2 }
+		
+		available = {
+			is_mio_trait_completed = AFR_Reinforcement_refurbishment_technology_2
+			has_mio_size > 5
+		}
+		limit_to_equipment_type = {
+			MVLV_mio_cat_eq_3rd_tsf
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.05
+			soft_attack = 0.02
+			hard_attack = 0.02
+			ap_attack = 0.02
+			defense = 0.02
+			armor_value = 0.02
+			breakthrough = 0.02
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.04
+		}
+
+
+	}
+}
+
+CHI_generic_tsf_design_organization = {
+	include = generic_tsf_organization
+	icon = GFX_idea_chi_whampoa_military_academy
+	#icon = GFX_idea_CHI_camco
+
+	allowed = {	
+		tag = CHI
+		has_dlc = "Arms Against Tyranny"
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.075
+		}
+	}
+
+	trait = { 
+		token = CHI_close_combat_capability
+		name = CHI_close_combat_capability
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		
+		available = {
+			has_mio_size > 1
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			defense = 0.05
+			armor_value = 0.05
+			breakthrough = 0.05
+			maximum_speed = -0.05
+			build_cost_ic = 0.05
+		}
+
+
+	}
+}

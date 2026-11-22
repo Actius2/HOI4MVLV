@@ -1,0 +1,122 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+GEU_area_priority = {
+	enable = {
+		original_tag = GEU
+		date > 1998.12.31
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = china_mainland
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = -100
+	}
+}
+
+GEU_defend_doctrin = {
+	enable = {
+		original_tag = GEU
+		date > 1998.12.31
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CAN
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = USA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CEA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SOA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SOV
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = OSE
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = EEA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = EUR
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = AFR
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = GEU
+		value = -100
+	}
+}
+

@@ -1,0 +1,40 @@
+
+state={
+	id=800
+	name="STATE_800"
+
+	history = {
+		1999.1.1 = {
+			owner = H15
+			add_core_of = H15
+			
+			victory_points = {
+				4724 100
+			}
+			
+			buildings = {
+				hive = 1
+				radar_station = 1
+				4724 = {
+					bunker = 2
+
+				}
+
+			}
+		}
+		owner = SOV
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = SOV
+		victory_points = { 4724 10 }
+	}
+
+	provinces={
+		1777 1850 4724 4853 7744 7815 10639 10712 12563 12621 12691 
+	}
+	manpower=35000000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

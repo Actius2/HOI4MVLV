@@ -1,0 +1,187 @@
+focus_tree = {
+	id = A_Target_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			TAG = H00
+		}
+	}
+	focus = {
+		id = BET_NF_underground
+		icon = GFX_focus_jap_zaibatsu
+		available = {
+			defficulty_hell_trigger = yes
+		}
+		x = 1
+		y = 0
+
+		cost = 15
+		completion_reward = {
+			set_global_flag = MVLV_underground_flag
+			custom_effect_tooltip = BET_NF_underground_tt
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = BET_NF_tactical_improvements
+		icon = GFX_focus_jap_zaibatsu
+		available = {
+			OR = {
+				defficulty_hard_trigger = yes
+				defficulty_hell_trigger = yes
+			}
+		}
+		x = 4
+		y = 0
+
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = { is_in_faction_with = BET }
+				add_dynamic_modifier = {
+					modifier = "BETA_tactical_improvements"
+				}	
+			}
+			set_variable = { 
+				var = global.BETA_tactical_improv
+				value = 0.01 
+			}
+			set_variable = { 
+				var = global.BETA_alternative_hell_improv
+				value = 0.000
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = BET_NF_super_heavy_laser_SOV
+		icon = GFX_focus_jap_zaibatsu
+		relative_position_id = BET_NF_tactical_improvements
+		available = {
+			AND = {
+				NOT = { has_global_flag = mvlv_alternative_hell_news_flag }
+				defficulty_hell_trigger = yes
+				date > 2001.8.1
+			}
+		}
+		prerequisite = {
+			focus = BET_NF_tactical_improvements
+		}
+		x = 0
+		y = 2
+
+		cost = 2
+		completion_reward = {
+			if = {
+				limit = {
+					797 = { is_controlled_by = H26 }
+				}
+				SOV = {
+					country_event = mvlv_uni.8
+				}
+				797 = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			hidden_effect = {
+				H26 = {
+					division_template = {
+						name = "超重光線級"
+						is_locked = yes
+						division_names_group = BET_SRF_01
+						regiments = {
+							MVLV_beta_srf = {
+								x = 0
+								y = 0
+							}
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Г標的\" division_template = \"超重光線級\" start_experience_factor = 0.5"
+							owner = PREV
+						}
+					}
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = BET_NF_super_heavy_laser_world
+		icon = GFX_focus_jap_zaibatsu
+		relative_position_id = BET_NF_super_heavy_laser_SOV
+		available = {
+		}
+		prerequisite = {
+			focus = BET_NF_super_heavy_laser_SOV
+		}
+		x = 0
+		y = 2
+
+		cost = 6
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { tag = SOV }
+				}
+				country_event = mvlv_uni.8
+			}
+			287 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_in_faction_with = BET
+						NOT = { has_idea = mvlv_brokenhive }
+						NOT = {
+							tag = BET
+							tag = H26
+							tag = H21
+							tag = H22
+						}
+					}
+					division_template = {
+						name = "超重光線級"
+						is_locked = yes
+						division_names_group = BET_SRF_01
+						regiments = {
+							MVLV_beta_srf = {
+								x = 0
+								y = 0
+							}
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Г標的\" division_template = \"超重光線級\" start_experience_factor = 0.5"
+							owner = PREV
+						}
+					}
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+}

@@ -1,0 +1,216 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+EUR_area_priority = {
+	enable = {
+		original_tag = EUR
+		date > 1998.12.31
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = -100
+	}
+}
+
+EUR_defend_doctrine = {
+	enable = {
+		original_tag = EUR
+		date > 1998.12.31
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = EUR
+		value = -100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CAN
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = USA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CEA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SOA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SOV
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = JAP
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = GEU
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = OSE
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CHI
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = AFR
+		value = 100
+	}
+}
+
+
+EUR_sicily_frontline = {
+	enable = {
+		original_tag = EUR
+		date > 1998.12.31
+		has_full_control_of_state = 115
+		NOT = {
+			156 = {
+				is_controlled_by = EUR
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.3
+		states = {
+			115
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+EUR_sicily_secondline = {
+	enable = {
+		original_tag = EUR
+		date > 1998.12.31
+		has_full_control_of_state = 115
+		156 = {
+			is_controlled_by = EUR
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		states = {
+			115
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+
+EUR_channel_frontline = {
+	enable = {
+		original_tag = EUR
+		date > 1998.12.31
+		has_full_control_of_state = 808
+		has_full_control_of_state = 127
+		NOT = {
+			156 = {
+				is_controlled_by = EUR
+			}
+			29 = {
+				is_controlled_by = EUR
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.7
+		states = {
+			808
+			127
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+EUR_channel_secondline = {
+	enable = {
+		original_tag = EUR
+		date > 1998.12.31
+		has_full_control_of_state = 808
+		156 = {
+			is_controlled_by = EUR
+		}
+		29 = {
+			is_controlled_by = EUR
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers	
+		ratio = 0.2
+		states = {
+			808
+			127
+		}
+		subtract_fronts_from_need = yes
+	}
+}

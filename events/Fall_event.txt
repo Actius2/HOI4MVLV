@@ -1,0 +1,99 @@
+﻿###########################
+# turkey Events
+###########################
+
+add_namespace = fall_event
+
+#大東亜用マレー北部
+country_event = {
+	id = fall_event.1
+	title = fall_event.1.t
+	desc = fall_event.1.d
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { tag = GEU }
+				}
+				country_event = fall_event.2
+			}
+		}
+	}
+	option = {
+		name = fall_event.1.a
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = fall_event.1.b
+		trigger = {
+			GEU = { has_doctrine = trench_warfare }
+		}
+		add_manpower = 1000000
+		add_timed_idea = { idea = GEU_beta_resist_idea days = 90 }
+		ai_chance = {
+			base = 1
+		}
+	}	
+}
+#
+country_event = {
+	id = fall_event.2
+	title = fall_event.2.t
+	desc = fall_event.2.d
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+
+	option = {
+		name = fall_event.2.a
+		trigger = {
+			NOT = { tag = JAP }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = fall_event.2.b
+		trigger = {
+			tag = JAP
+		}
+		GEU = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = rocket_artillery_equipment
+				amount = 500
+				producer = JAP
+			}
+		}
+		add_timed_idea = { idea = JAP_GEU_support_idea days = 90 }
+		ai_chance = {
+			base = 1
+		}
+
+	}
+	option = {
+		name = fall_event.2.c
+		trigger = {
+			tag = JAP
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+

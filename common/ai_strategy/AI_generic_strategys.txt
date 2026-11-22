@@ -1,0 +1,314 @@
+# Written by Henrik "Groogy" Hansson
+# Modified by Daniel "Da9L" Sjöberg
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+default_production = {
+	allowed = { always = yes }
+
+	enable = {
+		is_in_faction_with = UNI
+	}
+
+	abort = {
+		always = no
+	}
+    abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 75
+	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = 1
+	}
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = -9999
+	}	
+	ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = -9999
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 1000
+	}
+	ai_strategy = {
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
+	####
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor #アーキタイプ（らしいが記述的にバニラ装備タイプ）types = { ... }<equipment archetype type>
+		value = 80 #比率
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = support
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = rocket
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = air_transport
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = MVLV_TSF_chassis
+		value = 75
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_equipment
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_equipment
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = air_transport
+		value = 1
+	}
+	####
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio #備蓄
+		value = 10
+	}
+
+	#role_ratio ユニットの比率？？？
+	ai_strategy = {
+		type = role_ratio
+		id = tsf
+		value = 70
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry_brigade_artillery
+		value = 0
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor_brigade_artillery
+		value = 19
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = gunship
+		value = 1
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = diver
+		value = 10
+	}
+	#作るユニットの比率？？？空海
+	ai_strategy = {
+		type = unit_ratio
+		id = armor
+		value = 100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 1
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 10
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 1
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 10
+	}
+	ai_strategy = {
+		type = min_wanted_supply_trains
+		value = 300
+	}
+	ai_strategy = {
+		type = min_wanted_supply_trucks
+		value = 30
+	}
+	ai_strategy = {
+		type = land_xp_spend_priority
+		id = division_template
+		value = -100
+	}
+	ai_strategy = {
+		type = land_xp_spend_priority
+		id = upgrade_xp_cutoff
+		value = -100
+	}
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = -100
+	}
+	# ai_strategy = {
+		# type = naval_invasion_supremacy_weight
+		# value = -100
+	# }
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+	ai_strategy = {
+		type = garrison_reinforcement_priority
+		value = -100
+	}
+	ai_strategy = {
+		type = spare_unit_factor
+		value = -100
+	}
+}
+
+default_unit_production = {
+	enable = {
+		NOT = {
+			is_in_faction_with = BET
+		}
+		check_variable = {
+			num_divisions < 200
+		}
+	}
+	abort_when_not_enabled = yes
+	####希望する師団比率？？？
+	ai_strategy = {
+		type = build_army
+		id = tsf
+		value = 80
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry_brigade_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor_brigade_artillery
+		value = 10
+	}
+	ai_strategy = {
+		type = build_army
+		id = diver
+		value = 8
+	}
+	ai_strategy = {
+		type = build_army
+		id = gunship
+		value = 1
+	}
+}
+default_unit_production = {
+	enable = {
+		NOT = {
+			is_in_faction_with = BET
+		}
+		NOT = {
+			check_variable = {
+				num_divisions < 200
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	####希望する師団比率？？？
+	ai_strategy = {
+		type = build_army
+		id = tsf
+		value = -100
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry_brigade_artillery
+		value = -100
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor_brigade_artillery
+		value = -100
+	}
+	ai_strategy = {
+		type = build_army
+		id = diver
+		value = -100
+	}
+	ai_strategy = {
+		type = build_army
+		id = gunship
+		value = -100
+	}
+}

@@ -1,0 +1,58 @@
+﻿
+units = {
+
+	##### ソビエト太平洋艦隊 #####
+	fleet = {
+		name = "Pacific Fleet" 
+		naval_base = 13238 
+		task_force = {
+			name = "1st Fleet" 
+			location = 13238 
+			ship = { name = "SOV Sovietsky Soyuz" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = SOV version_name = "Yamato Class" } } }
+			ship = { name = "SOV Kirov" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Mogami Class"} } }
+			ship = { name = "SOV Kalinin" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Mogami Class"} } }
+			ship = { name = "SOV Yuri Andropov" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Mogami Class"} } }
+		}				
+		task_force = {
+			name = "2nd Fleet" 
+			location = 13238 
+			ship = { name = "SOV Sovietskaya Belorussia" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = SOV version_name = "Yamato Class" } } }
+			ship = { name = "SOV Frunze" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Mogami Class"} } }
+			ship = { name = "SOV Sverdlov" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Mogami Class"} } }
+			ship = { name = "SOV Russia" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Mogami Class"} } }
+		}				
+		task_force = {
+			name = "第三船団" 
+			location = 13238 
+			ship = { name = "SOV Stalingrad" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = SOV version_name = "Kongo Class" } } }
+			ship = { name = "SOV Moscow" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = SOV version_name = "Kongo Class" } } }
+			ship = { name = "SOV Kronstadt" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = SOV version_name = "Kongo Class" } } }
+			ship = { name = "SOV Dzerzhinsky" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Mogami Class"} } }
+			ship = { name = "SOV Zhdanov" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Mogami Class"} } }
+			ship = { name = "SOV Zhelesnyakov" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Mogami Class"} } }
+		}				
+		task_force = {
+			name = "4th Convoy" 
+			location = 13238 
+			#スラヴァ級
+			ship = { name = "SOV Slava" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = SOV version_name = "Sendai Class" } } }
+			ship = { name = "SOV Admiral Hrota Lobov" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = SOV version_name = "Sendai Class" } } }
+			ship = { name = "SOV Chervona Ukraine" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = SOV version_name = "Sendai Class" } } }
+			ship = { name = "SOV Komsomolets" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = SOV version_name = "Sendai Class" } } }
+			#ウダロイ級
+			ship = { name = "SOV Admiral Zakharov" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+			ship = { name = "SOV Admiral Spiridonov" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+			ship = { name = "SOV Admiral Tribble" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }	
+			ship = { name = "SOV Marshal Shaposhnikov" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+			ship = { name = "SOV Admiral Vinogradov" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+			ship = { name = "SOV Admiral Panteleyev" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+			#ソヴレメンヌイ級
+			ship = { name = "SOV Osmotley Terriny" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }		
+			ship = { name = "SOV Boevoy" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+			ship = { name = "SOV Stoiky" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+			ship = { name = "SOV Boorny" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+			ship = { name = "SOV Beast Louie" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+			ship = { name = "SOV Bezboyaznenny" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = SOV version_name = "Fubuki Class" } } }
+		}				
+	}
+} 

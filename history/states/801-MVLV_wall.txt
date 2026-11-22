@@ -1,0 +1,27 @@
+
+state={
+	id=801
+	name="STATE_801" # wall
+	manpower = 1
+	state_category = rural
+	impassable = yes
+
+	history = {
+
+		owner = H00
+
+		victory_points = {
+			13262 5
+		}
+		victory_points = {
+			13263 5
+		}
+		victory_points = {
+			13264 5
+		}
+	}
+
+	provinces={
+		13262 13263 13264
+	}
+}

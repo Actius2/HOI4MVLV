@@ -1,0 +1,18 @@
+focus_tree = {
+	id = SRD_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SRD
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 20
+		y = 1000
+	}
+	reset_on_civilwar = no
+
+
+}

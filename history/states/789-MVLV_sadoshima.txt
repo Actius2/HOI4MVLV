@@ -1,0 +1,65 @@
+state = {
+	id = 789
+	name = "STATE_789"
+	state_category = rural
+	manpower = 35000000
+	
+
+	history = {
+		1999.1.1 = {
+			owner = H21
+			add_core_of = H21
+			buildings = {
+				hive = 1
+			}
+		}
+		add_core_of = JAP
+		owner = JAP
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 10
+			anti_air_building = 3
+			air_base = 1
+			9952 = {
+				bunker = 3
+			}
+			13265 = {
+				bunker = 1		
+			}
+			13266 = {
+				naval_base = 1
+				bunker = 1
+			}
+			13267 = {
+				bunker = 1
+			}
+			13268 = {
+				bunker = 1
+			}
+			13269 = {
+				bunker = 1
+			}
+			13270 = {
+				bunker = 1
+			}
+			13271 = {
+				naval_base = 1
+				bunker = 1
+			}
+			13272 = {
+				naval_base = 1
+				bunker = 1
+			}
+			radar_station = 3
+		}
+		victory_points = {
+			9952
+			100
+		}
+
+	}
+
+	provinces = {
+		9952 13265 13266 13267 13268 13269 13270 13271 13272 
+	}
+}

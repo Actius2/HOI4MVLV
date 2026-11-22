@@ -1,0 +1,1373 @@
+﻿##### OOB #####
+units = {
+	# 第一線兵団
+	division = {
+		location = 4153
+		division_template = "Tank Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 4153
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 4122
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 4122
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1117
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1117
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 4000
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 4000
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 993
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 993
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1182
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1182
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1182
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-16（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1182
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-16（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1113
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-16（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1113
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1113
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4000
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4000
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11374
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11374
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11374
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+
+	division = {
+		location = 3501
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-16（国連）"
+			}
+		}
+	}
+	division = {
+		location = 3501
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 3501
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 9458
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 9458
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-16（国連）"
+			}
+		}
+	}
+	division = {
+		location = 9458
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 540
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 540
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 540
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 540
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 6103
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 6103
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 6103
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 12049
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 12049
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 12049
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-16（国連）"
+			}
+		}
+	}
+	division = {
+		location = 12049
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 9957
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 9957
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 9955
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 9955
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 7214
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 7214
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-16（国連）"
+			}
+		}
+	}
+	division = {
+		location = 10158
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 10158
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1281
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1281
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4744
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4744
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 13063
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 13063
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 13063
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 4073
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4073
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4073
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 9957
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 9957
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 9957
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 11969
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11969
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11969
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 2227
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 2227
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 2227
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 4159
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4159
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "A-01 Itsumi's Valkyries"
+		location = 1182
+		division_template = "TSF Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_maneuver = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "T-94（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1182
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1182
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1182
+		division_template = "TSF Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4J（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1182
+		division_template = "TSF Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4J（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1182
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1182
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1182
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1182
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 4067
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4014
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4014
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 4014
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	#スリランカ
+	#____________________________________________________________
+	division = {
+		location = 10201
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 10201
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-4E（国連）"
+			}
+		}
+	}
+	division = {
+		location = 10201
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	#北極海
+	#____________________________________________________________
+	division = {
+		location = 11047
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy  = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "Mig-23（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11047
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy  = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "Mig-23（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11047
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 11047
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy  = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "Mig-23（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11047
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy  = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "Mig-23（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11047
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "Mig-23（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11047
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "Mig-23（国連）"
+			}
+		}
+	}
+	division = {
+		location = 11047
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	#樺太
+	#____________________________________________________________
+	division = {
+		location = 1742
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy  = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "Mig-23（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1742
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy  = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "Mig-23（国連）"
+			}
+		}
+	}
+	division = {
+		location = 1742
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	#____________________________________________________________
+	division = {
+		name = "1st Diver Division"
+		location = 4287
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "2nd Diver Division"
+		location = 4287
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "3rd Diver Division"
+		location = 4287
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "4th Diver Division"
+		location = 12689
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		name = "5thDiver Division"
+		location = 12689
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		name = "6th Diver Division"
+		location = 12689
+		division_template = "Diver Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		name = "7th Diver Division"
+		location = 5222
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		name = "8th Diver Division"
+		location = 5222
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		name = "9th Diver Division"
+		location = 5222
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		name = "10th Diver Division"
+		location = 7112
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		name = "11th Diver Division"
+		location = 7112
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+	division = {
+		name = "12th Diver Division"
+		location = 7112
+		division_template = "Diver Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "UNI"
+				creator = UNI
+				version_name = "F-15（国連）"
+			}
+		}
+	}
+}
+
+## Air oob
+air_wings = {
+	357 = {
+		# fighter_equipment_1 = {
+		# 	owner = "UNI"
+		# 	amount = 1920
+		# }
+		# name = "砲撃部隊"
+		transport_plane_equipment_1 = {
+			owner = "UNI"
+			amount = 3
+		}
+		name = "United Nations 1st Space Fleet"
+		# CAS_equipment_2 = {
+		# 	owner = "UNI"
+		# 	amount = 1980
+		# }
+		# name = "砲撃部隊"
+	}
+	100 = {
+		# fighter_equipment_1 = {
+		# 	owner = "UNI"
+		# 	amount = 320
+		# }
+		# name = "砲撃部隊"
+		transport_plane_equipment_1 = {
+			owner = "UNI"
+			amount = 3
+		}
+		name = "United Nations 2nd Space Fleet"
+		# CAS_equipment_2 = {
+		# 	owner = "UNI"
+		# 	amount = 380
+		# }
+		# name = "砲撃部隊"
+	}
+	629 = {
+		# fighter_equipment_1 = {
+		# 	owner = "UNI"
+		# 	amount = 320
+		# }
+		# name = "砲撃部隊"
+		transport_plane_equipment_1 = {
+			owner = "UNI"
+			amount = 3
+		}
+		name = "United Nations 3rd Space Fleet"
+		# CAS_equipment_2 = {
+		# 	owner = "UNI"
+		# 	amount = 380
+		# }
+		# name = "砲撃部隊"
+	}
+	543 = {
+	# 	fighter_equipment_1 = {
+	# 		owner = "UNI"
+	# 		amount = 320
+	# 	}
+	# 	name = "砲撃部隊"
+		transport_plane_equipment_1 = {
+			owner = "UNI"
+			amount = 3
+		}
+		name = "United Nations 4th Space Fleet"
+	# 	CAS_equipment_2 = {
+	# 		owner = "UNI"
+	# 		amount = 380
+	# 	}
+	# 	name = "砲撃部隊"
+	}
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "UNI"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "UNI"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "UNI"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = train_equipment_2
+			creator = "UNI"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_2
+			creator = "UNI"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = rocket_artillery_equipment_1
+			creator = "UNI"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 60
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_equipment_3
+			creator = "UNI"
+		}
+		requested_factories = 15
+		progress = 0.3
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_1_heavy
+			creator = "UNI" 
+			version_name = "F-4E（国連）"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_heavy
+			creator = "UNI" 
+			version_name = "F-15E（国連）"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 40
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_heavy
+			creator = "UNI" 
+			version_name = "F-18EF（国連）"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 40
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_light
+			creator = "UNI" 
+			version_name = "F-16（国連）"
+		}
+		requested_factories = 20
+		progress = 0.1
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_maneuver
+			creator = "UNI" 
+			version_name = "T-94（国連）"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 40
+	}
+
+
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_AL_shell_equipment_1
+			creator = "UNI"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_shell_equipment_1
+			creator = "UNI"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = transport_plane_equipment_1
+			creator = "UNI"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 90
+	}
+}

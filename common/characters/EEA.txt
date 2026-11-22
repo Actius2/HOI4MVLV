@@ -1,0 +1,362 @@
+characters = {
+
+	EEA_Melkel = {
+#ドローテ・ザウアー・メルケル
+		name = EEA_Melkel
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EEA_Merukeru_pic
+				small = GFX_EEA_Merukeru_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+				old_guard
+				brilliant_strategist
+				politically_connected
+				war_hero
+				career_officer
+				trait_reckless
+				harsh_leader
+				media_personality
+				infantry_officer
+				cavalry_officer
+
+				
+				commander_aptitude
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+
+	EEA_Gretel = {
+#グレーテル・イェッケルン
+		name = EEA_Gretel
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EEA_Gretel_pic
+				small = GFX_EEA_Gretel_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+				organizer
+				career_officer
+				harsh_leader
+				inflexible_strategist
+				commander_aptitude
+				infantry_officer
+				cavalry_officer
+				armor_officer
+				tsf_officer
+				trickster
+				tsf_leader
+				tsf_commander
+				skilled_staffer
+				expert_delegator
+				urban_assault_specialist
+			}
+			
+			skill = 8
+			
+			attack_skill = 5
+			defense_skill = 7
+			planning_skill = 7
+			logistics_skill = 6
+			
+			legacy_id = -1
+		}
+	}
+	
+	EEA_Annette = {
+#アネット・ホーゼンフェルト
+		name = EEA_Annette
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EEA_Annette_pic
+				small = GFX_EEA_Annette_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				urban_assault_specialist
+				career_officer
+				tsf_officer
+				tsf_leader
+				offensive_doctrine
+				
+			}
+			
+			skill = 7
+			
+			attack_skill = 8
+			defense_skill = 7
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	EEA_Zuzi = {
+#ズーズィ・ツァプ
+		name = EEA_Zuzi
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EEA_Zuzi_pic
+				small = GFX_EEA_Zuzi_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				infantry_leader
+				
+				urban_assault_specialist
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+			
+			legacy_id = -1
+
+		}
+	}
+	
+	EEA_Circe = {
+#キルケ・シュタインホフ
+		name = EEA_Circe
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EEA_Circe_pic
+				small = GFX_EEA_Circe_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				tsf_leader
+				
+				war_hero
+				
+				trait_engineer
+				
+				politically_connected
+				career_officer
+				
+				commander_aptitude
+				tsf_officer
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 7
+			
+			attack_skill = 8
+			defense_skill = 7
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+			visible = {
+				has_character_flag = unlock_character_flag
+			}
+		}
+	}
+	
+	EEA_Joachim = {
+#ヨアヒム・バルク
+		name = EEA_Joachim
+		
+		portraits = {
+			army = {
+				large = GFX_EEA_Joachim_pic
+				small = GFX_EEA_Joachim_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				organizer
+				
+				panzer_leader
+				tsf_officer
+				tsf_leader
+				
+				brilliant_strategist
+				career_officer
+				
+			}
+			
+			skill = 7
+			
+			attack_skill = 6
+			defense_skill = 7
+			planning_skill = 5
+			logistics_skill = 4
+			
+			legacy_id = -1
+			
+			visible = {
+				has_character_flag = unlock_character_flag
+			}
+		}
+	}
+	
+	EEA_Lorelei = {
+#ローレライ・シュヴァルツ
+		name = EEA_Lorelei
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EEA_Lorelei_pic
+				small = GFX_EEA_Lorelei_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			 traits = {
+			 
+			 	tsf_officer
+				
+			 }
+			
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	EEA_Anamaria = {
+#アナマリア・アントネスク（衛士1）
+		name = EEA_Anamaria
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_EEA_Anamaria_pic
+				small = GFX_EEA_Anamaria_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				tsf_leader
+			}
+			
+	skill = 4
+	
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	EEA_Franko = {
+#フランコ・ヴェルサーチ（衛士3）
+		name = EEA_Franko
+		
+
+		portraits = {
+			army = {
+				large = GFX_EEA_Franko_pic
+				small = GFX_EEA_Franko_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				tsf_officer
+				tsf_leader
+			}
+			
+	skill = 3
+	
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	EEA_Graeme = {
+#グレアム・オースティン（衛士2）
+		name = EEA_Graeme
+		
+
+		portraits = {
+			army = {
+				large = GFX_EEA_Graeme_pic
+				small = GFX_EEA_Graeme_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+				tsf_officer
+				tsf_leader
+			}
+			
+	skill = 3
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+}

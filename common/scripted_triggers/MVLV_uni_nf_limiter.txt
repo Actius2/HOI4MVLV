@@ -1,0 +1,17 @@
+MVLV_uni_nf_limiter_script_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = MVLV_uni_nf_limiter_script_tt
+		OR = {
+			OR = {
+				has_idea = MVLV_bocchi
+				is_ai = no
+			}
+			NOT = {
+				AND = {
+					date > 2001.10.22
+					date < 2002.2.01
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+﻿l_english:
+ hive_mainhall:0 "Hive - Great Hall"
+ hive_mainhall_desc:0 "A vast underground structure from the underground stem to the Great Hall. It is believed that the Great Hall contains a reactor."
+ hive_gateclass:0 "Gate Class"
+ hive_gateclass_desc:0 "An organic gate." 
+ hive_drift:0 "Corridor"
+ hive_drift_desc:0 "Hive passageway."
+ hive_gate:0 "Gate"
+ hive_gate_desc:0 "It is used at the entrance to the Hive, when the TSF enters."
+ hive_super_mainhall:0 "Original Hive - Great Hall"
+ hive_super_mainhall_desc:0 "A vast subterranean structure that extends from the underground stalk to the Great Hall. The hall is believed to contain Target A."

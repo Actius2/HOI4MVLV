@@ -1,0 +1,250 @@
+ideas = {
+	country = {
+		#default national spirits
+		EUR_power = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				weekly_manpower = 2000
+				war_support_factor = 0.3
+				special_forces_cap = 0.03
+			}
+		}
+		EUR_eng = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+		EUR_bunker = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.05
+				production_speed_bunker_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.1
+			}
+		}
+
+		EUR_a10_production_line = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				tsa_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+			}
+		}
+
+		EUR_joint_euro_command = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.1
+				max_command_power = 100
+				experience_gain_army = 0.1
+				max_planning = 0.1
+				planning_speed = 0.2
+			}
+		}
+
+		EUR_ja44_tatic = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					air_attack = 0.05
+					defense = 0.1
+					breakthrough = 0.1
+					instant = yes
+				}
+			}
+		}
+
+		EUR_new_knight_training = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				training_time_army_factor = 0.05
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = 0.05
+					instant = yes
+					hard_attack = 0.1
+				}
+			}
+		}
+
+		EUR_advance_field_medic = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				#casualty_trickleback = 0.2
+				experience_loss_factor = -0.2
+			}
+		}
+
+		EUR_tech_collaboration_with_uni = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		EUR_uni = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = UNI
+				cic_to_target_factor = 0.05
+				mic_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.4
+				extra_trade_to_target_factor = 0.2
+				industrial_capacity_factory = 0.05
+			}
+		}
+		AFR_EUR = {
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				min_export = 0.1
+				stability_factor = -0.10
+				industrial_capacity_factory = 0.15
+				production_factory_start_efficiency_factor = 0.3
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		
+#アフリカとの交易
+		
+		EUR_trade_with_africa = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				local_resources_factor = 0.1
+				
+				political_power_gain = 0.1
+
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+				
+			}
+		}
+		#租借地法案 
+		EUR_afr_concession_bill = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_expected_value = -0.10
+			}
+		}
+
+		EEA_generous_aid_from_eur = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_expected_value = -0.1
+			}
+		}
+
+		EUR_aid_the_eea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.05
+			}
+		}
+
+		EUR_improve_mk57_cannon = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					hard_attack = 0.05
+					soft_attack = 0.1
+					build_cost_ic = 0.05
+					instant = yes
+				}
+			}
+		}
+	
+		EUR_the_true_european_union = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.25
+				stability_factor = 0.25
+				special_forces_cap = 0.1
+				industrial_capacity_factory = 0.1
+				army_speed_factor = 0.1
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+		}
+	
+		EUR_modified_human_field_test = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_speed_factor = 0.1
+				army_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		EUR_deploy_modified_human = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		EUR_tatical_exchange = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+	}
+}

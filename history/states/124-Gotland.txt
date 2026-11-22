@@ -1,0 +1,21 @@
+state=
+{
+	id=124
+	name="STATE_124"
+	manpower = 56988
+	
+	state_category = small_island
+	
+	history={
+		owner = H08
+		remove_core_of = H08
+		add_core_of = EUR
+
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces={
+		408 6258
+	}
+}

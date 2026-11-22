@@ -1,0 +1,453 @@
+
+@d1 = 0.75
+@d2 = 0.7
+@d3 = 0.65
+@d4 = 0.6
+@d5 = 0.55
+@d6 = 0.5
+@d7 = 0.45
+@d8 = 0.4
+@d9 = 0.35
+@d10 = 0.3
+
+#ボパール
+H13_offense_doctrine = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+	}
+	abort_when_not_enabled = no
+	abort = { always = no }
+	ai_strategy = {
+		type = area_priority 
+		id = europe
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority 
+		id = australia
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority 
+		id = africa
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority 
+		id = oceania
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority 
+		id = north_america
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority 
+		id = south_america
+		value = -100
+	}
+	ai_strategy = {
+		type = area_priority 
+		id = japan
+		value = -100
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders 
+		id = H13
+		value = -100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = BET
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H02
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H03
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H04
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H05
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H06
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H07
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H08
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H09
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H10
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H11
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H12
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H13
+		value = -100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H14
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H15
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H16
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H17
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H18
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H19
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H20
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H21
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H22
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H23
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H24
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H25
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = H26
+		value = 100
+	}
+}
+
+H13_defend_home = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		OR = {
+			NOT = { BETA_stay_home_trigger = yes }
+			has_idea = mvlv_brokenhive
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 10
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_1 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		check_variable = {
+			num_divisions < 100
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d1
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_2 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		NOT = {
+			check_variable = {
+				num_divisions < 100
+			}
+		}
+		check_variable = {
+			num_divisions < 110
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d2
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_3 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		NOT = {
+			check_variable = {
+				num_divisions < 110
+			}
+		}
+		check_variable = {
+			num_divisions < 120
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d3
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_4 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		NOT = {
+			check_variable = {
+				num_divisions < 120
+			}
+		}
+		check_variable = {
+			num_divisions < 130
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d4
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_5 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		NOT = {
+			check_variable = {
+				num_divisions < 130
+			}
+		}
+		check_variable = {
+			num_divisions < 140
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d5
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_6 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		NOT = {
+			check_variable = {
+				num_divisions < 140
+			}
+		}
+		check_variable = {
+			num_divisions < 150
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d6
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_7 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		NOT = {
+			check_variable = {
+				num_divisions < 150
+			}
+		}
+		check_variable = {
+			num_divisions < 160
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d7
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_8 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		NOT = {
+			check_variable = {
+				num_divisions < 160
+			}
+		}
+		check_variable = {
+			num_divisions < 170
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d8
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_9 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		NOT = {
+			check_variable = {
+				num_divisions < 170
+			}
+		}
+		check_variable = {
+			num_divisions < 200
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d9
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}
+H13_defend_doctrine_10 = {
+	enable = {
+		original_tag = H13
+		date > 1998.12.31
+		BETA_stay_home_trigger = yes
+		NOT = { has_idea = mvlv_brokenhive }
+		NOT = {
+			check_variable = {
+				num_divisions < 200
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = @d10
+		states = {
+			796
+		}
+		subtract_fronts_from_need = no
+	}
+}

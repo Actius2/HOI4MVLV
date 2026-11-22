@@ -1,0 +1,1386 @@
+characters = {
+
+	UNI_Radabinod = {
+#パウル・ラダビノッド
+		name = UNI_Radabinod
+		
+		portraits = {
+			army = {
+				large = GFX_UNI_Radabinod_pic
+				small = GFX_UNI_Radabinod_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				unyielding_defender
+				organizer
+				
+				defensive_doctrine
+				inspirational_leader
+				organisational_leader
+				logistics_wizard
+				
+				trait_cautious
+				
+				inflexible_strategist
+				war_hero
+				
+			}
+			
+			skill = 7
+			
+			attack_skill = 3
+			defense_skill = 7
+			planning_skill = 6
+			logistics_skill = 6
+			
+			legacy_id = -1
+			#id = 602
+		}
+	}
+	
+	UNI_Michiru = {
+#伊隅・みちる
+		name = UNI_Michiru
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Michiru_pic
+				small = GFX_UNI_Michiru_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				MVLV_valkyrie_lineage
+				brilliant_strategist
+				inflexible_strategist
+				tsf_officer
+				commander_aptitude
+				war_hero
+				trait_reckless
+				trickster
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 4
+			
+			legacy_id = 979
+		}
+	}
+	
+	UNI_Mitsuki = {
+#速瀬・水月
+		name = UNI_Mitsuki
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Mitsuki_pic
+				small = GFX_UNI_Mitsuki_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				MVLV_valkyrie_lineage
+				brilliant_strategist
+				harsh_leader
+				offensive_doctrine
+				tsf_officer
+				commander_aptitude
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+			
+			legacy_id = 976
+			
+		}
+	}
+	
+	UNI_Munakata = {
+#宗像・美冴
+		name = UNI_Munakata
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Munakata_pic
+				small = GFX_UNI_Munakata_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				MVLV_valkyrie_lineage
+				inflexible_strategist
+				career_officer
+				tsf_officer
+				commander_aptitude
+				tsf_leader
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = 967
+			
+		}
+	}
+	
+	UNI_Kazama = {
+#風間・祷子
+		name = UNI_Kazama 
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Kazama_pic
+				small = GFX_UNI_Kazama_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				MVLV_valkyrie_lineage
+				trait_engineer
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 2
+			
+			legacy_id = 966
+			
+		}
+	}
+	
+	UNI_Ace = {
+#アラン・エース
+		name = UNI_Ace
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Ace_pic
+				small = GFX_UNI_Ace_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+			
+				infantry_officer
+				tsf_officer
+				trait_reckless
+				
+				brilliant_strategist
+				politically_connected
+				career_officer
+				media_personality
+				harsh_leader
+				armor_officer
+				
+				trickster
+				panzer_leader
+				
+			}
+			skill = 4
+			
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	UNI_Yuuko = {
+#香月・夕呼
+		name = UNI_Yuuko
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Yuuko_pic
+				small = GFX_UNI_Yuuko_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				brilliant_strategist
+				media_personality
+				true_genius
+				politically_connected
+				adaptable
+				organizer
+				logistics_wizard
+				fast_planner
+				thorough_planner
+				offensive_doctrine
+				defensive_doctrine
+				trickster
+				organisational_leader
+				inspirational_leader
+				expert_delegator
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 7
+			logistics_skill = 7
+			
+			legacy_id = 57
+			
+		}
+	}
+	
+	UNI_Irina = {
+#イリーナ・ピアティフ
+		name = UNI_Irina
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Irina_pic
+				small = GFX_UNI_Irina_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				armor_officer
+				media_personality
+				harsh_leader
+				
+			}
+			
+			skill = 2
+			
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	UNI_Usui = {
+#碓氷 大尉
+		name = UNI_Usui
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Usui_pic
+				small = GFX_UNI_Usui_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				inflexible_strategist
+				harsh_leader
+				career_officer
+				tsf_officer
+				commander_aptitude
+				trait_cautious
+				
+				tsf_leader
+				tsf_commander
+				
+				commando
+				urban_assault_specialist
+				jungle_rat
+				adaptable
+				
+				naval_invader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	UNI_Suzumiya = {
+#涼宮・遙
+		name = UNI_Suzumiya
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Suzumiya_pic
+				small = GFX_UNI_Suzumiya_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				MVLV_valkyrie_lineage
+				infantry_officer
+				career_officer
+				armor_officer
+				commander_aptitude
+				trait_cautious
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 5
+			
+			legacy_id = 977
+			
+		}
+	}
+	
+	UNI_Akane = {
+#涼宮・茜
+		name = UNI_Akane
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Akane_pic
+				small = GFX_UNI_Akane_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				MVLV_valkyrie_lineage
+				career_officer
+				tsf_officer
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = 965
+			
+		}
+	}
+	
+	UNI_Kasiwagi = {
+#柏木・晴子
+		name = UNI_Kasiwagi
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Kasiwagi_pic
+				small = GFX_UNI_Kasiwagi_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				MVLV_valkyrie_lineage
+				trait_cautious
+				tsf_officer
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = 978
+			
+		}
+	}
+	
+	UNI_Rebecca = {
+#レベッカ・リント
+		name = UNI_Rebecca
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Rebecca_pic
+				small = GFX_UNI_Rebecca_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				career_officer
+				armor_officer
+				
+				brilliant_strategist
+				politically_connected
+				trait_reckless
+				harsh_leader
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	UNI_Hartwig = {
+#クラウス・ハルトウィック
+		name = UNI_Hartwig
+		
+		portraits = {
+			army = {
+				large = GFX_UNI_Hartwig_pic
+				small = GFX_UNI_Hartwig_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				brilliant_strategist
+				career_officer
+				trait_cautious
+				harsh_leader
+				armor_officer
+				
+				offensive_doctrine
+				aggressive_assaulter
+				
+				panzer_leader
+				panzer_expert
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	UNI_Olson = {
+#オルソン
+		name = UNI_Olson
+		
+		portraits = {
+			army = {
+				large = GFX_UNI_Olson_pic
+				small = GFX_UNI_Olson_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				true_genius
+				
+				politically_connected
+				media_personality
+				
+			}
+			
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	UNI_Marimo = {
+#神宮寺・まりも
+		name = UNI_Marimo
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Marimo_pic
+				small = GFX_UNI_Marimo_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				inflexible_strategist
+				harsh_leader
+				career_officer
+				tsf_officer
+				commander_aptitude
+				
+				war_hero
+				trait_cautious
+				
+				
+				trait_mountaineer
+				adaptable
+				tsf_leader
+				tsf_commander
+				ranger
+				hive_attacker
+				trickster
+				expert_improviser
+				
+				commando
+				
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 7
+			defense_skill = 8
+			planning_skill = 7
+			logistics_skill = 6
+			
+			legacy_id = -1
+		}
+	}
+	
+	UNI_Motoko = {
+#香月・モトコ
+		name = UNI_Motoko
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Motoko_pic
+				small = GFX_UNI_Motoko_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				inflexible_strategist
+				true_genius
+				politically_connected
+				
+			}
+			
+			skill = 2
+			
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	UNI_Henri = {
+#アンリ・ギーシェン
+		name = UNI_Henri
+		
+		portraits = {
+			army = {
+				large = GFX_UNI_Henri_pic
+				small = GFX_UNI_Henri_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				
+				tsf_leader
+				trait_reckless
+				
+				trickster
+				commando
+				paratrooper
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	UNI_Silver = {
+#白銀・武
+		name = UNI_Silver
+		
+		portraits = {
+			army = {
+				large = GFX_UNI_Silver_pic
+				small = GFX_UNI_Silver_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				true_genius
+				tsf_officer
+				MVLV_valkyrie_lineage
+				expert_improviser
+				tsf_leader
+				trickster
+				inspirational_leader
+				war_hero
+				hill_fighter
+				hive_attacker
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 8
+			defense_skill = 8
+			planning_skill = 5
+			logistics_skill = 7
+			
+			legacy_id = 996
+			
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+		}
+	}
+	
+	UNI_Meiya = {
+#御剣・冥夜
+		name = UNI_Meiya
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Meiya_pic
+				small = GFX_UNI_Meiya_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				politically_connected
+				JAP_samurai_lineage
+				infantry_officer
+				ranger
+				trait_engineer
+				fortress_buster
+				tsf_officer
+				tsf_leader
+				hive_attacker
+				MVLV_valkyrie_lineage
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 8
+			defense_skill = 7
+			planning_skill = 6
+			logistics_skill = 8
+			
+			legacy_id = 997
+			
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+		}
+	}
+	
+	UNI_Tizuru = {
+#榊・千鶴
+		name = UNI_Tizuru
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Tizuru_pic
+				small = GFX_UNI_Tizuru_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				politically_connected
+				trait_cautious
+				harsh_leader
+				skilled_staffer
+				organizer
+				commander_aptitude
+				tsf_officer
+				tsf_leader
+				tsf_commander
+				hive_attacker
+				MVLV_valkyrie_lineage
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 8
+			logistics_skill = 8
+			
+			legacy_id = 998
+			
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+			
+		}
+	}
+	
+	UNI_Miki = {
+#珠瀬・壬姫
+		name = UNI_Miki
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Miki_pic
+				small = GFX_UNI_Miki_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				politically_connected
+				commando
+				infantry_leader
+				ambusher
+				tsf_officer
+				tsf_leader
+				hive_attacker
+				MVLV_valkyrie_lineage
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 5
+			defense_skill = 9
+			planning_skill = 6
+			logistics_skill = 8
+			
+			legacy_id = 999
+			
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+			
+		}
+	}
+	
+	UNI_Ayamine = {
+#彩峰・慧
+		name = UNI_Ayamine
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Ayamine_pic
+				small = GFX_UNI_Ayamine_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				politically_connected
+				swamp_fox
+				naval_invader
+				trickster
+				guerilla_fighter
+				tsf_officer
+				tsf_leader
+				hive_attacker
+				MVLV_valkyrie_lineage
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 8
+			defense_skill = 8
+			planning_skill = 3
+			logistics_skill = 9
+			
+			legacy_id = 989
+			
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+			
+		}
+	}
+	
+	UNI_Mikoto = {
+#鎧・美琴
+		name = UNI_Mikoto
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Mikoto_pic
+				small = GFX_UNI_Mikoto_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				politically_connected
+				trait_reckless
+				desert_fox
+				swamp_fox
+				trait_mountaineer
+				hill_fighter
+				jungle_rat
+				ranger
+				urban_assault_specialist
+				adaptable
+				winter_specialist
+				winter_expert
+				tsf_officer
+				tsf_leader
+				hive_attacker
+				MVLV_valkyrie_lineage
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 7
+			logistics_skill = 7
+			
+			legacy_id = -1
+			
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+			
+		}
+	}
+	
+	UNI_00 = {
+#00ユニット
+		name = UNI_00
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_00_pic
+				small = GFX_UNI_00_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				true_genius
+				tsf_officer
+				tsf_leader
+				hive_attacker
+				MVLV_valkyrie_lineage
+				MVLV_trait_00_unit
+				brilliant_strategist
+				inflexible_strategist
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 7
+			logistics_skill = 7
+			
+			legacy_id = 1000
+			
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+			
+		}
+	}
+	
+	
+	UNI_Yuya = {
+#ユウヤ・ブリッジス（イベント）
+		name = UNI_Yuya
+		
+		portraits = {
+			army = {
+				large = GFX_UNI_Yuya_pic
+				small = GFX_UNI_Yuya_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				trickster
+				panzer_leader
+				panzer_expert
+				trait_reckless
+				trait_engineer
+				fortress_buster
+				inflexible_strategist
+				tsf_officer
+				expert_improviser
+				tsf_leader
+				trickster
+				inspirational_leader
+				war_hero
+				hill_fighter
+				MVLV_valkyrie_lineage
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 8
+			defense_skill = 6
+			planning_skill = 8
+			logistics_skill = 6
+			
+			legacy_id = -1
+			
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+		}
+	}
+	
+	UNI_Inia = {
+#イーニア・シェスチナ
+		name = UNI_Inia
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Inia_pic
+				small = GFX_UNI_Inia_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				trickster
+				trait_cautious
+				trait_engineer
+				armor_officer
+				inspirational_leader
+				career_officer
+				true_genius
+				tsf_officer
+				tsf_leader
+				MVLV_valkyrie_lineage
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 8
+			defense_skill = 8
+			planning_skill = 6
+			logistics_skill = 6
+			
+			legacy_id = -1
+			
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+			
+		}
+	}
+	
+	UNI_Latroi = {
+#フィカーツィア・ラトロワ
+		name = UNI_Latroi
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Latroi_pic
+				small = GFX_UNI_Latroi_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				organizer
+				fast_planner
+				winter_specialist
+				armor_officer
+				media_personality
+				war_hero
+				inflexible_strategist
+				brilliant_strategist
+				panzer_leader
+				panzer_expert
+				commander_aptitude
+				tsf_officer
+				tsf_leader
+				tsf_commander
+				
+				MVLV_valkyrie_lineage
+				
+			}
+			
+			skill = 9
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 7
+			logistics_skill = 7
+			
+			legacy_id = -1
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+		}
+	}
+	
+	UNI_Sandark = {
+#イェージ・サンダーク
+		name = UNI_Sandark
+		
+		portraits = {
+			army = {
+				large = GFX_UNI_Sandark_pic
+				small = GFX_UNI_Sandark_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				old_guard
+				organizer
+				thorough_planner
+				politically_connected
+				inflexible_strategist
+				commander_aptitude
+				tsf_officer
+				tsf_leader
+				tsf_commander
+				
+				MVLV_valkyrie_lineage
+				
+			}
+			
+			skill = 9
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 7
+			logistics_skill = 7
+			
+			legacy_id = -1
+			visible = {
+				has_character_flag = UNI_ouka_leader_flag
+			}
+		}
+	}
+	
+	UNI_Yasiro = {
+#社・霞
+		name = UNI_Yasiro
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_UNI_Yasiro_pic
+				small = GFX_UNI_Yasiro_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+			
+				brilliant_strategist
+				true_genius
+				tsf_officer
+				
+				tsf_leader
+				trickster
+
+			}
+			
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+
+			
+		}
+	}
+	
+	
+	
+	UNI_Fisher = {
+#マーガレット・フィッシャー
+		name = UNI_Fisher
+		
+		gender = female
+		portraits = {
+			army = {
+				large = gfx/leaders/UNI/UNI_Fisher_pic.dds
+				small = gfx/leaders/UNI/UNI_Fisher_pic_small.dds
+			}
+		}
+		
+		navy_leader={
+		
+			traits = {
+			
+				ground_pounder 
+				fly_swatter 
+				gentlemanly
+
+			}
+			
+			skill = 5
+		
+			attack_skill = 5
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 4
+			
+			legacy_id= -1
+		}
+	}
+	
+	UNI_Shannon = {
+#シャノン・アレクサンダー
+		name = UNI_Shannon
+		
+		gender = female
+		portraits = {
+			army = {
+				large = gfx/leaders/UNI/UNI_Shannon_pic.dds
+				small = gfx/leaders/UNI/UNI_Shannon_pic_small.dds
+			}
+		}
+		
+		navy_leader = {
+		
+			traits = {
+			
+				fly_swatter
+				cuts_corners
+				bold
+
+			}
+			
+					skill = 5
+		
+					attack_skill = 6
+					defense_skill = 4
+					maneuvering_skill = 3
+					coordination_skill = 3
+			
+			legacy_id= -1
+		}
+	}
+	
+	UNI_Mizuno = {
+#水野・真弓
+		name = UNI_Mizuno
+		
+		gender = female
+		portraits = {
+			army = {
+				large = gfx/leaders/UNI/UNI_Mizuno_pic.dds
+				small = gfx/leaders/UNI/UNI_Mizuno_pic_small.dds
+			}
+		}
+		
+		navy_leader = {
+		
+			traits = {
+			
+				ground_pounder
+
+			}
+			
+					skill = 4
+		
+					attack_skill = 5
+					defense_skill = 2
+					maneuvering_skill = 2
+					coordination_skill = 4
+			
+			legacy_id= -1
+		}
+	}
+	
+	UNI_Waka = {
+#若林・美緒
+		name = UNI_Waka
+		
+		gender = female
+		portraits = {
+			army = {
+				large = gfx/leaders/UNI/UNI_Waka_pic.dds
+				small = gfx/leaders/UNI/UNI_Waka_pic_small.dds
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+					brilliant_strategist
+					politically_connected
+					career_officer
+					trait_cautious
+					armor_officer
+					tsf_officer
+					JAP_samurai_lineage
+					
+					offensive_doctrine
+					inspirational_leader
+					
+					trickster
+					trait_engineer
+					panzer_leader
+					tsf_leader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id= -1
+		}
+	}
+}

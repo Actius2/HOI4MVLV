@@ -1,0 +1,159 @@
+
+leader_traits = {
+	##################################
+	# Common Traits
+	##################################
+	#指揮官特性
+	#指揮数増えるのとは排他にする、元帥にできないようにする。
+	MVLV_1st_unicorns = {
+		type = land
+		trait_type = personality_trait  
+
+		non_shared_modifier = {
+			max_commander_army_size = -8
+			experience_gain_factor = 0.1
+			promote_cost_factor = 999
+		}
+		modifier = {
+			equipment_capture = 0.05
+			sickness_chance = -0.5
+			wounded_chance_factor = -0.5
+			army_attack_factor = -0.05
+			army_defence_factor = -0.05
+		}
+		defense_skill = 1
+		trait_xp_factor = {
+			hive_attacker = 2
+			skilled_staffer = -1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	MVLV_1stx_unicorns = {
+		type = land
+		trait_type = personality_trait 
+
+		non_shared_modifier = {
+			max_commander_army_size = -8
+			experience_gain_factor = 0.1
+			promote_cost_factor = 999
+		}
+		modifier = {
+			equipment_capture = 0.05
+			sickness_chance = -0.5
+			wounded_chance_factor = -0.5
+			army_attack_factor = -0.05
+			army_defence_factor = -0.05
+		}
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+		trait_xp_factor = {
+			hive_attacker = 2
+			skilled_staffer = -1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	MVLV_2nd_unicorns = {
+		type = land
+		trait_type = personality_trait 
+
+		non_shared_modifier = {
+			max_commander_army_size = -9
+			experience_gain_factor = 0.1
+			promote_cost_factor = 999
+		}
+		modifier = {
+			equipment_capture = 0.05
+			sickness_chance = -0.5
+			wounded_chance_factor = -0.5
+			army_attack_factor = -0.10
+			army_defence_factor = -0.10
+		}
+		attack_skill = 1
+		defense_skill = 1
+		trait_xp_factor = {
+			hive_attacker = 2
+			skilled_staffer = -1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	MVLV_3rd_unicorns = {
+		type = land
+		trait_type = personality_trait 
+
+		non_shared_modifier = {
+			max_commander_army_size = -9
+			experience_gain_factor = 0.1
+			promote_cost_factor = 999
+		}
+		modifier = {
+			equipment_capture = 0.05
+			sickness_chance = -0.5
+			wounded_chance_factor = -0.5
+			army_attack_factor = -0.05
+			army_defence_factor = -0.05
+		}
+		attack_skill = 1
+		defense_skill = 1
+		trait_xp_factor = {
+			hive_attacker = 2
+			skilled_staffer = -1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	###########
+	# status traits
+
+	basics_element = {
+		type = all
+		trait_type = status_trait
+		modifier = {
+			modifier_army_sub_unit_category_MVLV_tsf_family_attack_factor = 0.05
+			modifier_army_sub_unit_category_MVLV_tsf_family_defence_factor = 0.05
+		}
+	}
+	basics_element2 = {
+		type = all
+		trait_type = status_trait
+		modifier = {
+			modifier_army_sub_unit_category_MVLV_tsf_family_attack_factor = 0.10
+			modifier_army_sub_unit_category_MVLV_tsf_family_defence_factor = 0.10
+		}
+	}
+	improved_element = {
+		type = all
+		trait_type = status_trait
+		modifier = {
+			modifier_army_sub_unit_category_MVLV_tsf_family_attack_factor = 0.05
+			modifier_army_sub_unit_category_MVLV_tsf_family_defence_factor = 0.05
+		}
+	}
+	advanced_element = {
+		type = all
+		trait_type = status_trait
+		modifier = {
+			modifier_army_sub_unit_category_MVLV_tsf_family_attack_factor = 0.05
+			modifier_army_sub_unit_category_MVLV_tsf_family_defence_factor = 0.05
+		}
+	}
+	special_element = {
+		type = all
+		trait_type = status_trait
+		modifier = {
+			modifier_army_sub_unit_category_MVLV_tsf_family_attack_factor = 0.10
+			modifier_army_sub_unit_category_MVLV_tsf_family_defence_factor = 0.10
+		}
+		#効果時間を延ばすので許可はいらない
+	}
+
+
+}

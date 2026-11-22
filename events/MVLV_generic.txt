@@ -1,0 +1,1895 @@
+﻿add_namespace = mvlv_generic
+#____________________________________________________________
+#用途
+#汎用イベント
+#
+#id:mvlv_generic.1 effect:難易度変更
+#id:mvlv_generic.2 effect:ステート、プロビ名変更
+#id:mvlv_generic.3 effect:ステート、プロビ関連の初期設定
+#id:mvlv_generic.4 effect:ハイヴステートへのリソース追加
+#id:mvlv_generic.5 effect:12.5事件スタートアップ
+#id:mvlv_generic.6 effect:戦略研究会
+#id:mvlv_generic.7 effect:クーデター決起
+#id:mvlv_generic.8 effect:クーデター介入選択
+#id:mvlv_generic.9 effect:クーデター成功率低
+#id:mvlv_generic.10 effect:クーデター成功率高
+#id:mvlv_generic.11 effect:
+#id:mvlv_generic.12 effect:クーデター失敗
+#id:mvlv_generic.13 effect:クーデター成功
+#id:mvlv_generic.14 effect:殿下死亡
+#id:mvlv_generic.15 effect:難易度変更
+#id:mvlv_generic.16 effect:戦死モード変更
+#id:mvlv_generic.33 effect:オーナー移譲
+#id:mvlv_generic.34 effect:G弾系イベント
+
+#id:mvlv_generic.40 effect:全体難易度変更
+#id:mvlv_generic.99 effect:プレイヤー数カウント
+#id:mvlv_generic.997～999 effect:更新履歴（ディシジョン）
+#
+#____________________________________________________________
+# 難易度選択イベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.0
+	title = mvlv_generic.0.t
+	desc = mvlv_generic.0.d
+	picture = GFX_mvlv_start_event
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.0.a
+	}
+}
+
+country_event = {
+	id = mvlv_generic.100
+	title = mvlv_generic.100.t
+	desc = mvlv_generic.100.d
+	picture = GFX_mvlv_start_event
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.100.a
+		trigger = {
+			NOT = {
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = mvlv_generic.100.b
+		trigger = {
+			TAG = USA
+		}
+		USA = {
+			country_event = mvlv_usa.101
+		}
+	}
+}
+
+country_event = {
+	id = mvlv_generic.1
+	title = mvlv_generic.1.t
+	desc = mvlv_generic.1.d
+	picture = GFX_mvlv_start_event
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = mvlv_difficulty_flag
+		}
+	}
+	#easy
+	option = {
+		name = mvlv_generic.1.a
+		trigger = {
+			is_in_faction_with = UNI
+			is_ai = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = mvlv_difficulty_select_flag }
+			}
+			news_event = mvlv_news.15
+			every_country = {
+				limit = { is_in_faction_with = UNI }
+				if = {
+					limit = { is_ai = no }
+					set_country_flag = mvlv_difficulty_select_flag
+					add_manpower = 100000
+					MVLV_all_difficulty_clr_script_effect = yes
+					add_ideas = mvlv_difficulty_easy
+					#政治力ボーナス
+					add_political_power = 50
+					army_experience = 20
+					capital_scope = {
+						create_unit = {
+							division = "division_template = \"Tank Division\" start_experience_factor = 0.1"
+							owner = ROOT
+							count = 5
+						}
+						create_unit = {
+							division = "division_template = \"TSF Division\" start_experience_factor = 0.1"
+							owner = ROOT
+						}
+						create_unit = {
+							division = "division_template = \"TSF Division\" start_experience_factor = 0.1"
+							owner = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	#nomal
+	option = {
+		name = mvlv_generic.1.b
+		trigger = {
+			is_in_faction_with = UNI
+			is_ai = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = mvlv_difficulty_select_flag }
+			}
+			news_event = mvlv_news.15
+			every_country = {
+				limit = { is_in_faction_with = UNI }
+				if = {
+					limit = { is_ai = no }
+					set_country_flag = mvlv_difficulty_select_flag
+					MVLV_all_difficulty_clr_script_effect = yes
+					add_ideas = mvlv_difficulty_normal
+					add_ideas = MVLV_denial_of_delusion
+				}
+			}
+		}
+	}
+	#hard
+	option = {
+		name = mvlv_generic.1.c
+		trigger = {
+			is_in_faction_with = UNI
+			is_ai = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = mvlv_difficulty_select_flag }
+			}
+			news_event = mvlv_news.15
+			every_country = {
+				limit = { is_in_faction_with = UNI }
+				if = {
+					limit = { is_ai = no }
+					set_country_flag = mvlv_difficulty_select_flag
+					MVLV_all_difficulty_clr_script_effect = yes
+					add_ideas = mvlv_difficulty_hard
+					add_ideas = MVLV_denial_of_delusion
+				}
+			}
+		}
+	}
+	#hell
+	option = {
+		name = mvlv_generic.1.e
+		trigger = {
+			is_in_faction_with = UNI
+			is_ai = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = mvlv_difficulty_select_flag }
+			}
+			news_event = mvlv_news.15
+			every_country = {
+				limit = { is_in_faction_with = UNI }
+				if = {
+					limit = { is_ai = no }
+					set_country_flag = mvlv_difficulty_select_flag
+					MVLV_all_difficulty_clr_script_effect = yes
+					add_ideas = mvlv_difficulty_unlimited
+					add_ideas = MVLV_denial_of_delusion
+					if = {
+						limit = { 
+							has_global_flag = mvlv_alternative_hell_flag
+							NOT = { has_global_flag = mvlv_alternative_hell_news_flag }
+						}
+						hidden_effect = {
+							news_event = mvlv_news.11
+							set_global_flag = mvlv_alternative_hell_news_flag
+							set_variable = { 
+								var = global.BETA_alternative_hell_improv
+								value = 0.000 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#ai
+	option = {
+		name = mvlv_generic.1.m
+		ai_chance = {
+			factor = 200
+		}
+		trigger = {
+			is_in_faction_with = UNI
+			is_ai = yes
+		}
+		add_ideas = mvlv_difficulty_ai
+	}
+	option = {
+		name = mvlv_generic.1.n
+		ai_chance = {
+			factor = 200
+		}
+		trigger = {
+			is_in_faction_with = BET
+			# is_ai = yes
+		}
+		add_ideas = mvlv_difficulty_beta
+		if = {
+			limit = {
+				BETA_stay_home_trigger = yes
+				NOT = { tag = H21 }
+				NOT = { tag = H22 }
+			}
+			MVLV_BETA_start_deploy100_effect = yes
+		}
+		if = {
+			limit = {
+				NOT = { tag = H21 }
+				NOT = { tag = H22 }
+				NOT = { tag = BET }
+			}
+			MVLV_AI_bunker = yes
+		}
+		set_major = yes
+
+	}
+	option = {
+		name = mvlv_generic.1.o
+		ai_chance = {
+			factor = 200
+		}
+		trigger = {
+			tag = H00
+		}
+		add_ideas = mvlv_difficulty_beta
+		set_major = yes
+
+	}
+	option = {
+		name = mvlv_generic.1.p
+		ai_chance = {
+			factor = 200
+		}
+		trigger = {
+			NOT = {
+				is_in_faction_with = BET
+				is_in_faction_with = UNI
+				tag = H00
+			}
+			is_ai = no
+		}
+		add_ideas = mvlv_difficulty_ai
+		set_major = yes
+
+	}
+	option = {
+		name = mvlv_generic.1.q
+		ai_chance = {
+			factor = 200
+		}
+		trigger = {
+			NOT = {
+				is_in_faction_with = BET
+				is_in_faction_with = UNI
+				tag = H00
+			}
+			is_ai = yes
+		}
+		add_ideas = mvlv_difficulty_ai
+		set_major = yes
+	}
+}
+
+# 開始時にステート名や人的リソース等を変更
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.2
+	desc = mvlv_generic.2.d
+	title = mvlv_generic.2.t
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		country_event = mvlv_generic.3
+		country_event = mvlv_generic.4
+	}
+}
+
+# ステート、プロビ関連の初期設定
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.3
+	desc = mvlv_generic.3.d
+	title = mvlv_generic.3.t
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+
+		############プロヴィンス名############
+		set_province_name = {
+			id = 30
+			name = provi_Rovaniemi_Hive
+		}
+		set_province_name = {
+			id = 1630
+			name = provi_Dunhuang_Hive
+		}
+		set_province_name = {
+			id = 1492
+			name = provi_Mandalay_Hive
+		}
+		set_province_name = {
+			id = 4687
+			name = provi_Nogginsk_Hive
+		}
+		set_province_name = {
+			id = 4724
+			name = provi_Krasnoyarsk_Hive
+		}
+		set_province_name = {
+			id = 4801
+			name = provi_Ulaanbaatar_Hive
+		}
+		set_province_name = {
+			id = 4817
+			name = provi_Surgut_Hive
+		}
+		set_province_name = {
+			id = 5029
+			name = provi_Mashhad_Hive
+		}
+		set_province_name = {
+			id = 6613
+			name = provi_Lyon_Hive
+		}
+		set_province_name = {
+			id = 6999
+			name = provi_Chongqing_Hive
+		}
+		set_province_name = {
+			id = 7070
+			name = provi_Cheorwon_Hive
+		}
+		set_province_name = {
+			id = 7765
+			name = provi_Oryokminsk_Hive
+		}
+		set_province_name = {
+			id = 9130
+			name = provi_Verisk_Hive
+		}
+		set_province_name = {
+			id = 9660
+			name = provi_Budapest_Hive
+		}
+		set_province_name = {
+			id = 9952
+			name = provi_Sado_Hive
+		}
+		set_province_name = {
+			id = 10235
+			name = provi_Ekibastuz_Hive
+		}
+		set_province_name = {
+			id = 10540
+			name = provi_Evensk_Hive
+		}
+		set_province_name = {
+			id = 11370
+			name = provi_Minsk_Hive
+		}
+		set_province_name = {
+			id = 11537
+			name = provi_Uralisk_Hive
+		}
+		set_province_name = {
+			id = 11995
+			name = provi_Bhopal_Hive
+		}
+		set_province_name = {
+			id = 12549
+			name = provi_Verkhoyansk_Hive
+		}
+		set_province_name = {
+			id = 4859
+			name = provi_Hatanga_Hive
+		}
+		set_province_name = {
+			id = 13218
+			name = provi_Yokohama_Hive
+		}
+		#喀什ハイヴ
+		set_province_name = {
+			id = 13254
+			name = provi_Original_Hive
+		}
+		set_province_name = {
+			id = 13252
+			name = provi_Drift
+		}
+		set_province_name = {
+			id = 13248
+			name = provi_Main_Hall
+		}
+		set_province_name = {
+			id = 13251
+			name = provi_Drift
+		}
+		set_province_name = {
+			id = 13253
+			name = provi_Drift
+		}
+		set_province_name = {
+			id = 13256
+			name = provi_Drift
+		}
+		set_province_name = {
+			id = 13249
+			name = provi_SW115
+		}
+		set_province_name = {
+			id = 13250
+			name = provi_Gate
+		}
+		set_province_name = {
+			id = 13255
+			name = provi_Gate
+		}
+		set_province_name = {
+			id = 13257
+			name = provi_Gate
+		}
+		set_province_name = {
+			id = 13258
+			name = provi_Hall
+		}
+		set_province_name = {
+			id = 13259
+			name = provi_Hall
+		}
+		set_province_name = {
+			id = 13260
+			name = provi_Hall
+		}
+		set_province_name = {
+			id = 13261
+			name = provi_Hall
+		}
+		#____________________________________________________________
+		set_province_name = {
+			id = 3878
+			name = provi_UN_Headquarters
+		}
+		set_province_name = {
+			id = 9377
+			name = provi_UN_base_Guadeloupe
+		}
+		set_province_name = {
+			id = 10641
+			name = provi_Yakutsk
+		}
+		set_province_name = {
+			id = 13238
+			name = provi_Selawik
+		}
+		set_province_name = {
+			id = 13241
+			name = provi_Wrangel_Base
+		}
+		set_province_name = {
+			id = 13244
+			name = provi_UN_Yukon_Base
+		}
+		set_province_name = {
+			id = 7381
+			name = provi_Jakarta
+		}
+		set_province_name = {
+			id = 11960
+			name = provi_Kyoto
+		}
+
+	}
+}
+
+#____________________________________________________________
+#リソース追加イベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.4
+	desc = mvlv_generic.4.d
+	title = mvlv_generic.4.t
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = BET
+						is_owned_by = H26
+						is_owned_by = H25
+						is_owned_by = H24
+						is_owned_by = H23
+						is_owned_by = H22
+						is_owned_by = H21
+						is_owned_by = H20
+						is_owned_by = H19
+						is_owned_by = H18
+						is_owned_by = H17
+						is_owned_by = H16
+						is_owned_by = H15
+						is_owned_by = H14
+						is_owned_by = H13
+						is_owned_by = H12
+						is_owned_by = H11
+						is_owned_by = H10
+						is_owned_by = H09
+						is_owned_by = H08
+						is_owned_by = H07
+						is_owned_by = H06
+						is_owned_by = H05
+						is_owned_by = H04
+						is_owned_by = H03
+						is_owned_by = H02
+					}
+					is_capital = yes
+				}
+				set_state_category = hive
+				THIS = {
+					add_resource = {
+						type = steel
+						amount = 50
+					}
+					add_resource = {
+						type = oil
+						amount = 50
+					}
+					add_resource = {
+						type = aluminium
+						amount = 50
+					}
+					add_resource = {
+						type = rubber
+						amount = 50
+					}
+					add_resource = {
+						type = tungsten
+						amount = 50
+					}
+					add_resource = {
+						type = chromium
+						amount = 50
+					}
+				}
+			}
+		}
+	}
+}
+
+#12.5事件　スタートアップイベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.5
+	desc = mvlv_generic.5.d
+	title = mvlv_generic.5.t
+	fire_only_once = yes
+
+	trigger = {
+		tag = UNI
+		date > 2001.12.01
+		JAP = {
+			NOT = { has_country_flag = mvlv_jap_stable_government_flag }
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = USA_support_japanese }
+			}
+			USA = {
+				unlock_national_focus = USA_support_japanese
+				set_country_flag = USA_no_support_flag
+			}
+		} 
+
+	}
+	option ={
+		name = mvlv_generic.5.a
+		JAP = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = mvlv_jap_stable_government_flag
+					}
+					NOT = { has_completed_focus = mvlv_jap_nf10 }
+					NOT = { has_completed_focus = mvlv_jap_nf11 }
+				}
+				country_event = mvlv_generic.6
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	# option ={
+		# trigger = {
+			# JAP = {
+				# has_country_flag = mvlv_jap_stable_government_flag
+			# }
+		# }
+		# name = mvlv_generic.5.b
+		# ai_chance = {
+			# base = 0
+		# }
+	# }
+}
+
+#戦略研究会
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.6
+	desc = mvlv_generic.6.d
+	title = mvlv_generic.6.t
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option ={
+		name = mvlv_generic.6.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = mvlv_jap_stable_government_flag
+				}
+				NOT = { has_completed_focus = mvlv_jap_nf10 }
+				NOT = { has_completed_focus = mvlv_jap_nf11 }
+			}
+			add_ideas = JAP_information
+			country_event = mvlv_generic.7
+		}
+	}
+	# option ={
+		# trigger = {
+			# JAP = {
+				# has_country_flag = mvlv_jap_stable_government_flag
+			# }
+		# }
+		# name = mvlv_generic.6.b
+	# }
+}
+
+#クーデター決起イベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.7
+	desc = mvlv_generic.7.d
+	title = mvlv_generic.7.t
+	picture = GFX_mvlv_start_kekki
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		TAG = JAP
+		has_idea = JAP_information
+		NOT = { has_completed_focus = mvlv_jap_nf10 }
+		NOT = { has_completed_focus = mvlv_jap_nf11 }
+		282 = {
+			is_controlled_by = JAP
+		}
+		792 = {
+			is_controlled_by = UNI
+		}
+	}
+	
+	option ={
+		trigger = {
+			USA = {
+				NOT = { has_country_flag = USA_no_support_flag }
+			}
+		}
+		name = mvlv_generic.7.a
+		USA = { country_event = mvlv_generic.8 }
+	}
+	option = {
+		trigger = {
+			USA = {
+				has_country_flag = USA_no_support_flag
+			}
+		}
+		name = mvlv_generic.7.a
+		JAP = { country_event = mvlv_generic.10 }
+	}
+}
+
+#クーデター介入選択イベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.8
+	desc = mvlv_generic.8.d
+	title = mvlv_generic.8.t
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.8.a
+		JAP = {
+			country_event = mvlv_generic.9
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		name = mvlv_generic.8.b
+		JAP = {
+			country_event = mvlv_generic.10
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+#クーデター成功率低
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.9
+	desc = mvlv_generic.9.d
+	title = mvlv_generic.9.t
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option ={
+		name = mvlv_generic.9.a
+		random_list = {
+			75 = { country_event = { id = mvlv_generic.12 days = 1 } }
+			20 = { country_event = { id = mvlv_generic.13 days = 1 } }
+			5 = { country_event = { id = mvlv_generic.14 days = 1 } }
+		}
+	}
+}
+
+#クーデター成功率高
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.10
+	desc = mvlv_generic.10.d
+	title = mvlv_generic.10.t
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option ={
+		name = mvlv_generic.10.a
+		random_list = {
+			5 = { country_event = { id = mvlv_generic.12 days = 1 } }#success
+			20 = { country_event = { id = mvlv_generic.13 days = 1 } }#failure
+			75 = { country_event = { id = mvlv_generic.14 days = 1 } }#failure
+		}
+	}
+}
+
+#クーデター失敗
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.12
+	desc = mvlv_generic.12.d
+	title = mvlv_generic.12.t
+	picture = GFX_mvlv_start_good
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option ={
+		name = mvlv_generic.12.a	
+		remove_ideas = JAP_information
+		complete_national_focus = mvlv_jap_nf11
+		if = {
+			limit = {
+				check_variable = { global.var_generalDeathMode = 1 }
+			}
+			retire_character = JAP_Sagiri
+			USA = {
+				retire_character = USA_Walken
+				retire_character = USA_Irma
+			}
+		}
+	}
+}
+
+#クーデター成功
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.13
+	desc = mvlv_generic.13.d
+	title = mvlv_generic.13.t
+	picture = GFX_mvlv_start_bad
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.13.a
+		remove_ideas = JAP_information
+		complete_national_focus = mvlv_jap_nf11
+		USA = {
+			country_event = {
+				id = mvlv_usa.8
+				days = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.var_generalDeathMode = 1
+				}
+			}
+			retire_character = JAP_Mana
+			USA = {
+				retire_character = USA_Walken
+				retire_character = USA_Irma
+			}
+		}
+	}
+}
+
+#殿下死亡
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.14
+	desc = mvlv_generic.14.d
+	title = mvlv_generic.14.t
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option ={
+		name = mvlv_generic.14.a
+
+		add_timed_idea =  { 
+			idea = JAP_killed_shougun
+			days = 365
+		}
+		kill_country_leader = yes
+		complete_national_focus = mvlv_jap_nf10
+		remove_ideas = JAP_information
+		USA = {
+			country_event = {
+				id = mvlv_usa.9
+				days = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.var_generalDeathMode = 1
+				}
+			}
+			retire_character = JAP_Sagiri
+			retire_character = JAP_denka
+			retire_character = JAP_Mana
+			USA = {
+				retire_character = USA_Walken
+				USA_Walken2 = {
+					set_character_flag = unlock_character_flag
+				}
+			}
+		}
+	}
+}
+
+#難易度変更
+#マルチ途中参加者向け
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.15
+	title = mvlv_generic.15.t
+	desc = mvlv_generic.15.d
+	picture = GFX_mvlv_start_event
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.1.a
+		ai_chance = {
+			factor = 0
+		}
+		MVLV_all_difficulty_clr_script_effect = yes
+		add_ideas = mvlv_difficulty_easy
+		news_event = mvlv_news.7
+	}
+	option = {
+		name = mvlv_generic.1.b
+		ai_chance = {
+			factor = 0
+		}
+		MVLV_all_difficulty_clr_script_effect = yes
+		add_ideas = mvlv_difficulty_normal
+		news_event = mvlv_news.7
+	}
+	option = {
+		name = mvlv_generic.1.c
+		ai_chance = {
+			factor = 0
+		}
+		MVLV_all_difficulty_clr_script_effect = yes
+		add_ideas = mvlv_difficulty_hard
+		news_event = mvlv_news.7
+	}
+	option = {
+		name = mvlv_generic.1.e
+		ai_chance = {
+			factor = 0
+		}
+		MVLV_all_difficulty_clr_script_effect = yes
+		add_ideas = mvlv_difficulty_unlimited
+		news_event = mvlv_news.7
+	}
+}
+
+#戦死モード変更
+#1:削除（デフォルト）
+#0:削除しない
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.16
+	title = mvlv_generic.16.t
+	desc = mvlv_generic.16.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.16.a
+		set_variable = {
+			global.var_generalDeathMode = 1
+		}
+	}
+	option = {
+		name = mvlv_generic.16.b
+		set_variable = {
+			global.var_generalDeathMode = 0
+		}
+	}
+}
+
+#マブラヴmodへようこそ
+#a:戦術のヒント
+#b:目標のヒント
+#c:閉じる＞＞難易度選択をしていないなら難易度選択へ
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.17
+	title = mvlv_generic.17.t
+	desc = mvlv_generic.17.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.17.a
+		ai_chance = {
+			base = 0			# Never pick this option.
+		}
+		country_event = mvlv_generic.18
+	}
+	option = {
+		name = mvlv_generic.17.b
+		ai_chance = {
+			base = 0			# Never pick this option.
+		}
+		country_event = mvlv_generic.19
+	}
+	option = {
+		name = mvlv_generic.17.c
+		ai_chance = {
+			base = 0			# Never pick this option.
+		}
+		country_event = mvlv_generic.23
+	}
+	option = {
+		name = mvlv_generic.17.e
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = mvlv_difficulty_flag
+				}
+			}
+			country_event = mvlv_generic.1
+		}
+		
+		#削除モードの変更
+		IF = {
+			limit = {
+				is_ai = no
+			}
+			country_event = mvlv_generic.16
+		}
+	}
+}
+
+#戦術のヒント
+#a:閉じる＞＞ようこそへ
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.18
+	title = mvlv_generic.18.t
+	desc = mvlv_generic.18.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.18.a
+		country_event = mvlv_generic.17
+	}
+}
+
+#目標のヒント
+#a:甲21号作戦のヒント
+#b:桜花作戦のヒント
+#c:閉じる＞＞ようこそへ
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.19
+	title = mvlv_generic.19.t
+	desc = mvlv_generic.19.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.19.a
+		ai_chance = {
+			base = 0			# Never pick this option.
+		}
+		country_event = mvlv_generic.20
+	}
+	option = {
+		name = mvlv_generic.19.b
+		ai_chance = {
+			base = 0			# Never pick this option.
+		}
+		country_event = mvlv_generic.21
+	}
+	option = {
+		name = mvlv_generic.19.c
+		ai_chance = {
+			base = 100
+		}
+		country_event = mvlv_generic.17
+	}
+}
+
+#甲21号作戦のヒント
+#a:閉じる＞＞ようこそへ
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.20
+	title = mvlv_generic.20.t
+	desc = mvlv_generic.20.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.20.a
+		country_event = mvlv_generic.19
+	}
+}
+
+#桜花作戦のヒント
+#a:追加のヒント
+#b:閉じる＞＞ようこそへ
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.21
+	title = mvlv_generic.21.t
+	desc = mvlv_generic.21.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.21.a
+		ai_chance = {
+			base = 0			# Never pick this option.
+		}
+		country_event = mvlv_generic.22
+	}
+	option = {
+		name = mvlv_generic.21.b
+		ai_chance = {
+			base = 100
+		}
+		country_event = mvlv_generic.19
+	}
+}
+
+#桜花作戦のヒント2
+#a:閉じる
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.22
+	title = mvlv_generic.22.t
+	desc = mvlv_generic.22.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.22.a
+		country_event = mvlv_generic.21
+	}
+}
+#難易度のヒント
+#a~e:各難易度のヒントへ
+#f:閉じる＞＞ようこそへ
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.23
+	title = mvlv_generic.23.t
+	desc = mvlv_generic.23.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.23.a
+		country_event = mvlv_generic.24
+	}
+	option = {
+		name = mvlv_generic.23.b
+		country_event = mvlv_generic.25
+	}
+	option = {
+		name = mvlv_generic.23.c
+		country_event = mvlv_generic.26
+	}
+	option = {
+		name = mvlv_generic.23.e
+		country_event = mvlv_generic.17
+	}
+	option = {
+		name = mvlv_generic.23.f
+		country_event = mvlv_generic.27
+	}
+}
+#難易度<簡単>のヒント
+#a:閉じる
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.24
+	title = mvlv_generic.24.t
+	desc = mvlv_generic.24.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.24.a
+		country_event = mvlv_generic.23
+	}
+}
+#難易度<普通>のヒント
+#a:閉じる
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.25
+	title = mvlv_generic.25.t
+	desc = mvlv_generic.25.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.25.a
+		country_event = mvlv_generic.23
+	}
+}
+#難易度<困難>のヒント
+#a:閉じる
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.26
+	title = mvlv_generic.26.t
+	desc = mvlv_generic.26.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.26.a
+		country_event = mvlv_generic.23
+	}
+}
+#難易度<地獄>のヒント
+#a:閉じる
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.27
+	title = mvlv_generic.27.t
+	desc = mvlv_generic.27.d
+	picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mvlv_generic.27.a
+		country_event = mvlv_generic.28
+	}
+	option = {
+		name = mvlv_generic.27.b
+		country_event = mvlv_generic.23
+	}
+}
+#難易度<地獄>のヒントストーリー
+#a:閉じる
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.28
+	title = mvlv_generic.28.t
+	desc = mvlv_generic.28.d
+	#picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = mvlv_generic.28.a
+		country_event = mvlv_generic.29
+	}
+	option = {
+		name = mvlv_generic.28.b
+		country_event = mvlv_generic.23
+	}
+}
+country_event = {
+	id = mvlv_generic.29
+	title = mvlv_generic.29.t
+	desc = mvlv_generic.29.d
+	#picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.29.a
+		country_event = mvlv_generic.30
+	}
+	option = {
+		name = mvlv_generic.29.b
+		country_event = mvlv_generic.23
+	}
+}
+country_event = {
+	id = mvlv_generic.30
+	title = mvlv_generic.30.t
+	desc = mvlv_generic.30.d
+	#picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.30.a
+		country_event = mvlv_generic.31
+	}
+	option = {
+		name = mvlv_generic.30.b
+		country_event = mvlv_generic.23
+	}
+}
+
+country_event = {
+	id = mvlv_generic.31
+	title = mvlv_generic.31.t
+	desc = mvlv_generic.31.d
+	#picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.31.a
+		country_event = mvlv_generic.23
+		set_global_flag = mvlv_alternative_hell_flag
+	}
+}
+
+
+country_event = {
+	id = mvlv_generic.32
+	title = mvlv_generic.32.t
+	desc = mvlv_generic.32.d
+	#picture = GFX_mvlv_mascot
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.32.a
+	}
+}
+######################
+##オーナー権の移譲
+country_event = {
+	id = mvlv_generic.33
+	desc = mvlv_generic.33.d
+	title = mvlv_generic.33.t
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		ROOT = {
+			every_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					NOT = { is_owned_by = ROOT }
+				}
+				set_state_owner_to = ROOT
+			}
+		}
+		FROM = {
+			every_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					NOT = { is_owned_by = FROM }
+				}
+				set_state_owner_to = FROM
+			}
+		}
+	}
+}
+###G弾
+country_event = {
+	id = mvlv_generic.34
+	desc = mvlv_generic.34.d
+	title = mvlv_generic.34.t
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = mvlv_generic.34.a
+		ai_chance = {
+			base = 100
+		}
+		#非難
+		add_political_power = 100
+		FROM = {
+			country_event = mvlv_generic.35
+		}
+	}
+	option = {
+		name = mvlv_generic.34.b
+		ai_chance = {
+			base = 0
+		}
+		add_timed_idea = { idea = MVLV_idea_G_debuff days = 90 }
+		FROM = {
+			country_event = mvlv_generic.36
+		}
+	}
+}
+country_event = {
+	id = mvlv_generic.35
+	desc = mvlv_generic.35.d
+	title = mvlv_generic.35.t
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_dynamic_modifier = { modifier = MVLV_G_Lancher_modifier }
+				}
+			}
+			add_dynamic_modifier = { modifier = MVLV_G_Lancher_modifier }
+			set_variable = { ROOT.MVLV_G_Lancher_modifier_value = -0.1 }
+		}
+		else = {
+			subtract_from_variable = { ROOT.MVLV_G_Lancher_modifier_value = 0.1 }
+		}
+	}
+	option = {
+		name = mvlv_generic.35.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = mvlv_generic.36
+	desc = mvlv_generic.36.d
+	title = mvlv_generic.36.t
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = mvlv_generic.36.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = {
+	id = mvlv_generic.37
+	desc = mvlv_generic.37.d
+	title = mvlv_generic.37.t
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = mvlv_generic.37.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = mvlv_generic.38
+	desc = mvlv_generic.38.d
+	title = mvlv_generic.38.t
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = mvlv_generic.38.a
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = mvlv_generic.39
+				days = 7
+			}
+		}
+	}
+}
+country_event = {
+	id = mvlv_generic.39
+	desc = mvlv_generic.39.d
+	title = mvlv_generic.39.t
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect ={
+			play_song_Alternative_14_effect = yes
+			MVLV_BETA_G_penalty_effect = yes
+		}
+	}
+	option = {
+		name = mvlv_generic.39.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#------------------------------
+#全体難易度変更
+#マルチ途中参加者向け
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.40
+	title = mvlv_generic.40.t
+	desc = mvlv_generic.40.d
+	picture = GFX_mvlv_start_event
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+		country_event = mvlv_generic.16
+	}
+	option = {
+		name = mvlv_generic.1.a
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+			limit = { is_in_faction_with = UNI }
+			if = {
+				limit = { is_ai = yes }
+				country_event = mvlv_generic.41
+			}
+			else = {
+				MVLV_all_difficulty_clr_script_effect = yes
+				add_ideas = mvlv_difficulty_easy
+			}
+		}
+		news_event = mvlv_news.10
+	}
+	option = {
+		name = mvlv_generic.1.b
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+			limit = { is_in_faction_with = UNI }
+			if = {
+				limit = { is_ai = yes }
+				country_event = mvlv_generic.41
+			}
+			else = {
+				MVLV_all_difficulty_clr_script_effect = yes
+				add_ideas = mvlv_difficulty_normal
+			}
+		}
+		news_event = mvlv_news.10
+	}
+	option = {
+		name = mvlv_generic.1.c
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+			limit = { is_in_faction_with = UNI }
+			if = {
+				limit = { is_ai = yes }
+				country_event = mvlv_generic.41
+			}
+			else = {
+				MVLV_all_difficulty_clr_script_effect = yes
+				add_ideas = mvlv_difficulty_hard
+			}
+		}
+		news_event = mvlv_news.10
+	}
+	option = {
+		name = mvlv_generic.1.e
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+			limit = { is_in_faction_with = UNI }
+			if = {
+				limit = { is_ai = yes }
+				country_event = mvlv_generic.41
+			}
+			else = {
+				MVLV_all_difficulty_clr_script_effect = yes
+				add_ideas = mvlv_difficulty_unlimited
+			}
+		}
+		news_event = mvlv_news.10
+	}
+	option = {
+		name = mvlv_generic.1.d
+		trigger = {
+			is_ai = yes
+		}
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+			limit = { is_in_faction_with = UNI }
+			if = {
+				limit = { is_ai = yes }
+				country_event = mvlv_generic.41
+			}
+			else = {
+				MVLV_all_difficulty_clr_script_effect = yes
+				add_ideas = mvlv_difficulty_ai
+			}
+		}
+		news_event = mvlv_news.10
+	}
+}
+country_event = {
+	id = mvlv_generic.41
+	title = mvlv_generic.41.t
+	desc = mvlv_generic.41.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.41.a
+		MVLV_all_difficulty_clr_script_effect = yes
+		add_ideas = mvlv_difficulty_ai
+	}
+}
+
+country_event = {
+	id = mvlv_generic.42
+	title = mvlv_generic.42.t
+	desc = mvlv_generic.42.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.42.a
+	}
+}
+
+country_event = {
+	id = mvlv_generic.43
+	title = mvlv_generic.43.t
+	desc = mvlv_generic.43.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.43.a
+	}
+}
+
+#-----------------------------------
+
+#通知ONOFF
+country_event = {
+	id = mvlv_generic.96
+	desc = mvlv_generic.96.d
+	title = mvlv_generic.96.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.96.a
+	}
+}
+country_event = {
+	id = mvlv_generic.97
+	desc = mvlv_generic.97.d
+	title = mvlv_generic.97.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.97.a
+	}
+}
+
+#要再確認
+#戦況計算
+#10日ごとに自分自身を実行し、戦況を切り替える
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.98
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		country_event = {
+			id = mvlv_generic.98
+			days = 10
+		}
+		set_variable = {
+			THIS.var_war_situation = 0
+		}
+		set_variable = {
+			THIS.var_exists_hive = 0
+		}
+		set_variable = {
+			THIS.var_exists_h01 = 0
+		}
+		set_variable = {
+			THIS.var_exists_human = 0
+		}
+		#残存ハイヴから
+		every_country = {
+			if = {
+				limit = {
+					is_in_faction_with = BET
+					has_idea = mvlv_brokenhive
+					#NOT = { tag = BET }
+				}
+				add_to_variable = {
+					ROOT.var_exists_hive = 1
+				}
+			}
+			if = {
+				limit = {
+					tag = BET
+					has_idea = mvlv_brokenhive
+				}
+				add_to_variable = {
+					ROOT.var_exists_h01 = 10
+				}
+			}
+			if = {
+				limit = {
+					is_in_faction_with = UNI
+					surrender_progress > 0.5
+				}
+				add_to_variable = {
+					ROOT.var_exists_human = 1
+				}
+			}
+		}
+		add_to_variable = {
+			THIS.var_war_situation = THIS.var_exists_hive
+		}
+		add_to_variable = {
+			THIS.var_war_situation = THIS.var_exists_h01
+		}
+		subtract_from_variable = {
+			THIS.var_war_situation = THIS.var_exists_human
+		}
+		every_country = {
+			if = {
+				limit = {
+					is_in_faction_with = UNI
+					check_variable = {
+						THIS.var_war_situation < global.var_betawar_situation_1
+					}
+				}
+				add_ideas = betawar_situation_1
+			}
+			else_if = {
+				limit = {
+					is_in_faction_with = UNI
+					check_variable = {
+						THIS.var_war_situation < global.var_betawar_situation_2
+					}
+				}
+				add_ideas = betawar_situation_2
+			}
+			else_if = {
+				limit = {
+					is_in_faction_with = UNI
+					check_variable = {
+						THIS.var_war_situation < global.var_betawar_situation_3
+					}
+				}
+				add_ideas = betawar_situation_3
+			}
+			else_if = {
+				limit = {
+					is_in_faction_with = UNI
+					check_variable = {
+						THIS.var_war_situation < global.var_betawar_situation_4
+					}
+				}
+				add_ideas = betawar_situation_4
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = mvlv_generic.1006
+	desc = mvlv_generic.1006.d
+	title = mvlv_generic.1006.t
+	picture = GFX_mvlv_start_event
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = no
+	option = {
+		name = mvlv_generic.1006.a
+	}
+}
+
+#プレイヤー数カウントイベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.99
+	desc = mvlv_generic.99.d
+	title = mvlv_generic.99.t
+	picture = BETA_event_1
+	fire_only_once = no
+	hidden = yes
+	trigger = {
+		TAG = BET
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		# ai_chance = { factor = 100 }
+		set_variable = {
+			global.var_playercount = 0
+		}
+		every_country = {
+			IF = {
+				limit = {
+					is_ai = no
+				}
+				add_to_variable = {
+					global.var_playercount = 1
+				}
+			}
+		}
+		#####
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = MVLV_command_ouka_flag
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { global.var_playercount = 1 }
+				}
+				every_country = {
+					limit = {
+						has_country_flag = PL_ouka_operation_flag
+					}
+					clr_country_flag = PL_ouka_operation_flag
+				}
+				every_country = {
+					limit = {
+						AND = {
+							is_ai = no
+							is_in_faction_with = UNI
+						}
+					}
+					set_country_flag = PL_ouka_operation_flag
+				}
+				every_country = {
+					limit = {
+						AND = {
+							is_ai = no
+							NOT = { is_in_faction_with = UNI }
+						}
+					}
+					UNI = {
+						set_country_flag = PL_ouka_operation_flag
+					}
+				}
+				else = {
+					every_country = {
+						limit = {
+							has_country_flag = PL_ouka_operation_flag
+						}
+						clr_country_flag = PL_ouka_operation_flag
+					}
+					UNI = {
+						set_country_flag = PL_ouka_operation_flag
+					}
+				}
+			}
+		}
+	}
+}
+
+#更新履歴
+#____________________________________________________________
+country_event = {
+	id = mvlv_generic.997
+	desc = mvlv_generic.997.d
+	title = mvlv_generic.999.t
+	picture = GFX_mvlv_mascot
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.999.a
+	}
+}
+
+country_event = {
+	id = mvlv_generic.998
+	desc = mvlv_generic.998.d
+	title = mvlv_generic.999.t
+	picture = GFX_mvlv_mascot
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.999.a
+	}
+}
+
+country_event = {
+	id = mvlv_generic.999
+	desc = mvlv_generic.999.d
+	title = mvlv_generic.999.t
+	picture = GFX_mvlv_mascot
+	is_triggered_only = yes
+	option = {
+		name = mvlv_generic.999.a
+	}
+}

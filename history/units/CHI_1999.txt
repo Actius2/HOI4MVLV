@@ -1,0 +1,390 @@
+﻿units = {
+	division = {
+		location = 1070
+		division_template = "TSF Division"
+		start_experience_factor = 0.4
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "CHI"
+				creator = CHI
+				version_name = "J-8（中国）"
+			}
+		}
+	}
+	division = {
+		location = 7214
+		division_template = "TSF Division"
+		start_experience_factor = 0.4
+		force_equipment_variants = {
+			MVLV_TSF_chassis_1_heavy = {
+				owner = "CHI"
+				creator = CHI
+				version_name = "J-8（中国）"
+			}
+		}
+	}
+	division = {
+		location = 7214
+		division_template = "TSF Division"
+		start_experience_factor = 0.4
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "CHI"
+				creator = CHI
+				version_name = "J-10（中国）"
+			}
+		}
+	}
+	division = {
+		location = 7214
+		division_template = "TSF Division"
+		start_experience_factor = 0.4
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "CHI"
+				creator = CHI
+				version_name = "J-10（中国）"
+			}
+		}
+	}
+	division = {
+		location = 7186
+		division_template = "TSF Division"
+		start_experience_factor = 0.4
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_maneuver = {
+				owner = "CHI"
+				creator = CHI
+				version_name = "J-11（中国）"
+			}
+		}
+	}
+	division = {
+		location = 7214
+		division_template = "TSF Division"
+		start_experience_factor = 0.3
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_maneuver = {
+				owner = "CHI"
+				creator = CHI
+				version_name = "J-11（中国）"
+			}
+		}
+	}
+	division = {
+		location = 7186
+		division_template = "TSF Division"
+		start_experience_factor = 0.4
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_heavy = {
+				owner = "CHI"
+				creator = CHI
+				version_name = "F-CK-1（中国）"
+			}
+		}
+	}
+	division = {
+		location = 7214
+		division_template = "Tank Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 7214
+		division_template = "Tank Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 7186
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 7186
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 7186
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 7186
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 7214
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7214
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7214
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7214
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7214
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7186
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7186
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7186
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7186
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7186
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7186
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7186
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7186
+		division_template = "Gunship Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 7186
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1038
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1038
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 11963
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 11963
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 994
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 994
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1070
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1070
+		division_template = "Tank Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 1070
+		division_template = "Gunship Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 11990
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 11990
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 11990
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 11990
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 99
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 99
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 99
+	}
+	add_equipment_production = {
+		equipment = {
+			type = train_equipment_2
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 99
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_2
+			creator = "CHI"
+		}
+		requested_factories = 4
+		progress = 0.1
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = rocket_artillery_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 4
+		progress = 0.1
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_2
+			creator = "CHI"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_equipment_2
+			creator = "CHI"
+		}
+		requested_factories = 7
+		progress = 0.1
+		efficiency = 60
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_light
+			creator = "CHI" 
+			version_name = "J-10（中国）"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 70
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_heavy
+			creator = "CHI" 
+			version_name = "F-CK-1（中国）"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_TSF_chassis_2_maneuver
+			creator = "CHI" 
+			version_name = "J-11（中国）"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 50
+	}
+
+
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_AL_shell_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 99
+	}
+	add_equipment_production = {
+		equipment = {
+			type = MVLV_shell_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 99
+	}
+	add_equipment_production = {
+		equipment = {
+			type = transport_plane_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 99
+	}
+}

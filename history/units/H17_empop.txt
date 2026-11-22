@@ -1,0 +1,809 @@
+##### OOB #####
+units = {
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1492
+		division_template = "Fort class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+##--------------##
+#12404
+	division = {
+		location = 12404
+		division_template = "Fort class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 12404
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+#4585
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 4585
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+#1566
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1566
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+#7562
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7562
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+#7469
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7469
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+#10386
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Tank class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Grappler class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10386
+		division_template = "Destroyer class division"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+
+}

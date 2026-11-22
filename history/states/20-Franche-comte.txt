@@ -1,0 +1,40 @@
+
+state={
+	id=20
+	name="STATE_20"
+
+	history={
+
+		owner = H12
+		add_core_of = H12
+		add_core_of = EUR
+
+		#ブダペスト陥落用
+		add_claim_by = H11
+		
+		victory_points = {
+			6613 100
+		}
+		
+		buildings = {
+			hive = 1
+		}
+
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 4
+            6613 = {bunker = 5} 
+		}
+
+	}
+
+	provinces={
+		641 762 780 3589 3650 3770 6613 6639 6668 6786 9590 9728 9732 11593 11713 11716 11794 
+	}
+	manpower=35000000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

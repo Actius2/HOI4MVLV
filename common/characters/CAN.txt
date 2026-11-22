@@ -1,0 +1,301 @@
+characters = {
+
+	CAN_Gegran = {
+#レア・ゲグラン
+		name = CAN_Gegran
+		
+		gender = female
+		
+		portraits = {
+			army = {
+				large = GFX_CAN_Gegran_pic
+				small = GFX_CAN_Gegran_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				commander_aptitude
+				tsf_officer
+				
+				tsf_leader
+				tsf_commander
+			}
+			
+			skill = 6
+			
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	CAN_Ellen = {
+#エレン・エイス
+		name = CAN_Ellen
+		
+		gender = female
+		
+		portraits = {
+			army = {
+				large = GFX_CAN_Ellen_pic
+				small = GFX_CAN_Ellen_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				infantry_officer
+				
+				tsf_officer
+				tsf_leader
+				paratrooper
+				trait_reckless
+			}
+			
+		skill = 5
+		
+		attack_skill = 6
+		defense_skill = 4
+		planning_skill = 3
+		logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	CAN_Josette = {
+#ジョセット
+		name = CAN_Josette
+		
+		gender = female
+		
+		portraits = {
+			army = {
+				large = GFX_CAN_Josette_pic
+				small = GFX_CAN_Josette_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				infantry_officer
+				inflexible_strategist
+				paratrooper
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+		skill = 4
+		
+		attack_skill = 5
+		defense_skill = 4
+		planning_skill = 2
+		logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	CAN_Derick = {
+#デリック・アイアンサイド
+		name = CAN_Derick
+		
+		portraits = {
+			army = {
+				large = GFX_CAN_Derick_pic
+				small = GFX_CAN_Derick_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				armor_officer
+				
+				tsf_officer
+				tsf_leader
+				
+				commando
+			}
+			
+	skill = 5
+	
+	attack_skill = 6
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	CAN_Burring = {
+#ジョージ・バーリング（ジナ・バーリング）
+		name = CAN_Burring
+		
+		gender = female
+		
+		portraits = {
+			army = {
+				large = GFX_CAN_Burring_pic
+				small = GFX_CAN_Burring_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				tsf_officer
+				true_genius
+				
+				trait_reckless
+				harsh_leader
+				
+				
+				tsf_leader
+				trickster
+			}
+			
+	skill = 5
+	
+	attack_skill = 6
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	CAN_Romeo = {
+#ロメオ・ダレール（ロメーヌ・ダレール）
+		name = CAN_Romeo
+		
+		gender = female
+		
+		portraits = {
+			army = {
+				large = GFX_CAN_Romeo_pic
+				small = GFX_CAN_Romeo_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				brilliant_strategist
+				politically_connected
+				career_officer
+				trait_cautious
+				media_personality
+				armor_officer
+				
+				offensive_doctrine
+				
+			}
+			
+	skill = 5
+	
+	attack_skill = 6
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	CAN_komine = {
+#小峰・楓（こみね・かえで）
+		name = CAN_komine
+		
+		gender = female
+		
+		portraits = {
+			army = {
+				large = GFX_CAN_komine_pic
+				small = GFX_CAN_komine_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				armor_officer
+				brilliant_strategist
+				
+				commando
+				
+			}
+			
+	skill = 4
+	
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	CAN_Peggy = {
+#ペギー・シドニー・ウォルターズ
+		name = CAN_Peggy
+		
+		gender = female
+		
+		portraits = {
+			army = {
+				large = GFX_CAN_Peggy_pic
+				small = GFX_CAN_Peggy_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				
+				brilliant_strategist
+				politically_connected
+				war_hero
+				trait_cautious
+				media_personality
+				harsh_leader
+				
+				commander_aptitude
+				
+				infantry_officer
+				cavalry_officer
+				armor_officer
+				
+				panzer_leader
+				panzer_expert
+				
+				
+			}
+			
+	skill = 5
+	
+	attack_skill = 5
+	defense_skill = 6
+	planning_skill = 3
+	logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	
+}

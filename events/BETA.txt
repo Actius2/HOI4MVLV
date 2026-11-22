@@ -1,0 +1,451 @@
+﻿add_namespace = BETA
+#____________________________________________________________
+#用途
+#BETA向けイベント
+#
+#id:BETA.1 effect:BETAの占領地をbetalandにする
+#id:BETA.2 effect:BETA攻勢イベント
+#id:BETA.3 effect:定期的に校正間隔を広げるフラグをクリアする
+#id:BETA.4 effect:ハイヴ陥落時、近隣ハイヴにBETA師団配置
+#id:BETA.5 effect:桜花作戦時、BET国の首都に師団を配置 移動速度にバフ
+#id:BETA.6 effect:桜花作戦時間切れ時、BETAにバフ
+#id:BETA.7 effect:桜花作戦成功でBETAデバフ
+#id:BETA.8 effect:00ユニットが開発されたらBETAにバフ
+#id:BETA.98 effect:ハイヴ奪取時ハイヴ占領アイデア付与
+#id:BETA.99 effect:ハイヴ占領アイデアを時限剥奪
+#
+#____________________________________________________________
+# 開始時にBETAの占領地をbetalandにする
+country_event = {
+	id = BETA.1
+	desc = BETA.1.d
+	title = BETA.1.t
+	picture = BETA_event_1
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		every_state = {
+			limit = {
+				OR = {
+					is_owned_by = BET
+					is_owned_by = H26
+					is_owned_by = H25
+					is_owned_by = H24
+					is_owned_by = H23
+					is_owned_by = H22
+					is_owned_by = H21
+					is_owned_by = H20
+					is_owned_by = H19
+					is_owned_by = H18
+					is_owned_by = H17
+					is_owned_by = H16
+					is_owned_by = H15
+					is_owned_by = H14
+					is_owned_by = H13
+					is_owned_by = H12
+					is_owned_by = H11
+					is_owned_by = H10
+					is_owned_by = H09
+					is_owned_by = H08
+					is_owned_by = H07
+					is_owned_by = H06
+					is_owned_by = H05
+					is_owned_by = H04
+					is_owned_by = H03
+					is_owned_by = H02
+					is_owned_by = H00
+				}
+				is_capital = no
+			}
+			set_state_category = betaland
+		}
+	}
+}
+
+#桜花作戦時に発生
+#首都に師団を配置し、軍の移動速度にバフ
+ country_event = {
+ 	id = BETA.5
+ 	desc = BETA.5.d
+ 	title = BETA.5.t
+ 	picture = BETA_event_1.dds
+ 	is_triggered_only = yes
+ 	option = {
+ 		name = BETA.5.a
+ 		add_timed_idea = {
+ 			idea = BET_operation
+ 			days = 60
+ 		}
+ 		MVLV_BETA_start_deploy100_effect = yes
+	}
+ }
+
+#桜花作戦時間切れ時、BETAにバフ
+country_event = {
+	id = BETA.6
+	desc = BETA.6.d
+	title = BETA.6.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = BETA.6.a
+		add_ideas = BET_end_game
+		every_owned_state = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 5
+				instant_build = yes
+			}
+		}
+	}
+}
+
+#桜花作戦成功でBETAデバフ
+country_event = {
+	id = BETA.7
+	desc = BETA.7.d
+	title = BETA.7.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = BETA.7.a
+		add_ideas = BET_broken_original_hive
+		#812 = { add_core_of = BET }
+	}
+}
+
+#00ユニットが開発されたらBETAにバフ
+country_event = {
+	id = BETA.8
+	desc = BETA.8.d
+	title = BETA.8.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = BETA.8.a
+		add_ideas = BET_00_unit
+		add_ideas = BET_human_kill
+	}
+}
+
+country_event = {
+	id = BETA.9
+	desc = BETA.9.d
+	title = BETA.9.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = BETA.9.a
+		add_ideas = BET_human_kill
+	}
+}
+country_event = {
+	id = BETA.10
+	desc = BETA.10.d
+	title = BETA.10.t
+	picture = BETA_event_1.dds
+	
+	is_triggered_only = yes
+	
+	option ={
+		name = BETA.10.a
+		load_oob = H21_Invasion
+		JAP = { country_event = mvlv_jap.4 }
+	}
+	option ={
+		name = BETA.10.b
+		load_oob = H21_Invasion2
+		JAP = { country_event = mvlv_jap.5 }
+	}
+}
+
+##横浜基地襲撃BETA
+country_event = {
+	id = BETA.11
+	desc = BETA.11.d
+	title = BETA.11.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = H21_broken_flag }
+				}
+				if = {
+					#H21が所有していないならば
+					limit = {
+						NOT = {
+							H21 = { controls_state = 789 }
+						}
+					}
+					H21 = {
+						set_province_controller = 13218
+						load_oob = H21_yokohama
+						add_timed_idea = {
+							idea = H21_sado
+							days = 50
+						}
+						add_timed_idea = {
+							idea = mvlv_aggressive_beta
+							days = 50
+						}
+					}
+					JAP = {
+						country_event = mvlv_uni.21
+						play_song_Alternative_41_effect = yes
+					}
+					UNI = {
+						country_event = mvlv_uni.21
+						play_song_Alternative_41_effect = yes
+					}
+					set_global_flag = H21_broken_flag
+				}
+				#予備判定
+				BET = {
+					country_event = {
+						id = BETA.11
+						days = 4
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = BETA.11.a
+	}
+}
+
+######佐渡島イベント
+#佐渡島におけるBETA噴出
+country_event = {
+	id = BETA.12
+	desc = BETA.12.d
+	title = BETA.12.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			###通知
+			####場合によっては空振り通知になる可能性あり
+			##しばらく保留で問題になるようなら噴出処理内に
+
+			####オペ佐渡時の動作
+			if = {
+				limit = {
+					has_global_flag = mvlv_op_sado_flag
+				}
+
+				##緊急避難のイベント
+				every_country = {
+					limit = {
+						is_in_faction_with = UNI
+					}
+					news_event = { id = mvlv_news.8 days = 1 }
+				}
+			}
+			##噴出処理
+			H21 = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = mvlv_gushing_beta_flag }
+					}
+					every_country = {
+						limit = {
+							is_in_faction_with = UNI
+						}
+						country_event = mvlv_uni.40
+					}
+					H21 = {
+						#set_province_controller = 9952
+						load_oob = H21_empop
+						add_timed_idea = {
+							idea = MVLV_BETA_idea_gushing
+							days = 2
+						}
+					}
+					set_country_flag = mvlv_gushing_beta_flag
+				}
+				###横浜襲撃(初回判定)＞予備判定はBETA11で
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = H21_broken_flag }
+				}
+				BET = {
+					country_event = {
+						id = BETA.11
+						days = 4
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = BETA.12.a
+	}
+}
+
+
+
+
+
+#ハイヴ奪取時ハイヴ占領アイデア付与、取り返されたら時限剥奪
+country_event = {
+	id = BETA.98
+	desc = BETA.98.d
+	title = BETA.98.t
+	is_triggered_only = yes
+	option = {
+		name = BETA.98.a
+		if = {
+			limit = {
+				NOT = {
+					has_idea = mvlv_brokenhive
+				}
+			}
+			add_ideas = {
+				mvlv_brokenhive
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = H00
+					}
+					NOT = {
+						tag = H21
+					}
+				}
+				news_event = {
+					id = mvlv_news.1
+					hours = 1
+				}
+			}
+			#佐渡陥落
+			else_if = {
+				limit = {
+					tag = H21
+				}
+				country_event = { id = BETA.12 days = 1 }
+				every_country = {
+					limit = { has_template = "A-02" }
+					delete_unit_template_and_units = {
+						division_template = "A-02"
+					}
+				}
+				news_event = mvlv_news.1
+				##old#news_event = mvlv_news.3
+			}
+			else_if = {
+				limit = {
+					tag = H00
+				}
+				BET = {
+					add_ideas = {
+						mvlv_brokenhive
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							NOT = {
+								has_idea = BET_broken_original_hive
+							}
+							NOT = {
+								has_idea = BET_end_game
+							}
+						}
+					}
+					BET = {
+						add_to_faction = H00
+					}
+					every_country = {
+						limit = {
+							is_in_faction_with = UNI
+						}
+						country_event = mvlv_uni.7
+					}
+					every_country = {
+						limit = {
+							OR = {
+								is_in_faction_with = BET
+								tag = H00
+							}
+						}
+						country_event = BETA.7
+					}
+					else = {
+						news_event = {
+							id = mvlv_news.1
+							hours = 1
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = mvlv_brokenhive
+				NOT = { tag = H21 }
+			}
+			country_event = {
+				id = BETA.99
+				days = 10
+			}
+		}
+		else_if = {
+			limit = {
+				tag = H21
+				NOT = {
+					has_global_flag = mvlv_op_sado_flag
+				}
+			}
+			country_event = {
+				id = BETA.99
+				days = 10
+			}
+		}
+	}
+}
+
+#ハイヴ占領アイデアを時限剥奪
+country_event = {
+	id = BETA.99
+	desc = BETA.99.d
+	title = BETA.99.t
+	is_triggered_only = yes
+	option = {
+		name = BETA.99.a
+		if = {
+			limit = {
+				has_idea = mvlv_brokenhive
+			}
+			remove_ideas = {
+				mvlv_brokenhive
+			}
+			if = {
+				limit = {
+					not = {
+						tag = H00
+					}
+				}
+				news_event = {
+					id = mvlv_news.2
+					hours = 1
+				}
+				else = {
+					BET = {
+						remove_ideas = {
+							mvlv_brokenhive
+						}
+					}
+					news_event = {
+						id = mvlv_news.2
+						hours = 1
+					}
+				}
+			}
+		}
+	}
+}

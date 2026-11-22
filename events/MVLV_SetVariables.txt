@@ -1,0 +1,45 @@
+﻿add_namespace = beta_var
+#____________________________________________________________
+#用途
+#定数セットイベント
+#
+#id:beta_var.1 effect:ゲーム開始時に定数を設定する
+#
+#____________________________________________________________
+#ゲーム開始時に定数を設定する
+#____________________________________________________________
+country_event = {
+	id = beta_var.1
+	desc = beta_var.1.d
+	title = beta_var.1.t
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		#戦況用
+		set_variable = {
+			global.var_betawar_situation_1 = -4
+		}
+		set_variable = {
+			global.var_betawar_situation_2 = 5
+		}
+		set_variable = {
+			global.var_betawar_situation_3 = 20
+		}
+		set_variable = {
+			global.var_betawar_situation_4 = 35
+		}
+		#戦死モード（デフォルト1：将军削除モード）
+		set_variable = {
+			global.var_generalDeathMode = 1
+		}
+		if = {
+			limit = {
+				is_in_faction_with = BET
+			}
+			ROOT = { set_variable = { BETA_deploy_count = 0 } }
+		}
+	}
+	option = {
+	}
+}

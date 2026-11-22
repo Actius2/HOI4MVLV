@@ -1,0 +1,230 @@
+﻿
+units = {
+
+	####### 帝国聯合艦隊 #######
+	##### 第一艦隊 #####
+	fleet = {
+		name = "First Fleet"
+		naval_base = 9859  # Hiroshima
+		task_force = {				
+			name = "First Squadron"
+			location = 9859  #Ominato
+			ship = { name = "IJN Kii" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "IJN Owari" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "IJN Izumo" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+		}
+		task_force = {
+			name = "Fourth Squadron" 
+			location = 9859  #Ominato
+			ship = { name = "IJN Kongo" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = JAP version_name = "Kongo Class" } } }
+			ship = { name = "IJN Hiei" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = JAP version_name = "Kongo Class" } } }
+			ship = { name = "IJN Haruna" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = JAP version_name = "Kongo Class" } } }
+			ship = { name = "IJN Kirishima" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = JAP version_name = "Kongo Class" } } }
+		}
+		task_force = {
+			name = "Seventh Squadron" 
+			location = 9859  #Ominato
+			ship = { name = "IJN Mogami" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class"} } }
+			ship = { name = "IJN Mikuma" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class"} } }
+			ship = { name = "IJN Suzuya" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class"} } }
+			ship = { name = "IJN Kumano" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class"} } }
+		}
+		task_force = {
+			name = "Eighth Squadron" 
+			location = 9859  #Ominato
+			ship = { name = "IJN Furutaka" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class"} } }
+			ship = { name = "IJN Kako" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class"} } }
+			ship = { name = "IJN Aoba" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class"} } }
+			ship = { name = "IJN Kinugasa" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class"} } }
+		}
+		task_force = {
+			name = "Ninth Squadron" 
+			location = 9859  #Ominato
+			ship = { name = "IJN Kuma" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			ship = { name = "IJN Tama" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Sendai Class" } } }
+		}
+		task_force = {
+			name = "First Torpedo Squadron"
+			location = 9859  #Ominato
+			#Flagship
+			ship = { name = "IJN Abukuma" definition = light_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Katori Class" } } }
+			#第一駆逐隊
+			ship = { name = "IJN kamikaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Asakaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Harukaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Matsukaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第六駆逐隊
+			ship = { name = "IJN Akatsuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Hibiki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Kaminari" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Den" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第十一駆逐隊
+			ship = { name = "IJN Akizuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Teruzuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Suzutsuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Hatsutsuki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+		}
+		task_force = {
+			name = "4th Torpedo Squadron"
+			location = 9859  #Ominato
+			#Flagship
+			ship = { name = "IJN Yura" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			#第四駆逐隊
+			ship = { name = "IJN Nowaki" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Arashi" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Hagikaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Maikaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第九駆逐隊
+			ship = { name = "IJN Asakumo" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Yamakumo" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Natsukumo" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Minekumo" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第十五駆逐隊
+			ship = { name = "IJN Kuroshio" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Oyashio" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Hayashio" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Natsushio" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+		}
+	}
+	
+	##### 第二艦隊 #####
+	fleet = {
+		name = "Second Fleet"
+		naval_base = 12068 #taiwan
+		task_force = {
+			name = "Second Squadron"
+			location = 12068 #taiwan
+			ship = { name = "IJN Shinano" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "IJN Mino" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "IJN Kaga" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+		}
+		task_force = {
+			name = "Fifth Squadron" 
+			base = 11932
+			location = 12068 #taiwan
+			ship = { name = "IJN Takao" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "IJN Atago" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "IJN Choukai" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "IJN Maya" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class" } } }
+		}
+		task_force = {
+			name = "Second Torpedo Squadron"
+			location = 12068 #taiwan
+			#Flagship
+			ship = { name = "IJN Jintsuu" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			#第二駆逐隊
+			ship = { name = "IJN Murasame" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Yuudachi" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Harusame" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Samidare" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第七駆逐隊
+			ship = { name = "IJN Oboro" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Akebono" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Sazanami" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Shio" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第十二駆逐隊
+			ship = { name = "IJN Asagiri" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Yukiri" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Tenkiri" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Sagiri" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+		}
+		task_force = {
+			name = "Fifth Torpedo Squadron"
+			location = 12068 #taiwan
+			#Flagship
+			ship = { name = "IJN Yuubari" definition = light_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Katori Class" } } }
+			#第十七駆逐隊
+			ship = { name = "IJN Urakaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Isokaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Hamakaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Tanikaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第十駆逐隊
+			ship = { name = "IJN Akikumo" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Yukumo" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Ken un" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Fu un" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第十六駆逐隊
+			ship = { name = "IJN Hatsukaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Yukikaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Amatsukaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Tokitsukaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+		}
+	}
+	
+	##### 第三艦隊 #####
+	fleet = {
+		name = "Third Fleet"
+		naval_base = 2489 #Track
+		task_force = {
+			name = "Third Squadron"
+			location = 2489  #Track
+			ship = { name = "IJN Yamato" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "IJN Musashi" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+		}
+		task_force = {
+			name = "Sixth Squadron" 
+			location = 2489  #Track
+			ship = { name = "IJN Myoko" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "IJN Nachi" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "IJN Ashigara" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "IJN Haguro" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = {amount = 1 owner = JAP version_name = "Mogami Class" } } }
+		}
+		task_force = {
+			name = "Third Torpedo Squadron"
+			location = 2489  #Track
+			#Flagship
+			ship = { name = "IJN Sendai" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			#第三駆逐隊
+			ship = { name = "IJN Shiokaze" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Ho fu" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第八駆逐隊
+			ship = { name = "IJN Asashio" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Oshio" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Michishio" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Arashio" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第十三駆逐隊
+			ship = { name = "IJN Wakatake" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "IJN Kuretake" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "IJN Sanae" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+		}
+		task_force = {
+			name = "1st Submarine Squadron" 
+			location = 1399  #Chisima
+			#第一潜水隊
+			ship = { name = "IJN Soryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			ship = { name = "IJN Unryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			ship = { name = "IJN HakuRyu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			#第三潜水隊
+			ship = { name = "IJN Kenryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			ship = { name = "IJN Zuiryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			ship = { name = "IJN Kokuryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			#第五潜水隊
+			ship = { name = "IJN Shinryu" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = JAP version_name = "A1/B1 Class" } } }
+			ship = { name = "IJN Denryu" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = JAP version_name = "A1/B1 Class" } } }
+			ship = { name = "IJN Seiryu" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = JAP version_name = "A1/B1 Class" } } }
+		}
+		task_force = {
+			name = "second Submarine Squadron"
+			location = 11932  #Okinawa
+			#第二潜水隊
+			ship = { name = "IJN Nobori Ryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			ship = { name = "IJN Ko Ryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			ship = { name = "IJN Mo Ryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			#第四潜水隊
+			ship = { name = "IJN Kin ryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			ship = { name = "IJN Sen ryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			ship = { name = "IJN Hiryu" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = JAP version_name = "Ro-26 Class" } } }
+			#第六潜水隊
+			ship = { name = "IJN Fuku ryu" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = JAP version_name = "A1/B1 Class" } } }
+			ship = { name = "IJN Tsuchi ryu" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = JAP version_name = "A1/B1 Class" } } }
+			ship = { name = "IJN Ishiyumi ryu" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = JAP version_name = "A1/B1 Class" } } }
+		}
+	}
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	
+}

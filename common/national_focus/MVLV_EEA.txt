@@ -1,0 +1,1177 @@
+focus_tree = {
+	id = EEA_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EEA
+		}
+	}
+	
+	default = no
+	continuous_focus_position = {
+		x = 20
+		y = 1000
+	}
+	reset_on_civilwar = no
+	
+	#北極圏絶対防衛圏
+	focus = {
+		id = EEA_I_1
+		icon = GFX_goal_generic_construct_military
+		x = 3
+		y = 0
+		
+		cost = 5
+		
+		completion_reward = {
+			803 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 10
+					province = 11047
+					instant_build = yes
+				}
+			}
+			
+			army_experience = 50
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	#研究枠の追加
+	focus = {
+		id = EEA_I_2
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 1
+		relative_position_id = EEA_I_1
+		prerequisite = {
+			focus = EEA_I_1
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+			
+			add_offsite_building = {
+				type = arms_factory
+				level = 10
+			}
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+	}
+	
+	#北極圏前線工場化計画
+	focus = {
+		id = EEA_I_3
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = EEA_I_2
+		prerequisite = {
+			focus = EEA_I_2
+		}
+		cost = 5
+		
+		completion_reward = {
+		
+			add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+		
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#生産体制の拡充
+	focus = {
+		id = EEA_I_4
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		relative_position_id = EEA_I_3
+		prerequisite = {
+			focus = EEA_I_3
+		}
+		cost = 10
+		
+		completion_reward = {
+		
+			add_offsite_building = {
+				type = arms_factory
+				level = 10
+			}
+		
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#軍需生産への支援
+	focus = {
+		id = EEA_I_5
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -2
+		y = 1
+		relative_position_id = EEA_I_4
+		prerequisite = {
+			focus = EEA_I_4
+		}
+		cost = 10
+		
+		completion_reward = {
+		
+			add_offsite_building = {
+					type = arms_factory
+					level = 10
+			}
+		
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = owner
+				}
+				add_extra_state_shared_building_slots = 5
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#国連に協力を求める
+	focus = {
+		id = EEA_I_6
+		icon = GFX_goal_generic_scientific_exchange
+		x = 2
+		y = 1
+		relative_position_id = EEA_I_4
+		prerequisite = {
+			focus = EEA_I_4
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = EEA_I1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#西側との取引
+	focus = {
+		id = EEA_I_7
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = EEA_I_4
+		prerequisite = {
+			focus = EEA_I_4
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = -100
+			add_offsite_building = {
+				type = arms_factory
+				level = 10
+			}
+			
+			add_offsite_building = {
+				type = industrial_complex
+				level = 5
+			}
+			
+			EUR = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+			}
+			
+			USA = {
+				add_political_power = 50
+			}
+			
+			UNI = {
+				add_political_power = 50
+				
+			}
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#同盟組織再編
+	focus = {
+		id = EEA_P_1
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 11
+		y = 0
+		
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#東西統一への歩み
+	focus = {
+		id = EEA_P_2_A
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		x = -2
+		y = 1
+		relative_position_id = EEA_P_1
+		prerequisite = {
+			focus = EEA_P_1
+		}
+		mutually_exclusive = {
+			focus = EEA_P_2_B
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#軍事的知見の共有
+	focus = {
+		id = EEA_P_3_A
+		icon = GFX_focus_ger_oppose_hitler
+		x = -2
+		y = 1
+		relative_position_id = EEA_P_2_A
+		prerequisite = {
+			focus = EEA_P_2_A
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doctrine
+				cost_reduction = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#東西の装備統一
+	focus = {
+		id = EEA_P_4_A
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		x = 0
+		y = 1
+		relative_position_id = EEA_P_2_A
+		prerequisite = {
+			focus = EEA_P_2_A
+		}
+		
+		cost = 8
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = MVLV_tsf_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					name = mech_army_bonus
+					technology = EEA_EF-2000
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					name = mech_army_bonus
+					technology = EEA_SW
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#研究協定
+	focus = {
+		id = EEA_P_5_A
+		icon = GFX_focus_research
+		x = 2
+		y = 1
+		relative_position_id = EEA_P_2_A
+		prerequisite = {
+			focus = EEA_P_2_A
+		}
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+			
+			add_offsite_building = {
+					type = arms_factory
+					level = 10
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#鉄のお嬢さん
+	focus = {
+		id = EEA_P_6_AA
+		icon = GFX_focus_BEL_maritime_phoenix
+		x = 0
+		y = 1
+		relative_position_id = EEA_P_4_A
+		
+		prerequisite = {
+			focus = EEA_P_3_A
+		}
+		prerequisite = {
+			focus = EEA_P_4_A
+		}
+		prerequisite = {
+			focus = EEA_P_5_A
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+		
+			add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+				
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			EUR = {
+				add_political_power = 50
+				
+				add_offsite_building = {
+						type = arms_factory
+						level = 5
+				}
+				
+			add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+				
+			}
+
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#灯火
+	focus = {
+		id = EEA_P_6_A
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 1
+		relative_position_id = EEA_P_6_AA
+		
+		prerequisite = {
+			focus = EEA_P_6_AA
+		}
+
+		
+		cost = 5
+		
+		completion_reward = {
+		
+			add_political_power = 50
+		
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.6
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
+			}
+			set_politics = {
+				ruling_party = democratic
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#成就
+	focus = {
+		id = EEA_P_7_A
+		icon = GFX_focus_rom_parties_end
+		x = 0
+		y = 1
+		relative_position_id = EEA_P_6_A
+		prerequisite = {
+			focus = EEA_P_6_A
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+			add_stability = 0.2
+			
+			add_offsite_building = {
+					type = arms_factory
+					level = 10
+			}
+			
+			add_offsite_building = {
+					type = industrial_complex
+					level = 10
+				}
+			
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#ひとつのドイツ
+	focus = {
+		id = EEA_P_8_A
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 0
+		y = 1
+		relative_position_id = EEA_P_7_A
+		prerequisite = {
+			focus = EEA_P_7_A
+		}
+		
+		cost = 15
+		
+		completion_reward = {
+			add_ideas = EEA_P1
+			EEA = {
+				country_event = mvlv_eea.1
+			}
+			EUR = {
+				country_event = mvlv_eea.2
+			}
+			
+			add_offsite_building = {
+					type = arms_factory
+					level = 10
+			}
+			
+			add_offsite_building = {
+					type = industrial_complex
+					level = 10
+			}
+			
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#ソ連への再接近
+	focus = {
+		id = EEA_P_2_B
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 2
+		y = 1
+		relative_position_id = EEA_P_1
+		prerequisite = {
+			focus = EEA_P_1
+		}
+		mutually_exclusive = {
+			focus = EEA_P_2_A
+		}
+		
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 50
+			
+			SOV = {
+				add_political_power = 50
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#工業支援
+	focus = {
+		id = EEA_P_2_BB
+		icon = GFX_goal_generic_air_production
+		
+		x = 0
+		y = 1
+		
+		relative_position_id = EEA_P_2_B
+		prerequisite = {
+			focus = EEA_P_2_B
+		}
+
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 100
+			
+			add_offsite_building = {
+					type = industrial_complex
+					level = 5
+			}
+			
+			SOV = {
+				add_offsite_building = {
+						type = arms_factory
+						level = 5
+				}
+				add_offsite_building = {
+						type = industrial_complex
+						level = 10
+				}	
+			}
+				
+		}
+			
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#対等なる関係
+	focus = {
+		id = EEA_P_3_B
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		relative_position_id = EEA_P_2_BB
+		prerequisite = {
+			focus = EEA_P_2_BB
+		}
+		
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = -50
+			swap_ideas = {
+				remove_idea = EEA_WTO
+				add_idea = EEA_WTO_2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_P_4_B
+		icon = GFX_goal_generic_military_sphere
+		x = -2
+		y = 1
+		relative_position_id = EEA_P_3_B
+		prerequisite = {
+			focus = EEA_P_3_B
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+			# Buy TSF from soviet
+			add_political_power = -100
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis
+				amount = 400
+				producer = SOV
+			}
+			SOV = {
+				add_political_power = 100
+			}
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_P_5_B
+		icon = GFX_focus_generic_combined_arms
+		x = 0
+		y = 1
+		relative_position_id = EEA_P_3_B
+		prerequisite = {
+			focus = EEA_P_3_B
+		}
+		
+		cost = 5
+		
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doctrine
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			
+			SOV = {
+				add_political_power = 50
+				army_experience = 50
+			}
+			
+			# add_tech_bonus = {
+			# 	bonus = 1
+			# 	uses = 3
+			# 	category = land_doctrine
+			# }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_P_6_B
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 2
+		y = 1
+		relative_position_id = EEA_P_3_B
+		prerequisite = {
+			focus = EEA_P_3_B
+		}
+		
+		cost = 20
+		
+		completion_reward = {
+		
+			add_offsite_building = {
+					type = arms_factory
+					level = 10
+			}
+		
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = owner
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_P_7_B
+		icon = GFX_goal_generic_air_production
+		x = 0
+		y = 1
+		relative_position_id = EEA_P_5_B
+		prerequisite = {
+			focus = EEA_P_4_B
+			focus = EEA_P_5_B
+			focus = EEA_P_6_B
+		}
+		
+		cost = 8
+		
+		completion_reward = {
+			add_ideas = EEA_P3
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_P_8_B
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		relative_position_id = EEA_P_7_B
+		prerequisite = {
+			focus = EEA_P_7_B
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EEA_DDR
+				add_idea = EEA_P2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_P_9
+		icon = GFX_goal_generic_territory_or_war
+		x = 1
+		y = 1
+		relative_position_id = EEA_P_8_A
+		prerequisite = {
+			focus = EEA_P_8_A
+			focus = EEA_P_8_B
+		}
+		available = {
+			64 = {
+				is_controlled_by = EEA
+			}
+		}
+		
+		cost = 15
+		
+		completion_reward = {
+		
+			add_offsite_building = {
+				type = arms_factory
+				level = 20
+			}
+			
+			add_offsite_building = {
+				type = industrial_complex
+				level = 20
+			}
+		
+			set_capital = {
+				state = 64
+			}
+			61 = {
+				add_extra_state_shared_building_slots = 20
+			}
+			62 = {
+				add_extra_state_shared_building_slots = 20
+			}
+			65 = {
+				add_extra_state_shared_building_slots = 40
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_M_1
+		icon = GFX_goal_support_fourth_int
+		x = 19
+		y = 0
+		
+		cost = 5
+		
+		completion_reward = {
+			army_experience = 100
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_M_2
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 1
+		relative_position_id = EEA_M_1
+		prerequisite = {
+			focus = EEA_M_1
+		}
+		
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = EEA_M1
+
+			SOV = {
+				add_political_power = 50
+				army_experience = 50
+				
+				add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+
+			}
+	
+		}
+
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_M_3_A
+		icon = GFX_goal_generic_army_doctrines
+		x = -2
+		y = 1
+		relative_position_id = EEA_M_2
+		prerequisite = {
+			focus = EEA_M_2
+		}
+		mutually_exclusive = {
+			focus = EEA_M_3_B
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doctrine
+				cost_reduction = 0.3
+				uses = 2
+				category = land_doctrine
+			}
+			
+			army_experience = 100
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_M_4_A
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+		relative_position_id = EEA_M_3_A
+		prerequisite = {
+			focus = EEA_M_3_A
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = EEA_M2
+			army_experience = 50
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+	}
+
+	focus = {
+		id = EEA_M_5_A
+		icon = GFX_goal_generic_air_fighter
+		x = 0
+		y = 1
+		relative_position_id = EEA_M_4_A
+		prerequisite = {
+			focus = EEA_M_4_A
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = SOV_ru7
+			SOV = {
+				add_political_power = 50
+				add_offsite_building = {
+					type = arms_factory
+					level = 5
+				}
+				
+			}
+	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_M_3_B
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 2
+		y = 1
+		relative_position_id = EEA_M_2
+		prerequisite = {
+			focus = EEA_M_2
+		}
+		mutually_exclusive = {
+			focus = EEA_M_3_A
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doctrine
+				cost_reduction = 0.3
+				uses = 3
+				category = land_doctrine
+			}
+			army_experience = 50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_M_4_B
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 1
+		relative_position_id = EEA_M_3_B
+		prerequisite = {
+			focus = EEA_M_3_B
+		}
+		
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = EEA_M3
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_M_5_B
+		icon = GFX_goal_continuous_reduce_training_time
+		x = 0
+		y = 1
+		relative_position_id = EEA_M_4_B
+		prerequisite = {
+			focus = EEA_M_4_B
+		}
+		
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = SOV_ru9
+			SOV = {
+				add_political_power = 50
+				add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = EEA_M_6
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = EEA_M_5_A
+		prerequisite = {
+			focus = EEA_M_5_A
+			focus = EEA_M_5_B
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+		
+			add_political_power = -100
+		
+			add_offsite_building = {
+				type = industrial_complex
+				level = 5
+			}
+		
+			# Get TSF from UNI
+			
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis
+				amount = 400
+				producer = UNI
+			}
+			
+		}
+		ai_will_do = {
+		factor = 1
+		}
+	}
+
+	# 收回指挥权
+	focus = {
+		id = EEA_M_7
+		icon = GFX_focus_por_workers_of_iberia
+		x = -1
+		y = 1
+		relative_position_id = EEA_P_8_B
+		prerequisite = {
+			focus = EEA_P_8_A
+			focus = EEA_P_8_B
+		}
+		cost = 5
+		completion_reward = {
+			remove_ideas = {
+				EEA_UNI
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

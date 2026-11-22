@@ -1,0 +1,33 @@
+state={
+	id=85
+	name="STATE_85"
+	manpower = 1080100
+	
+	state_category = city
+	history = {
+		owner = H05
+		remove_core_of = H05
+		add_core_of = EEA
+
+		victory_points = {
+			362 10
+		}
+		victory_points = {
+			3295 5
+		}
+		victory_points = {
+			279 1
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 3
+		}
+
+	}
+
+	provinces={
+		243 279 334 362 389 3295 3324 6347 9263
+	}
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 5
+	name = "STATE_5"
+	manpower = 3378108
+	state_category = large_city
+	history = {
+		owner = H05
+		remove_core_of = H05
+		add_core_of = EEA
+		victory_points = {
+			6375 10
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 6
+		}
+	}
+	provinces = {
+		266 3351 3380 6375 6402 9327 9346 9372 9398 11245 11386
+	}
+}

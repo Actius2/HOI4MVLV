@@ -1,0 +1,245 @@
+technologies = {
+#MVLV_MTG_Naval_Pack
+	muvluv_mtg_naval_pack = {
+
+		enable_equipments = {
+			ship_hull_light_1
+			ship_hull_light_2
+			ship_hull_light_3
+			ship_hull_light_4
+			#
+			ship_hull_cruiser_1
+			ship_hull_cruiser_2
+			ship_hull_cruiser_3
+			ship_hull_cruiser_4
+			#
+			ship_hull_heavy_1
+			ship_hull_heavy_2
+			ship_hull_heavy_3
+			ship_hull_heavy_4
+			ship_hull_super_heavy_1
+			#
+			ship_hull_carrier_conversion_bb
+			ship_hull_carrier_conversion_ca
+			ship_hull_carrier_1
+			ship_hull_carrier_2
+			ship_hull_carrier_3
+			#
+			ship_hull_submarine_1
+			ship_hull_submarine_2
+			ship_hull_submarine_3
+			ship_hull_submarine_4
+			#
+			ship_hull_cruiser_submarine
+			ship_hull_cruiser_panzerschiff
+			ship_hull_torpedo_cruiser
+			ship_hull_pre_dreadnought
+			ship_hull_cruiser_coastal_defense_ship
+			
+		}
+		enable_equipment_modules = {
+			light_ship_engine_1
+			light_ship_engine_2
+			light_ship_engine_3
+			light_ship_engine_4
+			#
+			ship_depth_charge_1
+			ship_depth_charge_2
+			ship_depth_charge_3
+			ship_depth_charge_4
+			#
+			ship_sonar_1
+			ship_sonar_2
+			#
+			ship_airplane_launcher_1
+			ship_armor_cruiser_1
+			cruiser_ship_engine_1
+			cruiser_ship_engine_2
+			cruiser_ship_engine_3
+			cruiser_ship_engine_4
+			#
+			ship_airplane_launcher_2
+			ship_armor_cruiser_2
+			ship_armor_cruiser_3
+			ship_armor_cruiser_4
+			#
+			ship_armor_bb_1
+			ship_armor_bc_1
+			heavy_ship_engine_1
+			heavy_ship_engine_2
+			heavy_ship_engine_3
+			heavy_ship_engine_4
+			ship_armor_shbb
+			ship_armor_bb_2
+			ship_armor_bc_2
+			ship_armor_bb_3
+			ship_armor_bc_3
+			#
+			ship_armor_carrier_deck
+			carrier_ship_engine_1
+			ship_deck_space
+			carrier_ship_engine_2
+			carrier_ship_engine_3
+			carrier_ship_engine_4
+			#
+			ship_torpedo_1
+			ship_torpedo_2
+			ship_torpedo_3
+			ship_torpedo_4
+			ship_modules_tech
+			#
+			ship_torpedo_sub_1
+			sub_ship_engine_1
+			ship_torpedo_sub_2
+			sub_ship_engine_2
+			ship_torpedo_sub_3
+			sub_ship_engine_3
+			ship_torpedo_sub_4
+			sub_ship_engine_4
+			ship_sub_snorkel_1
+			ship_sub_snorkel_2
+			#
+			ship_light_battery_1
+			ship_medium_battery_1
+			ship_light_medium_battery_1
+			ship_heavy_battery_1
+			ship_light_battery_2
+			ship_light_battery_3
+			ship_light_battery_4
+			ship_medium_battery_2
+			ship_light_medium_battery_2
+			ship_medium_battery_3
+			ship_light_medium_battery_3
+			ship_medium_battery_4
+			ship_light_medium_battery_4
+			ship_heavy_battery_2
+			ship_super_heavy_battery_1
+			ship_heavy_battery_3
+			ship_heavy_battery_4
+			#
+			ship_secondaries_1
+			ship_secondaries_2
+			#
+			dp_ship_secondaries
+			dp_light_battery
+			#
+			ship_mine_layer_1
+			ship_mine_sweeper_1
+			ship_mine_layer_sub
+			#
+			ship_extra_fuel_tank
+			ship_anti_air_1
+			ship_anti_air_2
+			ship_anti_air_3
+			ship_anti_air_4
+			
+		}
+		on_research_complete = {
+			
+		}
+		destroyer = {
+			torpedo_attack = 0.4
+			lg_attack = 0.15
+			lg_armor_piercing = 0.1
+			hg_attack = 0.05
+		}
+		submarine = {
+			torpedo_attack = 0.4
+			mines_planting = 0.2
+		}
+		light_cruiser = {
+			torpedo_attack = 0.4
+			lg_attack = 0.3
+			lg_armor_piercing = 0.2
+			hg_attack = 0.1
+		}
+		heavy_cruiser = {
+			torpedo_attack = 0.4
+			lg_attack = 0.25
+			lg_armor_piercing = 0.1
+			hg_attack = 0.25
+			hg_armor_piercing = 0.1
+		}
+		battleship = {
+			lg_attack = 0.4
+			lg_armor_piercing = 0.1
+			hg_attack = 0.4
+			hg_armor_piercing = 0.1
+		}
+		battle_cruiser = {
+			lg_attack = 0.4
+			lg_armor_piercing = 0.1
+			hg_attack = 0.4
+			hg_armor_piercing = 0.1
+		}
+		carrier = {
+			lg_attack = 0.1
+			lg_armor_piercing = 0.1
+		}
+		naval_retreat_speed = 0.2
+		naval_torpedo_reveal_chance_factor = -0.25
+		critical_receive_chance = -0.3
+		naval_critical_effect_factor = -0.3
+		naval_mines_damage_factor = 0.6
+		naval_mines_effect_reduction = 0.5
+		####
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+		research_cost = 0.1
+		start_year = 1949
+		folder = {
+			name = mtgnavalfolder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		categories = {
+			naval_equipment
+		}
+	}
+
+############################################
+	
+	muvluv_mtg_mtg_transport_pack = {
+
+		transport_capacity = -0.5
+		invasion_preparation = -0.5
+		amphibious_invasion_defence = 0.65
+		naval_invasion_capacity = 150
+		amphibious_invasion = 0.25
+
+
+		enable_equipments = {
+			floating_harbor_equipment_1
+		}
+		force_use_small_tech_layout = yes
+		show_equipment_icon = yes
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+		research_cost = 0.1
+		start_year = 1949
+		folder = {
+			name = mtgnavalfolder
+			position = {
+				x = 0
+				y = 1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		categories = {
+			naval_equipment
+		}
+	}
+	
+	########################
+	########################
+	########################
+}

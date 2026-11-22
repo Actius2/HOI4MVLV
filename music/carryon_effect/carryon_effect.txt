@@ -1,0 +1,63 @@
+music_station = "Muv-luv"
+###########################
+###サウンドトラック買って！####
+###Buy the soundtrack!#####
+###########################
+music = {
+	song = "enzetu_01"
+	chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+music = {
+	song = "Alternative_01"
+	chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+music = {
+	song = "Alternative_02"
+	chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+music = {
+	song = "Alternative_03"
+	chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+music = {
+	song = "Alternative_04"
+	chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+music = {
+	song = "Alternative_05"
+	chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+music = {
+	song = "maintheme"
+	chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+

@@ -1,0 +1,30 @@
+state={
+	id=73
+	name="STATE_73"
+	manpower = 854300
+	
+	state_category = rural
+	
+	history = {
+		owner = H11
+		remove_core_of = H11
+		add_core_of = SOV
+
+
+		#ミンスク陥落用
+		add_claim_by = H05
+
+		
+		victory_points = {
+			3548 1 
+		}
+
+		buildings = {
+			infrastructure = 5
+		}
+	}
+
+	provinces={
+		3548 6571 9563 11536 11691 
+	}
+}

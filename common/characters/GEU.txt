@@ -1,0 +1,366 @@
+characters = {
+
+	GEU_Jonathan = {
+#ジョナサン・ジョースティン
+		name = GEU_Jonathan
+		
+		
+		portraits = {
+			army = {
+				large = GFX_GEU_Jonathan_pic
+				small = GFX_GEU_Jonathan_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+				armor_officer
+				
+				trait_reckless
+				inflexible_strategist
+				
+				panzer_leader
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	GEU_Gwen = {
+#グエン・バン・ミン
+		name = GEU_Gwen
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_GEU_Gwen_pic
+				small = GFX_GEU_Gwen_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+				inflexible_strategist
+				war_hero
+				trait_cautious
+				media_personality
+				harsh_leader
+				armor_officer
+				
+				offensive_doctrine
+				
+				
+				
+				adaptable
+				
+				jungle_rat
+				ranger
+				
+				commando
+				expert_improviser
+				trickster
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 6
+			defense_skill = 7
+			planning_skill = 2
+			logistics_skill = 4
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	GEU_Bian = {
+#レ・ビアン
+		name = GEU_Bian
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_GEU_Bian_pic
+				small = GFX_GEU_Bian_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				politically_connected
+				war_hero
+				trait_reckless
+				media_personality
+				harsh_leader
+				armor_officer
+				
+				trickster
+			}
+			
+			skill = 6
+			
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 2
+			logistics_skill = 5
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	GEU_Toon = {
+#グエン・トーン
+		name = GEU_Toon
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_GEU_Toon_pic
+				small = GFX_GEU_Toon_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				politically_connected
+				war_hero
+				trait_cautious
+				media_personality
+				harsh_leader
+				
+				tsf_officer
+				
+				trickster
+				
+				tsf_leader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	GEU_Neelam = {
+#ニイラム・ラワムナンド
+		name = GEU_Neelam
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_GEU_Neelam_pic
+				small = GFX_GEU_Neelam_pic_small
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
+			
+			skill = 4
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+		
+	}
+	
+	GEU_KumiKouda = {
+#倖田來未
+		name = GEU_KumiKouda
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_GEU_KumiKouda_pic
+				small = GFX_GEU_KumiKouda_pic_small
+			}
+		}
+		field_marshal = {
+			traits = {
+				trickster
+				brilliant_strategist
+				commando
+				jungle_rat
+				ranger
+				adaptable
+				media_personality
+				organizer
+				tsf_officer
+				commander_aptitude
+				tsf_leader
+				tsf_commander
+			}
+			
+			skill = 9
+			
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 7
+			logistics_skill = 7
+			
+			legacy_id = -1
+		}
+	}
+	
+	GEU_Tarisa = {
+#タリサ・マナンダル
+		name = GEU_Tarisa
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_GEU_Tarisa_pic
+				small = GFX_GEU_Tarisa_pic_small
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				brilliant_strategist
+				jungle_rat
+				tsf_officer
+				tsf_leader
+				
+				jaeger
+				
+				trickster
+				
+			}
+			
+			skill = 7
+			
+			attack_skill = 8
+			defense_skill = 7
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	GEU_Knightley = {
+#レイチェル・ナイトレイ
+		name = GEU_Knightley
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_GEU_Knightley_pic
+				small = GFX_GEU_Knightley_pic_small
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				tsf_officer
+				tsf_leader
+			}
+			
+			skill = 4
+			
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	GEU_takamori = {
+#高森・ミサキ
+		name = GEU_takamori
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_GEU_takamori_pic
+				small = GFX_GEU_takamori_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				tsf_officer
+
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	GEU_akaru = {
+#鬼灯・あかる
+		name = GEU_akaru
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_GEU_akaru_pic
+				small = GFX_GEU_akaru_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				tsf_officer
+				
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+}

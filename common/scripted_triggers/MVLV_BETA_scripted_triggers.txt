@@ -1,0 +1,391 @@
+BETA_stay_home_trigger = {
+	any_neighbor_country = {
+		is_in_faction_with = UNI
+	}
+}
+
+defficulty_easy_trigger = {
+	any_country = {
+		has_idea = mvlv_difficulty_easy
+	}
+}
+
+
+defficulty_nomal_trigger = {
+	any_country = {
+		has_idea = mvlv_difficulty_normal
+	}
+}
+
+defficulty_hard_trigger = {
+	any_country = {
+		has_idea = mvlv_difficulty_hard
+	}
+}
+
+
+defficulty_hell_trigger = {
+	any_country = {
+		has_idea = mvlv_difficulty_unlimited
+	}
+}
+
+morocco_underground_invasion_trigger = {
+	118 = {
+		is_controlled_by = from
+	}
+	290 = {
+		is_controlled_by = AFR
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			AFR = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+BETA_morocco_deep_underground_invasion_trigger = {
+	118 = {
+		is_controlled_by = from
+	}
+	NOT = {
+		290 = {
+			is_fully_controlled_by = AFR
+		}
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			AFR = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+dover_underground_invasion_trigger = {
+	29 = {
+		is_controlled_by = from
+	}
+	127 = {
+		is_controlled_by = EUR
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			EUR = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+portsmouth_underground_invasion_trigger = {
+	15 = {
+		is_controlled_by = from
+	}
+	808 = {
+		is_controlled_by = EUR
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			EUR = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+kamchatka_underground_invasion_trigger = {
+	797 = {
+		is_controlled_by = from
+	}
+	637 = {
+		is_controlled_by = SOV
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			SOV = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+BETA_kamchatka_deep_underground_invasion_trigger = {
+	797 = {
+		is_controlled_by = from
+	}
+	NOT = {
+		637 = {
+			is_fully_controlled_by = SOV
+		}
+	}
+	810 = {
+		is_controlled_by = SOV
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			SOV = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+taipei_underground_invasion_trigger = {
+	595 = {
+		is_controlled_by = from
+	}
+	524 = {
+		is_controlled_by = CHI
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			CHI = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+BETA_taipei_deep_underground_invasion_trigger = {
+	595 = {
+		is_controlled_by = from
+	}
+	NOT = {
+		524 = {
+			is_fully_controlled_by = CHI
+		}
+	}
+	807 = {
+		is_controlled_by = CHI
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			CHI = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+sicily_underground_invasion_trigger = {
+	156 = {
+		is_controlled_by = from
+	}
+	115 = {
+		is_controlled_by = EUR
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			EUR = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+tunisia_underground_invasion_trigger = {
+	115 = {
+		is_controlled_by = from
+	}
+	458 = {
+		is_controlled_by = AFR
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			AFR = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+alaska_underground_invasion_trigger = {
+	809 = {
+		is_controlled_by = from
+	}
+	790 = {
+		is_controlled_by = SOV
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			SOV = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+BETA_alaska_deep_underground_invasion_trigger = {
+	809 = {
+		is_controlled_by = from
+	}
+	NOT = {
+		790 = {
+			is_fully_controlled_by = SOV
+		}
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+	# 
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			SOV = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+somaliland_underground_invasion_trigger = {
+	OR = {
+		293 = {
+			is_controlled_by = from
+		}
+		659 = {
+			is_controlled_by = from
+		}
+	}
+	268 = {
+		is_controlled_by = AFR
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+
+		
+	# AFR = {
+	# 	is_ai = no
+	# }
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			AFR = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+
+
+#海南可地下侵攻 = {
+hainan_underground_invasion_trigger = {
+	OR = {
+		592 = {
+			is_controlled_by = from
+		}
+		594 = {
+			is_controlled_by = from
+		}
+		671 = {
+			is_controlled_by = from
+		}
+		728 = {
+			is_controlled_by = from
+		}
+	}
+	591 = {
+		is_controlled_by = CHI
+	}
+	NOT = {
+		has_idea = mvlv_brokenhive
+	}
+
+	
+	# CHI = {
+	# 	is_ai = no
+	# }
+	OR = {
+		defficulty_hell_trigger = yes
+		and = {
+			defficulty_hard_trigger = yes
+			CHI = {
+				is_ai = no
+			}
+		}
+	}
+}
+

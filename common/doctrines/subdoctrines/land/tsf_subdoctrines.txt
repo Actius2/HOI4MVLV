@@ -1,0 +1,617 @@
+#支援運用
+support_tsf_operation = {
+    track = tsf
+    name = SUBDOCTRINE_SUPPORT_TSF_OPERATION
+    description = SUBDOCTRINE_SUPPORT_TSF_OPERATION_DESC
+    icon = GFX_support_tsf_operation_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+
+        base = 1 
+    }
+
+    # EFFECTS
+    #enable_tactic = tactic_overwhelming_fire
+    category_MVLV_tsf_support_family = {
+        soft_attack = 0.1
+        hard_attack = 0.1
+        battalion_mult = {
+            category = category_line_tsf_family
+            soft_attack = 0.02
+            hard_attack = 0.02
+        }
+    }
+
+     rewards = {
+        standing_barrage = {
+        #1	
+			engineer = {
+				battalion_mult = {
+					category = category_line_tsf_family
+					entrenchment = 1		#0.50
+					add = yes
+				}
+			}
+        }
+        predicted_fire = {
+        #2
+            category_MVLV_tsf_support_family = {
+                defense = 0.2
+                breakthrough = 0.2
+			}
+            MVLV_tsf_support_company = {
+                battalion_mult = {
+                    category = category_line_tsf_family
+                    defense = 0.01
+                    breakthrough = 0.01
+                }
+            }
+        }
+        artillery_groups = {
+        #3
+            category_MVLV_tsf_support_family = {
+                reliability_factor = 0.05 #要観察
+            }
+        }
+        dedicated_air_support = {
+        #4
+            category_MVLV_tsf_support_family = {
+                maximum_speed = 0.1 #要観察
+            }
+        }
+        weakpoint_studies = {
+        #5
+            category_MVLV_tsf_support_family = {
+                defense = 0.2
+                breakthrough = 0.2
+			}
+            MVLV_tsf_support_company = {
+                battalion_mult = {
+                    category = category_line_tsf_family
+                    soft_attack = 0.01
+                    hard_attack = 0.01
+                }
+            }
+        }
+    }
+}
+
+#機動強襲
+mobile_assault = {
+    track = tsf
+    name = SUBDOCTRINE_MOBILE_ASSAULT
+    description = SUBDOCTRINE_MOBILE_ASSAULT_DESC
+    icon = GFX_doctrine_mobile_assault_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { base = 0 }
+
+     # EFFECTS
+    category_MVLV_tsf_family = {
+        maximum_speed = 0.1
+    }
+
+
+    rewards = {
+        pakfront = {
+        #1
+			enable_tactic = tactic_hm_MobileEvac
+			enable_tactic = tactic_hm_MobileAttack
+            MVLV_tsa_battalion = {
+                forest = {
+                    attack = 0.1
+                }
+                urban = {
+                    attack = 0.1
+                }
+                hills = {
+                    attack = 0.1
+                }
+                mountain = {
+                    attack = 0.1
+                }
+                jungle = {
+                    attack = 0.1
+                }
+            }
+            MVLV_asa_battalion = {
+                forest = {
+                    attack = 0.1
+                }
+                urban = {
+                    attack = 0.1
+                }
+                hills = {
+                    attack = 0.1
+                }
+                mountain = {
+                    attack = 0.1
+                }
+                jungle = {
+                    attack = 0.1
+                }
+            }
+			MVLV_tsf_battalion = {
+                forest = {
+                    attack = 0.1
+                }
+                urban = {
+                    attack = 0.1
+                }
+                hills = {
+                    attack = 0.1
+                }
+                mountain = {
+                    attack = 0.1
+                }
+                jungle = {
+                    attack = 0.1
+                }
+            }
+			MVLV_tsf_support_battalion = {
+                forest = {
+                    attack = 0.1
+                }
+                urban = {
+                    attack = 0.1
+                }
+                hills = {
+                    attack = 0.1
+                }
+                mountain = {
+                    attack = 0.1
+                }
+                jungle = {
+                    attack = 0.1
+                }
+            }
+			mountaineers = {
+				defense = 0.05
+				maximum_speed = 0.025
+			}
+			MVLV_tsf_specialForces_battalion = {
+				defense = 0.05
+				maximum_speed = 0.025
+			}
+        }
+        emplacement_rotation = {
+        #2
+			org_loss_when_moving = -0.2
+			planning_speed = 0.1
+        }
+        weakpoint_studies = {
+        #3
+			enable_tactic = tactic_mobility_elastic_defense
+			enable_tactic = tactic_mobility_Assault
+			MVLV_tsa_battalion = {
+                forest = {
+                    defence = 0.2
+                }
+                urban = {
+                    defence = 0.2
+                }
+                hills = {
+                    defence = 0.2
+                }
+                mountain = {
+                    defence = 0.2
+                }
+                jungle = {
+                    defence = 0.2
+                }
+            }
+			MVLV_asa_battalion = {
+                forest = {
+                    defence = 0.2
+                }
+                urban = {
+                    defence = 0.2
+                }
+                hills = {
+                    defence = 0.2
+                }
+                mountain = {
+                    defence = 0.2
+                }
+                jungle = {
+                    defence = 0.2
+                }
+            }
+			MVLV_tsf_battalion = {
+                forest = {
+                    defence = 0.2
+                }
+                urban = {
+                    defence = 0.2
+                }
+                hills = {
+                    defence = 0.2
+                }
+                mountain = {
+                    defence = 0.2
+                }
+                jungle = {
+                    defence = 0.2
+                }
+            }
+			MVLV_tsf_support_battalion = {
+                forest = {
+                    defence = 0.2
+                }
+                urban = {
+                    defence = 0.2
+                }
+                hills = {
+                    defence = 0.2
+                }
+                mountain = {
+                    defence = 0.2
+                }
+                jungle = {
+                    defence = 0.2
+                }
+            }
+			mountaineers = {
+				breakthrough = 0.10
+			}
+			MVLV_tsf_specialForces_battalion = {
+				breakthrough = 0.10
+			}
+        }
+        offensive_deployments = {
+        #4
+			category_MVLV_tsf_family = {
+				maximum_speed = 0.15
+			}
+        }
+        assault_anti_tank = {
+        #5
+			MVLV_tsa_battalion = {
+                forest = {
+                    attack = 0.1
+                }
+                urban = {
+                    attack = 0.1
+                }
+                hills = {
+                    attack = 0.1
+                }
+                mountain = {
+                    attack = 0.1
+                }
+                jungle = {
+                    attack = 0.1
+                }
+            }
+			MVLV_asa_battalion = {
+                forest = {
+                    attack = 0.1
+                }
+                urban = {
+                    attack = 0.1
+                }
+                hills = {
+                    attack = 0.1
+                }
+                mountain = {
+                    attack = 0.1
+                }
+                jungle = {
+                    attack = 0.1
+                }
+            }
+			MVLV_tsf_battalion = {
+                forest = {
+                    attack = 0.1
+                }
+                urban = {
+                    attack = 0.1
+                }
+                hills = {
+                    attack = 0.1
+                }
+                mountain = {
+                    attack = 0.1
+                }
+                jungle = {
+                    attack = 0.1
+                }
+            }
+			MVLV_tsf_support_battalion = {
+                forest = {
+                    attack = 0.1
+                }
+                urban = {
+                    attack = 0.1
+                }
+                hills = {
+                    attack = 0.1
+                }
+                mountain = {
+                    attack = 0.1
+                }
+                jungle = {
+                    attack = 0.1
+                }
+            }
+			mountaineers = {
+				soft_attack = 0.025
+				hard_attack = 0.025
+			}
+			MVLV_tsf_specialForces_battalion = {
+				soft_attack = 0.025
+				hard_attack = 0.025
+			}
+        }
+    }
+}
+
+#密集近接
+close_quarters_combat = {
+    track = tsf
+    name = SUBDOCTRINE_CLOSE_QUARTERS_COMBAT
+    description = SUBDOCTRINE_CLOSE_QUARTERS_COMBAT_DESC
+    icon = GFX_doctrine_close_quarters_combat_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    
+    ai_will_do = {
+        base = 1
+
+    }
+
+    # EFFECTS
+
+
+    category_MVLV_tsf_family = {
+        soft_attack = 0.05
+        hard_attack = 0.05
+    }
+
+    rewards = {
+        deployment_drills = {
+			enable_tactic = tactic_hm_CloseQuarters
+			enable_tactic = tactic_hm_CloseCounter
+            category_MVLV_tsf_family = {
+                breakthrough = 0.10
+            }
+        }
+        counter_battery_tasks = {  
+			enable_tactic = tactic_cc_hm_CloseQuarters
+			enable_tactic = tactic_cc_hm_MutualCooperation
+            category_support_battalions = {
+                soft_attack = 0.05
+                hard_attack = 0.05
+                defense = 0.10
+				breakthrough = 0.10
+            }
+        }
+        ballistics_corrections = {
+			enable_tactic = tactic_cc_hm_HighlyMobile
+			enable_tactic = tactic_cc_hm_HighlyManeuveEvac
+            category_MVLV_tsf_family = {
+				defense = 0.10
+                breakthrough = 0.10
+            }
+
+        }
+        mobile_barrages = {
+            category_MVLV_tsf_family = {
+                soft_attack = 0.05
+                hard_attack = 0.05
+            }
+        }
+        wide_dispersal_positions = {
+			enable_tactic = tactic_human_hvin_combat_assault
+			enable_tactic = tactic_human_hvin_combat_defence
+			medium_armor = {
+				hive_gateclass = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_mainhall = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_drift = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_gate = {
+					attack = 0.2
+					defence = 0.1
+				}
+			}
+			modern_sp_anti_air_brigade = {
+				hive_gateclass = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_mainhall = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_drift = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_gate = {
+					attack = 0.2
+					defence = 0.1
+				}
+			}
+			MVLV_tsf_battalion = {
+				hive_gateclass = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_mainhall = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_drift = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_gate = {
+					attack = 0.2
+					defence = 0.1
+				}
+			}
+			MVLV_tsf_support_battalion = {
+				hive_gateclass = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_mainhall = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_drift = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_gate = {
+					attack = 0.2
+					defence = 0.1
+				}
+			}
+			MVLV_tsa_battalion = {
+				hive_gateclass = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_mainhall = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_drift = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_gate = {
+					attack = 0.2
+					defence = 0.1
+				}
+			}
+			MVLV_asa_battalion = {
+				hive_gateclass = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_mainhall = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_drift = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_gate = {
+					attack = 0.2
+					defence = 0.1
+				}
+			}
+			MVLV_tsf_specialForces_battalion = {
+				hive_gateclass = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_mainhall = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_drift = {
+					attack = 0.2
+					defence = 0.1
+				}
+				hive_gate = {
+					attack = 0.2
+					defence = 0.1
+				}
+			}
+        }
+    }
+}
+
+#対光線戦
+laser_jagd_tactics = {
+    track = tsf
+    name = SUBDOCTRINE_LASER_JAGD_TACTICS
+    description = SUBDOCTRINE_SUBDOCTRINE_LASER_JAGD_TACTICS_DESC
+    icon = GFX_laser_jagd_tactics_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+
+    ai_will_do = { base = 0 }
+
+    # EFFECTS
+	category_line_tsf_family = {
+		defense = 0.05
+		breakthrough = 0.05
+	}
+
+    rewards = {
+        airborne_observers = { 
+            heat_attrition = -0.1
+			winter_attrition = -0.1
+			category_line_tsf_family = {
+				acclimatization_hot_climate_gain_factor = 0.10
+				acclimatization_cold_climate_gain_factor = 0.10
+			}
+        }
+        service_and_support = {
+			attrition = -0.05
+			cas_damage_reduction = 0.05
+		}
+        rescue_liasions = {
+			enable_tactic = tactic_hm_MobileAttack
+			category_line_tsf_family = {
+				soft_attack = 0.05
+				hard_attack = 0.05
+				air_attack = 0.10
+			}
+        }
+
+        transport_assault = {
+			cas_damage_reduction = 0.05
+            category_line_tsf_family = {
+                maximum_speed = 0.10
+            }
+        }
+        intervention_units = {
+			enable_tactic = tactic_cc_hm_HighlyMobile
+			category_line_tsf_family = {
+				soft_attack = 0.05
+				hard_attack = 0.05
+				air_attack = 0.20
+			}
+        }
+ 
+    }
+}

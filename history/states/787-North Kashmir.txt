@@ -1,0 +1,27 @@
+state={
+	id=787
+	name="STATE_787" # Northern Kashmir
+	manpower = 1415800
+	
+	state_category = rural
+
+	history = {
+		owner = H02
+		remove_core_of = H02
+
+		victory_points = {
+			1910 1
+		}
+
+		buildings = {
+			infrastructure = 2
+		}
+
+		add_core_of = GEU
+
+	}
+
+	provinces={
+		1910 2041 2084 10821 
+	}
+}

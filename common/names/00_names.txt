@@ -1,0 +1,537 @@
+### Names generation for aces ###
+# Surnames can be male/female dependent or general. Fe. in Polish some surnames has different endings depending on the gender.
+# Names and Surnames are randomly picked and will sometimes repeat, but will never repeat in combinations for example there will never be generated another "John Smith".
+# Assigning the callsign is random - may be assigned or not. If we use the callsign, it will never be assigned to anyone again. Callsigns are not obligatory to script.
+# Picking up a gender is random, and is influenced by the amount of names scripted.
+### Operations
+# Operations will randomly pick from national pools until exhausted
+# You can specify a strategic region for which an order name will be drawn
+# if any enemy province along the frontline matches this strategic region, this sub-pool will be considered and used in preference to default. 
+# Whether this 'historical' name pool is exhausted is dependent on the define: HISTORICAL_ORDER_NAME_EXHAUSTION
+# Strategic region index '0' is the generic national pool.
+# You can specify the same name in several regions, though I would suggest not doing this too often, for performance reasons.
+# After this, a first and second will be randomly picked from the default pool
+# The prefix must be provided for all pools
+
+default = {
+	male = {
+		names = { "John" "Bob" "Lucas" "Marcus" "Alexander" "Alex" "Peter" "Jonas" "Jim" "Johannes"}
+		surnames = { }
+		callsigns = { }
+	}
+	#female = {
+	#	names = { "Juliette" "Anna" }
+	#	surnames = { }
+	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
+	#}
+	surnames = { "Smith" "Jones" "Taylor" "Brown" "Williams" "Wilson" "Evans" "Walker" "White" "Roberts" }
+	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon}
+	
+	
+	#Operations - treat these as keys, not strings.
+	prefix = o_operation
+	
+	operation = {
+		0 = { o_default_operation }
+	}
+	
+	use_geographical_default_operation_names = yes
+	offensive_operation_suffix = o_strat_offensive_default
+	defensive_operation_suffix = o_strat_defensive_default
+	naval_operation_suffix = o_strat_naval_default
+	
+}
+ 
+###############################################################
+# The Majors
+###############################################################
+
+SOV = {
+	male = {
+		names = { 
+			Aleksandr Aleksey Andrey Anton Boris Dmitry Fyodor Gennady 
+			Georgy Grigory Igor Ilya Iosif Ivan Kirill Konstantin Lavr Leonid Lev
+			Maksim Mikhail Nikita Nikolay Noy Oleg Pavel Pyotr Roman Semyon Sergey
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yury
+			#New
+			Akim Aksel Anastasy Anatoly Andrian Arkady Arseny Aslan Dzhabir Emil Feodosy Filipp Isay Ivar Izot 
+			Karl Kazimir Kuzma Lavrenty Lazar Makary Manzakir Marat Markian Martemyan Mstislav 
+			Osher Pasha Roman Sidor Slava Stepan Tikhon Timofey Tsyrendashi Vsevolod Vyacheslav Yakov Yefim Zinovy
+			#Georgian
+			Levan Tamaz Zurab
+			#Armenian
+			Amayak Amazasp Arno Artashes Bagrat Derenik Karapet Khoren Tarlan
+		}
+		surnames = { 
+			Akhnazarov Akimenko Alekseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+			Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Isayev 
+			Konev Konstantinov Kornilov Kolchak Kuropatkin
+			Lazarev Makarov Maksimov Menshikov Nakhimov Nebogatov Nikolayevich Nikitin
+			Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+			Shuvalov Surkov Tukhachevsky Yan Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+			#New
+			Abramov Abugov Abyzov Achkasov Adriashenko Afanasev Agafonov Akimov Alagakov Alekhin Aleksandrovich 
+			Aleksandrov Almazov Anashkin Andreyev Andrianov Apriamov Arushanyan Arutyunovich Asadov
+			Babak Barkov Bondaryov Borisovich Bulgakov Bulgatov Bulanenko Brezhnev Bocharov 
+			Chernishevsky Chernishev Chigvintsev Chistyakov Chuikov Danilovich Dazhin Denishchev Dokutovich Dorzhiyev 
+			Filippov Fyodorov Gabrilov Gagarin Ganyev Gashev Golubev Grachyov Grigorov Grishayev Gusev
+			Ilnitsky Kaminsky Kiselyov Klubkov Koldeyev Kondakov Korenev Koshkin Kovshov Kuzma Kuznetsov 
+			Larionov Lavrentyev Lev Lidov Lisitsyn Loginov Lukichyov Lyubilkin
+			Makeyev Makhlyagin Makoveyev Malyutin Maresyev Markelov Matveyevich Mazhnov Melikhov Milko Moiseyenko Molchanov Murakhovets
+			Nakaryakov Nesterov Nikiforov Nikolayev Nikulin Nomokonov Novozhilov Okunev Onilov Orlov
+			Pakhomkin Panchenko Panteleyev Parfyonov Pavlichenko Pchelintsev Pegeshov Petrov Popov Posazhnikov Prokopev Pustobriko
+			Rabichev Radkin Rakityansky Raskov Romanovich Romashov Rudnev Ryasin 
+			Sagaidak Saikin Sanfirov Selin Selyanin Serebryakov Seryogin Shalayev Shambarov Shatrov
+			Shevelyov Shilov Shlyakhov Shmurak Shvetsov Simonov Sokolov Solomatin Stepanov Svetlov
+			Tanailov Terekhov Tinigin Tolstoy Ulyanenko Utkin Vashchenko Vasilenko Vinogradov Vladimirsky Volkhov Vorontsov
+			Yartsev Yegorov Yekimov Yermakov Yushin Zakharov Zaytsev Zhudin Zhukov
+			#Georgian (some might be shared with other SSRs around) -> Most likely in Russian form
+			Adamiya Aliyev Aslanikashvili Beriya Chiladze Dzhugashvili Gelashvili Giligashvili 
+			Kapanadze Khalvashi Kvachantiradze Kvaratskhelia Lomidze Makharashvili Tatuashvili Tavadze Tsereteli
+			#Armenian (some might be shared with other SSRs around) -> Most likely in Russian form
+			Babadzhanyan Gurgen Markosyan
+			#Azerbaijan (some might be shared with other SSRs around) -> Most likely in Russian form
+			Akhundov Aliyarbekov Apresyan
+		}
+	}
+	female = {
+		names = {
+			Afanasiya Albina Aleksandra Anastasiya Elena Elvira Lydia Lyudmila Margarita Muza Natalya Olga Sofiya Svetlana Valentina Yelena
+			#New
+			Alina Alevtina Aliya Anna Anya Asya Dusya Galya Kaleriya Kalya Katya Klava Klavdiya Irina 
+			Lida Liza Lyuba Lyubov Marina Mariya Maryam Marusya Nadezhda Nadya Natasha Nina Nonna 
+			Polina Raisa Roza Rozaliya Serafima Svetlana Tamara Tanya Taya Tonya Tosya
+			Valya Vera Yekaterina Yepistiniya Yevdokiya Yevgeniya Yuliya Zinaida Zoya
+			#Georgian
+			Ketevan Nana Nino Tamar 
+		}
+		surnames = {
+			#New
+			Abramova Abyzova Akhnazarova Akimenko Akimova Aleksandrova Aleksandrovna Almazova Anashkina Anatolyevna Artamonova
+			Badanova Bakieva Barakina Barkova Bocharova Bondaryova Bratishcheva Bulatova Bulgakova 
+			Chegodayeva Chernisheva Chibisova Chigvintseva Chistyakova Chuikova Fedutenko Filippova Fyodorova 
+			Gabrilova Gagarina Ganyeva Gasheva Golubeva Grachyova Grigorova Grishayeva Grunskaya Gulyakina Guseva Isayeva Ivanova 
+			Kekeshyeva Kiselyova Klubkova Koldeyeva Kondakova Koreneva Korotkevich Kosmodemyanskaya Kovalenko Kovshova Kroshchenko Kuzmina Kuznetsova
+			Larionova Lavrentyeva Lidova Loginova Lukichyova 
+			Makeyeva Makhlyagina Makoveyeva Maksimova Malyutina Maresyeva Markelova Matokh Mazhnova Melikhova Menshikova Milko Moiseyenko Molchanova
+			Moldagulova Mulatova Murakhovets Nakaryakova Nakhimova Nesterova Nikiforova Nikiforovna Nikoloyeva Novozhilova Nurmukhambetovna
+			Okuneva Onilova Orlova
+			Pakhomkina Panchenko Panteleyeva Parfyonova Pavlichenko Pavlova Pchelintseva Pegeshova Peredera Petrova Popova Posazhnikova Prokopeva Pustobrikova
+			Rabicheva Rachkevich Radkina Raskova Reznichenko Rogalskaya Romanova Romashova Rudneva Ryasina 
+			Saikina Sanfirova Selina Selyanina Serebryakova Shalayeva Shambarova Shanina Shatrova
+			Shevelyova Shilova Shlyakhova Shvetsova Simonova Sokolova Stepanova Surkova Svetlova
+			Tanailova Terekhova Tinigina Ulyanenko Vashchenko Vasilenko Vinogradova Visnitskaya Volkhova Vorontsova
+			Yartseva Yegorova Yekimova Yermakova Yushina Zakharova Zhukova
+			#Caucasus
+			Aliyeva
+			#Georgia
+			Aslanikashvili Beriya Dzhugashvili Gelashvili Giligashvili Khalvashi Kvaratskhelia Kapanadze Ingorovka Lomidze Makharashvili Tatuashvili Tavadze Tsereteli
+			#Azerbaijan
+			Pashayeva
+		}
+	}
+	callsigns = { "The Colonist" "The Bell" Heine Duma Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Vodka }
+	
+	prefix = o_operatsiya
+	
+	use_geographical_default_operation_names = yes
+	offensive_operation_suffix = o_strat_offensive_ru
+	defensive_operation_suffix = o_strat_defensive_ru
+	naval_operation_suffix = o_strat_naval_ru
+	
+	operation = {
+		0 = {
+			o_mercury
+			o_venus
+			o_neptune
+			o_maly_saturn
+			o_maly_neptun
+			o_kontsert
+		}
+		130 = {
+			o_bagration
+		}
+		131 = {
+			o_bagration
+			o_suvorov
+		}
+		132 = {
+			o_iskra
+			o_lyuban
+			o_sinyavino
+		}
+		133 = {
+			o_mars
+			o_jupiter
+			o_kutuzov
+			o_polar_star
+			o_rumyantsev
+		}
+		24 = {
+			o_belgrade_strategic_offensive
+		}
+		8 = {
+			o_berlin_strategic_offensive
+		}
+		137 = {
+			o_ring
+			o_saturn
+			o_uranus
+		}
+		38 = {
+			o_samland
+		}
+	}
+}
+
+
+USA = {
+	male = {
+		names = { 
+		
+			Adam Alexander William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses 
+			Joseph Charles Russell Benjamin Robert Christopher Richard Chester Lafayette Nathaniel Francis James Donald Cyrus Ambrose
+			Edward Eugene Augustus Norton Abner Isaac Amos Thomas Randolph
+			Robert Jesse James Nathan George Joseph John Patrick Albert Braxton William Ambrose Jubal Richard 
+			Lewis Edmund Leonida Benjamin Wade Daniel Thomas Jonathan Stonewall Lemual Sterling Raphael Kirby Pierre 
+			Jonas Frank Charles Peter Rand Leslie Howard Malvin Oscar Henry Simon Edward Gideon Isaac Evander Jerome Alfred Cadmus
+			Carnot Ezra Wilton Hamilton Matthew Richard Hiram Thomas Elkanah John William James Albert Wilburn Walter Hinchie Samuel Benjamin 
+			Henry Allison Horace Felix Jerome Lawrence Alexander Louis Steven Zach
+		
+		  }
+	}
+	female = {
+		names = { Mary Jane Kate Eleanor Charlotte Lisa Isabel Jay Carol Nancy Margaret }
+	}
+	surnames = { 
+		Smith Washington Grant Sherman Chamberlain Powell Clemens Abbott Abercrombie Allen Ames Anderson Barkhauer Andrews Appleton
+		Armstrong Arthur Atkins Asboth Babcock Baker Pope Banks Barnard Barnes Barnum Barry Barstow Bartlett Bates 
+		Baxter Beatty Belknap Benton Blair Blunt Bradley Brown Buell Buford Burnside Butler Caldwell Campbell Carr
+		Chapman Chipman Clayton Coburn Connor Conrad Cook Cooper Crittenden Custer Davies Davis Doubleday Ewing Farnsworth 
+		Ford Forsyth Foster Franklin Fry Gilbert Gregg Griffin Halleck Hamlin Hancock Harrison Hatch Hayes Heintzelman
+		Hooker Howard Hunter Jackson Johnson Jones Keyes Kimball Lyon McArthur McClellan McCook McDowell Meade Mitchell
+		Morgan Paine Phelps Porter Potter Reynolds Rice Rhodes Robinson Rosencrans Saloman Schenck Schofield Scott Sedgwick
+		Seward Sheridan Sickles Sprague Stevens Stevenson Stone Sullivan Taylor Tyler Wade Wadsworth Wallace Ward Warner
+		Wilson Wright Young Lee Jackson Johnson Beauregard Stuart Longstreet Forrest Pickett Mosby Cleburne Hood Breckenridge Bragg 
+		Barksdale Early Hill Ewell Morgan Armistead Semmes Smith Hampton Polk Cheatham Wheeler Pemberton Gordon Hardee Floyd Price 
+		Wise "Van Dorn" Loring Buckner Taylor Williams French Gibbs Hindman Anderson Sibley Garnett Magruder Pillow McLaws Rodes Heth 
+		Pender Trimble Kershaw Wofford Kemper Law Robertson Benning Hays Walker Iverson Wilcox Mahone Wright Pettigrew Archer 
+		Davis Lane Posey Scales Warner Imboden Jenkins Bee Ector Gano Granbury Green Greer Gregg Hardeman Harrison Hood Johnston King Lane Mabry Maxey McCulloch Moore 
+		Nelson Randal Robertson Ross Rosser Scurry Steele Terrell Waterhouse Waul Wharton Whitfield Wigfall Young Bowie Travis Houston
+		Wells Holmgren
+
+	}
+	callsigns = { "Goose" "Iceman" "Maverick" "Apollo" "Animal" "Boom-Boom" "Badger" "Brick" "Cajun" "Challenger" "Chip" "Eagle" "Ghost" "Hawk" "Jaws" "Moses" "Mad Dog"}
+	prefix = o_operation
+	first = { 
+		o_shadow o_mountain o_active o_joint o_allied o_unified o_resolute o_dark o_bright o_stalwart o_red o_green o_blue 
+		o_bold o_defiant o_striking
+	}
+	
+	second = { 
+		o_storm o_fox o_shield o_sword o_wolf o_panther o_wind o_thunder o_rain o_pegasus o_star 
+		o_phalanx o_resolve o_fire o_force o_eagle o_raptor o_hawk o_lion o_tiger
+		o_cobra
+	}
+	operation = {
+		160 = {
+			o_musketeer
+		}
+		83 = {
+			o_cartwheel
+			o_chronicle
+			o_postern
+			o_blissful
+			o_dexterity
+			o_cleanslate
+			o_cyclone
+			o_oboe
+			o_watchtower
+		}
+		97 = {
+			o_detachment
+			o_flintlock
+			o_catchpole
+			o_forager
+			o_galvanic
+			o_iceberg
+			o_stalemate
+		}
+		94 = {
+			o_detachment
+			o_flintlock
+			o_catchpole
+			o_forager
+			o_galvanic
+			o_iceberg
+			o_stalemate
+		}
+		84 = {
+			o_detachment
+			o_flintlock
+			o_catchpole
+			o_forager
+			o_galvanic
+			o_iceberg
+			o_stalemate
+		}
+		76 = {
+			o_iceberg
+			o_causway
+		}
+		154 = {
+			o_downfall
+			o_olympic
+			o_coronet
+			o_majestic
+		}
+		33 = {
+			o_cottage
+			o_sandcrab
+		}
+		23 = {
+			o_avalanche
+			o_giant
+			o_buffalo
+			o_husky
+			o_shingle
+		}
+		20 = {
+			o_anvil
+			o_dragoon
+		}
+		208 = {
+			o_overlord
+			o_cobra
+			o_roundup
+			o_sledgehammer
+		}
+		19 = {
+			o_overlord
+			o_cobra
+			o_roundup
+			o_sledgehammer
+		}
+		182 = {
+			o_torch
+			o_blackstone
+			o_brushwood
+			o_goalpost
+		}
+		126 = {
+			o_torch
+			o_blackstone
+			o_brushwood
+			o_goalpost
+		}
+	}
+}
+JAP = {
+	male = {
+		names = { 
+			"佐藤" "鈴木" "高橋" "田中" "渡辺" "伊藤" "山本" "中村" "小林" "斎藤" "加藤" "吉田" "山田" "佐々木" "山口" "松本" "井上" "木村" "林" "清水" "山崎" "中島" "池田" "阿部" "橋本" "山下" "森" "石川" "前田" "小川" "藤田" "岡田" "後藤" "長谷川" "石井" "村上" "近藤" "坂本" "遠藤" "青木" "藤井" "西村" "福田" "太田" "三浦" "藤原" "岡本" "松田" "中川" "中野" "原田" "小野" "田村" "竹内" "金子" "和田" "中山" "石田" "上田" "森田" "小島" "柴田" "原" "宮崎" "酒井" "工藤" "横山" "宮本" "内田" "高木" "安藤" "島田" "谷口" "大野" "高田" "丸山" "今井" "河野" "藤本" "村田" "村田" "武田" "上野" "杉山" "増田" "小山" "大冢" "平野" "菅原" "久保" "松井" "千葉" "岩崎" "桜井" "木下" "野口" "松尾" "菊地" "野村" "新井" "渡部" "星野" "森川" "栗原" "市谷" "藤野" "秋元" "浅田" "緒方" "織田" "宮崎" "鈴原" "石田" "赤西" "涼宮"
+		}
+	}
+	female = {
+		names = { 
+			"佐藤" "鈴木" "高橋" "田中" "渡辺" "伊藤" "山本" "中村" "小林" "斎藤" "加藤" "吉田" "山田" "佐々木" "山口" "松本" "井上" "木村" "林" "清水" "山崎" "中島" "池田" "阿部" "橋本" "山下" "森" "石川" "前田" "小川" "藤田" "岡田" "後藤" "長谷川" "石井" "村上" "近藤" "坂本" "遠藤" "青木" "藤井" "西村" "福田" "太田" "三浦" "藤原" "岡本" "松田" "中川" "中野" "原田" "小野" "田村" "竹内" "金子" "和田" "中山" "石田" "上田" "森田" "小島" "柴田" "原" "宮崎" "酒井" "工藤" "横山" "宮本" "内田" "高木" "安藤" "島田" "谷口" "大野" "高田" "丸山" "今井" "河野" "藤本" "村田" "村田" "武田" "上野" "杉山" "増田" "小山" "大冢" "平野" "菅原" "久保" "松井" "千葉" "岩崎" "桜井" "木下" "野口" "松尾" "菊地" "野村" "新井" "渡部" "星野" "森川" "栗原" "市谷" "藤野" "秋元" "浅田" "緒方" "織田" "宮崎" "鈴原" "石田" "赤西" "涼宮"
+		}
+	}
+	surnames = { 
+		"楓" "千奈美" "梓" "南" "明日香" "和美" "美代" "愛理" "美雪" "千春" "恵美理" "楓" "円" "莉香" "理佳" "梨花" "麗花" "梨絵" "真理子" "真奈美" "千奈美" "真由" "真由美" "真希" "瑞穗" "瑞江" "泉" "梓" "成実" "南" "明日香" "玲子" "雅美" "和美" "仁美" "明沙" "美智子" "美代" "美緒" "美野" "美嘉" "美穗" "美晴" "愛理" "夏美" "梨沙子" "美美子" "貞子" "桜" "朱美"
+	}
+	callsigns = { Viper Lightning Devil Dragon Fury Bat Beer Sake Demon Dirty Lance Panther Shogun Vampire "War Lord" }
+	prefix = o_operation
+		first = { 
+			o_ichi
+			o_ni
+			o_san
+			o_yon
+			o_go
+			o_roku
+			o_nana
+			o_hachi
+			o_kyu
+			o_ju
+			o_ju_ichi
+			o_ju_ni
+			o_ju_san
+			o_ju_yon
+			o_ju_ko
+			o_ju_roku
+			o_ju_hachi
+			o_ju_kyu
+			o_ni_ju
+			o_ni_ju_ichi
+			o_ni_ju_ni
+			o_ni_ju_san
+			o_ni_ju_yon
+			o_ni_ju_ko
+			o_ni_ju_roku
+			o_ni_ju_hachi
+			o_ni_ju_kyu
+			o_san_ju
+			o_san_ju_ichi
+			o_san_ju_ni
+			o_san_ju_san
+			o_san_ju_yon
+			o_san_ju_ko
+			o_san_ju_roku
+			o_san_ju_hachi
+			o_san_ju_kyu
+			o_yon_ju
+			o_yon_ju_ichi
+			o_yon_ju_ni
+			o_yon_ju_san
+			o_yon_ju_yon
+			o_yon_ju_ko
+			o_yon_ju_roku
+			o_yon_ju_hachi
+			o_yon_ju_kyu
+			o_roku_ju
+			o_roku_ju_ichi
+			o_roku_ju_ni
+			o_roku_ju_san
+			o_roku_ju_yon
+			o_roku_ju_ko
+			o_roku_ju_roku
+			o_roku_ju_hachi
+			o_roku_ju_kyu
+		}
+		second = {
+			o_go
+		}
+	operation = {
+		142 = {
+			o_fu
+		}
+		105 = {
+			o_ai
+		}
+		159 = {
+			o_e
+			o_b
+		}
+		187 = {
+			o_de
+			o_l
+			o_t
+		}
+		158 = {
+			o_de
+		}
+		167 = {
+			o_de
+			o_sr
+		}
+		289 = {
+			o_t
+		}
+		188 = {
+			o_t
+		}
+		160 = {
+			o_m
+		}
+		33 = {
+			o_al
+		}
+		189 = {
+			o_b
+		}
+		101 = {
+			o_d
+		}
+		93 = {
+			o_j
+		}
+		178 = {
+			o_fs
+		}
+		167 = {
+			o_mo
+		}
+		97 = {
+			o_ry
+		}
+		95 = {
+			o_mi
+		}
+	}
+
+}
+
+
+
+
+
+
+###############################################################
+# Scandinavia
+###############################################################
+
+
+
+###############################################################
+# Eastern Europe
+###############################################################
+
+###############################################################
+# Asia
+###############################################################
+OSE = {
+	male = {
+		names = {  
+			John Alf Adrian Louis Hallam Henry Shane Stafford William Frederick Thomas Ronald Lawrence Bruce Ray Stuart Brian Bob Scott Guy
+		 }
+	}
+	female = {
+		names = {
+			Sheila Wanda Mary Amelia Chloe Leslie Zoe Sophie Evie Barbera Olivia Charlotte Amelia Ava Mia Chloe Zoe Evie Sophie Emily Ella Matilda
+		}
+	}
+	surnames = {
+		Hope Tennyson Northcote War Thesinger Denman Forster Baird Issac Stewart Fisher Cook Davis Armstrong Anderson Mitchell MacKenzie
+	
+	 }
+	callsigns = { }
+
+	ace = {
+		name = Leslie
+		callsign = Les
+		surname = Clisby
+		type = fighter
+	}
+	ace = {
+		name = "John"
+		callsign = Wad
+		surname = Waddy
+		type = fighter
+	}
+	ace = {
+		name = Keith
+		callsign = Bluey
+		surname = Truscott
+		type = fighter
+	}
+	ace = {
+		name = Paterson
+		callsign = Pat
+		surname = Hughes
+		type = fighter
+	}
+	ace = {
+		name = Adrian
+		callsign = Tim
+		surname = Goldsmith
+		type = fighter
+	}
+	ace = {
+		name = Clive
+		callsign = Killer
+		surname = Caldwell
+		type = fighter
+	}
+}
+
+

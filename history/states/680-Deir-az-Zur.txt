@@ -1,0 +1,30 @@
+
+state={
+	id=680
+	name="STATE_680"
+
+	history={
+
+		owner = H09
+		remove_core_of = H09
+
+
+		victory_points = {
+			901 1 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = AFR
+
+	}
+
+	provinces={
+		901 1549 1578 1606 1634 6883 10882 
+	}
+	manpower=324110
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

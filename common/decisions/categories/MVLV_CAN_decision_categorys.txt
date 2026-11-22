@@ -1,0 +1,25 @@
+CAN_decisions_category = {
+	icon = generic_propaganda
+	priority = 100
+	allowed = {
+        tag = CAN
+	}
+	available = {
+
+	}
+
+	visible = {
+
+	}
+}
+CAN_JAP_decisions_category = {
+	allowed = {
+        tag = CAN
+	}
+	available = {
+
+	}
+	visible = {
+		has_completed_focus = CAN_Canadian_tsf
+	}
+}

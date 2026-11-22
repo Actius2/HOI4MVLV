@@ -1,0 +1,10 @@
+duplicate_archetypes = {
+	MVLV_TSF_support_chassis = {
+		archetype = MVLV_TSF_chassis
+		type = { armor artillery }
+		picture = archetype_light_tank_equipment
+		# for_each = {
+			# variant_name = { find_and_replace = { "chassis" "equipment" } }
+		# }
+	}
+}

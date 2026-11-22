@@ -1,0 +1,14 @@
+BETA_decisions_category = {
+	icon = generic_propaganda
+	priority = 10
+	allowed = {
+		is_in_faction_with = BET
+	}
+}
+MVLV_A_in_faction_decisions_category = {
+	icon = generic_propaganda
+	priority = 10
+	allowed = {
+		tag = H00
+	}
+}

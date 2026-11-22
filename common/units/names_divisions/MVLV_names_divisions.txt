@@ -1,0 +1,177 @@
+﻿MVLV_ARM_01 = {
+	name = "Tank Division"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"medium_armor"
+		
+	}
+	fallback_name = "%d Tank Division"
+}
+
+MVLV_ARM_02 = {
+	name = "Tank Brigade"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"medium_armor"
+		
+	}
+	fallback_name = "%d Tank Brigade"
+}
+
+MVLV_INF_01 = {
+	name = "Infantry division"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%d Infantry Division"
+}
+
+MVLV_INF_02 = {
+	name = "Infantry Brigade"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%d Infantry Brigade"
+}
+###
+MVLV_INF_03 = {
+	name = "Infantry Brigade"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%d Infantry Brigade"
+}
+
+MVLV_INF_04 = {
+	name = "Light Brigade"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"infantry"
+	}
+	fallback_name = "%d Light Brigade"
+}
+##
+MVLV_TSF_01 = {
+	name = "Tactical Surface Fighter Wing"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"MVLV_tsf_battalion"
+	}
+	fallback_name = "%d TSF Wing"
+}
+
+MVLV_TSF_02 = {
+	name = "Tactical Surface Fighter Group"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"MVLV_tsf_battalion"
+	}
+	fallback_name = "%d TSF Group"
+}
+
+MVLV_PAR_01 = {
+	name = "Orbital Divers"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"paratrooper"
+	}
+	fallback_name = "%d Orbital Drop Troop"
+}
+
+MVLV_TSA_01 = {
+	name = "Tactical Surface Attacker Regiment"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"MVLV_tsa_battalion"
+	}
+	fallback_name = "%d TSA Regiment"
+}
+
+MVLV_TSA_02 = {
+	name = "Tactical Surface Attacker Battalion"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"MVLV_tsa_battalion"
+	}
+	fallback_name = "%d TSA Battalion"
+}
+
+MVLV_ASA_01 = {
+	name = "Tactical Assault Surface Attacker Wing"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"MVLV_tsa_battalion"
+	}
+	fallback_name = "%d ASA Wing"
+}
+
+MVLV_ASA_02 = {
+	name = "Tactical Assault Surface Attacker Group"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"MVLV_tsa_battalion"
+	}
+	fallback_name = "%d ASA Group"
+}
+
+MVLV_GUNSHIP_01 = {
+	name = "Assault Helicopter Wing"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"light_armor"
+	}
+	fallback_name = "%d Assault Helicopter Wing"
+}
+
+MVLV_JEG_01 = {
+	name = "Imperial Guard Regiment"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"mountaineers"
+	}
+	fallback_name = "%d Imperial Guard Regiment"
+}
+
+MVLV_JEG_02 = {
+	name = "Imperial Guard Battalion"
+	can_use = {
+		always = yes
+	}
+	division_types = {
+		"mountaineers"
+	}
+	fallback_name = "%d Guards Battalion"
+}

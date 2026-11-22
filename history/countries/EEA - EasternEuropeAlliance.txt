@@ -1,0 +1,634 @@
+capital = 119#首都
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		MVLV_research_basic_tsf_framework = 1
+		MVLV_research_A6 = 1
+		MVLV_research_A10 = 1
+		
+		MVLV_research_tsf_1_light_framework = 1
+		MVLV_research_tsf_1_heavy_framework = 1
+		MVLV_research_tsf_2_light_framework = 1
+		MVLV_research_tsf_2_heavy_framework = 1
+		MVLV_research_armor_light = 1
+		MVLV_research_armor_heavy = 1
+		MVLV_research_engine_1 = 1
+		MVLV_research_engine_maneuver_1 = 1
+		MVLV_research_OS_1 = 1
+		MVLV_research_OS_close_1 = 1
+		MVLV_research_OS_support_1 = 1
+		MVLV_research_head_normal_1 = 1
+		MVLV_research_head_aerial_1 = 1
+		MVLV_research_head_heavy_1 = 1
+		MVLV_research_assault_cannon_1 = 1
+		MVLV_research_assault_cannon_2 = 1
+		MVLV_research_reinforced_structure_1 = 1
+		MVLV_research_add_blade_armor = 1
+		MVLV_research_combat_sword = 1
+		MVLV_research_shield = 1
+		MVLV_research_add_sensor_1 = 1
+		MVLV_research_supplies = 1
+		MVLV_research_small_missile = 1
+		MVLV_research_large_missile_1 = 1
+		MVLV_research_large_missile_2 = 1
+		MVLV_research_custom_shells = 1
+		MVLV_research_maintenance_team_3 = 1
+		MVLV_research_reactive_shield = 1
+		
+	}
+	create_equipment_variant = {
+		name = "TornadeIDS（東欧）"
+		type = MVLV_TSF_chassis_1_light
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_light
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_maneuver_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_add_basic_assault_cannon
+		}
+		icon = "GFX_TornadeIDS"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "TornadeADV（東欧）"
+		type = MVLV_TSF_chassis_1_light
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_light
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_maneuver_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_add_assault_cannon_1
+			MVLV_TSF_head_slot = MVLV_TSF_add_sensor_1
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_add_back_thruster
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_add_back_thruster
+			MVLV_TSF_leg_slot = MVLV_TSF_add_blade_armor
+			MVLV_TSF_sp_slot_1 = MVLV_TSF_fcs_1
+		}
+		icon = "GFX_TornadeADV"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Mig-21（東欧）"
+		type = MVLV_TSF_chassis_1_heavy
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_light
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_maneuver_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_heavy_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_add_basic_assault_cannon
+		}
+		icon = "GFX_Mig-21"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Mig-23（東欧）"
+		type = MVLV_TSF_chassis_1_heavy
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_maneuver_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_add_basic_assault_cannon
+			MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+		}
+		icon = "GFX_Mig-23"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Mig-27（東欧）"
+		type = MVLV_TSF_chassis_2_heavy
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_light
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+		}
+		icon = "GFX_Mig-27"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Mig-25（東欧）"
+		type = MVLV_TSF_chassis_2_heavy
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_no_armor
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_support
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_2
+			MVLV_TSF_left_hand_slot = MVLV_TSF_add_basic_assault_cannon
+			MVLV_TSF_shoulder_slot = MVLV_TSF_large_missile_1
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_add_basic_assault_cannon
+			MVLV_TSF_waist_slot = MVLV_TSF_add_thruster_1
+		}
+		icon = "GFX_Mig-25"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Mig-31（東欧）"
+		type = MVLV_TSF_chassis_2_heavy
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_2
+			MVLV_TSF_left_hand_slot = MVLV_TSF_long_sword
+			MVLV_TSF_shoulder_slot = MVLV_TSF_large_missile_2
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_drop_tank
+			MVLV_TSF_arm_slot = MVLV_TSF_supplie_armor
+			MVLV_TSF_waist_slot = MVLV_TSF_add_thruster_1
+		}
+		icon = "GFX_Mig-31"
+	}
+	create_equipment_variant = {
+		name = "Mig-29（東欧）"
+		type = MVLV_TSF_chassis_2_light
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_light
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_maneuver_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_aerial_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_2
+			MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+			MVLV_TSF_sp_slot_1 = MVLV_TSF_piercing_shell
+		}
+		icon = "GFX_Mig-29"
+	}
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		UNI_basic_concept_research = 1
+		UNI_Assault_gun_improvement_1 = 1
+		UNI_Blade_improvement_1 = 1
+		UNI_Blade_improvement_2 = 1
+		UNI_Schurzen_1 = 1
+
+		UNI_Manipulator_improvement = 1
+
+		EEA_F-5GIDS = 1
+		EEA_F-5EADV = 1
+		EEA_MiG-21 = 1
+		EEA_MiG-23 = 1
+		EEA_MiG-27 = 1
+		EEA_MiG-29 = 1
+		EEA_MiG-25 = 1
+		EEA_MiG-31 = 1
+		generic_A-6 = 1
+		tech_special_forces = 1
+	}
+}
+
+
+
+1999.1.1 = {
+	oob = "EEA_1999"
+	load_oob = "MVLV_generic_templates"
+	load_oob = "MVLV_TSF"
+	load_oob = "MVLV_ASA"
+	load_oob = "MVLV_TSA"
+	load_oob = "MVLV_paratrooper"
+	add_to_war = {
+		targeted_alliance = UNI
+		enemy = BET
+	}
+	#戦争状態を設定
+	set_technology = {
+		#初期研究を定義
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		Mvlv_tech_support_pack = 1
+		
+		gw_artillery = 1
+		interwar_artillery = 1
+		artillery1 = 1
+		artillery2 = 1
+		rocket_artillery = 1
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_medium_tank = 1
+		improved_medium_tank = 1
+		advanced_medium_tank = 1
+		AA_tankI = 1
+		AA_tankII = 1
+		early_destroyer = 1
+
+		fleet_in_being = 1
+		fighter = 1
+		CAS1 = 1
+		CAS2 = 1
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		improved_equipment_conversion = 1
+
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+		
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+		construction5 = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		
+		interwar_antiair = 1
+		experimental_rockets = 1
+		rocket_engines = 1
+		MVLV_shell_tech = 1
+		###陸军ドクトリン###
+		superior_firepower = 1
+
+		improved_equipment_conversion = 1
+
+		tech_special_forces = 1
+		###军需・民需建築許可###
+		MVLV_EnableBuilding_arms_factory = 1
+		MVLV_EnableBuilding_industrial_complex = 1
+		MVLV_EnableBuilding_ammunition_plant = 1
+		MVLV_EnableBuilding_ammunition_silo = 1
+		###戦術###
+		human_combat_tactics = 1
+
+	}
+
+	add_ideas = {
+		#初期国家精神を定義
+		limited_exports
+		service_by_requirement
+		tot_economic_mobilisation
+		mvlv_nuclear_winter
+		mvlv_prominence_problem
+		EEA_DDR
+		EEA_WTO
+		EEA_UNI
+		MVLV_UNF
+	}
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_technology = {
+			muvluv_mtg_naval_pack = 1
+			muvluv_mtg_mtg_transport_pack = 1
+		}
+		### Battleship Variants	
+		create_equipment_variant = {
+			name = "Nagato Class"
+			name_group = JAP_BB_HISTORICAL
+			type = ship_hull_heavy_1
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_1
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				fixed_ship_armor_slot = ship_armor_bb_1
+				front_1_custom_slot = empty
+				mid_1_custom_slot = ship_secondaries_1
+				mid_2_custom_slot = ship_airplane_launcher_1
+				rear_1_custom_slot = ship_heavy_battery_2
+			}
+		}
+		create_equipment_variant = {
+			name = "Kongo Class"
+			name_group = JAP_BB_HISTORICAL
+			type = ship_hull_heavy_2
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				fixed_ship_armor_slot = ship_armor_bc_2
+				front_1_custom_slot = ship_anti_air_1
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = ship_airplane_launcher_1
+				rear_1_custom_slot = ship_heavy_battery_1
+			}
+		}
+
+		### Heavy Cruiser Variants			
+
+		create_equipment_variant = {
+			name = "Mogami Class"
+			type = ship_hull_cruiser_2
+			name_group = JAP_CL_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_medium_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				front_1_custom_slot = ship_medium_battery_2
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = ship_airplane_launcher_1
+			}
+		}
+
+
+		create_equipment_variant = {
+			name = "Sendai Class"		# cruiser minelayer
+			type = ship_hull_cruiser_1
+			name_group = JAP_MINELAYERS_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_medium_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_armor_slot = empty
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+		}
+		### Destroyer Variants
+
+		create_equipment_variant = {
+			name = "Fubuki Class"
+			type = ship_hull_light_1
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_2
+				fixed_ship_anti_air_slot = empty
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_2
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+		}
+
+		### Submarine Variants	
+		create_equipment_variant = {
+			name = "Ro-26 Class"
+			type = ship_hull_submarine_1
+			parent_version = 0
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_1
+				fixed_ship_engine_slot = sub_ship_engine_1
+				rear_1_custom_slot = empty
+			}
+		}
+
+		create_equipment_variant = {
+			name = "Yamato Class"
+			type = ship_hull_super_heavy_1
+			name_group = JAP_BB_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_super_heavy_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				fixed_ship_armor_slot = ship_armor_shbb
+				front_1_custom_slot = ship_anti_air_1
+				front_2_custom_slot = empty
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = ship_secondaries_2
+				mid_3_custom_slot = ship_secondaries_2
+				rear_1_custom_slot = ship_super_heavy_battery_1
+				rear_2_custom_slot = ship_airplane_launcher_1
+			}
+		}
+
+		create_equipment_variant = {
+			name = "Katori Class"
+			type = ship_hull_cruiser_2
+			name_group = JAP_CL_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_medium_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				mid_1_custom_slot = ship_torpedo_1
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = ship_airplane_launcher_1
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Kagero Class"
+			type = ship_hull_light_2
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_2
+				fixed_ship_torpedo_slot = ship_torpedo_2
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = ship_light_battery_2
+			}
+		}
+
+		create_equipment_variant = {
+			name = "A1/B1 Class"
+			type = ship_hull_cruiser_submarine
+			name_group = JAP_SS_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_1
+				fixed_ship_engine_slot = sub_ship_engine_1
+				front_1_custom_slot = ship_airplane_launcher_1
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+		}
+		set_naval_oob = "EEA_1999_navy"
+	}
+	if = {
+		limit = {
+			not = {
+				has_dlc = "Man the Guns"
+			}
+		}
+		set_technology = {
+			early_submarine = 1
+			basic_submarine = 1
+			improved_submarine = 1
+			advanced_submarine = 1
+			early_destroyer = 1
+			basic_destroyer = 1
+			improved_destroyer = 1
+			advanced_destroyer = 1
+			early_light_cruiser = 1
+			basic_light_cruiser = 1
+			improved_light_cruiser = 1
+			advanced_light_cruiser = 1
+			early_heavy_cruiser = 1
+			basic_heavy_cruiser = 1
+			improved_heavy_cruiser = 1
+			advanced_heavy_cruiser = 1
+			early_battleship = 1
+			basic_battleship = 1
+			improved_battleship = 1
+			advanced_battleship = 1
+			early_battlecruiser = 1
+			basic_battlecruiser = 1
+			heavy_battleship = 1
+			heavy_battleship2 = 1
+			early_carrier = 1
+			basic_carrier = 1
+			improved_carrier = 1
+			advanced_carrier = 1
+			transport = 1
+			landing_craft = 1
+			tank_landing_craft = 1
+		}
+		set_naval_oob = "EEA_1999_navy_legacy"
+	}
+	set_convoys = 1000	
+	starting_train_buffer = 50
+}
+
+set_stability = 0.8#初期安定度を定義
+set_war_support = 0.7#初期戦争協力度を定義
+set_research_slots = 3#初期研究枠を定義
+army_experience = 300
+navy_experience = 100
+add_political_power = 0#初期政治力を定義
+
+add_offsite_building = { type = arms_factory level = 20 }
+add_offsite_building = { type = industrial_complex level = 30 }
+add_offsite_building = { type = dockyard level = 5 }
+add_offsite_building = { type = ammunition_plant level = 2 }
+add_offsite_building = { type = ammunition_silo level = 2 }
+
+set_politics = {
+	#初期政体を定義
+	ruling_party = communism
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	#初期支持率を定義
+	democratic = 10
+	fascism = 2
+	communism = 88
+}
+
+###各政体における指導者を定義###
+create_country_leader = {
+	name = "東欧州連合理事会"
+	desc = "POLITICS_JOSEPH_STALIN_DESC"
+	picture = "DDR.dds"
+	expire = "2040.1.1"
+	ideology = stalinism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "東欧州連合理事会"
+	desc = "POLITICS_JOSEPH_STALIN_DESC"
+	picture = "DDR.dds"
+	expire = "2040.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "東欧州連合理事会"
+	desc = "POLITICS_JOSEPH_STALIN_DESC"
+	picture = "DDR.dds"
+	expire = "2040.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+# create_country_leader = {
+	# name = "ドローテ・ザウアー・メルケル"
+	# desc = "POLITICS_JOSEPH_STALIN_DESC"
+	# picture = "GFX_EEA_Merukeru_pic"
+	# expire = "2040.1.1"
+	# ideology = conservatism
+	# traits = {
+			# hedonist
+			# social_reformer
+			# war_industrialist
+	# }
+# }
+
+recruit_character = EEA_Melkel
+recruit_character = EEA_Gretel
+recruit_character = EEA_Annette
+recruit_character = EEA_Zuzi
+recruit_character = EEA_Circe
+recruit_character = EEA_Joachim
+recruit_character = EEA_Lorelei
+recruit_character = EEA_Anamaria
+recruit_character = EEA_Franko
+recruit_character = EEA_Graeme
+
+
+
+
+###初期提督を定義###

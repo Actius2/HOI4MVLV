@@ -1,0 +1,202 @@
+bookmarks = {
+	bookmark = {
+		name = "1999_START_NAME"
+		desc = "1999_START_DESC"
+		date = 1999.8.1.1
+		picture = "GFX_select_date_1999"
+		default_country = "JAP"
+		default = yes
+		"USA" = {
+			history = "USA_1999_START_DESC"
+			ideology = democratic
+			ideas = {
+				mvlv_altanative_5
+				USA_country
+				USA_refugees
+			}
+			focuses = {
+				USA_ProjectDawn
+				USA_EvacuateFromEarth
+				USA_asia_pacific_strategy
+			}
+		}
+		"UNI" = {
+			history = "UNI_1999_START_DESC"
+			ideology = democratic
+			ideas = {
+				mvlv_altanative_0
+				UNI_xmosi
+				operation_ouka
+			}
+			focuses = {
+				UNI_207
+				UNI_00_unit
+				UNI_operation_ouka
+			}
+		}
+		"JAP" = {
+			history = "JAP_1999_START_DESC"
+			ideology = fascism
+			ideas = {
+				JAP_puppet_shogun
+				JAP_konoe
+				mvlv_altanative_4
+			}
+			focuses = {
+				mvlv_jap_nf1
+				mvlv_jap_nf10
+				mvlv_jap_nf11
+			}
+		}
+		"EUR" = {
+			history = "EUR_1999_START_DESC"
+			ideology = democratic
+			ideas = {
+				EUR_power
+				EUR_eng
+				mvlv_leased_land
+			}
+			focuses = {
+				EUR_TheTrueEuropeanUnion
+				EUR_CanadaIndustrialInvestment
+				EUR_LessonsFromBattleofLondon
+			}
+		}
+		"SOV" = {
+			history = "SOV_1999_START_DESC"
+			ideology = communism
+			ideas = {
+				mvlv_altanative_3
+				SOV_comunist_party
+				SOV_warlord
+			}
+			focuses = {
+				SOV_main
+				SOV_rs19
+				SOV_rs4
+			}
+		}
+		"GEU" = {
+			history = "GEU_1999_START_DESC"
+			ideology = neutrality
+			ideas = {
+				GEU_jacaruta
+				GEU_ast_support
+				GEU_jp_support
+			}
+			focuses = {
+				geug_1
+				geu_is_god
+				geu_ghard1
+			}
+		}
+		"AFR" = {
+			history = "AFR_1999_START_DESC"
+			ideology = communism
+			ideas = {
+				AFR_eu_support
+				AFR_eua
+				mvlv_leased_land
+			}
+			focuses = {
+				AFR_aNewAfricaUnion
+				AFR_SafeContinent
+				AFR_FortificationGroupTactics
+			}
+		}
+		"---" = {
+			history = "OTHER_1999_DESC"
+		}
+		# minors from DLC ####
+
+		"OSE" = {
+			minor = yes
+			history = "OSE_1999_START_DESC"
+			ideology = democratic
+			ideas = {
+				OSE_food
+				OSE_refugees
+			}
+			focuses = {
+				ose_eco
+				ose_war
+			}
+		}
+		"EEA" = {
+			minor = yes
+			history = "EEA_1999_START_DESC"
+			ideology = neutrality
+			ideas = {
+				EEA_DDR
+				EEA_WTO
+				EEA_UNI
+			}
+			focuses = {
+				EEA_P_6_A
+				EEA_P_3_B
+			}
+		}
+		"CHI" = {
+			minor = yes
+			history = "CHI_1999_START_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_overseas_chinese_network
+				CHI_one_country_two_systems
+				mvlv_parmanent
+			}
+			focuses = {
+				CHI_idea_12_L1
+				CHI_idea_12_S1
+				CHI_idea_02
+			}
+		}
+		"CEA" = {
+			minor = yes
+			history = "CEA_1999_START_DESC"
+			ideology = communism
+			ideas = {
+				mvlv_saast
+				SOA_happy
+				
+			}
+			focuses = {
+				SOA_The_Savior_is_Here
+				SOA_Same_as_America
+				SOA_True_Happiness
+			}
+		}
+		"SOA" = {
+			minor = yes
+			history = "SOA_1999_START_DESC"
+			ideology = communism
+			ideas = {
+				mvlv_saast
+				SOA_happy
+			}
+			focuses = {
+				SOA_The_Savior_is_Here
+				SOA_Same_as_America
+				SOA_True_Happiness
+			}
+		}
+		"CAN" = {
+			minor = yes
+			history = "CAN_1999_START_DESC"
+			ideology = democratic
+			ideas = {
+				CAN_atomic
+				CAN_us
+			}
+			focuses = {
+				CAN_Approaching_France
+				CAN_As_eldest_daughter_of_British
+				CAN_Negotiations_with_US
+			}
+		}
+		effect = {
+			randomize_weather = 12345			# <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

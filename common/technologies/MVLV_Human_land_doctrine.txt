@@ -1,0 +1,109 @@
+technologies = {
+	human_combat_tactics = {
+		#doctrine = yes
+		#research_cost = 100
+		#categories = {
+		#	land_doctrine
+		#}
+		#enable_tactic = tactic_orbit_diver
+		#enable_tactic = tactic_human_hive_inner_combat
+		enable_tactic = tactic_cc_withdraw
+		enable_tactic = tactic_tw_evade
+		enable_tactic = tactic_ambush
+		enable_tactic = tactic_cc_tactical_withdrawal
+		enable_tactic = tactic_human_hv_attack
+		enable_tactic = tactic_human_hv_defend
+		enable_tactic = tactic_human_hv_navy_attack
+		enable_tactic = tactic_human_hv_gate_attack
+		enable_tactic = tactic_human_hv_withdrawal_attack
+		enable_tactic = tactic_human_hv_arty_attack
+		enable_tactic = tactic_human_hv_gate_secure
+		enable_tactic = tactic_human_hvin_attack
+		enable_tactic = tactic_human_hvin_defend
+		enable_tactic = tactic_human_hvin_withdrawal
+		enable_tactic = tactic_human_hvin_move
+		enable_tactic = tactic_human_hvin_fire
+		enable_tactic = tactic_human_hvin_assault
+		enable_tactic = tactic_human_hvin_caution
+		enable_tactic = tactic_human_hvin_delay
+		enable_tactic = tactic_human_hvin_counterattack
+		enable_tactic = tactic_hm_amphibiousInvasion
+		enable_tactic = tactic_ab_hm_attack
+		enable_tactic = tactic_ab_hm_Reinforcements
+		enable_tactic = tactic_ab_hm_planedAttack
+		enable_tactic = tactic_ab_hm_navyAttack
+		enable_tactic = tactic_ab_hm_SecuringSpot
+		enable_tactic = tactic_iv_hm_attack
+		enable_tactic = tactic_iv_hm_maintain
+		enable_tactic = tactic_iv_hm_clinging
+		enable_tactic = tactic_iv_hm_delay
+		enable_tactic = tactic_iv_hm_navyAttack
+		enable_tactic = tactic_iv_hm_Loss
+		enable_tactic = tactic_iv_hm_withdrawal
+		enable_tactic = tactic_hm_amphibiousDefence
+		enable_tactic = tactic_ab_hm_deffence
+		enable_tactic = tactic_ab_hm_reconnaissance
+		enable_tactic = tactic_ab_hm_dlayDeffence
+		enable_tactic = tactic_ab_hm_navyDeffence
+		enable_tactic = tactic_iv_hm_deffence
+		enable_tactic = tactic_iv_hm_overwhelming_fire
+		enable_tactic = tactic_iv_hm_elastic_defense
+		enable_tactic = tactic_iv_hm_delay_defense
+		enable_tactic = tactic_iv_hm_AssaultCounter
+		enable_tactic = tactic_iv_hm_ClearUp
+		enable_tactic = tactic_iv_hm_navyFire
+		enable_tactic = tactic_human_diver_attack
+		enable_tactic = tactic_human_hive_diver_attack
+		enable_tactic = tactic_human_hv_diver_attack
+		enable_tactic = tactic_human_hv_in_diver_attack
+		enable_tactic = tactic_human_diver_defend
+		enable_tactic = tactic_human_hive_diver_defend
+		enable_tactic = tactic_human_hv_diver_defend
+		enable_tactic = tactic_human_hv_in_diver_defend
+		doctrine = yes
+		research_cost = 100
+		#set at gamestart
+		allow = {
+			always = no
+		}
+	}
+	MVLV_00_xg_doctine = {
+		MVLV_xg_battalion = {
+			max_organisation = 1000
+			max_strength = 800
+			default_morale = 100.1
+			defense = 1
+		}
+		doctrine = yes
+		research_cost = 100.5
+		categories = {
+			land_doctrine
+		}
+	}
+	# MVLV_00_xg_doctine2 = {
+	# 	MVLV_xg_battalion = {
+	# 		max_organisation = -1000
+	# 		max_strength = -800
+	# 		default_morale = -100.1
+	#                     defense = -1.0
+	# 	}
+	# 	doctrine = yes	
+	# 	research_cost = 100.5
+	# 	categories = {
+	# 		land_doctrine
+	# 	}
+	# }
+	# MVLV_00_xg_doctine3 = {
+	# 	MVLV_xg_battalion = {
+	# 		max_organisation = 500
+	# 		max_strength = 500
+	# 		default_morale = -100.1
+	#                     defense = 0.5
+	# 	}
+	# 	doctrine = yes	
+	# 	research_cost = 100.5
+	# 	categories = {
+	# 		land_doctrine
+	# 	}
+	# }
+}

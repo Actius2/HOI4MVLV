@@ -1,0 +1,47 @@
+music = {
+    name = "enzetu_01"
+    file = "sound_01.ogg"
+    volume = 0.75
+}
+music = {
+	#未来への咆哮GameSize_オリジナルサウンドトラック Vol.1
+    name = "Alternative_01"
+    file = "sound_02.ogg"
+    volume = 0.65
+}
+music = {
+	#迫撃_オリジナルサウンドトラック Vol.1
+    name = "Alternative_02"
+    file = "sound_03.ogg"
+    volume = 0.65
+}
+music = {
+	#強襲上陸_オリジナルサウンドトラック Vol.2
+    name = "Alternative_03"
+    file = "sound_04.ogg"
+    volume = 0.65
+}
+music = {
+	#蹂躙_オリジナルサウンドトラック Vol.2
+    name = "Alternative_04"
+    file = "sound_05.ogg"
+    volume = 0.65
+}
+music = {
+	#迎撃_オリジナルサウンドトラック Vol.2
+    name = "Alternative_05"
+    file = "sound_06.ogg"
+    volume = 0.65
+}
+music = {
+	#忍び寄る不安_オリジナルサウンドトラック
+	name = "maintheme"
+	file = "sound_07.ogg"
+	volume = 0.65
+}
+#オリジナルサウンドトラック
+#https://www.lantis.jp/release-item/LACA-5103.html
+#オリジナルサウンドトラック Vol.1
+#https://www.lantis.jp/release-item/LACA-5508.html
+#オリジナルサウンドトラック Vol.2
+#https://www.lantis.jp/release-item/LACA-5524.html

@@ -1,0 +1,8 @@
+MVLV_BETA_Status_Report_decision_category = {
+	priority = 999
+	icon = generic_propaganda
+	visible_when_empty = yes
+	allowed = {
+		is_in_faction_with = UNI
+	}
+}

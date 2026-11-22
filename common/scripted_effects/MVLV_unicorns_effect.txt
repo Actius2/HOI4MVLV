@@ -1,0 +1,197 @@
+
+########################
+#ユニコーン部隊用
+MVLV_unicorns_basic_point_script_effect = {
+	set_temp_variable = { sol_temp_val = num_equipment@beta_soldier }
+	set_temp_variable = { war_temp_val = num_equipment@beta_warrior }
+	set_temp_variable = { tan_temp_val = num_equipment@beta_tank }
+	if = {
+		limit = {
+			check_variable = { sol_temp_val > 10000 }
+		}
+		add_to_variable = { ROOT.MVLV_unicorns_basic_point = 10 }
+		add_equipment_to_stockpile = {
+			type = beta_soldier
+			amount = -10000
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { sol_temp_val < 10000 }
+		}
+		if = {
+			limit = {
+				check_variable = { sol_temp_val > 0 }
+			}
+			set_temp_variable = { calc_temp_val = sol_temp_val }
+			divide_temp_variable  = { calc_temp_val = 1000 }
+			add_to_variable = { ROOT.MVLV_unicorns_basic_point = calc_temp_val }
+			set_temp_variable = { calc_temp_val = 0 }
+			subtract_from_temp_variable  = { calc_temp_val = sol_temp_val }
+			add_equipment_to_stockpile = {
+				type = beta_soldier
+				amount = calc_temp_val
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			check_variable = { war_temp_val > 10000 }
+		}
+		add_to_variable = { ROOT.MVLV_unicorns_basic_point = 10 }
+		add_equipment_to_stockpile = {
+			type = beta_warrior
+			amount = -10000
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { war_temp_val < 10000 }
+		}
+		if = {
+			limit = {
+				check_variable = { war_temp_val > 0 }
+			}
+			set_temp_variable = { calc_temp_val = war_temp_val }
+			divide_temp_variable  = { calc_temp_val = 1000 }
+			add_to_variable = { ROOT.MVLV_unicorns_basic_point = calc_temp_val }
+			set_temp_variable = { calc_temp_val = 0 }
+			subtract_from_temp_variable  = { calc_temp_val = war_temp_val }
+			add_equipment_to_stockpile = {
+				type = beta_warrior
+				amount = calc_temp_val
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			check_variable = { tan_temp_val > 10000 }
+		}
+		add_to_variable = { ROOT.MVLV_unicorns_basic_point = 10 }
+		add_equipment_to_stockpile = {
+			type = beta_tank
+			amount = -10000
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { tan_temp_val < 10000 }
+		}
+		if = {
+			limit = {
+				check_variable = { tan_temp_val > 0 }
+			}
+			set_temp_variable = { calc_temp_val = tan_temp_val }
+			divide_temp_variable  = { calc_temp_val = 1000 }
+			add_to_variable = { ROOT.MVLV_unicorns_basic_point = calc_temp_val }
+			set_temp_variable = { calc_temp_val = 0 }
+			subtract_from_temp_variable  = { calc_temp_val = tan_temp_val }
+			add_equipment_to_stockpile = {
+				type = beta_tank
+				amount = calc_temp_val
+			}
+		}
+	}
+
+}
+MVLV_unicorns_improvement_point_script_effect = {
+
+	set_temp_variable = { gra_temp_val = num_equipment@beta_grappler }
+	set_temp_variable = { des_temp_val = num_equipment@beta_destroyer }
+	set_temp_variable = { for_temp_val = num_equipment@beta_fort }
+	if = {
+		limit = {
+			check_variable = { gra_temp_val > 10000 }
+		}
+		add_to_variable = { ROOT.MVLV_unicorns_improvement_point = 10 }
+		add_equipment_to_stockpile = {
+			type = beta_grappler
+			amount = -10000
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { gra_temp_val < 10000 }
+		}
+		if = {
+			limit = {
+				check_variable = { gra_temp_val > 0 }
+			}
+			set_temp_variable = { calc_temp_val = gra_temp_val }
+			divide_temp_variable  = { calc_temp_val = 1000 }
+			add_to_variable = { ROOT.MVLV_unicorns_improvement_point = calc_temp_val }
+			set_temp_variable = { calc_temp_val = 0 }
+			subtract_from_temp_variable  = { calc_temp_val = gra_temp_val }
+			add_equipment_to_stockpile = {
+				type = beta_grappler
+				amount = calc_temp_val
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			check_variable = { des_temp_val > 10000 }
+		}
+		add_to_variable = { ROOT.MVLV_unicorns_improvement_point = 10 }
+		add_equipment_to_stockpile = {
+			type = beta_destroyer
+			amount = -10000
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { des_temp_val < 10000 }
+		}
+		if = {
+			limit = {
+				check_variable = { des_temp_val > 0 }
+			}
+			set_temp_variable = { calc_temp_val = des_temp_val }
+			divide_temp_variable  = { calc_temp_val = 1000 }
+			add_to_variable = { ROOT.MVLV_unicorns_improvement_point = calc_temp_val }
+			set_temp_variable = { calc_temp_val = 0 }
+			subtract_from_temp_variable  = { calc_temp_val = des_temp_val }
+			add_equipment_to_stockpile = {
+				type = beta_destroyer
+				amount = calc_temp_val
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			check_variable = { for_temp_val > 1000 }
+		}
+		add_to_variable = { ROOT.MVLV_unicorns_improvement_point = 10 }
+		add_equipment_to_stockpile = {
+			type = beta_fort
+			amount = -1000
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { for_temp_val < 1000 }
+		}
+		if = {
+			limit = {
+				check_variable = { for_temp_val > 0 }
+			}
+			set_temp_variable = { calc_temp_val = for_temp_val }
+			divide_temp_variable  = { calc_temp_val = 1000 }
+			add_to_variable = { ROOT.MVLV_unicorns_improvement_point = calc_temp_val }
+			set_temp_variable = { calc_temp_val = 0 }
+			subtract_from_temp_variable  = { calc_temp_val = for_temp_val }
+			add_equipment_to_stockpile = {
+				type = beta_fort
+				amount = calc_temp_val
+			}
+		}
+	}
+
+}
+
+
+

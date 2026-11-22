@@ -1,0 +1,218 @@
+ideas = {
+	country = {
+		OSE_food = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = -0.15
+				consumer_goods_expected_value = -0.05
+				country_resource_coal = 150
+			}
+		}
+		OSE_refugees = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 1500
+				stability_factor = -0.3
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		OSE_goods = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		OSE_refugees2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.15
+				production_speed_arms_factory_factor = 0.4
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_infrastructure_factor = 0.5
+			}
+		}
+		OSE_refugees3 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_attack_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				land_reinforce_rate = 0.03
+			}
+		}
+		OSE_refugees4 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.6
+				production_speed_arms_factory_factor = 0.25
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.4
+			}
+		}
+		OSE_space = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+			}
+			equipment_bonus = {
+				MVLV_AL_shell_equipment = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}
+		}
+		OSE_tsf = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = -0.05
+					defense = 0.05
+					breakthrough = 0.05
+					instant = yes
+				}
+			}
+		}
+		OSE_human = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 1500
+				research_speed_factor = 0.15
+			}
+		}
+		OSE_tank = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+			}
+			equipment_bonus = {
+				medium_tank_equipment = {
+					build_cost_ic = -0.15
+					defense = 0.05
+					breakthrough = 0.05
+					instant = yes
+				}
+			}
+		}
+		OSE_geu = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				weekly_manpower = -1000
+			}
+		}
+
+		OSE_payment_of_grants = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				political_power_gain = -0.5
+			}
+		}
+		OSE_idea_ANZAC = { 
+#ANZAC
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				invasion_preparation = -0.3
+				out_of_supply_factor = -0.1
+				
+				army_morale_factor = 0.1
+				army_org_Factor = 0.05
+				
+			}
+		}
+		
+		OSE_idea_Expanding_refugee = { 
+#難民戦線の拡大
+			allowed = {
+				always = no
+			}
+			modifier = {
+			
+				political_power_factor = -0.10
+			
+				monthly_population = 1
+			
+				weekly_manpower = 1500
+				
+				stability_weekly = -0.005
+				
+				consumer_goods_expected_value = 0.10
+			}
+		}
+		
+		OSE_idea_Refugee_Nation = { 
+#難民国家
+			allowed = {
+				always = no
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2
+					defense = 0.05
+					breakthrough = 0.10
+					instant = yes
+				}
+			}
+			
+			modifier = {
+			
+				consumer_goods_expected_value = 0.15
+			
+				monthly_population = 2
+			
+				weekly_manpower = 4500
+			
+				army_attack_factor = 0.1
+				land_reinforce_rate = 0.05		
+				army_morale_factor = 0.1			
+				army_org_Factor = 0.05
+				
+				production_speed_arms_factory_factor = 0.3
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_infrastructure_factor = 0.5
+				
+				industrial_capacity_factory = 0.2
+				
+				war_support_factor = 0.50
+				stability_weekly = 0.005
+				
+				training_time_army_factor = -0.15
+				
+				conscription = 0.03
+				
+				
+			}
+		}
+	}
+}

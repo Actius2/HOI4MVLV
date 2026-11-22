@@ -1,0 +1,288 @@
+operations = {
+	destroy_reacting_furnace = {
+		icon = generic_prepare_civil_war
+		available = {
+			FROM = {
+				all_core_state = {
+					is_controlled_by = ROOT
+				}
+				is_in_faction_with = BET
+				#has_war_with = ROOT
+				#is_neighbor_of = ROOT
+				surrender_progress > 0.5
+			}
+			command_power > 200
+		}
+		visible = {
+			is_in_faction_with = UNI
+			has_war_with = BET
+			FROM = {
+				all_core_state = {
+					is_controlled_by = ROOT
+				}
+				NOT = {
+					has_idea = destroyed_reacting_furnace
+				}
+			}
+			always = no
+		}
+		target_trigger = {
+			FROM = {
+				all_core_state = {
+					is_controlled_by = ROOT
+				}
+				is_in_faction_with = BET
+				#has_war_with = ROOT
+				#is_neighbor_of = ROOT
+			}
+		}
+		days_remove = 1
+		fire_only_once = no
+		complete_effect = {
+			add_command_power = -200
+		}
+		remove_effect = {
+			FROM = {
+				add_ideas = destroyed_reacting_furnace
+			}
+		}
+	}
+	thinning_operation = {
+		icon = generic_prepare_civil_war
+		available = {
+			FROM = {
+				is_in_faction_with = BET
+				has_war_with = ROOT
+				is_neighbor_of = ROOT
+				NOT = {
+					has_idea = hive_thinning_state
+					has_idea = mvlv_brokenhive
+				}
+			}
+			has_equipment = {
+				MVLV_TSF_chassis > 119
+			}
+			has_equipment = {
+				MVLV_AL_shell_equipment_1 > 499
+			}
+			has_equipment = {
+				MVLV_shell_equipment > 499
+			}
+			has_manpower > 5000
+			NOT = { has_country_flag = hive_thinning_tt }
+		}
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = hive_thinning_tt }
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				is_in_faction_with = BET
+				has_war_with = ROOT
+				is_neighbor_of = ROOT
+			}
+		}
+		fire_only_once = no
+		modifier = {
+		}
+		complete_effect = {
+			FROM = {
+				add_timed_idea = {
+					idea = hive_thinning_state
+					days = 30
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis
+				amount = -120
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_shell_equipment
+				amount = -500
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_AL_shell_equipment_1
+				amount = -500
+			}
+			add_manpower = -5000
+			activate_mission = thinning_operation_cooldown_mission
+			set_country_flag = hive_thinning_tt
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				date > 1999.1.20
+				has_war_support > 0.5
+				has_stability > 0.25
+			}
+			modifier = {
+				add = 10
+				date > 2000.1.1
+			}
+			modifier = {
+				add = 10
+				date > 2001.1.1
+			}
+			modifier = {
+				add = 20
+				num_divisions > 100
+			}
+		}
+	}
+	thinning_operation_2 = {
+		icon = generic_prepare_civil_war
+		available = {
+			FROM = {
+				is_in_faction_with = BET
+				has_war_with = ROOT
+				is_neighbor_of = ROOT
+				NOT = {
+					has_idea = hive_thinning_state
+					has_idea = mvlv_brokenhive
+				}
+			}
+			has_equipment = {
+				MVLV_TSF_chassis > 59
+			}
+			has_equipment = {
+				infantry_equipment > 50
+			}
+			has_equipment = {
+				medium_tank_equipment > 287
+			}
+			has_equipment = {
+				artillery_equipment > 47
+			}
+			has_equipment = {
+				rocket_artillery_equipment > 47
+			}
+			has_manpower > 10500
+			NOT = { has_country_flag = hive_thinning_tt }
+		}
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = hive_thinning_tt }
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				is_in_faction_with = BET
+				has_war_with = ROOT
+				is_neighbor_of = ROOT
+			}
+		}
+		fire_only_once = no
+		modifier = {
+		}
+		complete_effect = {
+			FROM = {
+				add_timed_idea = {
+					idea = hive_thinning_state
+					days = 30
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis
+				amount = -60
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -50
+			}
+			add_equipment_to_stockpile = {
+				type = medium_tank_equipment
+				amount = -288
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -48
+			}
+			add_equipment_to_stockpile = {
+				type = rocket_artillery_equipment
+				amount = -48
+			}
+			add_manpower = -10500
+			activate_mission = thinning_operation_cooldown_mission
+			set_country_flag = hive_thinning_tt
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	thinning_operation_ai = {
+		icon = generic_prepare_civil_war
+		available = {
+			FROM = {
+				is_in_faction_with = BET
+				has_war_with = ROOT
+				is_neighbor_of = ROOT
+				NOT = {
+					has_idea = hive_thinning_state
+					has_idea = mvlv_brokenhive
+				}
+			}
+			has_manpower > 5000
+		}
+		visible = {
+			is_ai = yes
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				is_in_faction_with = BET
+				has_war_with = ROOT
+				is_neighbor_of = ROOT
+			}
+		}
+		days_remove = 90
+		fire_only_once = no
+		cost = 30
+		modifier = {
+		}
+		complete_effect = {
+			FROM = {
+				add_timed_idea = {
+					idea = hive_thinning_state
+					days = 50
+				}
+			}
+			add_manpower = -5000
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				FROM = {
+					has_country_flag = MVLV_aggressive_preparation_flag
+				}
+			}
+		}
+	}
+	thinning_operation_cooldown_mission = {
+		activation = {
+			has_country_flag = hive_thinning_tt
+		}
+		available = { always = no }
+
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 120
+		timeout_effect = {
+			clr_country_flag = hive_thinning_tt
+		}
+	}
+}

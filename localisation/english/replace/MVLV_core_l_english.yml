@@ -1,0 +1,48 @@
+﻿l_english:
+  MVLV_new_line_tt: "\n"
+  NUCLEAR_BOMB: "G-Bomb"
+  NUCLEAR_PRODUCTION_ETA: "The next G-Bomb is $PROGRESS|1G%$ complete, and will be completed in $DAYS|G$ days."
+  NUCLEAR_PRODUCTION_NONE: "There are no G-Bombs being produced."
+  CAN_USE_ROCKET_SITES_FOR_NUKES: "Rocket Sites can be used for G-Bombs."
+  NUKE_BUTTON_CLICK: "§G-Bomb§!Drop a G-Bomb"
+  NUKE_BUTTON_NUKES: "We have a G-Bomb"
+
+  PRODUCTION_MATERIALS_RUBBER: "G-Element"
+  state_resource_rubber: "G-Element"
+  temporary_state_resource_rubber: "G-Element"
+  country_resource_rubber: "G-Element"
+  state_resource_cost_rubber: "G-Element Consumption"
+  country_resource_cost_rubber: "G-Element Consumption"
+  sabotage_rubber: "Destruction of G-Element production"
+  rubber_desc: "Reality-defying materials created by the BETA, presumably to be sent back to their Creators. It has a variety of physical effects and is speculated to have at least 11 different types, which are used in the production of Laser and Heavy Laser classes."
+
+  group_tsf_title: "Tactical Surface Fighter"
+  modifier_army_sub_unit_category_MVLV_tsf_attack_factor: "TSF Attack"
+  modifier_army_sub_unit_category_MVLV_tsf_defence_factor: "TSF Defense"
+  modifier_army_sub_unit_category_MVLV_tsf_speed_factor: "TSF Speed"
+  modifier_army_sub_unit_category_MVLV_tsf_max_org_factor: "TSF Organization"
+
+  modifier_army_sub_unit_light_armor_attack_factor: "Attack helicopter Attack"
+  modifier_army_sub_unit_light_armor_defence_factor: "Attack helicopter Defense"
+  
+  modifier_army_sub_unit_medium_armor_attack_factor: "Tank Attack"
+  modifier_army_sub_unit_medium_armor_defence_factor: "Tank Defense"
+  modifier_army_sub_unit_medium_armor_speed_factor: "Tank Speed"
+  
+  modifier_army_sub_unit_MVLV_combined_arms_battalion_attack_factor: "Composite Battalion Attack"
+  modifier_army_sub_unit_MVLV_combined_arms_battalion_defence_factor: "Composite Battalion Defense"
+
+  group_xg_title: "High-Maneuver Aeronautic Fortress"
+  modifier_army_sub_unit_category_MVLV_xg_attack_factor: "HI-MAERF Attack"
+  modifier_army_sub_unit_category_MVLV_xg_defence_factor: "HI-MAERF Defense"
+  modifier_army_sub_unit_category_MVLV_xg_speed_factor: "HI-MAERF Speed"
+  modifier_army_sub_unit_category_MVLV_xg_max_org_factor: "HI-MAERF Organization"
+
+
+PRODUCTION_MATERIALS_COAL: "Food"
+  state_resource_coal: "Food"
+  temporary_state_resource_coal: "Food"
+  country_resource_coal: "Food"
+  state_resource_cost_coal: "Food Consumption"
+  country_resource_cost_coal: "Food Consumption"
+  sabotage_coal: "Destruction of Food production"

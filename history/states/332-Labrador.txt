@@ -1,0 +1,34 @@
+state={
+	id=332
+	name="STATE_332"
+	
+	state_category = wasteland
+	resources={
+		coal = 10
+	}
+	history={
+
+		add_core_of = EUR
+		owner = EUR
+
+		buildings = {
+			infrastructure = 1
+
+			12503 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CAN
+
+		victory_points = {
+			12503 50
+		}
+
+	}
+
+	provinces={
+		1426 1785 4720 4787 12503 
+	}
+	manpower=522179
+	buildings_max_level_factor=1.000
+}

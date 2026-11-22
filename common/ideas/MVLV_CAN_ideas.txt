@@ -1,0 +1,311 @@
+ideas = {
+	country = {
+		CAN_atomic = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = -0.15
+				supply_consumption_factor = 0.1
+				production_factory_max_efficiency_factor = -0.02
+				stability_factor = -0.2
+			}
+		}
+		CAN_atomic_1 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = -0.02
+				production_factory_efficiency_gain_factor = -0.02
+				industrial_capacity_factory = -0.2
+				supply_consumption_factor = 0.1
+				production_factory_max_efficiency_factor = -0.02
+				stability_factor = -0.3
+			}
+		}
+		CAN_atomic_2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = -0.04
+				production_factory_efficiency_gain_factor = -0.04
+				industrial_capacity_factory = -0.25
+				supply_consumption_factor = 0.1
+				production_factory_max_efficiency_factor = -0.03
+				stability_factor = -0.4
+				
+			}
+		}
+		CAN_atomic_3 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = -0.06
+				production_factory_efficiency_gain_factor = -0.06
+				industrial_capacity_factory = -0.3
+				supply_consumption_factor = 0.1
+				production_factory_max_efficiency_factor = -0.03
+				stability_factor = -0.5
+				
+			}
+		}
+		CAN_atomic_4 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = -0.08
+				production_factory_efficiency_gain_factor = -0.08
+				industrial_capacity_factory = -0.35
+				supply_consumption_factor = 0.1
+				production_factory_max_efficiency_factor = -0.04
+				stability_factor = -0.6
+				
+			}
+		}
+		CAN_atomic_5 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				industrial_capacity_factory = -0.4
+				supply_consumption_factor = 0.1
+				production_factory_max_efficiency_factor = -0.04
+				stability_factor = -0.7
+				
+			}
+		}
+		CAN_idea_revival_of_loneliness = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.5
+			}
+		}
+		CAN_us = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = -1
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 2.5
+				production_speed_arms_factory_factor = -2
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_infrastructure_factor = 0.5
+				industrial_capacity_factory = 0.1
+				stability_factor = 0.4
+				war_support_factor = -0.15
+				factory_energy_consumption = -0.05
+				country_resource_coal = 10
+			}
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.6
+				extra_trade_to_target_factor = 0.4
+			}
+		}
+		CAN_noatomic = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.25
+				production_speed_industrial_complex_factor = 0.25
+				production_speed_infrastructure_factor = 0.55
+				monthly_population = 1
+				stability_factor = 0.25
+				weekly_manpower = 2000
+			}
+		}
+		CAN_EUR = { 
+			allowed = {
+				always = no
+			}
+
+			research_bonus = {
+				MVLV_tsf_tech = 0.1
+			}
+
+			modifier = {
+				experience_gain_army = 0.2
+				research_speed_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				industrial_capacity_factory =0.05
+			}
+			targeted_modifier = {
+				tag = EUR
+				cic_to_target_factor = 0.02
+				mic_to_target_factor = 0.03
+				trade_cost_for_target_factor = -0.6
+				extra_trade_to_target_factor = 0.4
+			}
+		}
+		##########
+		CAN_idea_Honor_and_Homeland = { 
+			allowed = {
+				always = no
+			}
+			modifier = {
+				special_forces_cap = 0.1
+				special_forces_min = 20
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}
+		}
+		CAN_idea_The_New_French_Army = { 
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.1
+					air_attack = 0.05
+					defense = 0.1
+					breakthrough = 0.1
+					instant = yes
+				}
+			}
+			modifier = {
+				training_time_army_factor = 0.15
+				consumer_goods_expected_value = 0.05
+				experience_loss_factor = -0.2
+			}
+		}
+		CAN_idea_Expeditionary_Force = { 
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				asa_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+			modifier = {
+				invasion_preparation = -0.4
+				out_of_supply_factor = -0.1
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		CAN_idea_Canada_Support_Policy_2 = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = -0.5
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 1.25
+				production_speed_arms_factory_factor = -1
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_infrastructure_factor = 0.3
+				industrial_capacity_factory = 0.1
+				stability_factor = 0.4
+				factory_energy_consumption = -0.05
+				country_resource_coal = 10
+			}
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.4
+				extra_trade_to_target_factor = 0.4
+			}
+		}
+		CAN_idea_Canada_Support_Policy_3 = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = -0.25
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 0.3
+				production_speed_arms_factory_factor = -0.25
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.15
+				industrial_capacity_factory = 0.1
+				stability_factor = 0.5
+				war_support_factor = 0.1
+				factory_energy_consumption = -0.05
+				country_resource_coal = 10
+			}
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.4
+				extra_trade_to_target_factor = 0.2
+			}
+		}
+		CAN_idea_Mass_production_model = { 
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				medium_tank_equipment = {
+					build_cost_ic = -0.2
+					reliability = -0.1
+					maximum_speed = -0.05
+					instant = yes
+				}
+				modern_tank_aa_equipment = {
+					build_cost_ic = -0.2
+					reliability = -0.1
+					maximum_speed = -0.05
+					instant = yes
+				}
+				light_tank_equipment = {
+					build_cost_ic = -0.2
+					reliability = -0.1
+					maximum_speed = -0.05
+					instant = yes
+				}	
+			}
+		}
+		CAN_idea_NA_Military_Agreement = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 250
+				war_support_factor = 0.60
+				conversion_cost_civ_to_mil_factor = -0.3
+				production_speed_arms_factory_factor = 0.25
+			}
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.2
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = -0.05
+			}
+		}
+		#空への誇り
+		CAN_idea_Pride_in_the_Sky = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_specialForces_chassis = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+			modifier = {
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+			}
+		}
+	}
+}

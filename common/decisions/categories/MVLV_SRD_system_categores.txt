@@ -1,0 +1,12 @@
+MVLV_SRD_system_decision_category = {
+	icon = generic_prepare_civil_war
+
+	picture = GFX_decision_cat_naval_blockade
+	allowed = {
+		tag = SRD
+	}
+
+	visible = {
+		tag = SRD
+	}
+}

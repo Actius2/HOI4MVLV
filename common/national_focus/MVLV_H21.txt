@@ -1,0 +1,49 @@
+focus_tree = {
+	id = sadoshima_focus_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			TAG = H21
+		}
+	}
+
+	focus = {
+		id = BET_not_broken_hive
+		icon = GFX_focus_jap_zaibatsu
+		x = 17
+		y = 0
+
+		available = { 
+			UNI = { 
+				has_completed_focus = UNI_sadogashima
+			}
+			789 = {
+				is_controlled_by = H21
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		cost = 8
+
+		completion_reward = { 
+			load_oob = H21_yokohama2
+			add_timed_idea =  { 
+				idea = H21_sado
+				days = 50
+			}
+			add_timed_idea =  { 
+				idea = mvlv_aggressive_beta
+				days = 50
+			}#####
+			JAP = { country_event = mvlv_uni.22
+			}
+			UNI = { country_event = mvlv_uni.22
+			}
+		}
+
+		ai_will_do = { factor = 10 }
+	}
+}

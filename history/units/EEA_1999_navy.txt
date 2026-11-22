@@ -1,0 +1,31 @@
+﻿units = {
+	fleet = {
+		name = "Fleet"
+		naval_base = 12674
+		task_force = {				
+			name = "1st Squadron"
+			location = 12674
+			ship = { name = "VM Karl Marx" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "SOV Admiral Lazarev" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "SOV Murmansk" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "SOV Alexander Nevsky" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "SOV Oktyabrskaya Revolutsia" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
+		}
+		task_force = {
+			name = "2nd Squadron"
+			location = 12674
+			ship = { name = "SOV Admiral Zozulya" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV Vladivostok" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV Admiral Drost" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV Sevastopol" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV kronstadt" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV Admiral Nakhimov" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV Admiral Makarov" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV Khabarovsk" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV Admiral Isachenkov" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV marshal tymoshenko" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV Admiral Isakov" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+			ship = { name = "SOV Admiral Yumachev" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = JAP version_name = "Fubuki Class"} } }
+		}
+	}
+}

@@ -1,0 +1,143 @@
+show_setup = {
+	show_setup1 = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			country_event = mvlv_generic.15
+		}
+		
+		ai_will_do = {
+			base = -100
+		}
+	}
+
+	show_setup2 = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			country_event = mvlv_generic.40
+		}
+		
+		ai_will_do = {
+			base = -100
+		}
+	}
+
+	MVLV_command_ouka_decision = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			AND = {
+				NOT = { has_global_flag = MVLV_command_ouka_flag }
+				UNI = { is_ai = yes }
+				check_variable = { global.var_playercount > 1 }
+				is_in_faction_with = UNI
+			}
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				set_global_flag = MVLV_command_ouka_flag
+				every_country = {
+					limit = {
+						has_country_flag = PL_ouka_operation_flag
+					}
+					clr_country_flag = PL_ouka_operation_flag
+				}
+				set_country_flag = PL_ouka_operation_flag
+			}
+			custom_effect_tooltip = MVLV_command_ouka_tt
+		}
+		ai_will_do = {
+			base = -100
+		}
+	}
+	history_of_MUVLUV = {
+		icon = generic_prepare_civil_war
+		fire_only_once = no
+		days_re_enable = 1
+		cost = 0
+		complete_effect = {
+			country_event = mvlv_generic.0
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	MVLV_Collect_the_commanders = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MVLV_no_commanders_delete_mode_tt
+				all_allied_country = {
+					is_ai = yes
+				}
+				check_variable = {
+					global.var_generalDeathMode = 0
+				}
+			}
+		}
+		complete_effect = {
+			every_possible_country = {
+				limit = { is_in_faction_with = UNI }
+				every_character = {
+					limit = {
+						is_army_leader = yes
+					}
+					set_nationality = ROOT
+				}
+			}
+		}
+	}
+	
+	MVLV_change_notice = {
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = MVLV_underground_notice_flag }
+				}
+				set_country_flag = MVLV_underground_notice_flag
+				country_event = mvlv_generic.96
+			}
+			else = {
+				clr_country_flag = MVLV_underground_notice_flag
+				country_event = mvlv_generic.97
+			}
+		}
+		ai_will_do = {
+			base = -100
+		}
+	}
+
+}

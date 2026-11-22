@@ -1,0 +1,43 @@
+﻿l_japanese:
+ generic_tsf_organization: "戦術機企業"
+ generic_mio_initial_trait_tsf_designer: "戦術機設計部門"
+
+ mio_header_tsf_original: "固有設計"
+ mio_header_tsf_basic: "戦術機設計"
+ mio_header_tsf_special: "緊急設計"
+
+ generic_mio_trait_gun_fighter_tsf: "砲撃戦重視"
+ generic_mio_trait_CQB_tsf: "近接戦重視"
+ generic_mio_trait_reliabity_upgrade: "信頼性の強化"
+ generic_mio_trait_ammo_package_upgrade: "所持弾数の強化"
+ generic_mio_trait_base_production_upgrade: "生産ラインの効率化"
+ generic_mio_trait_armour_upgrade: "防御重視"
+ generic_mio_trait_gun_upgrade: "攻撃重視"
+ generic_mio_trait_production_upgrade: "生産力重視"
+ generic_mio_trait_armour_upgrade_2: "全てを防ぐ盾"
+ generic_mio_trait_gun_upgrade_2: "全てを貫く矛"
+ generic_mio_trait_production_upgrade_2: "物量作戦主義"
+ generic_mio_trait_agility_upgrade: "対BETA戦闘装備"
+ generic_mio_trait_antihuman_upgrade: "対人戦闘装備"
+ generic_mio_trait_cutting_resource_production_upgrade: "新素材"
+ generic_mio_trait_resource_cutting: "費用の削減"
+
+ JAP_generic_tsf_design_organization: "日本式戦術機設計"
+ JAP_hard_controle_tsf_system: "熟練兵士向け設定"
+
+ SOV_generic_tsf_design_organization: "ソ連式戦術機設計"
+ SOV_Efficient_Manufacturing: "役職単位の戦術機設計"
+
+ USA_generic_tsf_design_organization: "アメリカ式戦術機設計"
+ USA_Advanced_Tactical_Equipment: "最新式戦術機装備"
+
+ EUR_generic_tsf_design_organization: "欧州式戦術機設計"
+ EUR_long_term_combat_capability: "長時間戦闘能力"
+
+ AFR_generic_tsf_design_organization: "改修重視式戦術機設計"
+ AFR_Reinforcement_refurbishment_technology_1: "第1世代戦術機の改修"
+ AFR_Reinforcement_refurbishment_technology_2: "第2世代戦術機の改修"
+ AFR_Reinforcement_refurbishment_technology_3: "第3世代戦術機の改修"
+
+ CHI_generic_tsf_design_organization: "中華式戦術機設計"
+ CHI_close_combat_capability: "近接戦闘能力の強化"

@@ -1,0 +1,110 @@
+add_namespace = mvlv_eea
+country_event = {
+	id = mvlv_eea.1
+	desc = mvlv_eea.1.d
+	title = mvlv_eea.1.t
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = mvlv_eea.1.a
+#		transfer_state = 802
+#		add_state_core = 802
+		
+		transfer_state = 101
+		add_state_core = 101
+		
+		transfer_state = 100
+		add_state_core = 100
+		
+		add_state_core = 42
+		add_state_core = 50
+		add_state_core = 51
+		add_state_core = 52
+		add_state_core = 53
+		add_state_core = 54
+		add_state_core = 55
+		add_state_core = 56
+		add_state_core = 57
+		add_state_core = 58
+		add_state_core = 59
+		add_state_core = 60
+		
+		add_offsite_building = {
+			type = industrial_complex
+			level = 5
+		}
+		
+#		802 = {
+#			add_extra_state_shared_building_slots = 30
+#		}
+		
+		101 = {
+			add_extra_state_shared_building_slots = 15
+		}
+		
+		100 = {
+			add_extra_state_shared_building_slots = 15
+		}
+		
+		805 = {
+			add_extra_state_shared_building_slots = 10
+		}
+		806 = {
+			add_extra_state_shared_building_slots = 10
+		}
+		
+		EEA = {
+		#将軍二人追加
+			EEA_Joachim = {
+				set_character_flag = unlock_character_flag
+			}
+			EEA_Circe = {
+				set_character_flag = unlock_character_flag
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mvlv_eea.2
+	desc = mvlv_eea.2.d
+	title = mvlv_eea.2.t
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = mvlv_eea.2.a
+		add_offsite_building = {
+			type = arms_factory
+			level = 10
+		}
+	}
+}
+
+country_event = {
+	id = mvlv_eea.3
+	desc = mvlv_eea.3.d
+	title = mvlv_eea.3.t
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = mvlv_eea.3.a
+		# EUR = {
+			# country_event = mvlv_eur.100
+		# }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = mvlv_eea.3.b
+		# EUR = {
+			# country_event = mvlv_eur.101
+		# }
+		EEA = {
+			add_political_power = -150
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

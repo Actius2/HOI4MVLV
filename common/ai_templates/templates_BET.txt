@@ -1,0 +1,319 @@
+#All Hive templates is merged to here.
+#全ハイヴのテンプレートファイルをここにマージしました。
+beta_tank = {
+	role = beta_tank
+
+	available_for = {
+		BET
+		H02
+		H03
+		H04
+		H05
+		H06
+		H07
+		H08
+		H09
+		H10
+		H11
+		H12
+		H13
+		H14
+		H15
+		H16
+		H17
+		H18
+		H19
+		H20
+		H21
+		H22
+		H23
+		H24
+		H25
+		H26
+	}
+	
+	upgrade_prio = {
+		factor = 0.01
+	}
+	beta_tank_default = {
+		upgrade_prio = {
+			factor = 0.01
+		}
+		
+		
+		
+		target_template = {
+			
+			
+			regiments = {
+				MVLV_beta_tank = 10
+			}
+		}
+
+	}
+}
+
+beta_warrior = {
+	available_for = {
+		BET
+		H02
+		H03
+		H04
+		H05
+		H06
+		H07
+		H08
+		H09
+		H10
+		H11
+		H12
+		H13
+		H14
+		H15
+		H16
+		H17
+		H18
+		H19
+		H20
+		H21
+		H22
+		H23
+		H24
+		H25
+		H26
+	}
+	upgrade_prio = {
+		factor = 0.01
+	}
+	role = beta_warrior
+		
+	
+	beta_warrior_default = {
+		upgrade_prio = {
+			factor = 0.01
+		}
+		
+		
+		
+		target_template = {
+			
+			
+			regiments = {
+				MVLV_beta_warrior = 10
+			}
+		}
+
+	}
+}
+
+beta_soldier = {
+	available_for = {
+		BET
+		H02
+		H03
+		H04
+		H05
+		H06
+		H07
+		H08
+		H09
+		H10
+		H11
+		H12
+		H13
+		H14
+		H15
+		H16
+		H17
+		H18
+		H19
+		H20
+		H21
+		H22
+		H23
+		H24
+		H25
+		H26
+	}
+	role = beta_soldier
+
+	upgrade_prio = {
+		factor = 0.01
+	}
+	
+	beta_soldier_default = {
+		upgrade_prio = {
+			factor = 0.01
+		}
+		
+		
+		
+		target_template = {
+			
+			
+			regiments = {
+				MVLV_beta_soldier = 10
+			}
+		}
+
+	}
+}
+
+beta_grappler = {
+	available_for = {
+		BET
+		H02
+		H03
+		H04
+		H05
+		H06
+		H07
+		H08
+		H09
+		H10
+		H11
+		H12
+		H13
+		H14
+		H15
+		H16
+		H17
+		H18
+		H19
+		H20
+		H21
+		H22
+		H23
+		H24
+		H25
+		H26
+	}
+	role = beta_grappler
+
+	upgrade_prio = {
+		factor = 0.01
+	}
+	
+	beta_grappler_default = {
+		upgrade_prio = {
+			factor = 0.01
+		}
+		
+		
+		
+		target_template = {
+			
+			
+			regiments = {
+				MVLV_beta_grappler = 10
+			}
+		}
+
+	}
+}
+
+beta_destroyer = {
+	available_for = {
+		BET
+		H02
+		H03
+		H04
+		H05
+		H06
+		H07
+		H08
+		H09
+		H10
+		H11
+		H12
+		H13
+		H14
+		H15
+		H16
+		H17
+		H18
+		H19
+		H20
+		H21
+		H22
+		H23
+		H24
+		H25
+		H26
+	}
+	role = beta_destroyer
+
+	upgrade_prio = {
+		factor = 0.01
+	}
+	
+	beta_destroyer_default = {
+		upgrade_prio = {
+			factor = 0.01
+		}
+
+		
+		
+		
+		target_template = {
+			
+			
+			regiments = {
+				MVLV_beta_destroyer = 10
+			}
+		}
+
+	}
+}
+
+beta_fort_BET = {
+	available_for = {
+		BET
+		H02
+		H03
+		H04
+		H05
+		H06
+		H07
+		H08
+		H09
+		H10
+		H11
+		H12
+		H13
+		H14
+		H15
+		H16
+		H17
+		H18
+		H19
+		H20
+		H21
+		H22
+		H23
+		H24
+		H25
+		H26
+	}
+	role = beta_fort
+
+	upgrade_prio = {
+		factor = 0.01
+	}
+	
+	beta_fort_default = {
+		upgrade_prio = {
+			factor = 0.01
+		}	
+		
+		target_template = {
+			
+			
+			regiments = {
+				MVLV_beta_fort = 20
+			}
+		}
+
+	}
+}
+

@@ -1,0 +1,66 @@
+add_namespace = mvlv_beta_eat
+country_event = {
+	id = mvlv_beta_eat.0
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		every_state = {
+			limit = {
+				occupied_by_BETA = yes
+			}
+			OWNER = {
+				add_offsite_building = {
+					type = arms_factory
+					level = PREV.arms_factory_level
+				}
+			}
+			BET = {
+				add_offsite_building = {
+					type = arms_factory
+					level = PREV.arms_factory_level
+				}
+			}
+			THIS = {
+				remove_building = {
+					type = arms_factory
+					level = arms_factory_level
+				}
+				remove_building = {
+					type = industrial_complex
+					level = industrial_complex_level
+				}
+				remove_building = {
+					type = dockyard
+					level = building_level@dockyard
+				}
+				set_state_category = betaland
+				add_dynamic_modifier = {
+					modifier = beta_no_pop_modifier
+				}
+			}
+		}
+		country_event = mvlv_beta_eat.1
+	}
+}
+
+country_event = {
+	id = mvlv_beta_eat.1
+	hidden = yes
+	# fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		every_state = {
+			limit = {
+				# occupied_by_BETA = yes
+				no_human_land_trigger = yes
+			}
+			population_cleaning_effect = yes
+			core_population_growth_effect = yes
+		}
+		country_event = {
+			id = mvlv_beta_eat.1
+			days = 30
+		}
+	}
+}

@@ -1,0 +1,273 @@
+#人類の防波堤
+breakwater_of_humanity = {
+    track = infantry_support
+    name = SUBDOCTRINE_BREAKWATER_OF_HUMANITY
+    description = SUBDOCTRINE_BREAKWATER_OF_HUMANITY_DESC
+    icon = GFX_doctrine_breakwater_of_humanity_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+        modifier = {
+            factor = 0.5
+            is_major = no
+        }
+    
+    }
+
+    # EFFECTS
+    #enable_tactic = tactic_overwhelming_fire
+	conscription = 0.05
+	enable_tactic = tactic_hm_guerrillaDeffence
+
+    #段階ごとの強化
+    rewards = {
+		#激励
+        encouragement = {
+			land_night_attack = 0.1
+			infantry = {
+				default_morale = 1
+			}
+        }
+		#緻密な連携
+        close_collaboration = {
+			land_reinforce_rate = 0.30
+        }
+		#支援要請
+        request_assistance = {
+			category_support_battalions = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+			}
+        }
+		#前線急行
+        rushing_front = {
+			infantry = {
+				maximum_speed = 0.2
+			}
+        }
+		#防波堤
+        breakwaters = {
+			dig_in_speed_factor = 0.2
+            infantry = {
+                combat_width = -1.0
+                max_organisation = 20
+				max_strength = 0.2
+            }
+            engineer = {
+				battalion_mult = {
+					category = category_light_infantry
+					entrenchment = 1			#0.50
+					add = yes
+				}
+            }
+        }
+    }
+}
+#戦場の女神
+artillery_goddess = {
+    track = infantry_support
+    name = SUBDOCTRINE_ARTILLERY_GODDESS
+    description = SUBDOCTRINE_ARTILLERY_GODDESS_DESC
+    icon = GFX_doctrine_artillery_goddess_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    #OTHER BASE REWARDS
+    category_artillery = {
+        soft_attack = 0.05
+		hard_attack = 0.05
+    }
+
+    rewards = {
+		#砲列への補給
+        supplying_the_artillery = {
+			category_artillery = {
+				default_morale = 0.5
+			}
+        }
+		#機動砲撃
+        mobile_artillery_fire = {
+            category_artillery = {
+                defense = 0.05
+				breakthrough = 0.05
+            }
+        }
+		#予備砲弾
+        spare_shells = {
+			enable_tactic = tactic_human_hv_barrage_attack
+            category_support_artillery = {
+				max_organisation = 10
+            }
+        }
+		#援護射撃
+        covering_fire = {
+            category_support_artillery = {
+				soft_attack = 0.10
+				hard_attack = 0.10
+            }
+        }
+		#戦場の女神
+        superior_fire = {
+			artillery_brigade = {
+				combat_width = -0.5
+				air_attack = 2.0
+			}
+			rocket_artillery_brigade = {
+				combat_width = -0.5
+				air_attack = 2.0
+			}
+        }
+    }
+}
+#汎用支援
+general_support = {
+    track = infantry_support
+    name = SUBDOCTRINE_GENERAL_SUPPORT
+    description = SUBDOCTRINE_GENERAL_SUPPORT_DESC
+    icon = GFX_doctrine_general_support_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    # EFFECTS
+	category_support_battalions = {
+		soft_attack = 0.10
+		hard_attack = 0.10
+	}
+   
+    #OTHER BASE REWARDS
+    rewards = {
+		#迅速支援
+        quick_assistance = {
+            category_support_battalions = {
+				default_morale = 0.35
+			}
+        }
+		#機動支援
+        mobile_support = {
+        #2
+			category_support_battalions = {
+                defense = 0.10
+				breakthrough = 0.10
+            }
+        }
+		#強化整備
+        advanced_maintenance = {
+        #3
+            maintenance_company = {
+				reliability = 0.1
+				default_morale = 0.5
+            }
+        }
+		#充実した工具
+        extensive_tools = {
+        #4
+            engineer = {
+				battalion_mult = {
+					category = category_light_infantry
+					defense = 0.10
+					breakthrough = 0.10
+				}
+            }            
+        }
+		#潤沢な物資
+        abundant_supplies = {
+        #5
+			logistics_company = {
+				battalion_mult = {
+					category = category_artillery
+					soft_attack = 0.05
+					hard_attack = 0.05
+				}
+			}
+        }
+
+    }
+}
+#徹底整備
+thorough_maintenance = {
+    track = infantry_support
+    name = SUBDOCTRINE_THOROUGH_MAINTENANCE
+    description = SUBDOCTRINE_THOROUGH_MAINTENANCE_DESC
+    icon = GFX_doctrine_thorough_maintenance_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+
+        base = 1
+
+    }
+
+    # EFFECTS
+
+    #OTHER BASE REWARDS
+	maintenance_company = {
+		reliability = 0.1
+	}
+
+    rewards = {
+		#燃費の改善
+        improved_fuel_economy = {
+        #1
+		#燃料および弾薬消費量
+            supply_consumption_factor = -0.2
+        }
+		#
+		#整備環境の改善
+        improved_maintenance_environment = {
+        #2
+			maintenance_company = {
+				reliability_factor = 0.10
+			}
+
+        }
+		#極地対応部品
+        arctic_parts = {
+        #3
+            attrition = -0.2
+
+        }
+		#性能強化
+        performance_enhancement = {
+        #4
+            army_speed_factor = 0.2
+        }
+		#完全整備品
+        fully_refurbished = {
+        #5
+            army_strength_factor = 0.05
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+        }
+    }
+}

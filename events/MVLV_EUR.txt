@@ -1,0 +1,51 @@
+add_namespace = mvlv_eur
+country_event = {
+	id = mvlv_eur.1
+	desc = mvlv_eur.1.d
+	title = mvlv_eur.1.t
+	picture = GFX_mvlv_xfj_project
+	fire_only_once = yes
+	trigger = {
+		tag = EUR
+		EUR = {
+			has_tech = MVLV_research_tsf_2_maneuver_framework
+			has_tech = MVLV_research_engine_maneuver_2
+			has_tech = MVLV_research_add_aerial_blade_armor
+			has_tech = MVLV_research_special_structure_1
+		}
+	}
+
+
+	option = {
+		name = mvlv_eur.1.a
+		create_equipment_variant = {
+			name = "EF-2000（欧州）"
+			type = MVLV_TSF_chassis_2_maneuver
+			parent_version = 0
+			allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+			modules = {
+				MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+				MVLV_TSF_OS_slot = MVLV_TSF_OS_2_close
+				MVLV_TSF_engine_slot = MVLV_TSF_engine_maneuver_2
+				MVLV_TSF_headUnit_slot = MVLV_TSF_head_aerial_1
+				MVLV_TSF_right_hand_slot = MVLV_TSF_support_gun
+				MVLV_TSF_left_hand_slot = empty
+				MVLV_TSF_head_slot = MVLV_TSF_add_blade_armor
+				MVLV_TSF_shoulder_slot = MVLV_TSF_add_aerial_blade_armor
+				MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+				MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+				MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				MVLV_TSF_waist_slot = MVLV_TSF_add_thruster_1
+				MVLV_TSF_leg_slot = MVLV_TSF_add_blade_armor
+				MVLV_TSF_sp_slot_1 = MVLV_TSF_special_structure_1
+			}
+			icon = "GFX_EF2000"
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_TSF_chassis_2_maneuver
+			amount = 120
+			variant_name = "EF-2000（欧州）"
+		}
+	}
+}
+

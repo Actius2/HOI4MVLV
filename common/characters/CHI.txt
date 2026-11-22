@@ -1,0 +1,277 @@
+characters = {
+
+	CHI_Cuiyifei = {
+#ツィ・イーフェイ（緑ミク）
+
+		name = CHI_Cuiyifei
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_CHI_Cuiyifei_pic
+				small = GFX_CHI_Cuiyifei_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+			
+		brilliant_strategist
+		
+		trickster
+		
+		trait_cautious
+		harsh_leader
+		
+		tsf_officer
+		commander_aptitude
+		tsf_leader
+		tsf_commander
+		
+		commando
+		
+		war_hero
+		media_personality
+		
+		jaeger
+		
+		
+			}
+			
+			skill = 8
+			
+			attack_skill = 7
+			defense_skill = 8
+			planning_skill = 6
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+	
+	CHI_Sun = {
+#スン・リージェン （Sun Li Jen：元ノルウェー人	東方のロンメル）
+		name = CHI_Sun
+		
+		gender = female
+		
+		portraits = {
+			army = {
+				large = GFX_CHI_Sun_pic
+				small = GFX_CHI_Sun_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+			brilliant_strategist
+			war_hero
+			career_officer
+			trait_reckless
+			media_personality
+			harsh_leader
+			armor_officer
+			
+			engineer_officer
+			
+			true_genius
+			commander_aptitude
+			
+			offensive_doctrine
+			aggressive_assaulter
+			expert_delegator
+			
+			trickster
+			panzer_leader
+			panzer_expert
+			desert_fox
+			
+		
+			}
+			
+			skill = 5
+			
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	CHI_Lilinmei = {
+#リー・リンメイ
+		name = CHI_Lilinmei
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_CHI_Lilinmei_pic
+				small = GFX_CHI_Lilinmei_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless
+				brilliant_strategist
+				tsf_officer
+				
+				tsf_leader
+			}
+			
+			skill = 5
+			
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	CHI_Wangxiaofen = {
+#ワン・シャオフェン
+		name = CHI_Wangxiaofen
+		
+		gender = female
+		portraits = {
+		
+			army = {
+				large = GFX_CHI_Wangxiaofen_pic
+				small = GFX_CHI_Wangxiaofen_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless
+				career_officer
+				tsf_officer
+				tsf_leader
+			}
+			skill = 5
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	CHI_Louyahua = {
+#ルー・ヤフア
+		name = CHI_Louyahua
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_CHI_Louyahua_pic
+				small = GFX_CHI_Louyahua_pic_small
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				trait_cautious
+				tsf_officer
+				tsf_leader
+			}
+			skill = 5
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	CHI_Andersen = {
+#アントン・アンネシェン（ノルウェー人なのに中国人になってた人）
+		name = CHI_Andersen
+		
+		portraits = {
+			army = {
+				large = GFX_CHI_Andersen_pic
+				small = GFX_CHI_Andersen_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	CHI_Jo = {
+#ジョ・ショウチク
+		name = CHI_Jo
+		
+		gender = female
+		portraits = {
+			army = {
+				large = gfx/leaders/CHI/CHI_Jo_pic.dds
+				small = gfx/leaders/CHI/CHI_Jo_pic_small.dds
+			}
+		}
+		
+		navy_leader = {
+		
+			traits = {
+			
+				old_guard_navy
+				gentlemanly
+				gunnery_expert
+				cuts_corners
+				navy_media_personality
+				bold
+				navy_career_officer
+				
+				battleship_adherent
+				aviation_enthusiast
+				caustic_personality
+				naval_lineage
+				
+				
+				ground_pounder
+				big_guns_expert
+				ironside
+				fly_swatter
+				air_controller
+				superior_tactician
+				
+
+			}
+			
+					skill = 6
+		
+					attack_skill = 6
+					defense_skill = 6
+					maneuvering_skill = 5
+					coordination_skill = 2
+			
+			legacy_id= -1
+		}
+	}
+	
+}

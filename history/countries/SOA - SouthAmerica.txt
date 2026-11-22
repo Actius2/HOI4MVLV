@@ -1,0 +1,249 @@
+﻿capital = 500 #首都
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		MVLV_research_basic_tsf_framework = 1
+		MVLV_research_tsf_1_light_framework = 1
+		MVLV_research_armor_light = 1
+	}
+	create_equipment_variant = {
+		name = "F-5（南米）"
+		type = MVLV_TSF_chassis_1_light
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_light
+			MVLV_TSF_OS_slot = MVLV_TSF_basic_OS
+			MVLV_TSF_engine_slot = MVLV_TSF_basic_engine
+			MVLV_TSF_headUnit_slot = MVLV_TSF_basic_head
+			MVLV_TSF_right_hand_slot = MVLV_TSF_basic_assault_cannon
+
+		}
+		icon = "GFX_F-5"
+	}
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		UNI_basic_concept_research = 1
+	}
+}
+
+# set_country_flag = monroe_doctrine #国旗を設定
+1999.1.1 = {
+	oob = "SOA_1999"
+	load_oob = "MVLV_generic_templates"
+	load_oob = "MVLV_TSF"
+	add_to_war = {
+		targeted_alliance = UNI
+		enemy = BET
+	}	#戦争状態を設定
+	set_technology = {
+		#初期研究を定義
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		Mvlv_tech_support_pack = 1
+		
+		gw_artillery = 1
+		interwar_artillery = 1
+		artillery1 = 1
+		artillery2 = 1
+		rocket_artillery = 1
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_medium_tank = 1
+		early_destroyer = 1
+
+		fleet_in_being = 1
+		fighter = 1
+		#CAS2 = 1
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		improved_equipment_conversion = 1
+
+
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+		
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+		construction5 = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		
+		interwar_antiair = 1
+		
+		MVLV_shell_tech = 1
+		
+		###陸軍ドクトリン###
+		###TSF###
+		# UNI_basic_concept_research = 1
+		###军需・民需建築許可###
+		MVLV_EnableBuilding_arms_factory = 1
+		MVLV_EnableBuilding_industrial_complex = 1
+		MVLV_EnableBuilding_ammunition_plant = 1
+		MVLV_EnableBuilding_ammunition_silo = 1
+		###戦術###
+		human_combat_tactics = 1
+	}
+
+	add_ideas = {
+		#初期国家精神を定義
+		mvlv_nuclear_winter
+		mvlv_saast
+		SOA_happy
+		MVLV_UNF
+	}
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_technology = {
+			muvluv_mtg_naval_pack = 1
+			muvluv_mtg_mtg_transport_pack = 1
+		}
+	}
+	if = {
+		limit = {
+			not = {
+				has_dlc = "Man the Guns"
+			}
+		}
+		set_technology = {
+			early_submarine = 1
+			basic_submarine = 1
+			improved_submarine = 1
+			advanced_submarine = 1
+			early_destroyer = 1
+			basic_destroyer = 1
+			improved_destroyer = 1
+			advanced_destroyer = 1
+			early_light_cruiser = 1
+			basic_light_cruiser = 1
+			improved_light_cruiser = 1
+			advanced_light_cruiser = 1
+			early_heavy_cruiser = 1
+			basic_heavy_cruiser = 1
+			improved_heavy_cruiser = 1
+			advanced_heavy_cruiser = 1
+			early_battleship = 1
+			basic_battleship = 1
+			improved_battleship = 1
+			advanced_battleship = 1
+			early_battlecruiser = 1
+			basic_battlecruiser = 1
+			heavy_battleship = 1
+			heavy_battleship2 = 1
+			early_carrier = 1
+			basic_carrier = 1
+			improved_carrier = 1
+			advanced_carrier = 1
+			transport = 1
+			landing_craft = 1
+			tank_landing_craft = 1
+		}
+	}
+	set_convoys = 1000	
+	starting_train_buffer = 50
+}
+
+# if = {
+	# limit = { has_dlc = "Man the Guns" }
+# }
+
+set_stability = 0.5#初期安定度を定義
+set_war_support = 0.5#初期戦争協力度を定義
+set_research_slots = 3 #初期研究枠を定義
+add_political_power = 0#初期政治力を定義
+
+add_offsite_building = { type = arms_factory level = 12 }
+add_offsite_building = { type = industrial_complex level = 35 }
+add_offsite_building = { type = dockyard level = 10 }
+add_offsite_building = { type = ammunition_plant level = 2 }
+add_offsite_building = { type = ammunition_silo level = 3 }
+
+set_politics = {
+	#初期政体を定義
+	ruling_party = neutrality
+	last_election = "1934.7.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	#初期支持率を定義
+	neutrality = 100
+}
+
+###各政体における指導者を定義###
+create_country_leader = {
+	name = "フェルナンド カルドーゾ"
+	desc = "POLITICS_GETULIO_VARGAS_DESC"
+	picture = "Ferdinand.dds"
+	expire = "2040.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Plínio Salgado"
+	desc = "POLITICS_PLINIO_SALGADO_DESC"
+	picture = "GFX_Portrait_generic_council"
+	expire = "2040.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Luís Carlos Prestes"
+	desc = "POLITICS_LUIS_CARLOS_PRESTES_DESC"
+	picture = "GFX_Portrait_generic_council"
+	expire = "2040.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Armando Sales"
+	desc = "POLITICS_ARMANDO_SALES_DESC"
+	picture = "GFX_Portrait_generic_council"
+	expire = "2040.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+recruit_character = SOA_Augustus			#アウグスト・ピノ・ウガルテ
+recruit_character = SOA_Carlos				#カルロス・イバニェス
+recruit_character = SOA_Emmanuel			#エマニエル・コントレラス
+recruit_character = SOA_Pablo				#パブロ・エンシーナ
+recruit_character = SOA_Bel					#ベル・オイギンス
+
+###初期提督を定義###
+create_navy_leader = {
+	name = "Augusto Rademaker"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
+	traits = {
+	}
+	skill = 3
+}
+

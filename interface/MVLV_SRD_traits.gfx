@@ -1,0 +1,25 @@
+spriteTypes = {
+
+	######################
+	spriteType = {
+		name = "GFX_trait_basics_element"
+		texturefile = "gfx/interface/traits/personal/trait_substance_abuser.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_basics_element2"
+		texturefile = "gfx/interface/traits/personal/trait_substance_abuser.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_improved_element"
+		texturefile = "gfx/interface/traits/personal/trait_substance_abuser.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_advanced_element"
+		texturefile = "gfx/interface/traits/personal/trait_substance_addict.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_special_element"
+		texturefile = "gfx/interface/traits/personal/MVLV_trait_00_unit.dds"
+	}
+	
+}

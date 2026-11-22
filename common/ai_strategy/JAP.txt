@@ -1,0 +1,293 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+JAP_area_priority = {
+	enable = {
+		original_tag = JAP
+		date > 1998.12.31
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = -300
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = -300
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = -300
+	}
+	ai_strategy = {
+		type = area_priority
+		id = japan
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = sado
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = cheorwon
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = -300
+	}
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -300
+	}
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = -300
+	}
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = -300
+	}
+}
+
+JAP_defend_doctrine = {
+	enable = {
+		original_tag = JAP
+		date > 1998.12.31
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CAN
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = USA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CEA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SOA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SOV
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CHI
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = OSE
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = EEA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = EUR
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = AFR
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = GEU
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = JAP
+		value = -100
+	}
+}
+
+
+
+Jap_tsushima_frontline = {
+	enable = {
+		original_tag = JAP
+		date > 1998.12.31
+		has_full_control_of_state = 528
+		NOT = {
+			525 = {
+				is_controlled_by = GEU
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.3
+		states = {
+			528
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+Jap_tsushima_secondline = {
+	enable = {
+		original_tag = JAP
+		date > 1998.12.31
+		has_full_control_of_state = 528
+		525 = {
+			is_controlled_by = GEU
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		states = {
+			528
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+
+Jap_kuril_frontline = {
+	enable = {
+		original_tag = JAP
+		date > 1998.12.31
+		has_full_control_of_state = 555
+		NOT = {
+			637 = {
+				is_controlled_by = SOV
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.3
+		states = {
+			555
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+Jap_kuril_secondline = {
+	enable = {
+		original_tag = JAP
+		date > 1998.12.31
+		has_full_control_of_state = 555
+		637 = {
+			is_controlled_by = SOV
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		states = {
+			555
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+
+Jap_sakhalin_frontline = {
+	enable = {
+		original_tag = JAP
+		date > 1998.12.31
+		has_full_control_of_state = 537
+		NOT = {
+			560 = {
+				is_controlled_by = SOV
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.1
+		states = {
+			655
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+Jap_sakhalin_secondline = {
+	enable = {
+		original_tag = JAP
+		date > 1998.12.31
+		has_full_control_of_state = 537
+		560 = {
+			is_controlled_by = SOV
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.1
+		states = {
+			655
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+Jap_sado_frontline = {
+	enable = {
+		original_tag = JAP
+		date > 1998.12.31
+		534 = {
+			is_controlled_by = JAP
+		}
+		789 = {
+			is_controlled_by = H21
+		}
+
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.5
+		states = {
+			534
+		}
+		subtract_fronts_from_need = no
+	}
+}

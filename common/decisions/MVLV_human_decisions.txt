@@ -1,0 +1,764 @@
+MVLV_G_Lancher_cut_decisions_category = {
+	MVLV_G_Lancher_cut_decision = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_dynamic_modifier = { modifier = MVLV_G_Lancher_modifier }
+			has_equipment = {
+				MVLV_TSF_chassis > 119
+			}
+		}
+
+		visible = {
+			has_dynamic_modifier = { modifier = MVLV_G_Lancher_modifier }
+		}
+
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { ROOT.MVLV_G_Lancher_modifier_value < -0.15 }
+				}
+				add_to_variable = { ROOT.MVLV_G_Lancher_modifier_value = 0.1 }
+				custom_effect_tooltip = MVLV_G_Lancher_cut_decision_tt
+			}
+			else = {
+				remove_dynamic_modifier = { modifier = MVLV_G_Lancher_modifier }
+			}
+			send_equipment = {
+				equipment = MVLV_TSF_chassis
+				amount = 120
+				target = UNI
+			}
+		}
+	}
+}
+#疎開など
+MVLV_VoluntaryEvacuation_category = {
+	MVLV_support_residents_decision = {
+		priority = 6
+		icon = generic_prepare_civil_war
+		available = {
+			is_in_faction_with = UNI
+			has_stability < 0.5
+			has_war_support > 0.7
+			any_neighbor_country = { is_in_faction_with = BET }
+		}
+		visible = {
+			is_in_faction_with = UNI
+		}
+		ai_will_do = {
+			base = 0
+		}
+		days_re_enable = 180
+		fire_only_once = no
+		cost = 50
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = -0.2	
+		}
+	}
+	MVLV_VoluntaryEvacuationOnOff_decision = {
+		priority = 5
+		icon = generic_prepare_civil_war
+		available = {
+			is_in_faction_with = UNI
+		}
+
+		visible = {
+			is_in_faction_with = UNI
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0
+				has_country_flag = MVLV_VoluntaryEvacuation_flag
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = MVLV_VoluntaryEvacuation_flag }
+				# if = {
+					# limit = { NOT = { has_country_flag = MVLV_VE_flag } }
+					# set_country_flag = MVLV_VE_flag
+					clr_country_flag = MVLV_VoluntaryEvacuation_flag
+					custom_effect_tooltip = MVLV_VoluntaryEvacuation_off_tt
+				# }
+			}
+			else = {
+				# if = {
+					# limit = { NOT = { has_country_flag = MVLV_VE_flag } }
+					# set_country_flag = MVLV_VE_flag
+					set_country_flag = MVLV_VoluntaryEvacuation_flag
+					custom_effect_tooltip = MVLV_VoluntaryEvacuation_on_tt
+				# }
+			}
+			# clr_country_flag = MVLV_VE_flag
+		}
+	}
+	#自主避難を許可する
+	#自主避難を禁止する
+	#自主避難
+	MVLV_VoluntaryEvacuation_mission = {
+		priority = 4
+		activation = {
+			is_in_faction_with = UNI
+			has_country_flag = MVLV_VoluntaryEvacuation_flag
+			FROM = {
+				impassable = no
+				is_core_of = ROOT
+				is_owned_by = ROOT
+				state_population_k > 10
+				#is_owned_and_controlled_by = ROOT
+				NOT = { is_fully_controlled_by = ROOT }
+				NOT = { has_state_category = betaland }
+				owner = { has_country_flag = MVLV_VoluntaryEvacuation_flag }
+				#controller = {}
+			}
+		}
+		target_trigger = {
+			is_in_faction_with = UNI
+			has_country_flag = MVLV_VoluntaryEvacuation_flag
+			FROM = {
+				impassable = no
+				is_core_of = ROOT
+				is_owned_by = ROOT
+				state_population_k > 10
+				#is_owned_and_controlled_by = ROOT
+				NOT = { is_fully_controlled_by = ROOT }
+				NOT = { has_state_category = betaland }
+				owner = { has_country_flag = MVLV_VoluntaryEvacuation_flag }
+				#controller = {}
+			}
+		}
+		state_target = yes
+		available = { always = no }
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					NOT = { state_population_k > 10 }
+					NOT = { is_owned_by = ROOT }
+					owner = { NOT = { has_country_flag = MVLV_VoluntaryEvacuation_flag }}
+				}
+			}
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 15
+		timeout_effect = {
+			if = {
+				limit = { is_ai = no }
+				add_stability = -0.001
+			}
+			#避難
+			FROM = {
+				#人口
+				if = {
+					limit = { state_population_k > 10 }
+					add_manpower = -10000
+					if = {
+						limit = {
+							OR = {
+								arms_factory > 0
+								industrial_complex > 0
+							}
+						}
+						custom_effect_tooltip = MVLV_VoluntaryEvacuation_mission_befor_tt
+					}
+					ROOT = {
+						random_owned_state = {
+							limit = {
+								NOT = {
+									any_neighbor_state = { owner = { is_in_faction_with = BET } }
+									#any_neighbor_state = { is_in_faction_with = BET }
+								}
+								is_core_of = ROOT
+								impassable = no
+							}
+							add_manpower = 10000
+							custom_effect_tooltip = MVLV_VoluntaryEvacuation_mission_after_tt
+						}
+					}
+				}
+				hidden_effect ={
+					#工場の抽選
+					if = {
+						limit = {
+							OR = {
+								arms_factory > 0
+								industrial_complex > 0
+							}
+						}
+						random_list = {
+							50 = {
+								modifier = {
+									factor = 0
+									NOT = { arms_factory > 0 }
+								}
+								remove_building = {
+									type = arms_factory
+									level = 1
+								}
+								ROOT = {
+									random_owned_state = {
+										limit = {
+											NOT = {
+												any_neighbor_state = { owner = { is_in_faction_with = BET } }
+											}
+											is_core_of = ROOT
+											impassable = no
+										}
+										add_extra_state_shared_building_slots = 1
+										add_building_construction = {
+											type = arms_factory
+											level = 1
+											instant_build = yes
+										}
+									}	
+								}
+							}
+							50 = {
+								modifier = {
+									factor = 0
+									NOT = { industrial_complex > 0 }
+								}
+								remove_building = {
+									type = industrial_complex
+									level = 1
+								}
+								ROOT = {
+									random_owned_state = {
+										limit = {
+											NOT = {
+												any_neighbor_state = { owner = { is_in_faction_with = BET } }
+											}
+											is_core_of = ROOT
+											impassable = no
+										}
+										add_extra_state_shared_building_slots = 1
+										add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+									}	
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#事前自主避難
+	MVLV_VoluntaryEvacuation_mission_2 = {
+		priority = 3
+		activation = {
+			is_in_faction_with = UNI
+			has_country_flag = MVLV_VoluntaryEvacuation_flag
+			FROM = {
+				impassable = no
+				is_core_of = ROOT
+				is_owned_by = ROOT
+				state_population_k > 10
+				#is_owned_and_controlled_by = ROOT
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { owner = { is_in_faction_with = BET } }
+				NOT = { has_state_category = betaland }
+				owner = { has_country_flag = MVLV_VoluntaryEvacuation_flag }
+				#controller = {}
+			}
+		}
+		target_trigger = {
+			is_in_faction_with = UNI
+			has_country_flag = MVLV_VoluntaryEvacuation_flag 
+			FROM = {
+				impassable = no
+				is_core_of = ROOT
+				is_owned_by = ROOT
+				state_population_k > 10
+				#is_owned_and_controlled_by = ROOT
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { owner = { is_in_faction_with = BET } }
+				NOT = { has_state_category = betaland }
+				owner = { has_country_flag = MVLV_VoluntaryEvacuation_flag }
+				#controller = {}
+			}
+		}
+		state_target = yes
+		available = { always = no }
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					NOT = { state_population_k > 10 }
+					NOT = { is_owned_by = ROOT }
+					owner = { NOT = { has_country_flag = MVLV_VoluntaryEvacuation_flag }}
+				}
+			}
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 30
+		timeout_effect = {
+			#避難
+			if = {
+				limit = { is_ai = no }
+				add_stability = -0.001
+			}
+			FROM = {
+				#人口
+				if = {
+					limit = { state_population_k > 10 }
+					add_manpower = -10000
+					if = {
+						limit = {
+							OR = {
+								arms_factory > 0
+								industrial_complex > 0
+							}
+						}
+						custom_effect_tooltip = MVLV_VoluntaryEvacuation_mission_befor_tt
+					}
+					ROOT = {
+						random_owned_state = {
+							limit = {
+								NOT = {
+									any_neighbor_state = { owner = { is_in_faction_with = BET } }
+									#any_neighbor_state = { is_in_faction_with = BET }
+								}
+								is_core_of = ROOT
+								impassable = no
+							}
+							add_manpower = 10000
+							custom_effect_tooltip = MVLV_VoluntaryEvacuation_mission_after_tt
+						}
+					}
+				}
+				hidden_effect ={
+					#工場の抽選
+					if = {
+						limit = {
+							OR = {
+								arms_factory > 0
+								industrial_complex > 0
+							}
+						}
+						random_list = {
+							50 = {
+								modifier = {
+									factor = 0
+									NOT = { arms_factory > 0 }
+								}
+								remove_building = {
+									type = arms_factory
+									level = 1
+								}
+								ROOT = {
+									random_owned_state = {
+										limit = {
+											NOT = {
+												any_neighbor_state = { owner = { is_in_faction_with = BET } }
+											}
+											is_core_of = ROOT
+											impassable = no
+										}
+										add_extra_state_shared_building_slots = 1
+										add_building_construction = {
+											type = arms_factory
+											level = 1
+											instant_build = yes
+										}
+									}	
+								}
+							}
+							50 = {
+								modifier = {
+									factor = 0
+									NOT = { industrial_complex > 0 }
+								}
+								remove_building = {
+									type = industrial_complex
+									level = 1
+								}
+								ROOT = {
+									random_owned_state = {
+										limit = {
+											NOT = {
+												any_neighbor_state = { owner = { is_in_faction_with = BET } }
+											}
+											is_core_of = ROOT
+											impassable = no
+										}
+										add_extra_state_shared_building_slots = 1
+										add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+									}	
+								}
+							}
+						}
+					}
+				}
+				#---------
+			}
+		}
+	}
+	MVLV_ForcedEvacuationOnOff_decision = {
+		priority = 2
+		icon = generic_prepare_civil_war
+		available = {
+			is_in_faction_with = UNI
+		}
+
+		visible = {
+			is_in_faction_with = UNI
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0
+				has_country_flag = MVLV_ForcedEvacuation_flag
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = MVLV_ForcedEvacuation_flag }
+				clr_country_flag = MVLV_ForcedEvacuation_flag
+				custom_effect_tooltip = MVLV_ForcedEvacuation_off_tt
+			}
+			else = {
+				set_country_flag = MVLV_ForcedEvacuation_flag
+				custom_effect_tooltip = MVLV_ForcedEvacuation_on_tt
+			}
+		}
+	}
+	MVLV_ForcedEvacuation_decision = {
+	
+		icon = generic_construction
+		
+		allowed = { always = yes }
+		available = {
+			is_in_faction_with = UNI
+			FROM = { any_neighbor_state = { owner = { is_in_faction_with = BET } } }
+		}
+		visible = {
+			is_in_faction_with = UNI
+			has_country_flag = MVLV_ForcedEvacuation_flag
+			FROM = {
+				impassable = no
+				is_core_of = ROOT
+				is_owned_by = ROOT
+				#is_owned_and_controlled_by = ROOT
+				#is_fully_controlled_by = ROOT
+				any_neighbor_state = { owner = { is_in_faction_with = BET } }
+				NOT = { has_state_category = betaland }
+				#owner = {}
+				#controller = {}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			FROM = {
+				impassable = no
+				is_core_of = ROOT
+				is_owned_by = ROOT
+				#is_owned_and_controlled_by = ROOT
+				#is_fully_controlled_by = ROOT
+				any_neighbor_state = { owner = { is_in_faction_with = BET } }
+				NOT = { has_state_category = betaland }
+				owner = { has_country_flag = MVLV_ForcedEvacuation_flag }
+				#controller = {}
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					NOT = { is_owned_by = ROOT }
+				}
+			}
+		}
+		cost = 10
+		fire_only_once = no
+		cancel_if_not_visible = no
+		days_remove = 7
+		complete_effect = {
+			if = {
+				limit = { is_ai = no }
+				add_stability = -0.01
+			}
+		}
+		remove_effect = {
+			FROM = {
+				#人口
+				if = {
+					limit = { state_population_k > 100 }
+					add_manpower = -100000
+					if = {
+						limit = {
+							OR = {
+								arms_factory > 0
+								industrial_complex > 0
+							}
+						}
+						custom_effect_tooltip = MVLV_VoluntaryEvacuation_mission_befor_tt
+					}
+					ROOT = {
+						random_owned_state = {
+							limit = {
+								NOT = {
+									any_neighbor_state = { owner = { is_in_faction_with = BET } }
+								}
+								impassable = no
+								is_core_of = ROOT
+							}
+							add_manpower = 100000
+							custom_effect_tooltip = MVLV_VoluntaryEvacuation_mission_after_tt
+						}
+					}
+				}
+				else = {
+					set_temp_variable = { temp_manpower = 0 }
+					add_to_temp_variable  = { temp_manpower = state_population }
+					set_temp_variable = { temp_manpower2 = 0 }
+					subtract_from_temp_variable = { temp_manpower2 = state_population }
+					add_manpower = temp_manpower2
+					if = {
+						limit = {
+							OR = {
+								arms_factory > 0
+								industrial_complex > 0
+							}
+						}
+						custom_effect_tooltip = MVLV_VoluntaryEvacuation_mission_befor_tt
+					}
+					ROOT = {
+						random_owned_state = {
+							limit = {
+								NOT = {
+									any_neighbor_state = { owner = { is_in_faction_with = BET } }
+								}
+								is_core_of = ROOT
+								impassable = no
+							}
+							add_manpower = temp_manpower
+							custom_effect_tooltip = MVLV_VoluntaryEvacuation_mission_after_tt
+						}
+					}
+				}
+				hidden_effect ={
+					#工場の抽選
+					if = {
+						limit = {
+							OR = {
+								arms_factory > 0
+								industrial_complex > 0
+							}
+						}
+						random_list = {
+							50 = {
+								modifier = {
+									factor = 0
+									NOT = { arms_factory > 0 }
+								}
+								remove_building = {
+									type = arms_factory
+									level = 1
+								}
+								ROOT = {
+									random_owned_state = {
+										limit = {
+											NOT = {
+												any_neighbor_state = { owner = { is_in_faction_with = BET } }
+											}
+											is_core_of = ROOT
+											impassable = no
+										}
+										add_extra_state_shared_building_slots = 1
+										add_building_construction = {
+											type = arms_factory
+											level = 1
+											instant_build = yes
+										}
+									}	
+								}
+							}
+							50 = {
+								modifier = {
+									factor = 0
+									NOT = { industrial_complex > 0 }
+								}
+								remove_building = {
+									type = industrial_complex
+									level = 1
+								}
+								ROOT = {
+									random_owned_state = {
+										limit = {
+											NOT = {
+												any_neighbor_state = { owner = { is_in_faction_with = BET } }
+											}
+											is_core_of = ROOT
+											impassable = no
+										}
+										add_extra_state_shared_building_slots = 1
+										add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+									}	
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0
+				has_political_power < 100
+			}
+		}
+	}
+	
+	
+	#----------------------------------
+}
+MVLV_human_category = {
+#_______#復興__________________________________________
+	MVLV_reclamation_decision = {
+	
+		icon = generic_construction
+		
+		allowed = { always = yes }
+		available = {
+			is_in_faction_with = UNI
+		}
+		visible = {
+			NOT = { is_in_faction_with = BET }
+			FROM = {
+				is_fully_controlled_by = ROOT
+				controller = {
+					PREV = {
+						impassable = no
+						is_fully_controlled_by = PREV
+						has_state_category = betaland
+					}
+					is_in_faction_with = ROOT
+				}
+			}
+
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				controller = {
+					PREV = {
+						impassable = no
+						is_fully_controlled_by = PREV
+						has_state_category = betaland
+					}
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		cost = ROOT.MVLV_decision_cost?10
+		fire_only_once = no
+		cancel_if_not_visible = yes
+		days_remove = 30
+		days_re_enable = 30
+		complete_effect = {
+			
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			FROM = {
+				add_manpower = 100000
+				add_extra_state_shared_building_slots = 5
+				remove_dynamic_modifier = {
+					modifier = beta_no_pop_modifier
+				}
+				set_state_category = pastoral
+			}
+		}
+		ai_will_do = { base = 100 }
+	}
+	#開発
+	MVLV_reclamation_decision_2 = {
+	
+		icon = generic_construction
+		
+		allowed = { always = yes }
+		available = {
+			is_in_faction_with = UNI
+		}
+		visible = {
+			NOT = { is_in_faction_with = BET }
+			FROM = { is_fully_controlled_by = ROOT }
+
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				controller = {
+					PREV = {
+						impassable = no
+						is_fully_controlled_by = PREV
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+						free_building_slots = {
+							building = arms_factory
+							size < 1
+							include_locked = no
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size < 1
+							include_locked = no
+						}
+					}
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		cost = ROOT.MVLV_decision_cost?10
+		fire_only_once = no
+		cancel_if_not_visible = yes
+		days_remove = 30
+		days_re_enable = 30
+		complete_effect = {
+			
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			FROM = {
+				add_manpower = 5000
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+}

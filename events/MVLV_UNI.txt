@@ -1,0 +1,1214 @@
+add_namespace = mvlv_uni
+#____________________________________________________________
+#用途
+#国連イベント
+#
+#id:mvlv_uni.1 effect:国連NF->始動 A-01配属表示用
+#id:mvlv_uni.2 effect:
+#id:mvlv_uni.3 effect:
+#id:mvlv_uni.4 effect:
+#id:mvlv_uni.5 effect:国連NF->人類最後の抵抗 桜花作戦アイデアを付与
+#id:mvlv_uni.6 effect:人類最後の抵抗 桜花作戦アイデアを付与
+#id:mvlv_uni.7 effect:BET NF->機能を止めたオリジナルハイヴ 桜花作戦のデバフ付与、207将軍削除
+#id:mvlv_uni.8 effect:H26NF->超重光線級の配備 超重光線級配備通知（SOVAIバフ）
+#id:mvlv_uni.9 effect:国連NF->切り札 00ユニットアイデア付与
+#id:mvlv_uni.10 effect:BET NF->異なる世界 白銀武非存在通知
+#id:mvlv_uni.11 effect:国連NF->奇跡のOS XM3開発通知
+#id:mvlv_uni.12 effect:国連NF->奇跡のOS XM3提供分岐
+#id:mvlv_uni.13 effect:国連NF->儲け 安定度、装備追加
+#id:mvlv_uni.14-16 effect:ユーコン基地テロ事件
+#id:mvlv_uni.17-18 effect:国連特権
+#id:mvlv_uni.19,23 effect:桜花作戦
+#id:mvlv_uni.20-22 effect:甲21号作戦
+#
+#____________________________________________________________
+#国連NF->始動 A-01配属表示用
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.1
+	desc = mvlv_uni.1.d
+	title = mvlv_uni.1.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.1.a
+		UNI = {
+			country_event = mvlv_uni.25
+		}
+	}
+}
+
+#国連NF->人類最後の抵抗 桜花作戦アイデアを付与
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.5
+	desc = mvlv_uni.5.d
+	title = mvlv_uni.5.t
+	picture = GFX_mvlv_ouka_sakusen
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.5.a
+		add_timed_idea = {
+			idea = operation_ouka
+			days = 30
+		}
+		custom_effect_tooltip = operation_ouka_tt
+	}
+}
+
+#BET NF->重大災害の防止策 桜花作戦のデバフ付与
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.6
+	desc = mvlv_uni.6.d
+	title = mvlv_uni.6.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_template = "A-04"
+				}
+				delete_unit_template_and_units = {
+					division_template = "A-04"
+				}
+			}
+			#remove_unit_leader = 0000
+			add_timed_idea = {
+				idea = MVLV_ouka_after
+				days = 180
+			}
+			set_global_flag = MVLV_ouka_end_flag
+		}
+	}
+	option = {
+		name = mvlv_uni.6.a
+		effect_tooltip = {
+			every_country = {
+				limit = {
+					has_template = "A-04"
+				}
+				delete_unit_template_and_units = {
+					division_template = "A-04"
+				}
+			}
+			add_timed_idea = {
+				idea = MVLV_ouka_after
+				days = 180
+			}
+		}
+	}
+}
+
+#BET NF->機能を止めたオリジナルハイヴ 桜花作戦のデバフ付与、207将軍削除
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.7
+	desc = mvlv_uni.7.d
+	title = mvlv_uni.7.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						global.var_generalDeathMode = 1
+					}
+				}
+				retire_character = UNI_Silver
+				retire_character = UNI_Meiya
+				retire_character = UNI_Tizuru
+				retire_character = UNI_Miki
+				retire_character = UNI_Ayamine
+				retire_character = UNI_Mikoto
+				retire_character = UNI_00
+				retire_character = USA_Yuya
+				retire_character = SOV_Latroi
+				retire_character = SOV_Crisca
+				retire_character = SOV_Martica
+				retire_character = SOV_Inia
+				retire_character = SOV_Sandark
+			}
+			every_country = {
+				limit = {
+					has_template = "A-04"
+				}
+				delete_unit_template_and_units = {
+					division_template = "A-04"
+				}
+			}
+			BET = {
+				remove_ideas = BET_end_game
+			}
+			H00 = {
+				remove_ideas = BET_end_game
+			}
+			add_timed_idea = {
+				idea = MVLV_ouka_after
+				days = 180
+			}
+			set_global_flag = MVLV_ouka_end_flag
+		}
+	}
+	option = {
+		name = mvlv_uni.7.a
+		effect_tooltip = {
+			if = {
+				limit = {
+					check_variable = {
+						global.var_generalDeathMode = 1
+					}
+				}
+				retire_character = UNI_Silver
+				retire_character = UNI_Meiya
+				retire_character = UNI_Tizuru
+				retire_character = UNI_Miki
+				retire_character = UNI_Ayamine
+				retire_character = UNI_Mikoto
+				retire_character = UNI_00
+				retire_character = USA_Yuya
+				retire_character = SOV_Latroi
+				retire_character = SOV_Crisca
+				retire_character = SOV_Martica
+				retire_character = SOV_Inia
+				retire_character = SOV_Sandark
+			}
+			every_country = {
+				limit = {
+					has_template = "A-04"
+				}
+				delete_unit_template_and_units = {
+					division_template = "A-04"
+				}
+			}
+			BET = {
+				remove_ideas = BET_end_game
+			}
+			H00 = {
+				remove_ideas = BET_end_game
+			}
+			add_timed_idea = {
+				idea = MVLV_ouka_after
+				days = 180
+			}
+		}
+	}
+}
+
+#H26NF->超重光線級の配備 超重光線級配備通知イベント（SOVAIバフ）
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.8
+	desc = {
+		trigger = {
+			TAG = SOV
+		}
+		text = mvlv_uni.8.d
+	}
+	desc = {
+		trigger = {
+			NOT = { TAG = SOV }
+		}
+		text = mvlv_uni.8.d2
+	}
+	title = mvlv_uni.8.t
+	picture = GFX_mvlv_srf
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.8.a
+		trigger = {
+			is_ai = no
+		}
+	}
+	option = {
+		name = mvlv_uni.8.b
+		ai_chance = {
+			factor = 200
+		}
+		trigger = {
+			TAG = SOV
+			is_ai = yes
+		}
+		add_timed_idea = { idea = mvlv_srf_ai days = 30 }
+	}
+}
+
+#国連NF->切り札 00ユニットアイデア付与
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.9
+	desc = mvlv_uni.9.d
+	title = mvlv_uni.9.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.9.a
+	}
+}
+
+#BET NF->異なる世界 白銀武非存在通知イベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.10
+	desc = mvlv_uni.10.d
+	title = mvlv_uni.10.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.10.a
+	}
+}
+
+#国連NF->奇跡のOS XM3開発通知イベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.11
+	desc = mvlv_uni.11.d
+	title = mvlv_uni.11.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.11.a
+	}
+}
+
+#国連NF->奇跡のOS XM3提供分岐イベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.12
+	desc = mvlv_uni.12.d
+	title = mvlv_uni.12.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.12.a
+		trigger = {
+			has_equipment = {
+				MVLV_TSF_chassis > 249
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = {
+				has_equipment = {
+					MVLV_TSF_chassis < 250
+				}
+			}
+			country_event = {
+				id = mvlv_uni.12
+				days = 3
+			}
+			custom_effect_tooltip = MVLV_event_xmos_tt
+			else = {
+				send_equipment = {
+					equipment = MVLV_TSF_chassis
+					amount = 250
+					target = UNI
+				}
+				add_ideas = UNI_xmosi
+				set_technology = {
+					MVLV_research_OS_XM3 = 1
+					MVLV_research_OS_close_XM3 = 1
+					MVLV_research_OS_support_XM3 = 1
+				}
+				UNI = {
+					country_event = mvlv_uni.13
+				}
+			}
+		}
+	}
+	option = {
+		name = mvlv_uni.12.b
+		UNI = {
+			country_event = mvlv_uni.13
+			add_offsite_building = {
+				type = arms_factory
+				level = 10
+			}
+		}
+		add_ideas = UNI_xmosi
+		set_technology = {
+			MVLV_research_OS_XM3 = 1
+			MVLV_research_OS_close_XM3 = 1
+			MVLV_research_OS_support_XM3 = 1
+		}
+		activate_mission = UNI_xmos_mission
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = mvlv_uni.12.c
+		country_event = {
+			id = mvlv_uni.12
+			days = 3
+		}
+		custom_effect_tooltip = MVLV_event_xmos_tt
+	}
+	option = {
+		name = mvlv_uni.12.f
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#国連NF->儲け 安定度、装備追加イベント
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.13
+	desc = mvlv_uni.13.d
+	title = mvlv_uni.13.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.13.a
+		add_stability = 0.05
+		add_equipment_to_stockpile = { type = MVLV_TSF_chassis amount = 250 producer = FROM }
+	}
+}
+
+#ユーコン基地テロ事件
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.14
+	desc = mvlv_uni.14.d
+	title = mvlv_uni.14.t
+	picture = GFX_mvlv_shirei
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.14.a
+		UNI = { country_event = mvlv_uni.15 }
+	}
+}
+
+country_event = {
+	id = mvlv_uni.15
+	desc = mvlv_uni.15.d
+	title = mvlv_uni.15.t
+	picture = GFX_mvlv_un_shireibu
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.15.a
+		every_country = {
+			limit = {
+				is_in_faction_with = UNI
+			}
+			if = {
+				limit = {
+					OSE = { has_completed_focus = ose_war }
+				}
+				country_event = mvlv_uni.161
+			}
+			else = {
+				country_event = mvlv_uni.16
+			}
+		}
+		hidden_effect = {
+			USA = {
+				country_event = {
+					id = mvlv_ate.4
+					days = 1
+				}
+			}
+			JAP = {
+				country_event = {
+					id = mvlv_ate.4
+					days = 1
+				}
+			}
+			SOV = {
+				country_event = {
+					id = mvlv_ate.4
+					days = 1
+				}
+			}
+			UNI = {
+				country_event = {
+					id = mvlv_ate.4
+					days = 1
+				}
+			}
+			M01 = {
+				transfer_state = 791
+				791 = {
+					add_core_of = M01
+				}
+				load_oob = M01_templates1
+				declare_war_on = {
+					target = UNI
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = USA
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = JAP
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = EUR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = BET
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = AFR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = CHI
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = GEU
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = CAN
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = OSE
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SOA
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = CEA
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = EEA
+					type = annex_everything
+				}
+
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mvlv_uni.16
+	desc = mvlv_uni.16.d
+	title = mvlv_uni.16.t
+	picture = GFX_mvlv_raf_tero
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.16.a
+	}
+}
+country_event = {
+	id = mvlv_uni.161
+	desc = mvlv_uni.16.d
+	title = mvlv_uni.16.t
+	picture = GFX_mvlv_event_master
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.16.a
+	}
+}
+
+#国連
+#____________________________________________________________
+country_event = {
+	id = mvlv_uni.17
+	desc = mvlv_uni.17.d
+	title = mvlv_uni.17.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.17.a
+		ROOT = {
+			add_equipment_to_stockpile = { type = MVLV_TSF_chassis amount = -120 producer = ROOT }
+		}
+		add_political_power = 150
+		UNI = {
+			country_event = mvlv_uni.18
+		}
+	}
+}
+
+country_event = {
+	id = mvlv_uni.18
+	desc = mvlv_uni.18.d
+	title = mvlv_uni.18.t
+	picture = BETA_event_1.dds
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.18.a
+		add_equipment_to_stockpile = { type = MVLV_TSF_chassis amount = 120 producer = ROOT }
+	}
+}
+
+#桜花作戦--降下
+country_event = {
+	id = mvlv_uni.19
+	desc = mvlv_uni.19.d
+	title = mvlv_uni.19.t
+	picture = GFX_mvlv_ouka
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.19.a
+		custom_effect_tooltip = mvlv_uni_19a_tt
+		every_country = {
+			limit = {
+				has_country_flag = PL_ouka_operation_flag
+			}
+			country_event = mvlv_uni.23
+		}
+	}
+	option = {
+		name = mvlv_uni.19.b
+		custom_effect_tooltip = mvlv_uni_19b_tt
+		every_country = {
+			limit = {
+				has_country_flag = PL_ouka_operation_flag
+			}
+			country_event = {
+				id = mvlv_uni.31
+				days = 2
+			}
+		}
+	}
+}
+
+#甲21号作戦
+country_event = {
+	id = mvlv_uni.20
+	desc = mvlv_uni.20.d
+	title = mvlv_uni.20.t
+	picture = GFX_mvlv_kou21
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			load_oob = unlock_A02
+			if = {
+				limit = {
+					NOT = {
+						tag = JAP
+					}
+				}
+				add_timed_idea = {
+					idea = JAP_kou21
+					days = 21
+				}
+			}
+		}
+	}
+	option = {
+		name = mvlv_uni.20.a
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = JAP_kou21
+				days = 21
+			}
+		}
+	}
+}
+
+##横浜基地襲撃
+country_event = {
+	id = mvlv_uni.21
+	desc = mvlv_uni.21.d
+	title = mvlv_uni.21.t
+	picture = GFX_mvlv_yokohama
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "A-02"
+			}
+			set_global_flag = yokohama_event_flag
+			if = {
+				limit = {
+					check_variable = {
+						global.var_generalDeathMode = 1
+					}
+				}
+				UNI = {
+					retire_character = UNI_Mitsuki
+					retire_character = UNI_Suzumiya
+					every_unit_leader = {
+						limit = {
+							is_character = UNI_Munakata
+							is_character = UNI_Kazama
+							is_character = UNI_Akane
+						}
+						add_timed_unit_leader_trait = {
+							trait = wounded
+							days = 30
+						}
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { tag = UNI }
+				}
+				country_event = mvlv_uni.43
+			}
+		}
+	}
+	option = {
+		name = mvlv_uni.21.a
+		effect_tooltip = {
+			if = {
+				limit = {
+					check_variable = {
+						global.var_generalDeathMode = 1
+					}
+				}
+				UNI = {
+					retire_character = UNI_Mitsuki
+					retire_character = UNI_Suzumiya
+					every_unit_leader = {
+						limit = {
+							is_character = UNI_Munakata
+							is_character = UNI_Kazama
+							is_character = UNI_Akane
+						}
+						add_timed_unit_leader_trait = {
+							trait = wounded
+							days = 30
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+##横浜基地襲撃(甲21時間切れ)
+country_event = {
+	id = mvlv_uni.22
+	desc = mvlv_uni.22.d
+	title = mvlv_uni.22.t
+	picture = GFX_mvlv_yokohama
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = mvlv_op_sado_flag
+			play_song_Alternative_41_effect = yes
+			every_country = {
+				limit = {
+					has_template = "A-02"
+				}
+				delete_unit_template_and_units = {
+					division_template = "A-02"
+				}
+			}
+			every_unit_leader = {
+				limit = {
+					is_character = UNI_Munakata
+					is_character = UNI_Kazama
+					is_character = UNI_Akane
+				}
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 30
+				}
+			}
+			set_global_flag = yokohama_event_flag
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { tag = UNI }
+				}
+				country_event = mvlv_uni.43
+			}
+		}
+	}
+	option = {
+		name = mvlv_uni.22.a
+		if = {
+			limit = {
+				check_variable = {
+					global.var_generalDeathMode = 1
+				}
+			}
+			retire_character = UNI_Kasiwagi
+			retire_character = UNI_Michiru
+			retire_character = UNI_Mitsuki
+			retire_character = UNI_Suzumiya
+			every_unit_leader = {
+				limit = {
+					is_character = UNI_Munakata
+					is_character = UNI_Kazama
+					is_character = UNI_Akane
+				}
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mvlv_uni.23
+	desc = mvlv_uni.23.d
+	title = mvlv_uni.23.t
+	picture = GFX_mvlv_ouka2
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.23.a
+		play_song_Alternative_01_effect = yes
+		hidden_effect = {
+			load_oob = UNI_A04_unlock
+		}
+	}
+}
+
+country_event = {
+	id = mvlv_uni.24
+	desc = mvlv_uni.24.d
+	title = mvlv_uni.24.t
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.24.a
+		if = {
+			limit = {
+				check_variable = {
+					global.var_generalDeathMode = 1
+				}
+			}
+			every_unit_leader = {
+				limit = {
+					is_character = UNI_Munakata
+					is_character = UNI_Kazama
+					is_character = UNI_Akane
+				}
+				set_nationality = JAP
+			}
+		}
+	}
+}
+#始動-横浜動乱
+country_event = {
+	id = mvlv_uni.25
+	desc = mvlv_uni.25.d
+	title = mvlv_uni.25.t
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.25.a
+		play_song_Alternative_14_effect = yes
+		if = {
+			limit = {
+				check_variable = {
+					global.var_generalDeathMode = 1
+				}
+			}
+			retire_character = UNI_Marimo
+		}
+		H21 = {
+			load_oob = BET_test
+			add_timed_idea = {
+				idea = H21_sado
+				days = 30
+			}
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = UNI
+				NOT = { tag = UNI }
+			}
+			country_event = mvlv_uni.42
+		}
+	}
+}
+
+#桜花作戦の可能性を通知（00ユニット後）
+country_event = {
+	id = mvlv_uni.26
+	desc = mvlv_uni.26.d
+	title = mvlv_uni.26.t
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			add_timed_idea = {
+				idea = MVLV_ouka_setting_idea
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = mvlv_uni.26.a
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = MVLV_ouka_setting_idea
+				days = 30
+			}
+		}
+	}
+}
+
+#桜花作戦決行を通知
+country_event = {
+	id = mvlv_uni.27
+	desc = mvlv_uni.27.d
+	title = mvlv_uni.27.t
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			remove_ideas = MVLV_ouka_setting_idea
+			add_timed_idea = {
+				idea = MVLV_ouka_setting_idea2
+				days = 7
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = UNI
+						tag = USA
+						has_country_flag = PL_ouka_operation_flag
+					}
+				}
+				set_country_flag = MVLV_ouka_support_flag
+			}
+		}
+	}
+	option = {
+		name = mvlv_uni.27.a
+		trigger = {
+			NOT = {
+				tag = USA
+			}
+		}
+		effect_tooltip = {
+			remove_ideas = MVLV_ouka_setting_idea
+			add_timed_idea = {
+				idea = MVLV_ouka_setting_idea2
+				days = 7
+			}
+		}
+		custom_effect_tooltip = MVLV_ouka_setting_tt
+	}
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = PL_ouka_operation_flag
+			}
+			NOT = {
+				tag = UNI
+			}
+		}
+		name = mvlv_uni.27.b
+		effect_tooltip = {
+			remove_ideas = MVLV_ouka_setting_idea
+			add_timed_idea = {
+				idea = MVLV_ouka_setting_idea2
+				days = 7
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					tag = USA
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = transport_plane_equipment
+				amount = 1
+				producer = UNI
+			}
+		}
+		custom_effect_tooltip = MVLV_ouka_setting2_tt
+		set_country_flag = MVLV_ouka_support_flag
+	}
+}
+
+##桜花作戦フェーズ1
+country_event = {
+	id = mvlv_uni.28
+	desc = mvlv_uni.28.d
+	title = mvlv_uni.28.t
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MVLV_ouka_support_flag
+					}
+				}
+				remove_ideas = MVLV_ouka_setting_idea2
+				add_timed_idea = {
+					idea = MVLV_ouka_phase_1_idea
+					days = 14
+				}
+				else = {
+					remove_ideas = MVLV_ouka_setting_idea2
+					add_timed_idea = {
+						idea = MVLV_ouka_phase_1_idea2
+						days = 14
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = mvlv_uni.28.a
+		effect_tooltip = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MVLV_ouka_support_flag
+					}
+				}
+				remove_ideas = MVLV_ouka_setting_idea2
+				add_timed_idea = {
+					idea = MVLV_ouka_phase_1_idea
+					days = 14
+				}
+				else = {
+					remove_ideas = MVLV_ouka_setting_idea2
+					add_timed_idea = {
+						idea = MVLV_ouka_phase_1_idea2
+						days = 14
+					}
+				}
+			}
+		}
+	}
+}
+
+##桜花作戦フェーズ2
+country_event = {
+	id = mvlv_uni.29
+	desc = mvlv_uni.29.d
+	title = mvlv_uni.29.t
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = MVLV_ouka_support_flag
+				}
+				add_timed_idea = {
+					idea = MVLV_ouka_phase_2_idea
+					days = 7
+				}
+			}
+			BET = {
+				remove_ideas = mvlv_aggressive_beta
+				set_country_flag = disabled_aggressive_beta
+			}
+		}
+	}
+	option = {
+		name = mvlv_uni.29.a
+		effect_tooltip = {
+			if = {
+				limit = {
+					has_country_flag = MVLV_ouka_support_flag
+				}
+				add_timed_idea = {
+					idea = MVLV_ouka_phase_2_idea
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+##桜花作戦フェーズ3
+country_event = {
+	id = mvlv_uni.30
+	desc = mvlv_uni.30.d
+	title = mvlv_uni.30.t
+	picture = GFX_mvlv_ouka_sakusen
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = mvlv_uni.30.a
+	}
+}
+
+country_event = {
+	id = mvlv_uni.31
+	desc = mvlv_uni.31.d
+	title = mvlv_uni.31.t
+	picture = GFX_mvlv_ouka2
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.31.a
+		play_song_Alternative_01_effect = yes
+		hidden_effect = {
+			load_oob = UNI_A04_unlock_SW115
+		}
+	}
+}
+
+#大規模攻勢の予兆
+country_event = {
+	id = mvlv_uni.32
+	desc = mvlv_uni.32.d
+	title = mvlv_uni.32.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.32.a
+	}
+}
+####
+#横浜の接収
+country_event = {
+	id = mvlv_uni.33
+	desc = mvlv_uni.33.d
+	title = mvlv_uni.33.t
+	#picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			UNI = { transfer_state = 792 }
+			set_province_name = {
+				id = 13218
+				name = provi_Yokohama
+			}
+		}
+	}
+	option = {
+		trigger = {
+			tag = UNI
+		}
+		name = mvlv_uni.33.a
+		effect_tooltip = {
+			UNI = { transfer_state = 792 }
+		}
+	}
+	option = {
+		trigger = {
+			tag = JAP
+		}
+		name = mvlv_uni.33.b
+	}
+}
+
+#大規模攻勢・地下侵攻関連
+country_event = {
+	id = mvlv_uni.34
+	desc = mvlv_uni.34.d
+	title = mvlv_uni.34.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.34.a
+	}
+}
+country_event = {
+	id = mvlv_uni.35
+	desc = mvlv_uni.35.d
+	title = mvlv_uni.35.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.35.a
+	}
+}
+#地下侵攻の通知
+country_event = {
+	id = mvlv_uni.36
+	desc = mvlv_uni.36.d
+	title = mvlv_uni.36.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.36.a
+	}
+}
+#地下侵攻の通知
+country_event = {
+	id = mvlv_uni.37
+	desc = mvlv_uni.37.d
+	title = mvlv_uni.37.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.37.a
+	}
+}
+country_event = {
+	id = mvlv_uni.38
+	desc = mvlv_uni.38.d
+	title = mvlv_uni.38.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.38.a
+	}
+}
+country_event = {
+	id = mvlv_uni.39
+	desc = mvlv_uni.39.d
+	title = mvlv_uni.39.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.39.a
+	}
+}
+#####
+#占領されたBETAの緊急動員
+country_event = {
+	id = mvlv_uni.40
+	desc = mvlv_uni.40.d
+	title = mvlv_uni.40.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.40.a
+	}
+}
+######ストーリー開始
+country_event = {
+	id = mvlv_uni.41
+	desc = mvlv_uni.41.d
+	title = mvlv_uni.41.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.41.a
+	}
+}
+######横浜基地動乱
+country_event = {
+	id = mvlv_uni.42
+	desc = mvlv_uni.42.d
+	title = mvlv_uni.42.t
+	#picture = GFX_mvlv_yokohama
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.42.a
+	}
+}
+######横浜基地襲撃
+country_event = {
+	id = mvlv_uni.43
+	desc = mvlv_uni.43.d
+	title = mvlv_uni.43.t
+	picture = GFX_mvlv_yokohama
+	is_triggered_only = yes
+	option = {
+		name = mvlv_uni.43.a
+	}
+}
+
+
+

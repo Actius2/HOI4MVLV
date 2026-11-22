@@ -1,0 +1,24 @@
+###########################
+###サウンドトラック買って！####
+###Buy the soundtrack!#####
+###########################
+play_song_Alternative_01_effect = {
+	#未来への咆哮(GAME size)
+	hidden_effect = { play_song = "Alternative_01" } 
+}
+play_song_Alternative_14_effect = {
+	#迫撃
+	hidden_effect = { play_song = "Alternative_02" } 
+}
+play_song_Alternative_28_effect = {
+	#強襲上陸
+	hidden_effect = { play_song = "Alternative_03" } 
+}
+play_song_Alternative_41_effect = {
+	#蹂躙
+	hidden_effect = { play_song = "Alternative_04" } 
+}
+play_song_Alternative_05_effect = {
+	#迎撃
+	hidden_effect = { play_song = "Alternative_05" } 
+}

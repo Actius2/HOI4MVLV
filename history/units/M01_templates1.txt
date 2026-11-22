@@ -1,0 +1,200 @@
+
+
+division_template = {
+	name = "Tactical armored regiment"
+	regiments = {
+		MVLV_tsf_battalion = { x = 0 y = 0 }
+		MVLV_tsf_battalion = { x = 0 y = 1 }
+		MVLV_tsf_battalion = { x = 0 y = 2 }
+		MVLV_tsf_battalion = { x = 1 y = 0 }
+		MVLV_tsf_battalion = { x = 1 y = 1 }
+		MVLV_tsf_battalion = { x = 1 y = 2 }
+		MVLV_tsf_battalion = { x = 2 y = 0 }
+		MVLV_tsf_battalion = { x = 2 y = 1 }
+		MVLV_tsf_battalion = { x = 2 y = 2 }
+		MVLV_tsf_battalion = { x = 2 y = 3 }
+	}
+}
+division_template = {
+	name = "BETA"
+	regiments = {
+		MVLV_beta_destroyer = { x = 0 y = 0 }
+		MVLV_beta_destroyer = { x = 0 y = 1 }
+		MVLV_beta_destroyer = { x = 0 y = 2 }
+		MVLV_beta_destroyer = { x = 1 y = 0 }
+		MVLV_beta_grappler = { x = 1 y = 1 }
+		MVLV_beta_grappler = { x = 1 y = 2 }
+		MVLV_beta_fort = { x = 2 y = 0 }
+		MVLV_beta_fort = { x = 2 y = 1 }
+		MVLV_beta_fort = { x = 2 y = 2 }
+		MVLV_beta_fort = { x = 2 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Grappler class division"
+	division_names_group = BET_GRAPPLER_01
+	regiments = {
+		MVLV_beta_grappler = { x = 0 y = 0 }
+		MVLV_beta_grappler = { x = 0 y = 1 }
+		MVLV_beta_grappler = { x = 0 y = 2 }
+		MVLV_beta_grappler = { x = 0 y = 3 }
+		MVLV_beta_grappler = { x = 0 y = 4 }
+		MVLV_beta_grappler = { x = 1 y = 0 }
+		MVLV_beta_grappler = { x = 1 y = 1 }
+		MVLV_beta_grappler = { x = 1 y = 2 }
+		MVLV_beta_grappler = { x = 1 y = 3 }
+		MVLV_beta_grappler = { x = 1 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Destroyer class division"
+	division_names_group = BET_DESTROYER_01
+	regiments = {
+		MVLV_beta_destroyer = { x = 0 y = 0 }
+		MVLV_beta_destroyer = { x = 0 y = 1 }
+		MVLV_beta_destroyer = { x = 0 y = 2 }
+		MVLV_beta_destroyer = { x = 0 y = 3 }
+		MVLV_beta_destroyer = { x = 0 y = 4 }
+		MVLV_beta_destroyer = { x = 1 y = 0 }
+		MVLV_beta_destroyer = { x = 1 y = 1 }
+		MVLV_beta_destroyer = { x = 1 y = 2 }
+		MVLV_beta_destroyer = { x = 1 y = 3 }
+		MVLV_beta_destroyer = { x = 1 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Fort class division"
+	division_names_group = BET_FORT_01
+	regiments = {
+		MVLV_beta_fort = { x = 0 y = 0 }
+		MVLV_beta_fort = { x = 0 y = 1 }
+		MVLV_beta_fort = { x = 0 y = 2 }
+		MVLV_beta_fort = { x = 0 y = 3 }
+		MVLV_beta_fort = { x = 0 y = 4 }
+		MVLV_beta_fort = { x = 1 y = 0 }
+		MVLV_beta_fort = { x = 1 y = 1 }
+		MVLV_beta_fort = { x = 1 y = 2 }
+		MVLV_beta_fort = { x = 1 y = 3 }
+		MVLV_beta_fort = { x = 1 y = 4 }
+		MVLV_beta_fort = { x = 2 y = 0 }
+		MVLV_beta_fort = { x = 2 y = 1 }
+		MVLV_beta_fort = { x = 2 y = 2 }
+		MVLV_beta_fort = { x = 2 y = 3 }
+		MVLV_beta_fort = { x = 2 y = 4 }
+		MVLV_beta_fort = { x = 3 y = 0 }
+		MVLV_beta_fort = { x = 3 y = 1 }
+		MVLV_beta_fort = { x = 3 y = 2 }
+		MVLV_beta_fort = { x = 3 y = 3 }
+		MVLV_beta_fort = { x = 3 y = 4 }
+	}
+}
+#6
+#4
+#13244
+units = {
+	division = {
+		location = 13244
+		division_template = "Tactical armored regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "USA"
+				creator = USA
+				version_name = "F-16"
+			}
+		}
+	}
+	division = {
+		location = 13244
+		division_template = "Tactical armored regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "USA"
+				creator = USA
+				version_name = "F-16"
+			}
+		}
+	}
+	division = {
+		location = 13244
+		division_template = "Tactical armored regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "USA"
+				creator = USA
+				version_name = "F-16"
+			}
+		}
+	}
+	division = {
+		location = 13244
+		division_template = "Tactical armored regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "USA"
+				creator = USA
+				version_name = "F-16"
+			}
+		}
+	}
+	division = {
+		location = 13244
+		division_template = "Tactical armored regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_light = {
+				owner = "USA"
+				creator = USA
+				version_name = "F-16"
+			}
+		}
+	}
+	division = {
+		location = 13244
+		division_template = "Tactical armored regiment"
+		start_experience_factor = 1
+		force_equipment_variants = {
+			MVLV_TSF_chassis_2_maneuver = {
+				owner = "SOV"
+				creator = SOV
+				version_name = "Su-37"
+			}
+		}
+	}
+	division = {
+		location = 13244
+		division_template = "BETA"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 13244
+		division_template = "BETA"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 13244
+		division_template = "BETA"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 13244
+		division_template = "BETA"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	
+}

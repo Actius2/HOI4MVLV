@@ -1,0 +1,2052 @@
+spriteTypes = {
+
+#モブ衛士１
+	spriteType = {
+		name = "GFX_MOB_1_pic"
+		textureFile = "gfx/leaders/MOB/MOB_1_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_MOB_1_pic_small"
+		textureFile = "gfx/leaders/MOB/MOB_1_pic_small.dds"
+	}
+
+#モブ衛士２
+	spriteType = {
+		name = "GFX_MOB_2_pic"
+		textureFile = "gfx/leaders/MOB/MOB_2_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_MOB_2_pic_small"
+		textureFile = "gfx/leaders/MOB/MOB_2_pic_small.dds"
+	}
+	
+
+#日本帝国（国家元首）
+
+	#煌武院・悠陽
+	spriteType = {
+		name = "GFX_JAP_Portrait_denka"
+		textureFile = "gfx/leaders/JAP/JAP_Portrait_denka.dds"
+	}
+	
+	
+
+	
+#日本帝国
+
+	#煌武院・悠陽
+	spriteType = {
+		name = "GFX_JAP_denka_pic"
+		textureFile = "gfx/leaders/JAP/JAP_denka_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_denka_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_denka_pic_small.dds"
+	}
+	
+	#斑鳩・崇継
+	spriteType = {
+		name = "GFX_JAP_Kakka_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Kakka_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Kakka_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Kakka_pic_small.dds"
+	}
+	
+	#篁・唯依
+	spriteType = {
+		name = "GFX_JAP_Yuihime_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Yuihime_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Yuihime_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Yuihime_pic_small.dds"
+	}
+	
+	#篁・唯依（イベント）
+	spriteType = {
+		name = "GFX_JAP_Yuihime_XFJ_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Yuihime_XFJ_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Yuihime_XFJ_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Yuihime_XFJ_pic_small.dds"
+	}
+	
+	#沙霧・尚哉
+	spriteType = {
+		name = "GFX_JAP_Sagiri_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Sagiri_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Sagiri_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Sagiri_pic_small.dds"
+	}
+	
+	#月詠・真那
+	spriteType = {
+		name = "GFX_JAP_Mana_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Mana_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Mana_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Mana_pic_small.dds"
+	}
+	
+	#神代・巽
+	spriteType = {
+		name = "GFX_JAP_Kamiyo_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Kamiyo_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Kamiyo_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Kamiyo_pic_small.dds"
+	}
+	
+	#巴・雪乃
+	spriteType = {
+		name = "GFX_JAP_Tomoe_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Tomoe_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Tomoe_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Tomoe_pic_small.dds"
+	}
+	
+	#戎・美凪
+	spriteType = {
+		name = "GFX_JAP_Minagi_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Minagi_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Minagi_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Minagi_pic_small.dds"
+	}
+	
+	#真壁・清十郎
+	spriteType = {
+		name = "GFX_JAP_Toshizo_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Toshizo_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Toshizo_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Toshizo_pic_small.dds"
+	}
+	
+	#駒木・咲代子
+	spriteType = {
+		name = "GFX_JAP_Komaki_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Komaki_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Komaki_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Komaki_pic_small.dds"
+	}
+	
+	#龍浪・響
+	spriteType = {
+		name = "GFX_JAP_Tatunami_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Tatunami_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Tatunami_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Tatunami_pic_small.dds"
+	}
+	
+	#千堂・柚香
+	spriteType = {
+		name = "GFX_JAP_Yuzuka_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Yuzuka_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Yuzuka_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Yuzuka_pic_small.dds"
+	}
+	
+	#伊隅・まりか
+	spriteType = {
+		name = "GFX_JAP_Marika_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Marika_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Marika_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Marika_pic_small.dds"
+	}
+	
+	#伊隅・あきら
+	spriteType = {
+		name = "GFX_JAP_Akira_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Akira_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Akira_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Akira_pic_small.dds"
+	}
+	
+	#雨宮・まりこ
+	spriteType = {
+		name = "GFX_JAP_Amamiya_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Amamiya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Amamiya_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Amamiya_pic_small.dds"
+	}
+	
+	#崇宰・恭子
+	spriteType = {
+		name = "GFX_JAP_Takatukasa_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Takatukasa_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Takatukasa_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Takatukasa_pic_small.dds"
+	}
+	
+	#浅葱・みのり
+	spriteType = {
+		name = "GFX_JAP_Asagi_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Asagi_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Asagi_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Asagi_pic_small.dds"
+	}
+	
+	#巌谷・榮二
+	spriteType = {
+		name = "GFX_JAP_Iwaya_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Iwaya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Iwaya_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Iwaya_pic_small.dds"
+	}
+	
+	#月詠・真耶
+	spriteType = {
+		name = "GFX_JAP_Maya_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Maya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Maya_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Maya_pic_small.dds"
+	}
+	
+	#大上・律子
+	spriteType = {
+		name = "GFX_JAP_Oogami_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Oogami_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Oogami_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Oogami_pic_small.dds"
+	}
+	
+	#美桜乃・雫
+	spriteType = {
+		name = "GFX_JAP_Sizuku_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Sizuku_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Sizuku_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Sizuku_pic_small.dds"
+	}
+	
+	#楠本・さやか
+	spriteType = {
+		name = "GFX_JAP_Kusumoto_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Kusumoto_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Kusumoto_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Kusumoto_pic_small.dds"
+	}
+	
+	#松風・諒一
+	spriteType = {
+		name = "GFX_JAP_Matukaze_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Matukaze_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Matukaze_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Matukaze_pic_small.dds"
+	}
+	
+	#神谷
+	spriteType = {
+		name = "GFX_JAP_Kamiya_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Kamiya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Kamiya_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Kamiya_pic_small.dds"
+	}
+	
+	#七瀬 大尉
+	spriteType = {
+		name = "GFX_JAP_NanaseAni_pic"
+		textureFile = "gfx/leaders/JAP/JAP_NanaseAni_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_NanaseAni_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_NanaseAni_pic_small.dds"
+	}
+	
+	#七瀬・凛
+	spriteType = {
+		name = "GFX_JAP_NanaseImouto_pic"
+		textureFile = "gfx/leaders/JAP/JAP_NanaseImouto_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_NanaseImouto_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_NanaseImouto_pic_small.dds"
+	}
+	
+	#鳳 中佐
+	spriteType = {
+		name = "GFX_JAP_Ootori_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Ootori_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Ootori_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Ootori_pic_small.dds"
+	}
+	
+	#和泉 中尉
+	spriteType = {
+		name = "GFX_JAP_Izumi_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Izumi_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Izumi_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Izumi_pic_small.dds"
+	}
+	
+	#高須賀 訓練兵
+	spriteType = {
+		name = "GFX_JAP_Takasuka_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Takasuka_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Takasuka_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Takasuka_pic_small.dds"
+	}
+	
+	#御手洗 中尉
+	spriteType = {
+		name = "GFX_JAP_Mitarai_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Mitarai_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Mitarai_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Mitarai_pic_small.dds"
+	}
+	
+	#豊川訓練兵
+	spriteType = {
+		name = "GFX_JAP_Toyokawa_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Toyokawa_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Toyokawa_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Toyokawa_pic_small.dds"
+	}
+	
+	#塩谷訓練兵
+	spriteType = {
+		name = "GFX_JAP_Siotani_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Siotani_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Siotani_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Siotani_pic_small.dds"
+	}
+	
+	#羽沢訓練兵
+	spriteType = {
+		name = "GFX_JAP_Hanezawa_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Hanezawa_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Hanezawa_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Hanezawa_pic_small.dds"
+	}
+	
+	#新田少佐
+	spriteType = {
+		name = "GFX_JAP_Nitta_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Nitta_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Nitta_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Nitta_pic_small.dds"
+	}
+	
+	#清水大尉
+	spriteType = {
+		name = "GFX_JAP_Simizu_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Simizu_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Simizu_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Simizu_pic_small.dds"
+	}
+	
+	#川瀬大尉
+	spriteType = {
+		name = "GFX_JAP_Kawase_pic"
+		textureFile = "gfx/leaders/JAP/JAP_Kawase_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_Kawase_pic_small"
+		textureFile = "gfx/leaders/JAP/JAP_Kawase_pic_small.dds"
+	}
+	
+	
+#アフリカ連合
+
+	#アフリカ連合理事会
+	spriteType = {
+		name = "GFX_AFL_Riji_pic"
+		textureFile = "gfx/leaders/AFR/AFL_Riji_pic.dds"
+	}
+	
+	#イブラヒム ドーゥル
+	spriteType = {
+		name = "GFX_AFR_Ibrahim_pic"
+		textureFile = "gfx/leaders/AFR/AFR_Ibrahim_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_AFR_Ibrahim_pic_small"
+		textureFile = "gfx/leaders/AFR/AFR_Ibrahim_pic_small.dds"
+	}
+	
+	#リタ カナレス
+	spriteType = {
+		name = "GFX_AFR_Rita_pic"
+		textureFile = "gfx/leaders/AFR/AFR_Rita_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_AFR_Rita_small"
+		textureFile = "gfx/leaders/AFR/AFR_Rita_pic_small.dds"
+	}
+	
+	#アラブの戦姫
+	spriteType = {
+		name = "GFX_AFR_ArabQe_pic"
+		textureFile = "gfx/leaders/AFR/AFR_ArabQe_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_AFR_ArabQe_pic_small"
+		textureFile = "gfx/leaders/AFR/AFR_ArabQe_pic_small.dds"
+	}
+	
+	#サアド・アラーヴィ
+	spriteType = {
+		name = "GFX_AFR_Aravi_pic"
+		textureFile = "gfx/leaders/AFR/AFR_Aravi_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_AFR_Aravi_pic_small"
+		textureFile = "gfx/leaders/AFR/AFR_Aravi_pic_small.dds"
+	}
+	
+	#ホルシス
+	spriteType = {
+		name = "GFX_AFR_Horisis_pic"
+		textureFile = "gfx/leaders/AFR/AFR_Horisis_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_AFR_Horisis_pic_small"
+		textureFile = "gfx/leaders/AFR/AFR_Horisis_pic_small.dds"
+	}
+	
+	#ヴァレリオ・ジアコーザ	
+	spriteType = {
+		name = "GFX_AFR_Varelio_pic"
+		textureFile = "gfx/leaders/AFR/AFR_Varelio_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_AFR_Varelio_pic_small"
+		textureFile = "gfx/leaders/AFR/AFR_Varelio_pic_small.dds"
+	}
+	
+	#モニカ・ジアコーザ	
+	spriteType = {
+		name = "GFX_AFR_Monika_pic"
+		textureFile = "gfx/leaders/AFR/AFR_Monika_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_AFR_Monika_pic_small"
+		textureFile = "gfx/leaders/AFR/AFR_Monika_pic_small.dds"
+	}
+	
+	#レヴィ・ペレス
+	spriteType = {
+		name = "GFX_AFR_Peres_pic"
+		textureFile = "gfx/leaders/AFR/AFR_Peres_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_AFR_Peres_pic_small"
+		textureFile = "gfx/leaders/AFR/AFR_Peres_pic_small.dds"
+	}
+	
+
+	
+	
+#オセアニア
+
+	#ジェーン・ハワード（国家元首）
+	spriteType = {
+		name = "GFX_OSE_JohnHoward_pic"
+		textureFile = "gfx/leaders/OSE/OSE_JohnHoward_pic.dds"
+	}
+	
+	#デイヴィッド・ハーレイ（ディアナ・ハーレイ）
+	spriteType = {
+		name = "GFX_OSE_Hawrei_pic"
+		textureFile = "gfx/leaders/OSE/OSE_Hawrei_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_Hawrei_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_Hawrei_pic_small.dds"
+	}
+	
+	#メルヴィナ アードバニー
+	spriteType = {
+		name = "GFX_OSE_Mervina_pic"
+		textureFile = "gfx/leaders/OSE/OSE_Mervina_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_Mervina_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_Mervina_pic_small.dds"
+	}
+	
+	#マット・ホール（マリィ・ホール）
+	spriteType = {
+		name = "GFX_OSE_Matty_pic"
+		textureFile = "gfx/leaders/OSE/OSE_Matty_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_Matty_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_Matty_pic_small.dds"
+	}
+	
+	#ジェリー・マテパラエ	
+	spriteType = {
+		name = "GFX_OSE_Mateparae_pic"
+		textureFile = "gfx/leaders/OSE/OSE_Mateparae_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_Mateparae_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_Mateparae_pic_small.dds"
+	}
+	
+	#オフィーリア・オディレット
+	spriteType = {
+		name = "GFX_OSE_Odilette_pic"
+		textureFile = "gfx/leaders/OSE/OSE_Odilette_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_Odilette_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_Odilette_pic_small.dds"
+	}
+	
+	#イザベラ・グリーン
+	spriteType = {
+		name = "GFX_OSE_Isabella_pic"
+		textureFile = "gfx/leaders/OSE/OSE_Isabella_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_Isabella_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_Isabella_pic_small.dds"
+	}
+	
+	#白川・美乃莉
+	spriteType = {
+		name = "GFX_OSE_sirakawa_pic"
+		textureFile = "gfx/leaders/OSE/OSE_sirakawa_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_sirakawa_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_sirakawa_pic_small.dds"
+	}
+	
+	#ミーガン・ノースコット
+	spriteType = {
+		name = "GFX_OSE_Megan_pic"
+		textureFile = "gfx/leaders/OSE/OSE_Megan_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_Megan_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_Megan_pic_small.dds"
+	}
+	
+	#ヴァレンタイン
+	spriteType = {
+		name = "GFX_OSE_Valentine_pic"
+		textureFile = "gfx/leaders/OSE/OSE_Valentine_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_Valentine_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_Valentine_pic_small.dds"
+	}
+	
+	#ジゼル・アジャーニ
+	spriteType = {
+		name = "GFX_OSE_Giselle_pic"
+		textureFile = "gfx/leaders/OSE/OSE_Giselle_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_Giselle_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_Giselle_pic_small.dds"
+	}
+	
+	#ナタリー
+	spriteType = {
+		name = "GFX_OSE_natary_pic"
+		textureFile = "gfx/leaders/OSE/OSE_natary_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_OSE_natary_pic_small"
+		textureFile = "gfx/leaders/OSE/OSE_natary_pic_small.dds"
+	}
+	
+#中国
+	
+	#スン・リージェン
+	spriteType = {
+		name = "GFX_CHI_Sun_pic"
+		textureFile = "gfx/leaders/CHI/CHI_Sun_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_Sun_pic_small"
+		textureFile = "gfx/leaders/CHI/CHI_Sun_pic_small.dds"
+	}
+	
+	#ツィ・イーフェイ（緑ミク）
+	spriteType = {
+		name = "GFX_CHI_Cuiyifei_pic"
+		textureFile = "gfx/leaders/CHI/CHI_Cuiyifei_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_Cuiyifei_pic_small"
+		textureFile = "gfx/leaders/CHI/CHI_Cuiyifei_pic_small.dds"
+	}
+	
+	#リー・リンメイ
+	spriteType = {
+		name = "GFX_CHI_Lilinmei_pic"
+		textureFile = "gfx/leaders/CHI/CHI_Lilinmei_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_Lilinmei_pic_small"
+		textureFile = "gfx/leaders/CHI/CHI_Lilinmei_pic_small.dds"
+	}
+	
+	#ワン・シャオフェン
+	spriteType = {
+		name = "GFX_CHI_Wangxiaofen_pic"
+		textureFile = "gfx/leaders/CHI/CHI_Wangxiaofen_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_Wangxiaofen_pic_small"
+		textureFile = "gfx/leaders/CHI/CHI_Wangxiaofen_pic_small.dds"
+	}
+	
+	#ルー・ヤフア
+	spriteType = {
+		name = "GFX_CHI_Louyahua_pic"
+		textureFile = "gfx/leaders/CHI/CHI_Louyahua_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_Louyahua_pic_small"
+		textureFile = "gfx/leaders/CHI/CHI_Louyahua_pic_small.dds"
+	}
+	
+	#アントン・アンネシェン（ノルウェー人なのに中国人になってた人）
+	spriteType = {
+		name = "GFX_CHI_Andersen_pic"
+		textureFile = "gfx/leaders/CHI/CHI_Andersen_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_Andersen_pic_small"
+		textureFile = "gfx/leaders/CHI/CHI_Andersen_pic_small.dds"
+	}
+	
+	#ジョ・ショウチク
+	spriteType = {
+		name = "GFX_CHI_Jo_pic"
+		textureFile = "gfx/leaders/CHI/CHI_Jo_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_Jo_pic_small"
+		textureFile = "gfx/leaders/CHI/CHI_Jo_pic_small.dds"
+	}
+	
+#東欧
+	
+	#グレーテル・イェッケルン
+	spriteType = {
+		name = "GFX_EEA_Gretel_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Gretel_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Gretel_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Gretel_pic_small.dds"
+	}
+	
+	#アネット・ホーゼンフェルト
+	spriteType = {
+		name = "GFX_EEA_Annette_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Annette_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Annette_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Annette_pic_small.dds"
+	}
+	
+	#ズーズィ・ツァプ
+	spriteType = {
+		name = "GFX_EEA_Zuzi_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Zuzi_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Zuzi_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Zuzi_pic_small.dds"
+	}
+	
+	#キルケ・シュタインホフ（イベント加入）
+	spriteType = {
+		name = "GFX_EEA_Circe_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Circe_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Circe_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Circe_pic_small.dds"
+	}
+	
+	#ヨアヒム・バルク（イベント加入）
+	spriteType = {
+		name = "GFX_EEA_Joachim_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Joachim_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Joachim_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Joachim_pic_small.dds"
+	}
+	
+	#アナマリア・アントネスク（衛士1）
+	spriteType = {
+		name = "GFX_EEA_Anamaria_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Anamaria_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Anamaria_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Anamaria_pic_small.dds"
+	}
+	
+	#グレアム・オースティン（衛士2）
+	spriteType = {
+		name = "GFX_EEA_Graeme_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Graeme_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Graeme_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Graeme_pic_small.dds"
+	}
+	
+	#フランコ・ヴェルサーチ（衛士3）
+	spriteType = {
+		name = "GFX_EEA_Franko_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Franko_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Franko_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Franko_pic_small.dds"
+	}
+	
+	#ローレライ・シュヴァルツ
+	spriteType = {
+		name = "GFX_EEA_Lorelei_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Lorelei_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Lorelei_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Lorelei_pic_small.dds"
+	}
+	
+	#ドローテ・ザウアー・メルケル
+	spriteType = {
+		name = "GFX_EEA_Merukeru_pic"
+		textureFile = "gfx/leaders/EEA/EEA_Merukeru_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EEA_Merukeru_pic_small"
+		textureFile = "gfx/leaders/EEA/EEA_Merukeru_pic_small.dds"
+	}
+	
+	
+	#南米連合
+
+	#アウグスト・ピノ・ウガルテ
+	spriteType = {
+		name = "GFX_SOA_Augustus_pic"
+		textureFile = "gfx/leaders/SOA/SOA_Augustus_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOA_Augustus_pic_small"
+		textureFile = "gfx/leaders/SOA/SOA_Augustus_pic_small.dds"
+	}	
+	
+	#カルロス・イバニェス
+	spriteType = {
+		name = "GFX_SOA_Carlos_pic"
+		textureFile = "gfx/leaders/SOA/SOA_Carlos_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOA_Carlos_pic_small"
+		textureFile = "gfx/leaders/SOA/SOA_Carlos_pic_small.dds"
+	}	
+	
+	#エマニエル・コントレラス
+	spriteType = {
+		name = "GFX_SOA_Emmanuel_pic"
+		textureFile = "gfx/leaders/SOA/SOA_Emmanuel_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOA_Emmanuel_pic_small"
+		textureFile = "gfx/leaders/SOA/SOA_Emmanuel_pic_small.dds"
+	}	
+	
+	#パブロ・エンシーナ
+	spriteType = {
+		name = "GFX_SOA_Pablo_pic"
+		textureFile = "gfx/leaders/SOA/SOA_Pablo_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOA_Pablo_pic_small"
+		textureFile = "gfx/leaders/SOA/SOA_Pablo_pic_small.dds"
+	}
+	
+	#ベル・オイギンス
+	spriteType = {
+		name = "GFX_SOA_Bel_pic"
+		textureFile = "gfx/leaders/SOA/SOA_Bel_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOA_Bel_pic_small"
+		textureFile = "gfx/leaders/SOA/SOA_Bel_pic_small.dds"
+	}
+
+
+	#中米連合
+
+	#タチアナ・デ・ホルテル
+	spriteType = {
+		name = "GFX_CEA_Gorter_pic"
+		textureFile = "gfx/leaders/CEA/CEA_Gorter_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CEA_Gorter_pic_small"
+		textureFile = "gfx/leaders/CEA/CEA_Gorter_pic_small.dds"
+	}	
+	#タチアナ・デ・ホルテル（政治首班）
+	spriteType = {
+		name = "GFX_CEA_Gorter_pic_pol"
+		textureFile = "gfx/leaders/CEA/CEA_Gorter_pic_pol.dds"
+	}
+	
+	#イオニアス・アテナ
+	spriteType = {
+		name = "GFX_CEA_atena_pic"
+		textureFile = "gfx/leaders/CEA/CEA_atena_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CEA_atena_pic_small"
+		textureFile = "gfx/leaders/CEA/CEA_atena_pic_small.dds"
+	}
+	
+	#ビクトリアーノ・ラクスライン
+	spriteType = {
+		name = "GFX_CEA_Lux_pic"
+		textureFile = "gfx/leaders/CEA/CEA_Lux_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CEA_Lux_pic_small"
+		textureFile = "gfx/leaders/CEA/CEA_Lux_pic_small.dds"
+	}
+	
+	#エマヌエル・ガウマン
+	spriteType = {
+		name = "GFX_CEA_Emmanuel_pic"
+		textureFile = "gfx/leaders/CEA/CEA_Emmanuel_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CEA_Emmanuel_pic_small"
+		textureFile = "gfx/leaders/CEA/CEA_Emmanuel_pic_small.dds"
+	}
+	
+	#マリアノ・デ・アルミホ
+	spriteType = {
+		name = "GFX_CEA_Mariano_pic"
+		textureFile = "gfx/leaders/CEA/CEA_Mariano_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CEA_Mariano_pic_small"
+		textureFile = "gfx/leaders/CEA/CEA_Mariano_pic_small.dds"
+	}
+	
+
+	
+	
+	
+#欧州連合
+
+	#アーサー・ダウディング
+	spriteType = {
+		name = "GFX_EUR_Daw_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Daw_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Daw_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Daw_pic_small.dds"
+	}
+	
+	#エリー・アレクサンダー
+	spriteType = {
+		name = "GFX_EUR_Alexander_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Alexander_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Alexander_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Alexander_pic_small.dds"
+	}
+	
+	#ヴィルフリート・アイヒベルガー
+	spriteType = {
+		name = "GFX_EUR_Villefried_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Villefried_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Villefried_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Villefried_pic_small.dds"
+	}
+	
+	#ジークリンデ・フォン・ファーレンホルスト
+	spriteType = {
+		name = "GFX_EUR_Sieglinde_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Sieglinde_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Sieglinde_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Sieglinde_pic_small.dds"
+	}
+	
+	#ゲルハルト・ララーシュタイン
+	spriteType = {
+		name = "GFX_EUR_Gerhard_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Gerhard_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Gerhard_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Gerhard_pic_small.dds"
+	}
+	
+	#ブリギッテ・ヴェスターナッハ
+	spriteType = {
+		name = "GFX_EUR_Brigitte_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Brigitte_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Brigitte_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Brigitte_pic_small.dds"
+	}
+	
+	#ベルナデット・リヴィエール
+	spriteType = {
+		name = "GFX_EUR_Bernadette_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Bernadette_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Bernadette_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Bernadette_pic_small.dds"
+	}
+	
+	#イルフリーデ・フォイルナー
+	spriteType = {
+		name = "GFX_EUR_Ilfriede_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Ilfriede_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Ilfriede_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Ilfriede_pic_small.dds"
+	}
+	
+	#ルナテレジア・ヴィッツレーベン
+	spriteType = {
+		name = "GFX_EUR_Lunateresia_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Lunateresia_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Lunateresia_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Lunateresia_pic_small.dds"
+	}
+	
+	#ヘルガローゼ・フォン・ファルケンマイヤー
+	spriteType = {
+		name = "GFX_EUR_Helgarose_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Helgarose_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Helgarose_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Helgarose_pic_small.dds"
+	}
+	
+	#ステラ・ブレーメル
+	spriteType = {
+		name = "GFX_EUR_Stella_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Stella_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Stella_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Stella_pic_small.dds"
+	}
+
+	#ヴォルフガング・ブラウアー
+	spriteType = {
+		name = "GFX_EUR_Wolfgang_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Wolfgang_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Wolfgang_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Wolfgang_pic_small.dds"
+	}
+	
+	#ヒュー・ウィンストン
+	spriteType = {
+		name = "GFX_EUR_Winston_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Winston_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Winston_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Winston_pic_small.dds"
+	}
+	
+	#ヴィヴィアン・D・オービニュ
+	spriteType = {
+		name = "GFX_EUR_Auvergne_pic"
+		textureFile = "gfx/leaders/EUR/EUR_Auvergne_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_EUR_Auvergne_pic_small"
+		textureFile = "gfx/leaders/EUR/EUR_Auvergne_pic_small.dds"
+	}
+	
+#カナダ
+
+	#ジャンヌ・クレティエン（国家元首）
+	spriteType = {
+		name = "GFX_CAN_JeanChretien_pic"
+		textureFile = "gfx/leaders/CAN/CAN_JeanChretien_pic.dds"
+	}
+
+	#レア・ゲグラン
+	spriteType = {
+		name = "GFX_CAN_Gegran_pic"
+		textureFile = "gfx/leaders/CAN/CAN_Gegran_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_Gegran_pic_small"
+		textureFile = "gfx/leaders/CAN/CAN_Gegran_pic_small.dds"
+	}
+	
+	#ロメオ・ダレール（ロメーヌ・ダレール）
+	spriteType = {
+		name = "GFX_CAN_Romeo_pic"
+		textureFile = "gfx/leaders/CAN/CAN_Romeo_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_Romeo_pic_small"
+		textureFile = "gfx/leaders/CAN/CAN_Romeo_pic_small.dds"
+	}
+	
+	#ジョージ・バーリング（ジナ・バーリング）
+	spriteType = {
+		name = "GFX_CAN_Burring_pic"
+		textureFile = "gfx/leaders/CAN/CAN_Burring_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_Burring_pic_small"
+		textureFile = "gfx/leaders/CAN/CAN_Burring_pic_small.dds"
+	}
+	
+	#デリック・アイアンサイド
+	spriteType = {
+		name = "GFX_CAN_Derick_pic"
+		textureFile = "gfx/leaders/CAN/CAN_Derick_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_Derick_pic_small"
+		textureFile = "gfx/leaders/CAN/CAN_Derick_pic_small.dds"
+	}
+	
+	#エレン・エイス
+	spriteType = {
+		name = "GFX_CAN_Ellen_pic"
+		textureFile = "gfx/leaders/CAN/CAN_Ellen_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_Ellen_pic_small"
+		textureFile = "gfx/leaders/CAN/CAN_Ellen_pic_small.dds"
+	}
+	
+	#ジョセット
+	spriteType = {
+		name = "GFX_CAN_Josette_pic"
+		textureFile = "gfx/leaders/CAN/CAN_Josette_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_Josette_pic_small"
+		textureFile = "gfx/leaders/CAN/CAN_Josette_pic_small.dds"
+	}
+	
+	#小峰・楓（こみね・かえで）
+	spriteType = {
+		name = "GFX_CAN_komine_pic"
+		textureFile = "gfx/leaders/CAN/CAN_komine_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_komine_pic_small"
+		textureFile = "gfx/leaders/CAN/CAN_komine_pic_small.dds"
+	}
+	
+	#ペギー・シドニー・ウォルターズ
+	spriteType = {
+		name = "GFX_CAN_Peggy_pic"
+		textureFile = "gfx/leaders/CAN/CAN_Peggy_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_Peggy_pic_small"
+		textureFile = "gfx/leaders/CAN/CAN_Peggy_pic_small.dds"
+	}
+	
+#大東亜連合
+	
+	#倖田來未
+	spriteType = {
+		name = "GFX_GEU_KumiKouda_pic"
+		textureFile = "gfx/leaders/GEU/GEU_KumiKouda_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_KumiKouda_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_KumiKouda_pic_small.dds"
+	}
+	
+	#ニイラム・ラワムナンド
+	spriteType = {
+		name = "GFX_GEU_Neelam_pic"
+		textureFile = "gfx/leaders/GEU/GEU_Neelam_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_Neelam_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_Neelam_pic_small.dds"
+	}
+	
+	#ジョナサン・ジョースティン
+	spriteType = {
+		name = "GFX_GEU_Jonathan_pic"
+		textureFile = "gfx/leaders/GEU/GEU_Jonathan_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_Jonathan_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_Jonathan_pic_small.dds"
+	}
+	
+	#タリサ・マナンダル
+	spriteType = {
+		name = "GFX_GEU_Tarisa_pic"
+		textureFile = "gfx/leaders/GEU/GEU_Tarisa_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_Tarisa_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_Tarisa_pic_small.dds"
+	}
+	
+	#レイチェル・ナイトレイ
+	spriteType = {
+		name = "GFX_GEU_Knightley_pic"
+		textureFile = "gfx/leaders/GEU/GEU_Knightley_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_Knightley_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_Knightley_pic_small.dds"
+	}
+	
+	#グエン・バン・ミン
+	spriteType = {
+		name = "GFX_GEU_Gwen_pic"
+		textureFile = "gfx/leaders/GEU/GEU_Gwen_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_Gwen_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_Gwen_pic_small.dds"
+	}
+	
+	#レ・ビアン
+	spriteType = {
+		name = "GFX_GEU_Bian_pic"
+		textureFile = "gfx/leaders/GEU/GEU_Bian_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_Bian_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_Bian_pic_small.dds"
+	}
+	
+	#グエン・トーン
+	spriteType = {
+		name = "GFX_GEU_Toon_pic"
+		textureFile = "gfx/leaders/GEU/GEU_Toon_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_Toon_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_Toon_pic_small.dds"
+	}
+	
+	#高森・ミサキ
+	spriteType = {
+		name = "GFX_GEU_takamori_pic"
+		textureFile = "gfx/leaders/GEU/GEU_takamori_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_takamori_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_takamori_pic_small.dds"
+	}
+	
+	#鬼灯・あかる
+	spriteType = {
+		name = "GFX_GEU_akaru_pic"
+		textureFile = "gfx/leaders/GEU/GEU_akaru_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_GEU_akaru_pic_small"
+		textureFile = "gfx/leaders/GEU/GEU_akaru_pic_small.dds"
+	}
+	
+#ソビエト連邦
+	
+	#フィカーツィア・ラトロワ
+	spriteType = {
+		name = "GFX_SOV_Latroi_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Latroi_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Latroi_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Latroi_pic_small.dds"
+	}
+	
+	#クリスカ・ビャーチェノワ
+	spriteType = {
+		name = "GFX_SOV_Crisca_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Crisca_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Crisca_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Crisca_pic_small.dds"
+	}
+	
+	#マーティカ・ビャーチェノワ
+	spriteType = {
+		name = "GFX_SOV_Martica_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Martica_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Martica_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Martica_pic_small.dds"
+	}
+	
+	#イーニア・シェスチナ
+	spriteType = {
+		name = "GFX_SOV_Inia_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Inia_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Inia_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Inia_pic_small.dds"
+	}
+	
+	#ナスターシャ・イヴァノヴァ
+	spriteType = {
+		name = "GFX_SOV_Nastassya_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Nastassya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Nastassya_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Nastassya_pic_small.dds"
+	}
+	
+	#トーニャ・ウペンスコナ"
+	spriteType = {
+		name = "GFX_SOV_Tonya_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Tonya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Tonya_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Tonya_pic_small.dds"
+	}
+	
+	#グネーシン
+	spriteType = {
+		name = "GFX_SOV_Gnessin_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Gnessin_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Gnessin_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Gnessin_pic_small.dds"
+	}
+	
+	#ロゴフスキー
+	spriteType = {
+		name = "GFX_SOV_Rogowski_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Rogowski_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Rogowski_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Rogowski_pic_small.dds"
+	}
+	
+	#ベリャーエフ
+	spriteType = {
+		name = "GFX_SOV_Belyaev_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Belyaev_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Belyaev_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Belyaev_pic_small.dds"
+	}
+	
+	#イェージ・サンダーク
+	spriteType = {
+		name = "GFX_SOV_Sandark_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Sandark_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Sandark_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Sandark_pic_small.dds"
+	}
+	
+	#リトヴィネンコ
+	spriteType = {
+		name = "GFX_SOV_Litvinenko_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Litvinenko_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Litvinenko_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Litvinenko_pic_small.dds"
+	}
+	
+	#エレーナ・モロゾワ
+	spriteType = {
+		name = "GFX_SOV_Yelena_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Yelena_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Yelena_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Yelena_pic_small.dds"
+	}
+	
+	#ヴァシリーサ・ティモフェエヴナ・ヤゾフ（ドミトリー・ティモフェヴィッチ・ヤゾフ）
+	spriteType = {
+		name = "GFX_SOV_Vasilisa_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Vasilisa_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Vasilisa_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Vasilisa_pic_small.dds"
+	}
+	
+	#ヴィクトーリヤ・ニコラエヴナ・ロボフ（ウラジーミル・ニコライェヴィチ・ロボフ）
+	spriteType = {
+		name = "GFX_SOV_Viktoriya_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Viktoriya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Viktoriya_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Viktoriya_pic_small.dds"
+	}
+	
+	#アルセニー・ボグダーノフ
+	spriteType = {
+		name = "GFX_SOV_Bogdanov_pic"
+		textureFile = "gfx/leaders/SOV/SOV_Bogdanov_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_Bogdanov_pic_small"
+		textureFile = "gfx/leaders/SOV/SOV_Bogdanov_pic_small.dds"
+	}
+	
+	
+	
+#国連
+	
+	#安全保障理事会
+	spriteType = {
+		name = "GFX_UNI_Riji_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Riji_pic.dds"
+	}
+	
+	#伊隅・みちる
+	spriteType = {
+		name = "GFX_UNI_Michiru_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Michiru_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Michiru_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Michiru_pic_small.dds"
+	}
+	
+	#速瀬・水月
+	spriteType = {
+		name = "GFX_UNI_Mitsuki_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Mitsuki_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Mitsuki_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Mitsuki_pic_small.dds"
+	}
+	
+	#パウル・ラダビノッド
+	spriteType = {
+		name = "GFX_UNI_Radabinod_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Radabinod_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Radabinod_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Radabinod_pic_small.dds"
+	}
+	
+	#宗像・美冴
+	spriteType = {
+		name = "GFX_UNI_Munakata_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Munakata_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Munakata_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Munakata_pic_small.dds"
+	}
+	
+	#風間・祷子
+	spriteType = {
+		name = "GFX_UNI_Kazama_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Kazama_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Kazama_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Kazama_pic_small.dds"
+	}
+
+	#香月・夕呼
+	spriteType = {
+		name = "GFX_UNI_Yuuko_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Yuuko_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Yuuko_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Yuuko_pic_small.dds"
+	}
+	
+	#碓氷 大尉
+	spriteType = {
+		name = "GFX_UNI_Usui_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Usui_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Usui_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Usui_pic_small.dds"
+	}
+
+	#涼宮・遙
+	spriteType = {
+		name = "GFX_UNI_Suzumiya_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Suzumiya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Suzumiya_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Suzumiya_pic_small.dds"
+	}
+	
+	#涼宮・茜
+	spriteType = {
+		name = "GFX_UNI_Akane_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Akane_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Akane_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Akane_pic_small.dds"
+	}
+	
+	#柏木・晴子
+	spriteType = {
+		name = "GFX_UNI_Kasiwagi_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Kasiwagi_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Kasiwagi_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Kasiwagi_pic_small.dds"
+	}
+	
+	#
+	spriteType = {
+		name = "GFX_UNI_Yasiro_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Yasiro_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Yasiro_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Yasiro_pic_small.dds"
+	}
+	
+	#レベッカ・リント
+	spriteType = {
+		name = "GFX_UNI_Rebecca_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Rebecca_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Rebecca_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Rebecca_pic_small.dds"
+	}
+	
+	#クラウス・ハルトウィック
+	spriteType = {
+		name = "GFX_UNI_Hartwig_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Hartwig_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Hartwig_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Hartwig_pic_small.dds"
+	}
+	
+	#オルソン
+	spriteType = {
+		name = "GFX_UNI_Olson_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Olson_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Olson_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Olson_pic_small.dds"
+	}
+	
+	#神宮寺・まりも
+	spriteType = {
+		name = "GFX_UNI_Marimo_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Marimo_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Marimo_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Marimo_pic_small.dds"
+	}
+	
+	#香月・モトコ
+	spriteType = {
+		name = "GFX_UNI_Motoko_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Motoko_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Motoko_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Motoko_pic_small.dds"
+	}
+	
+	#アンリ・ギーシェン
+	spriteType = {
+		name = "GFX_UNI_Henri_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Henri_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Henri_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Henri_pic_small.dds"
+	}
+	
+	#イリーナ・ピアティフ
+	spriteType = {
+		name = "GFX_UNI_Irina_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Irina_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Irina_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Irina_pic_small.dds"
+	}
+	
+	#白銀・武
+	spriteType = {
+		name = "GFX_UNI_Silver_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Silver_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Silver_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Silver_pic_small.dds"
+	}
+	
+	#御剣・冥夜
+	spriteType = {
+		name = "GFX_UNI_Meiya_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Meiya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Meiya_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Meiya_pic_small.dds"
+	}
+	
+	#榊・千鶴
+	spriteType = {
+		name = "GFX_UNI_Tizuru_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Tizuru_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Tizuru_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Tizuru_pic_small.dds"
+	}
+	
+	#珠瀬・壬姫
+	spriteType = {
+		name = "GFX_UNI_Miki_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Miki_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Miki_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Miki_pic_small.dds"
+	}
+	
+	#彩峰・慧
+	spriteType = {
+		name = "GFX_UNI_Ayamine_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Ayamine_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Ayamine_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Ayamine_pic_small.dds"
+	}
+	
+	#鎧・美琴
+	spriteType = {
+		name = "GFX_UNI_Mikoto_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Mikoto_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Mikoto_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Mikoto_pic_small.dds"
+	}
+	
+	#00ユニット
+	spriteType = {
+		name = "GFX_UNI_00_pic"
+		textureFile = "gfx/leaders/UNI/UNI_00_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_00_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_00_pic_small.dds"
+	}
+	
+	#ユウヤ・ブリッジス（イベント）
+	spriteType = {
+		name = "GFX_UNI_Yuya_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Yuya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Yuya_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Yuya_pic_small.dds"
+	}
+	
+	#イーニア・シェスチナ
+	spriteType = {
+		name = "GFX_UNI_Inia_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Inia_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Inia_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Inia_pic_small.dds"
+	}
+	
+	#フィカーツィア・ラトロワ
+	spriteType = {
+		name = "GFX_UNI_Latroi_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Latroi_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Latroi_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Latroi_pic_small.dds"
+	}
+	
+	#イェージ・サンダーク
+	spriteType = {
+		name = "GFX_UNI_Sandark_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Sandark_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Sandark_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Sandark_pic_small.dds"
+	}
+	
+	#アラン・エース
+	spriteType = {
+		name = "GFX_UNI_Ace_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Ace_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Ace_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Ace_pic_small.dds"
+	}
+	
+	#マーガレット・フィッシャー
+	spriteType = {
+		name = "GFX_UNI_Fisher_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Fisher_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Fisher_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Fisher_pic_small.dds"
+	}
+	
+	#シャノン・アレクサンダー
+	spriteType = {
+		name = "GFX_UNI_Shannon_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Shannon_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Shannon_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Shannon_pic_small.dds"
+	}
+	
+	#水野・真弓
+	spriteType = {
+		name = "GFX_UNI_Mizuno_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Mizuno_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Mizuno_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Mizuno_pic_small.dds"
+	}
+	
+	#若林・美緒
+	spriteType = {
+		name = "GFX_UNI_Waka_pic"
+		textureFile = "gfx/leaders/UNI/UNI_Waka_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_UNI_Waka_pic_small"
+		textureFile = "gfx/leaders/UNI/UNI_Waka_pic_small.dds"
+	}
+	
+#アメリカ合衆国
+	
+	
+	#ジョージア・W・ブッシュ
+	spriteType = {
+		name = "GFX_USA_Bush_pic"
+		textureFile = "gfx/leaders/USA/USA_Bush_pic.dds"
+	}
+	
+	#ユウヤ・ブリッジス
+	spriteType = {
+		name = "GFX_USA_Yuya_pic"
+		textureFile = "gfx/leaders/USA/USA_Yuya_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Yuya_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Yuya_pic_small.dds"
+	}
+	
+#レオン・クゼ
+	spriteType = {
+		name = "GFX_USA_Kuze_pic"
+		textureFile = "gfx/leaders/USA/USA_Kuze_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Kuze_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Kuze_pic_small.dds"
+	}
+	
+	#アルフレッド・ウォーケン
+	spriteType = {
+		name = "GFX_USA_Walken_pic"
+		textureFile = "gfx/leaders/USA/USA_Walken_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Walken_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Walken_pic_small.dds"
+	}
+	
+	#アルフレッド・ウォーケン（イベント）
+	spriteType = {
+		name = "GFX_USA_Walken2_pic"
+		textureFile = "gfx/leaders/USA/USA_Walken2_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Walken2_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Walken2_pic_small.dds"
+	}
+	
+	#ガイウス・マクラウド
+	spriteType = {
+		name = "GFX_USA_Mcleod_pic"
+		textureFile = "gfx/leaders/USA/USA_Mcleod_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Mcleod_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Mcleod_pic_small.dds"
+	}
+	
+	#フェーベ・テオドラキス
+	spriteType = {
+		name = "GFX_USA_Phoebe_pic"
+		textureFile = "gfx/leaders/USA/USA_Phoebe_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Phoebe_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Phoebe_pic_small.dds"
+	}
+	
+	#リリア・シェルベリ
+	spriteType = {
+		name = "GFX_USA_Lilia_pic"
+		textureFile = "gfx/leaders/USA/USA_Lilia_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Lilia_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Lilia_pic_small.dds"
+	}
+	
+	#ダリル・マクマナス
+	spriteType = {
+		name = "GFX_USA_Darryl_pic"
+		textureFile = "gfx/leaders/USA/USA_Darryl_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Darryl_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Darryl_pic_small.dds"
+	}
+	
+	
+	#イルマ・テスレフ
+	spriteType = {
+		name = "GFX_USA_Irma_pic"
+		textureFile = "gfx/leaders/USA/USA_Irma_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Irma_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Irma_pic_small.dds"
+	}
+	
+	#キース・ブレイザー
+	spriteType = {
+		name = "GFX_USA_Blaser_pic"
+		textureFile = "gfx/leaders/USA/USA_Blaser_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Blaser_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Blaser_pic_small.dds"
+	}
+	
+	#キャロライン・シールズ
+	spriteType = {
+		name = "GFX_USA_Caroline_pic"
+		textureFile = "gfx/leaders/USA/USA_Caroline_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Caroline_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Caroline_pic_small.dds"
+	}
+	
+	#シャロン・エイム
+	spriteType = {
+		name = "GFX_USA_Sharon_pic"
+		textureFile = "gfx/leaders/USA/USA_Sharon_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Sharon_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Sharon_pic_small.dds"
+	}
+	
+	#ウィルバート・コリンズ
+	spriteType = {
+		name = "GFX_USA_Wilbert_pic"
+		textureFile = "gfx/leaders/USA/USA_Wilbert_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Wilbert_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Wilbert_pic_small.dds"
+	}
+	
+	#ドロシー・マッカーサー
+	spriteType = {
+		name = "GFX_USA_Dorothy_pic"
+		textureFile = "gfx/leaders/USA/USA_Dorothy_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Dorothy_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Dorothy_pic_small.dds"
+	}
+	
+	#コートニー・ルメイ
+	spriteType = {
+		name = "GFX_USA_Courtney_pic"
+		textureFile = "gfx/leaders/USA/USA_Courtney_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Courtney_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Courtney_pic_small.dds"
+	}
+	
+	#ウェンディ・ウォーカー
+	spriteType = {
+		name = "GFX_USA_Wendy_pic"
+		textureFile = "gfx/leaders/USA/USA_Wendy_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Wendy_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Wendy_pic_small.dds"
+	}
+	
+	#ジェーン・ブリントン・リー
+	spriteType = {
+		name = "GFX_USA_Lee_pic"
+		textureFile = "gfx/leaders/USA/USA_Lee_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_Lee_pic_small"
+		textureFile = "gfx/leaders/USA/USA_Lee_pic_small.dds"
+	}
+	
+	
+#BETA
+
+	#あ号標的
+	spriteType = {
+		name = "GFX_BET_portrait_A_target_pic"
+		textureFile = "gfx/leaders/BET/BET_portrait_A_target_pic.dds"
+	}
+	
+	#上位存在（重頭脳）
+	spriteType = {
+		name = "GFX_BET_portrait_Heavy_Brain_Class_pic"
+		textureFile = "gfx/leaders/BET/BET_portrait_A_target_pic.dds"
+	}
+	
+	#上位存在（頭脳）
+	spriteType = {
+		name = "GFX_BET_portrait_Superior_Being_pic"
+		textureFile = "gfx/leaders/BET/BET_zunou_pic.dds"
+	}
+	
+	#頭脳級（指揮官）
+	spriteType = {
+		name = "GFX_BET_zunou_pic"
+		textureFile = "gfx/leaders/BET/BET_zunou_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_zunou_pic_small"
+		textureFile = "gfx/leaders/BET/BET_zunou_pic_small.dds"
+	}
+	
+	#上位存在（指揮官）
+	spriteType = {
+		name = "GFX_BET_jyou_pic"
+		textureFile = "gfx/leaders/BET/BET_jyou_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_jyou_pic_small"
+		textureFile = "gfx/leaders/BET/BET_jyou_pic_small.dds"
+	}
+	
+	#兵士級
+	spriteType = {
+		name = "GFX_BET_soldier_pic"
+		textureFile = "gfx/leaders/BET/BET_soldier_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_soldier_small"
+		textureFile = "gfx/leaders/BET/BET_soldier_small.dds"
+	}
+	
+	#光線級
+	spriteType = {
+		name = "GFX_BET_Laser_pic"
+		textureFile = "gfx/leaders/BET/BET_Laser_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_Laser_pic_small"
+		textureFile = "gfx/leaders/BET/BET_Laser_pic_small.dds"
+	}
+	
+	#戦車級
+	spriteType = {
+		name = "GFX_BET_tank_pic"
+		textureFile = "gfx/leaders/BET/BET_tank_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_tank_pic_small"
+		textureFile = "gfx/leaders/BET/BET_tank_pic_small.dds"
+	}
+	
+	#突撃級
+	spriteType = {
+		name = "GFX_BET_Destroyer_pic"
+		textureFile = "gfx/leaders/BET/BET_Destroyer_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_Destroyer_pic_small"
+		textureFile = "gfx/leaders/BET/BET_Destroyer_pic_small.dds"
+	}
+	
+	#闘士級
+	spriteType = {
+		name = "GFX_BET_Warrior_pic"
+		textureFile = "gfx/leaders/BET/BET_Warrior_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_Warrior_pic_small"
+		textureFile = "gfx/leaders/BET/BET_Warrior_pic_small.dds"
+	}
+	
+	#要撃級
+	spriteType = {
+		name = "GFX_BET_Grappler_pic"
+		textureFile = "gfx/leaders/BET/BET_Grappler_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_Grappler_pic_small"
+		textureFile = "gfx/leaders/BET/BET_Grappler_pic_small.dds"
+	}
+	
+	#要塞級
+	spriteType = {
+		name = "GFX_BET_Fort_pic"
+		textureFile = "gfx/leaders/BET/BET_Fort_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_Fort_pic_small"
+		textureFile = "gfx/leaders/BET/BET_Fort_pic_small.dds"
+	}
+	
+	#重光線級
+	spriteType = {
+		name = "GFX_BET_Heavy_Laser_pic"
+		textureFile = "gfx/leaders/BET/BET_Heavy_Laser_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_BET_Heavy_Laser_pic_small"
+		textureFile = "gfx/leaders/BET/BET_Heavy_Laser_pic_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_M01_kuri_pic"
+		textureFile = "gfx/leaders/M01/kuri_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_M01_kuri_pic_small"
+		textureFile = "gfx/leaders/M01/kuri_pic_small.dds"
+	}
+	
+
+	
+}

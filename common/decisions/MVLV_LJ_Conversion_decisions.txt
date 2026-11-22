@@ -1,0 +1,53 @@
+MVLV_LJ_Conversion_decision_category = {
+	LJ_Conversion_decision_50 = {
+		available = {
+			has_equipment = { MVLV_TSF_chassis > 49 }
+		}
+		visible = {
+			has_tech = MVLV_research_tsf_1_light_framework
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			set_variable = { ROOT.Conversion_val = -50 }
+			custom_effect_tooltip = LJ_Conversion_50_tt
+			hidden_effect = {
+				MVLV_LJ_Conversion_script_effect = yes
+			}
+		}
+	}
+	LJ_Conversion_decision_100 = {
+		available = {
+			has_equipment = { MVLV_TSF_chassis > 99 }
+		}
+		visible = {
+			has_tech = MVLV_research_tsf_1_light_framework
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			set_variable = { ROOT.Conversion_val = -100 }
+			custom_effect_tooltip = LJ_Conversion_100_tt
+			hidden_effect = {
+				MVLV_LJ_Conversion_script_effect = yes
+			}
+		}
+	}
+	LJ_Conversion_decision_200 = {
+		available = {
+			has_equipment = { MVLV_TSF_chassis > 199 }
+		}
+		visible = {
+			has_tech = MVLV_research_tsf_1_light_framework
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			set_variable = { ROOT.Conversion_val = -200 }
+			custom_effect_tooltip = LJ_Conversion_200_tt
+			hidden_effect = {
+				MVLV_LJ_Conversion_script_effect = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,125 @@
+
+SOV = {
+	#light_tank_chassis = { #Make Flamethrower tanks show up at the bottom of the regular tank pools (like AT, AA, SPG, etc.)
+	#	pool = {
+	#		weight = 0.7
+	#		icons = { 
+	#			GFX_SOV_light_flame_tank_medium # T-26 Chemical Tanks (HT-26, HT-130, HT-133, HT-134)
+	#		}
+	#		models = {
+	#			SOV_light_flame_tank_entity # T-26 Chemical Tanks (HT-26, HT-130, HT-133, HT-134)
+	#		}
+	#	}
+	#}
+
+	light_tank_flame_chassis = {
+		pool = {
+			weight = 2
+			icons = {
+				GFX_SOV_light_flame_tank_medium # T-26 Chemical Tanks (HT-26, HT-130, HT-133, HT-134)
+			}
+			models = {
+				SOV_light_flame_tank_entity # T-26 Chemical Tanks (HT-26, HT-130, HT-133, HT-134)
+			}
+		}
+	}
+
+	land_cruiser_chassis_1 = {
+		pool = {
+			icons = {
+				GFX_SOV_land_cruiser_armor_medium
+			}
+			models = {
+				SOV_land_cruiser_entity
+			}
+		}
+	}
+}
+
+
+USA = {
+	#light_tank_chassis = { #Make Flamethrower tanks show up at the bottom of the regular tank pools (like AT, AA, SPG, etc.)
+	#	pool = {
+	#		weight = 0.7
+	#		icons = { 
+	#			GFX_USA_light_flame_tank_medium # M3A1 Satan
+	#		}
+	#		models = {
+	#			USA_light_flame_tank_entity # M3A1 Satan
+	#		}
+	#	}
+	#}
+
+	light_tank_flame_chassis = {
+		pool = {
+			weight = 2 #Otherwise regular Light Armor shows up
+			icons = {
+				GFX_USA_light_flame_tank_medium # M3A1 Satan
+			}
+			models = {
+				USA_light_flame_tank_entity # M3A1 Satan
+			}
+		}
+	}
+
+	#medium_tank_chassis = { #Make Flamethrower tanks show up at the bottom of the regular tank pools (like AT, AA, SPG, etc.)
+	#	pool = {
+	#		weight = 0.7
+	#		icons = { 
+	#			GFX_USA_medium_flame_tank_medium # M4 Sherman Crocodile
+	#		}
+	#		models = {
+	#			USA_medium_flame_tank_entity # M4 Sherman Crocodile
+	#		}
+	#	}
+	#}
+
+	medium_tank_flame_chassis = {
+		pool = {
+			weight = 2 #USA tank weights are not fixed in 00_tank_icons.txt
+			icons = {
+				GFX_USA_medium_flame_tank_medium # M4 Sherman Crocodile
+			}
+			models = {
+				USA_medium_flame_tank_entity # M4 Sherman Crocodile
+			}
+		}
+	}
+
+	land_cruiser_chassis_1 = {
+		pool = {
+			icons = {
+				GFX_USA_land_cruiser_armor_medium
+			}
+			models = {
+				USA_land_cruiser_entity
+			}
+		}
+	}
+}
+
+JAP = {
+	#light_tank_chassis = { #Make Flamethrower tanks show up at the bottom of the regular tank pools (like AT, AA, SPG, etc.)
+	#	pool = {
+	#		weight = 0.7
+	#		icons = { 
+	#			GFX_JAP_light_flame_tank_medium # Type 95 Ha-Go with flamethrower
+	#		}
+	#		models = {
+	#			JAP_light_flame_tank_entity # Type 95 Ha-Go with flamethrower
+	#		}
+	#	}
+	#}
+
+	light_tank_flame_chassis = {
+		pool = {
+			weight = 2
+			icons = {
+				GFX_JAP_light_flame_tank_medium # Type 95 Ha-Go with flamethrower
+			}
+			models = {
+				JAP_light_flame_tank_entity # Type 95 Ha-Go with flamethrower
+			}
+		}
+	}
+}

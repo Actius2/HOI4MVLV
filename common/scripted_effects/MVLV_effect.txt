@@ -1,0 +1,302 @@
+MVLV_all_difficulty_clr_script_effect = {
+	hidden_effect = {
+		remove_ideas = {
+			mvlv_difficulty_easy
+		}
+		remove_ideas = {
+			mvlv_difficulty_normal
+		}
+		remove_ideas = {
+			mvlv_difficulty_hard
+		}
+		remove_ideas = {
+			mvlv_difficulty_unlimited
+		}
+		remove_ideas = {
+			mvlv_difficulty_ai
+		}
+	}
+}
+
+MVLV_AI_bunker = {
+	every_neighbor_country = {
+		limit = {
+			is_in_faction_with = UNI
+			NOT = { tag = JAP }
+			is_ai = yes
+		}
+		#日本の前線で正しく要塞が建築される方
+		#every_neighbor_state
+		every_controlled_state = {
+			limit = {
+				is_controlled_by = PREV
+				num_owned_neighbour_states ={
+					owner = ROOT
+					count > 0
+				}
+			}
+			set_building_level = {
+				type = bunker
+				level = 10
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+			}
+			set_building_level = {
+				type = coastal_bunker
+				level = 10
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+					limit_to_coastal = yes
+				}
+			}
+		}
+	}
+}
+
+CAN_Towards_independence_scripte_effect = {
+
+	if = {
+		limit = {
+			is_fully_controlled_by = ROOT
+		}
+		if = {
+			limit = {
+				industrial_complex < 2
+			}
+			ROOT = {
+				add_offsite_building ={
+					type = industrial_complex
+					level = -2
+				}
+			}
+		}
+		else = {
+			remove_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+		add_building_construction = {
+			type = arms_factory 
+			level = 2
+			instant_build = yes
+		}
+	}
+}
+
+CAN_Atomic_down_script_effect = {
+	ROOT = {
+		if = {
+			limit = {
+				has_idea = CAN_atomic_5
+			}
+			swap_ideas = {
+				remove_idea = CAN_atomic_5
+				add_idea = CAN_atomic_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = CAN_atomic_4
+			}
+			swap_ideas = {
+				remove_idea = CAN_atomic_4
+				add_idea = CAN_atomic_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = CAN_atomic_3
+			}
+			swap_ideas = {
+				remove_idea = CAN_atomic_3
+				add_idea = CAN_atomic_2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = CAN_atomic_2
+			}
+			swap_ideas = {
+				remove_idea = CAN_atomic_2
+				add_idea = CAN_atomic_1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = CAN_atomic_1
+			}
+			swap_ideas = {
+				remove_idea = CAN_atomic_1
+				add_idea = CAN_atomic
+			}
+		}
+	}
+}
+
+MVLV_LJ_Conversion_script_effect = {
+	set_temp_variable = { L1_temp_val = num_equipment@MVLV_TSF_chassis_1_light }
+	set_temp_variable = { H1_temp_val = num_equipment@MVLV_TSF_chassis_1_heavy }
+	set_temp_variable = { M1_temp_val = num_equipment@MVLV_TSF_chassis_1_light_mod }
+
+	set_temp_variable = { L2_temp_val = num_equipment@MVLV_TSF_chassis_2_light }
+	set_temp_variable = { H2_temp_val = num_equipment@MVLV_TSF_chassis_2_heavy }
+	set_temp_variable = { M2_temp_val = num_equipment@MVLV_TSF_chassis_2_maneuver }
+
+	set_temp_variable = { L3_temp_val = num_equipment@MVLV_TSF_chassis_3_light }
+	set_temp_variable = { H3_temp_val = num_equipment@MVLV_TSF_chassis_3_heavy }
+	set_temp_variable = { M3_temp_val = num_equipment@MVLV_TSF_chassis_3_maneuver }
+
+	add_equipment_to_stockpile = {
+		type = MVLV_TSF_chassis
+		amount = ROOT.Conversion_val
+	}
+	subtract_from_temp_variable = { L1_temp_val = num_equipment@MVLV_TSF_chassis_1_light }
+	subtract_from_temp_variable = { H1_temp_val = num_equipment@MVLV_TSF_chassis_1_heavy }
+	subtract_from_temp_variable = { M1_temp_val = num_equipment@MVLV_TSF_chassis_1_light_mod }
+
+	subtract_from_temp_variable = { L2_temp_val = num_equipment@MVLV_TSF_chassis_2_light }
+	subtract_from_temp_variable = { H2_temp_val = num_equipment@MVLV_TSF_chassis_2_heavy }
+	subtract_from_temp_variable = { M2_temp_val = num_equipment@MVLV_TSF_chassis_2_maneuver }
+
+	subtract_from_temp_variable = { L3_temp_val = num_equipment@MVLV_TSF_chassis_3_light }
+	subtract_from_temp_variable = { H3_temp_val = num_equipment@MVLV_TSF_chassis_3_heavy }
+	subtract_from_temp_variable = { M3_temp_val = num_equipment@MVLV_TSF_chassis_3_maneuver }
+
+	if = {
+		limit = {
+			check_variable = { L1_temp_val > 0 }
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_Laser_Jagd_L_equipment_1
+			amount = L1_temp_val
+			producer = SRD
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { H1_temp_val > 0 }
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_Laser_Jagd_H_equipment_1
+			amount = H1_temp_val
+			producer = SRD
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { M1_temp_val > 0 }
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_Laser_Jagd_L_equipment_1
+			amount = M1_temp_val
+			producer = SRD
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = { L2_temp_val > 0 }
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_Laser_Jagd_L_equipment_2
+			amount = L2_temp_val
+			producer = SRD
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { H2_temp_val > 0 }
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_Laser_Jagd_H_equipment_2
+			amount = H2_temp_val
+			producer = SRD
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { M2_temp_val > 0 }
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_Laser_Jagd_M_equipment_2
+			amount = M2_temp_val
+			producer = SRD
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = { L3_temp_val > 0 }
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_Laser_Jagd_L_equipment_3
+			amount = L3_temp_val
+			producer = SRD
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { H3_temp_val > 0 }
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_Laser_Jagd_H_equipment_3
+			amount = H3_temp_val
+			producer = SRD
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { M3_temp_val > 0 }
+		}
+		add_equipment_to_stockpile = {
+			type = MVLV_Laser_Jagd_M_equipment_3
+			amount = M3_temp_val
+			producer = SRD
+		}
+	}
+}
+
+########中南米は回避
+MVLV_initial_design_flag_set_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_tech = MVLV_research_tsf_1_light_framework
+				has_tech = MVLV_research_tsf_1_heavy_framework
+			}
+
+		}
+		set_country_flag = MVLV_tsf_1_design_flag
+	}
+	if = {
+		limit = {
+			OR = {
+				has_tech = MVLV_research_tsf_2_light_framework
+				has_tech = MVLV_research_tsf_2_heavy_framework
+				has_tech = MVLV_research_tsf_2_maneuver_framework
+			}
+
+		}
+		set_country_flag = MVLV_tsf_2_design_flag
+	}
+	if = {
+		limit = {
+			OR = {
+				has_tech = MVLV_research_tsf_3_light_framework
+				has_tech = MVLV_research_tsf_3_heavy_framework
+				has_tech = MVLV_research_tsf_3_maneuver_framework
+			}
+		}
+		set_country_flag = MVLV_tsf_3_design_flag
+	}
+}
+
+
+
+

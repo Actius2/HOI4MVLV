@@ -1,0 +1,7 @@
+MVLV_unicorns_decision_category = {
+	priority = 98
+	icon = generic_propaganda
+	allowed = {
+		is_in_faction_with = UNI
+	}
+}

@@ -1,0 +1,44 @@
+add_namespace = mvlv_soa
+country_event = {
+	id = mvlv_soa.1
+	desc = mvlv_soa.1.d
+	title = mvlv_soa.1.t
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mvlv_can.1.a
+	}
+}
+country_event = {
+	id = mvlv_soa.2
+	desc = mvlv_soa.2.d
+	title = mvlv_soa.2.t
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mvlv_soa.2.a
+	}
+}
+country_event = {
+	id = mvlv_soa.3
+	desc = mvlv_soa.3.d
+	title = mvlv_soa.3.t
+	
+	is_triggered_only = yes
+	immediate = {
+		add_ideas = SOA_idea_Unity
+		if = {
+			limit = {
+				NOT = { has_completed_focus = SOA_Unity }
+			}
+			complete_national_focus = SOA_Unity
+		}
+	}
+
+
+	option = {
+		name = mvlv_soa.3.a
+	}
+}

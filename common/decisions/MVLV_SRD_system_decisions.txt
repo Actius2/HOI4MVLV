@@ -1,0 +1,98 @@
+MVLV_SRD_system_decision_category = {
+	GEU_malay_fall = {
+		icon = generic_operation
+		available = {
+			GEU = {
+				NOT = { has_full_control_of_state = 724 }
+			}
+		}
+		visible = {
+			tag = SRD
+		}
+		fire_only_once = yes
+		complete_effect = {
+			GEU = {
+				country_event = fall_event.1
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	MVLV_Laser_Confiscation_decision = {
+		priority = 2
+		icon = generic_prepare_civil_war
+		available = {
+			tag = SRD
+			any_country = {
+				is_in_faction_with = UNI
+				OR = {
+					has_equipment = { laser_1 > 0 }
+					has_equipment = { heavy_laser_1 > 0 }
+				}
+			}
+		}
+
+		visible = {
+			tag = SRD
+		}
+		ai_will_do = {
+			base = 100
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					OR = {
+						has_equipment = { laser_1 > 0 }
+						has_equipment = { heavy_laser_1 > 0 }
+					}
+				}
+				if = {
+					limit = {
+						has_equipment = { laser_1 > 0 }
+					}
+					send_equipment = {
+						equipment = laser_1
+						amount = num_equipment@laser_1
+						target = SRD
+					}
+				}
+				if = {
+					limit = {
+						has_equipment = { heavy_laser_1 > 0 }
+					}
+					send_equipment = {
+						equipment = heavy_laser_1
+						amount = num_equipment@heavy_laser_1
+						target = SRD
+					}
+				}
+			}
+		}
+	}
+	MVLV_Start_event_decision = {
+		priority = 2
+		icon = generic_prepare_civil_war
+		available = {
+			tag = SRD
+			date > 2001.10.21
+		}
+
+		visible = {
+			tag = SRD
+		}
+		ai_will_do = {
+			base = 100
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			every_country = {
+				news_event = mvlv_news.14
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=532
+	name="STATE_532" # Tokai
+	manpower = 6174000
+	state_category = large_city
+
+	history = {
+		owner = H20
+		1999.1.1 = { 
+			owner = H20
+			add_core_of = JAP
+
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			dockyard = 1
+			industrial_complex = 2
+		}
+		
+		victory_points = {
+			7087 1
+		}
+		
+		victory_points = {
+			10125 15
+		}
+
+
+	}
+
+	provinces={
+		4069 4172 7087 7157 7187 10100 10125 12072 12097 
+	}
+}

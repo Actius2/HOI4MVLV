@@ -1,0 +1,15 @@
+
+EUR_core_change_decizion_category = {
+	icon = generic_propaganda
+	priority = 20
+	allowed = {
+        tag = EUR
+	}
+	available = {
+		always = no
+	}
+
+	visible = {
+
+	}
+}

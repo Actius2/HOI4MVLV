@@ -1,0 +1,56 @@
+AFR_decisions_category = {
+	CAN_Purification_Declaration_decision = {
+		icon = generic_construction
+		allowed = {
+			always = yes
+		}
+		available = {
+			FROM = {
+				infrastructure > 4
+			}
+		}
+		visible = {
+			NOT = { is_in_faction_with = BET }
+			FROM = {
+				is_fully_controlled_by = ROOT
+				controller = {
+					PREV = {
+						impassable = no
+						is_fully_controlled_by = PREV
+						has_state_flag = CAN_nuclear_explosion_flag
+					}
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				controller = {
+					PREV = {
+						impassable = no
+						is_fully_controlled_by = PREV
+						has_state_flag = CAN_nuclear_explosion_flag
+					}
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+		cancel_if_not_visible = no
+		complete_effect = {
+			FROM = {
+				clr_state_flag = CAN_nuclear_explosion_flag
+				remove_dynamic_modifier = { modifier = MVLV_CAN_nuclear_explosion_strait }
+				add_extra_state_shared_building_slots = 5
+				CAN_Atomic_down_script_effect = yes
+			}
+		}
+		ai_will_do = { base = 100 }
+	}
+
+}
+
+

@@ -1,0 +1,123 @@
+technologies = {
+	
+	@1918 = 0
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 8
+	@1941 = 10
+	@1942 = 12
+	@1943 = 14
+	@1944 = 16
+	@1945 = 18
+	@1946 = 20
+	Mvlv_tech_support_pack = {
+		enable_equipments = {
+			support_equipment_1
+			train_equipment_1
+			train_equipment_2
+		}
+		enable_subunits = {
+			engineer
+			recon
+			light_tank_recon
+			maintenance_company
+			field_hospital
+			logistics_company
+			signal_company
+		}
+
+		engineer = {
+			entrenchment  = 6
+			fort = {
+				defence = 0.10
+				attack = 0.10
+			}
+			river = {
+				attack = 0.10	
+				defence = 0.10
+			}
+			urban = {
+				attack = 0.10	
+				defence = 0.10
+			}
+		}
+		category_recon = {
+			recon = 6
+		}
+		maintenance_company = {
+			reliability_factor = 0.15
+		}
+		field_hospital = {
+			casualty_trickleback = 0.30
+			experience_loss_factor = -0.30
+		}
+		logistics_company = {
+			supply_consumption_factor = -0.3
+			fuel_consumption_factor = -0.15
+		}
+		signal_company = {
+			initiative = 0.36
+		}
+
+		######
+		research_cost = 0.1
+		start_year = 1949
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+			support_tech
+		}
+		
+		ai_will_do = {
+			factor = 0
+
+		}
+	}
+
+	#tech_support
+	#tech_engineers
+	#tech_engineers2
+	#tech_engineers3
+	#tech_engineers4
+	
+	#tech_recon	
+	#tech_recon2
+	#tech_recon3
+	#tech_recon4
+	
+	#tech_military_police
+	#tech_military_police2
+	#tech_military_police3
+	#tech_military_police4
+
+	#tech_maintenance_company	
+	#tech_maintenance_company2
+	#tech_maintenance_company3
+	#tech_maintenance_company4
+
+	#tech_field_hospital
+	#tech_field_hospital2	
+	#tech_field_hospital3
+	#tech_field_hospital4
+
+	#tech_logistics_company
+	#tech_logistics_company2	
+	#tech_logistics_company3
+	#tech_logistics_company4
+
+	#tech_signal_company	
+	#tech_signal_company2	
+	#tech_signal_company3
+	#tech_signal_company4
+
+	#basic_train
+	#wartime_train
+	
+	#砲兵か歩兵タブへの移動。多分カントリテックツリーをいじる
+	#もしくは砲兵派生で
+
+}

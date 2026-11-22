@@ -1,0 +1,880 @@
+ideas = {
+	hidden_ideas = {
+		#____________________________________________________________
+		#スタートアップ
+		mvlv_start_up = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = 1
+			}
+		}
+		mvlv_sado_debuff = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				land_reinforce_rate = -0.5
+			}
+		}
+	}
+	country = {
+		##暫定用
+		test_food_ideas = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				country_resource_coal = 1000
+			}
+		}
+		###難易度系列
+		mvlv_difficulty_easy = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				equipment_capture = 0.20
+				experience_loss_factor = -0.5
+				experience_gain_army_factor = 0.4
+				# fightyness
+				dig_in_speed_factor = 0.05
+				planning_speed = 0.1
+				supply_consumption_factor = -0.05
+				army_morale_factor = 0.1
+				land_reinforce_rate = 0.01
+				# army
+				army_defence_factor = 0.5
+				army_attack_factor = 0.5
+				# production
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 1
+				#surrender
+				surrender_limit = 1
+			}
+		}
+		mvlv_difficulty_normal = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				equipment_capture = 0.20
+				experience_loss_factor = -0.6
+				experience_gain_army_factor = 0.5
+				industrial_capacity_factory = 0.25
+				army_defence_factor = 0.25
+				army_attack_factor = 0.25
+				#surrender
+				surrender_limit = 1
+			}
+		}
+		mvlv_difficulty_hard = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				equipment_capture = 0.20
+				experience_loss_factor = -0.5
+				experience_gain_army_factor = 0.3
+				#surrender
+				surrender_limit = 1
+			}
+		}
+		mvlv_difficulty_unlimited = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				equipment_capture = 0.20
+				experience_loss_factor = -0.3
+				experience_gain_army_factor = 0.2
+				#surrender
+				surrender_limit = 1
+			}
+		}
+		mvlv_difficulty_ai = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				experience_loss_factor = -0.5
+				experience_gain_army_factor = 0.4
+				# Country
+				political_power_gain = 0.25
+				stability_weekly = 0.002
+				war_support_weekly = 0.002
+				# fightyness
+				dig_in_speed_factor = 0.45
+				planning_speed = 0.2
+				supply_consumption_factor = -0.55
+				army_morale_factor = 0.55
+				land_reinforce_rate = 0.55
+				# production
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 1
+				daily_ammunition_gain = 5000
+				# defensivness
+				army_core_defence_factor = 15.55
+				# AI
+				ai_focus_aggressive_factor = -10
+				ai_focus_defense_factor = 10
+				ai_call_ally_desire_factor = -30
+				ai_join_ally_desire_factor = -30
+				ai_badass_factor = 0.1
+				# naval
+				#surrender
+				surrender_limit = 1
+			}
+		}
+		mvlv_difficulty_beta = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				# weekly
+				stability_factor = 1				#stability_weekly = 0.01
+				war_support_factor = 1				#war_support_weekly = 0.01
+				political_power_gain = -3
+				political_power_factor = -1
+				command_power_gain = -3
+				# fightyness
+				
+				# army
+				army_core_attack_factor = 1
+				army_core_defence_factor = 0.8
+				army_defence_factor = 0.15
+				army_attack_factor = -0.60
+				army_speed_factor = -0.1
+				#
+				land_reinforce_rate = 0.5
+				#
+				no_supply_grace = 500
+				out_of_supply_factor = -10
+				attrition = -1
+				heat_attrition_factor = -1
+				winter_attrition_factor = -1
+				acclimatization_cold_climate_gain_factor = 1
+				acclimatization_hot_climate_gain_factor = 1
+				#training_time_army_factor = -0.3
+				#minimum_training_level = -0.3
+				# air
+				army_bonus_air_superiority_factor = 0.1
+				#army_leader
+				# army_leader_start_level = 2
+				# army_leader_start_attack_level = 5
+				# army_leader_start_planning_level = 1
+				# army_leader_start_defense_level = 1
+				# army_leader_start_logistics_level = 1
+				# experience
+				experience_loss_factor = -1
+				experience_gain_army_factor = -1
+				experience_gain_air_factor = -1
+				#production
+				#production_factory_start_efficiency_factor = 0.5
+				#production_factory_efficiency_gain_factor = 0.1
+				#industrial_capacity_factory = 2.5
+				#production_speed_buildings_factor = -1.50
+				production_speed_buildings_factor = -1
+				industrial_capacity_factory = -1
+				industrial_capacity_dockyard = -1
+				#consumer_goods_expected_value = 1
+				#min_export = -0.5
+				industry_repair_factor = -10
+				industry_free_repair_factor = -10
+				crypto_strength = 999
+				decryption_power = 999
+				intelligence_agency_defense = 100
+				#resource
+				# local_resources_factor = 20
+				mobilization_speed = 1.5
+				conscription_factor = 0.1
+				conscription = 0.1
+				military_factory_donations = -100
+				#ai
+				#ai_focus_aggressive_factor = 1300
+				#ai_focus_defense_factor = -30
+				#ai_focus_aggressive_factor = -3.00
+				#ai_focus_defense_factor = 13.00
+				
+				enemy_operative_capture_chance_factor = 1
+				enemy_operative_detection_chance = 10
+				
+				supply_node_range = 1
+				supply_consumption_factor = -1
+				
+				#surrender
+				surrender_limit = 1
+			}
+			targeted_modifier = {
+				tag = H00
+				cic_to_target_factor = 1
+				mic_to_target_factor = 1
+			}
+		}
+		mvlv_difficulty_beta_player = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				# weekly
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+				# fightyness
+				supply_consumption_factor = -0.5
+				# army
+				army_core_attack_factor = 1.5
+
+				army_core_defence_factor = 0.8
+				army_defence_factor = 0.15
+				army_attack_factor = -0.5
+	
+				no_supply_grace = 340
+				out_of_supply_factor = 10000
+				attrition = -0.01
+				heat_attrition_factor = -1
+				winter_attrition_factor = -1
+				acclimatization_cold_climate_gain_factor = 0.1
+				acclimatization_hot_climate_gain_factor = 0.1
+				training_time_army_factor = -0.3
+				minimum_training_level = -0.3
+				# air
+				army_bonus_air_superiority_factor = 0.1
+				#army_leader
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 5
+				army_leader_start_planning_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+
+				#production
+				production_factory_start_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 2.5
+				production_speed_buildings_factor = -1
+				consumer_goods_expected_value = 1
+				min_export = -0.5
+				industry_repair_factor = 2
+				crypto_strength = 99
+				decryption_power = 99
+				intelligence_agency_defense = 99
+				#resource
+				local_resources_factor = 10
+				mobilization_speed = 1.5
+				conscription_factor = 0.1
+				conscription = 0.05
+				#surrender
+				surrender_limit = 1
+			}
+		}
+
+		#____________________________________________________________
+		#核の冬
+		mvlv_nuclear_winter = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				supply_consumption_factor = 0.01
+				dig_in_speed_factor = -0.05
+				# production
+				production_factory_max_efficiency_factor = -0.02
+				production_factory_efficiency_gain_factor = -0.04
+			}
+		}
+		#プロミネンス計画
+		mvlv_prominence_problem = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = 0.15
+			}
+		}
+		#米州安全保障地域条約
+		mvlv_saast = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = -1
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 2.5
+				production_speed_arms_factory_factor = -0.8
+				industrial_capacity_factory = 0.05
+				training_time_army_factor = 0.55
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.25
+				consumer_goods_expected_value = -0.1
+				war_support_factor = -0.6
+				research_speed_factor = 0.05
+			}
+		}
+
+		mvlv_una = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = -1
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 2.5
+				production_speed_arms_factory_factor = -0.8
+				industrial_capacity_factory = 0.05
+				training_time_army_factor = 2.55
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.25
+				consumer_goods_expected_value = 0.1
+				political_power_gain = -0.9
+				war_support_factor = -0.6
+				license_armor_purchase_cost = -0.5
+				research_speed_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.3
+				mic_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.6
+				extra_trade_to_target_factor = 0.4
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		mvlv_leased_land = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+
+		mvlv_parmanent = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				supply_consumption_factor = -0.03
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		mvlv_license = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				license_production_speed = 0.2
+				license_tech_difference_speed = 0.1
+			}
+		}
+		#オルタネイティブ計画
+		mvlv_altanative_0 = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = -0.02
+					instant = yes
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				consumer_goods_expected_value = 0.02
+				experience_loss_factor = -0.15
+				experience_gain_army_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				country_resource_rubber = 10
+			}
+		}
+		#オルタネイティブ計画
+		mvlv_altanative_3 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				experience_loss_factor = -0.3
+				experience_gain_army_factor = 0.2
+				country_resource_rubber = 10
+			}
+		}
+		#オルタネイティブ計画
+		mvlv_altanative_4 = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = -0.02
+					instant = yes
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				country_resource_rubber = 10
+			}
+		}
+		#オルタネイティブ計画
+		mvlv_altanative_5 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_expected_value = 0.04
+				production_speed_buildings_factor = 0.1
+				country_resource_rubber = 10
+			}
+		}
+		#G弾の影響
+		MVLV_idea_G_debuff = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+		#縦深防御
+		# mvlv_defence_human = {
+		# 	allowed = {
+		# 		always = no
+		# 	}
+		# 	modifier = {
+		# 		#ai
+		# 		army_attack_factor = -0.90
+		# 		army_defence_factor = 0.50
+		# 	}
+		# }
+		operation_ouka = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_defence_factor = 0.5
+				army_morale_factor = 100
+				no_supply_grace = 340
+				out_of_supply_factor = -1000
+				supply_consumption_factor = -1
+				army_speed_factor = 0.65
+			}
+		}
+
+		MVLV_UNF = {
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = UNI
+				cic_to_target_factor = 0.03
+				mic_to_target_factor = 0.05
+				trade_cost_for_target_factor = -0.4
+				extra_trade_to_target_factor = 0.2
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		MVLV_UNF_1 = {
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = UNI
+				mic_to_target_factor = 0.05
+				trade_cost_for_target_factor = -0.4
+				extra_trade_to_target_factor = 0.2
+				industrial_capacity_factory = 0.05
+			}
+		}
+	
+		MVLV_UNF_2 = {
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = UNI
+				cic_to_target_factor = 0.03
+				mic_to_target_factor = 0.01
+				trade_cost_for_target_factor = -0.4
+				extra_trade_to_target_factor = 0.2
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		MVLV_UNF_with = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = UNI
+				cic_to_target_factor = 0.05
+				mic_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.4
+				extra_trade_to_target_factor = 0.2
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		MVLV_UNF_out = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				consumer_goods_expected_value = 0.1
+			}
+		}
+		#00ユニット
+		MVLV_00_unit = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.2
+			}
+		}
+		MVLV_bocchi = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+			}
+		}
+		MVLV_ouka_after = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_morale_factor = -0.4
+				supply_consumption_factor = 0.3
+			}
+		}
+		MVLV_xmosg = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.2
+			}
+		}
+		########
+		MVLV_ouka_setting_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 1
+				industrial_capacity_factory = 0.3
+				special_forces_training_time_factor = -0.5
+				special_forces_min = 60
+			}
+		}
+		MVLV_ouka_setting_idea2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 1
+				industrial_capacity_factory = 1
+				minimum_training_level = -0.1
+				special_forces_training_time_factor = -0.9
+				special_forces_min = 60
+			}
+		}
+		MVLV_ouka_phase_1_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.5
+			}
+		}
+		MVLV_ouka_phase_1_idea2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.3
+			}
+		}
+		MVLV_ouka_phase_2_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				special_forces_attack_factor = 0.5
+				special_forces_defence_factor = 0.5
+				special_forces_min = 20
+			}
+		}
+		MVLV_denial_of_delusion = {
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = H00
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+		}
+
+		G_researching = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = -0.1
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				nuclear = 0.15
+				#cat_strategic_bomber=0.15
+			}
+		}
+		energy_exhaustion = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_attack_factor = -1.5
+				army_defence_factor = -1.5
+			}
+			equipment_bonus = {
+				heavy_laser_equipment = {
+					build_cost_ic = 50
+					instant = yes
+					air_ground_attack = -1
+					air_attack = -1
+				}
+				laser_equipment = {
+					build_cost_ic = 50
+					instant = yes
+					air_ground_attack = -1
+					air_attack = -1
+				}
+			}
+		}
+		destroyed_reacting_furnace = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = -2.85
+				local_resources_factor = -10
+				training_time_army_factor = 250
+				minimum_training_level = 0.85
+			}
+		}
+		BETA_for_building_1 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		BETA_for_building_2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		BETA_for_building_3 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		BETA_for_building_fort_1 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_bunker_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.1
+			}
+		}
+		BETA_for_building_fort_2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_bunker_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.1
+			}
+		}
+		BETA_for_building_fort_3 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_bunker_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.1
+			}
+		}
+		MVLV_S11 = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					hard_attack = 0.1
+					soft_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+		
+
+		SRD_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				enemy_justify_war_goal_time = 100
+				license_subject_master_purchase_cost = 100
+				ai_call_ally_desire_factor = -100
+				ai_get_ally_desire_factor = -100
+				ai_join_ally_desire_factor = -100
+				ai_license_acceptance = -100
+			}
+		}
+		MVLV_debug_buff_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_attack_factor = 1
+				army_defence_factor = 1
+			}
+		}
+		
+	}
+	betawar_situation = {
+		use_list_view = yes
+		betawar_situation_1 = {
+			level = 1
+			allowed_to_remove = {
+				always = no
+			}
+			available = {
+				has_idea = betawar_situation_1
+			}
+			cancel_if_invalid = no
+			cost = 0
+			modifier = {
+				# army
+				land_reinforce_rate = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.15
+				# production
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				war_support_factor = 0.15
+				stability_factor = -0.15
+				conscription_factor = 0.1
+			}
+		}
+		betawar_situation_2 = {
+			level = 2
+			allowed_to_remove = {
+				always = no
+			}
+			available = {
+				has_idea = betawar_situation_2
+			}
+			cancel_if_invalid = no
+			cost = 0
+			modifier = {
+				# army
+				land_reinforce_rate = 0.03
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+				# production
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				war_support_factor = 0.1
+				stability_factor = -0.05
+				conscription_factor = 0.05
+			}
+		}
+		betawar_situation_3 = {
+			level = 3
+			allowed_to_remove = {
+				always = no
+			}
+			available = {
+				has_idea = betawar_situation_3
+			}
+			cancel_if_invalid = no
+			cost = 0
+			modifier = {
+				# army
+				#land_reinforce_rate = 0.10
+				#army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.05
+				# production
+				#production_factory_max_efficiency_factor = 0.05
+				#production_factory_efficiency_gain_factor = 0.03
+				war_support_factor = 0.05
+				stability_factor = 0.05
+				#conscription_factor = -0.05
+				#research_speed_factor = 0.05
+			}
+		}
+		betawar_situation_4 = {
+			level = 4
+			allowed_to_remove = {
+				always = no
+			}
+			available = {
+				has_idea = betawar_situation_4
+			}
+			cancel_if_invalid = no
+			cost = 0
+			modifier = {
+				# army
+				#army_core_attack_factor = 0.1
+				#army_core_defence_factor = 0.15
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+				army_defence_factor = 0.05
+				#land_reinforce_rate = 0.10
+				# production
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				war_support_factor = -0.1
+				stability_factor = 0.15
+				conscription_factor = -0.05
+				#research_speed_factor = 0.10
+			}
+		}
+
+	}
+}

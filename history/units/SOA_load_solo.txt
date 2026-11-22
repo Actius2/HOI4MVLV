@@ -1,0 +1,157 @@
+﻿
+division_template = {
+	name = "Special Volunteer Division"
+	division_names_group = MVLV_TSF_01
+	regiments = {
+		MVLV_tsf_battalion= { x = 0 y = 0 }
+		MVLV_tsf_battalion= { x = 0 y = 1 }
+		MVLV_tsf_battalion= { x = 0 y = 2 }
+		MVLV_tsf_battalion= { x = 1 y = 0 }
+		MVLV_tsf_battalion= { x = 1 y = 1 }
+		MVLV_tsf_battalion= { x = 1 y = 2 }
+		MVLV_tsf_battalion= { x = 2 y = 0 }
+		MVLV_tsf_battalion= { x = 2 y = 1 }
+		MVLV_tsf_battalion= { x = 2 y = 2 }
+		MVLV_tsf_battalion= { x = 2 y = 3 }
+	}
+	priority = 1
+	support = {
+		engineer = { x = 0 y = 0 }  
+		maintenance_company = { x = 0 y = 1 }
+		field_hospital =  { x = 0 y = 2 }
+	}
+}
+
+units = {
+	#戦術機
+	division = {
+		name = "第1特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "第2特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "第3特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "第4特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "第5特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "第6特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "第7特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "第8特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "第9特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+	division = {
+		name = "第10特務義勇師団"
+		location = 13218
+		division_template = "Special Volunteer Division"
+		start_experience_factor = 0.25
+		force_equipment_variants = { 
+			MVLV_TSF_chassis_2_heavy = {
+				#owner = "SOA"
+				creator = UNI
+				version_name = "F-15E（国連）"
+			}
+		}
+	}
+}

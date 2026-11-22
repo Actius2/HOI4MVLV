@@ -1,0 +1,87 @@
+initial = {
+	Accelerating_cross_border_effect = yes
+}
+
+Accelerating_cross_border_effect = {
+	809 = {
+		add_state_modifier = {
+			modifier = {
+				disable_strategic_redeployment = 1
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = {
+				cross_map
+			}
+			province = {
+				id = 13063
+			}
+		}
+	}
+	790 = {
+		add_state_modifier = {
+			modifier = {
+				disable_strategic_redeployment = 1
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = {
+				cross_map
+			}
+			province = {
+				id = 13204
+			}
+		}
+	}
+	# 809 = {
+	# 	add_state_modifier = {
+	# 		modifier = { 
+	# 			disable_strategic_redeployment = 1
+	# 		}
+	# 	}
+	# }
+	632 = {
+		add_state_modifier = {
+			modifier = {
+				disable_strategic_redeployment = 1
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = {
+				cross_map
+			}
+			province = {
+				id = 13047
+			}
+		}
+	}
+	# 632 = {
+	# 	add_state_modifier = {
+	# 		modifier = { 
+	# 			disable_strategic_redeployment = 1
+	# 		}
+	# 	}
+	# }
+	631 = {
+		add_state_modifier = {
+			modifier = {
+				disable_strategic_redeployment = 1
+			}
+		}
+		add_province_modifier = {
+			static_modifiers = {
+				cross_map
+			}
+			province = {
+				id = 13052
+			}
+		}
+	}
+	# 631 = {
+	# 	add_state_modifier = {
+	# 		modifier = { 
+	# 			disable_strategic_redeployment = 1
+	# 		}
+	# 	}
+	# }
+}

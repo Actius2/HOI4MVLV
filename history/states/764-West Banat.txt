@@ -1,0 +1,24 @@
+
+state={
+	id=764
+	name="STATE_764"
+	manpower = 585579
+	state_category = town
+
+	history = {
+		owner = H11
+		remove_core_of = H11
+		add_core_of = EEA
+
+
+
+		buildings = {
+			infrastructure = 3
+		}
+
+	}
+
+	provinces={
+		614 3614 6643 11787
+	}
+}

@@ -1,0 +1,661 @@
+characters = {
+
+	USA_Walken = {
+#アルフレッド・ウォーケン
+		name = USA_Walken
+		
+		portraits = {
+		
+			army = {
+			
+				large = GFX_USA_Walken_pic
+				small = GFX_USA_Walken_pic_small
+				
+			}
+			
+		}
+		corps_commander = {
+		
+			traits = {
+			
+				inflexible_strategist
+				logistics_wizard
+				organizer
+				offensive_doctrine
+				trait_cautious
+				tsf_officer
+				politically_connected
+				tsf_leader
+				commander_aptitude
+				
+				tsf_commander
+				
+				
+			}
+			
+			skill = 7
+			
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 5
+			
+			legacy_id = 995
+			
+		}
+	}
+	
+	USA_Dorothy = {
+#ドロシー・マッカーサー
+		name = USA_Dorothy
+		
+		portraits = {
+		
+			army = {
+			
+				large = GFX_USA_Dorothy_pic
+				small = GFX_USA_Dorothy_pic_small
+				
+			}
+			
+		}
+		field_marshal = {
+		
+			traits = {
+			
+				brilliant_strategist
+				politically_connected
+				war_hero
+				career_officer
+				trait_reckless
+				media_personality
+				harsh_leader
+				cavalry_officer
+				armor_officer
+				
+				true_genius
+				commander_aptitude
+				
+				offensive_doctrine
+				aggressive_assaulter
+				
+				skilled_staffer
+				panzer_leader
+				
+				inspirational_leader
+				expert_delegator
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Lee = {
+#ジェーン・ブリントン・リー
+		name = USA_Lee
+		
+		portraits = {
+		
+			army = {
+			
+				large = GFX_USA_Lee_pic
+				small = GFX_USA_Lee_pic_small
+				
+			}
+			
+		}
+		field_marshal = {
+		
+			traits = {
+			
+				brilliant_strategist
+				inflexible_strategist
+				war_hero
+				trait_reckless
+				harsh_leader
+				media_personality
+				cavalry_officer
+				
+				commander_aptitude
+				
+				unyielding_defender
+				inspirational_leader
+				trickster
+				
+				desert_fox
+				urban_assault_specialist
+				
+				adaptable
+				
+				commando
+			}
+			
+			skill = 7
+			
+			attack_skill = 6
+			defense_skill = 7
+			planning_skill = 3
+			logistics_skill = 6
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Courtney = {
+#コートニー・ルメイ
+		name = USA_Courtney
+		
+		portraits = {
+		
+			army = {
+			
+				large = GFX_USA_Courtney_pic
+				small = GFX_USA_Courtney_pic_small
+				
+			}
+			
+		}
+		corps_commander = {
+		
+			traits = {
+			
+				inflexible_strategist
+				war_hero
+				career_officer
+				trait_reckless
+				harsh_leader
+				armor_officer
+				
+				trickster
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Wendy = {
+#ウェンディ・ウォーカー（ウォルトン・ウォーカー）
+		name = USA_Wendy
+		
+		portraits = {
+		
+			army = {
+			
+				large = GFX_USA_Wendy_pic
+				small = GFX_USA_Wendy_pic_small
+				
+			}
+			
+		}
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				war_hero
+				trait_reckless
+				harsh_leader
+				armor_officer
+				
+				panzer_leader
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 7
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Yuya = {
+#ユウヤ・ブリッジス
+		name = USA_Yuya
+		
+		portraits = {
+		
+			army = {
+				large = GFX_USA_Yuya_pic
+				small = GFX_USA_Yuya_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				inflexible_strategist
+				trickster
+				tsf_officer
+				politically_connected	#戦争の英雄から差し替え
+				trait_reckless
+				
+			}
+			
+			skill = 7
+			attack_skill = 8
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 6
+			
+			legacy_id = 968
+			
+		}
+	}
+	
+	USA_Kuze = {
+#レオン・クゼ
+		name = USA_Kuze
+		
+		portraits = {
+			army = {
+				large = GFX_USA_Kuze_pic
+				small = GFX_USA_Kuze_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				trait_engineer
+				trait_cautious
+				brilliant_strategist
+				harsh_leader
+				
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+	
+	USA_Mcleod = {
+#ガイウス・マクラウド
+		name = USA_Mcleod
+		
+		portraits = {
+			army = {
+				large = GFX_USA_Mcleod_pic
+				small = GFX_USA_Mcleod_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				tsf_leader
+				
+				career_officer
+				
+			}
+			
+			skill = 2
+			
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Phoebe = {
+#フェーベ・テオドラキス
+		name = USA_Phoebe
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_USA_Phoebe_pic
+				small = GFX_USA_Phoebe_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				trait_engineer
+				commando
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Lilia = {
+#リリア・シェルベリ
+		name = USA_Lilia
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_USA_Lilia_pic
+				small = GFX_USA_Lilia_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				tsf_leader
+				
+				trait_reckless
+				
+				
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Darryl = {
+#ダリル・マクマナス
+		name = USA_Darryl
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_USA_Darryl_pic
+				small = GFX_USA_Darryl_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				tsf_leader
+				
+				career_officer
+				brilliant_strategist
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Irma = {
+#イルマ・テスレフ
+		name = USA_Irma
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_USA_Irma_pic
+				small = GFX_USA_Irma_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_leader
+				
+				career_officer
+				tsf_officer
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Blaser = {
+#キース・ブレイザー
+		name = USA_Blaser
+		
+		portraits = {
+			army = {
+				large = GFX_USA_Blaser_pic
+				small = GFX_USA_Blaser_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				career_officer
+				commander_aptitude
+				tsf_officer
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Caroline = {
+#キャロライン・シールズ
+		name = USA_Caroline
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_USA_Caroline_pic
+				small = GFX_USA_Caroline_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				career_officer
+				tsf_officer
+				tsf_leader
+				true_genius
+				
+			}
+			
+			skill = 2
+			
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Sharon = {
+#シャロン・エイム
+		name = USA_Sharon
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_USA_Sharon_pic
+				small = GFX_USA_Sharon_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				brilliant_strategist
+				tsf_officer
+				tsf_leader
+				career_officer
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+	
+	USA_Wilbert = {
+#ウィルバート・コリンズ
+		name = USA_Wilbert
+		
+		portraits = {
+			army = {
+				large = GFX_USA_Wilbert_pic
+				small = GFX_USA_Wilbert_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				tsf_leader
+				
+				career_officer
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	USA_Walken2 = {
+#アルフレッド・ウォーケン（イベント後）
+		name = USA_Walken2
+		
+		portraits = {
+			army = {
+				large = GFX_USA_Walken2_pic
+				small = GFX_USA_Walken2_pic_small
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				armor_officer
+				war_hero
+				hill_fighter
+				inflexible_strategist
+				logistics_wizard
+				organizer
+				offensive_doctrine
+				trait_cautious
+				tsf_officer
+				politically_connected
+				tsf_leader
+				commander_aptitude
+				tsf_commander
+			}
+			
+			skill = 9
+			attack_skill = 10
+			defense_skill = 7
+			planning_skill = 6
+			logistics_skill = 5
+			
+			legacy_id = -1
+			
+			visible = {
+				has_character_flag = unlock_character_flag
+			}
+			
+		}
+	}
+	
+}

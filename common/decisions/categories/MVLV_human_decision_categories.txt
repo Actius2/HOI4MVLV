@@ -1,0 +1,17 @@
+MVLV_G_Lancher_cut_decisions_category = {
+	icon = generic_prospect_for_resources
+
+	priority = 10
+	allowed = {
+		is_in_faction_with = UNI
+	}
+}
+
+MVLV_human_category = {
+	icon = generic_prospect_for_resources
+
+	priority = 10
+	allowed = {
+		is_in_faction_with = UNI
+	}
+}

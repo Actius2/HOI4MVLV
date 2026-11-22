@@ -1,0 +1,414 @@
+ideas = {
+	country = {
+		SOA_idea_Overseas_experience = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		SOA_idea_Overseas_experience_2 = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			research_bonus = {
+				MVLV_tsf_tech = 0.10
+			}
+		}
+		SOA_idea_Overseas_experience_3 = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor 0.1
+			}
+			research_bonus = {
+				MVLV_tsf_tech = 0.10
+			}
+		}
+		SOA_idea_cost_to_future = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.65
+			}
+		}
+		SOA_idea_cost_to_future_2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.50
+			}
+		}
+		SOA_idea_cost_to_future_3 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.35
+			}
+		}
+		SOA_idea_cost_to_future_4 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+		SOA_idea_True_Happiness = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				industrial_capacity_factory = 0.1
+			}
+		}
+		SOA_idea_Secret_Diplomacy = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				command_power_gain = 0.5
+				political_power_gain = 1
+			}
+		}
+		SOA_idea_strenrth_role = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = -0.5
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 2.5
+				production_speed_arms_factory_factor = -0.5
+				training_time_army_factor = 0.30
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.25
+				consumer_goods_expected_value = -0.05
+				war_support_factor = -0.4
+				
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.10
+			}
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.05
+				mic_to_target_factor = 0.05
+			}
+		}
+		SOA_idea_strenrth_role_2 = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = -0.3
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 2.5
+				production_speed_arms_factory_factor = -0.5
+				training_time_army_factor = 0.30
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.25
+				consumer_goods_expected_value = -0.05
+				war_support_factor = -0.2
+				
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.15
+			}
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.10
+				mic_to_target_factor = 0.10
+			}
+		}
+		SOA_idea_strenrth_role_3 = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = -0.2
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 2.5
+				production_speed_arms_factory_factor = -0.4
+				training_time_army_factor = 0.30
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.25
+				consumer_goods_expected_value = -0.05
+				
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.20
+			}
+		}
+		SOA_idea_america_research = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = 0.1
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 2.5
+				production_speed_arms_factory_factor = -0.4
+				training_time_army_factor = 0.30
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.25
+				consumer_goods_expected_value = -0.05
+				war_support_factor = 0.2
+				
+				industrial_capacity_factory = 0.20
+				research_speed_factor = 0.2
+			}
+		}		
+		SOA_idea_same_as_america = {
+			allowed = {
+				always = no
+			}
+			research_bonus = {
+				MVLV_tsf_tech = 0.2
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 2.5
+				production_speed_arms_factory_factor = -0.2
+				training_time_army_factor = 0.20
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.25
+				consumer_goods_expected_value = -0.05
+				war_support_factor = 0.4
+				industrial_capacity_factory = 0.50
+				research_speed_factor = 0.2
+			}
+		}
+		SOA_idea_tsf_industrial = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis_1_heavy = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+				MVLV_TSF_chassis_1_light = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+		}
+		SOA_idea_Lonely_All_Out_War = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = 0.20
+			}
+		}
+		SOA_idea_Lonely_All_Out_War_2 = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			modifier = {
+				industrial_capacity_factory = 0.20
+				special_forces_cap = 0.2
+				special_forces_min = 50
+			}
+		}
+		SOA_idea_Lonely_All_Out_War_3 = {
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				MVLV_TSF_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			modifier = {
+				industrial_capacity_factory = 0.40
+				special_forces_cap = 0.4
+				special_forces_min = 100
+			}
+		}
+		SOA_idea_Unity = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.4
+				war_support_factor = 1
+			}
+		}
+		SOA_happy = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.4
+				war_support_factor = -0.55
+			}
+		}
+		SOA_usa = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.65
+			}
+		}
+		SOA_nosaast = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.15
+				production_speed_arms_factory_factor = 0.3
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_infrastructure_factor = 0.3
+				war_support_factor = 0.55
+				stability_weekly = 0.005
+				weekly_manpower = 1000
+			}
+		}
+		SOA_refugees = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 3000
+				stability_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		CEA_refugees = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				weekly_manpower = 1500
+				stability_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		SOA_food = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = -0.15
+				consumer_goods_expected_value = -0.05
+				country_resource_coal = 100
+			}
+		}
+		CEA_food = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = -0.15
+				consumer_goods_expected_value = -0.05
+				country_resource_coal = 100
+			}
+		}
+		CEA_idea_prepare_for_the_worse = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_bunker_factor = 1
+				production_speed_coastal_bunker_factor = 1
+			}
+		}
+		MVLV_refugee_labor = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = -0.25
+				industrial_capacity_factory = 0.25
+			}
+		}
+
+		MVLV_latin_america_united = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.5
+				consumer_goods_expected_value = -0.1
+				production_speed_arms_factory_factor = 0.3
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_infrastructure_factor = 0.3
+				war_support_factor = 0.5
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+			}
+		}
+
+		MVLV_three_shift_system = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly = -0.005
+				war_support_weekly = -0.005
+				industrial_capacity_factory = 0.5
+			}
+		}
+
+		MVLV_unconditional_tsf_license = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				license_production_speed = 0.5
+				license_tech_difference_speed = 1
+			}
+		}
+
+		MVLV_gathered_researchers = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.4
+			}
+		}
+	}
+}

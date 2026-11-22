@@ -1,0 +1,216 @@
+generic_TSF_design = {
+	blocked_for = {}
+
+	available_for = { SOA }
+	roles = {
+		TSF_light_model
+	}
+	priority = {
+		factor = 2500
+	}
+	TSF_light_1_default_design = {
+		priority = {
+			factor = 250
+			modifier = {
+				OR = {
+					has_tech = MVLV_research_tsf_2_light_framework
+					has_tech = MVLV_research_tsf_2_heavy_framework
+				}
+				factor = 0 #let's not waste XP here
+			}
+		}
+		target_variant = {
+			match_value = 2000
+			type = MVLV_TSF_chassis_1_light
+			modules = {
+				MVLV_TSF_convert_module_slot = empty
+				MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+				MVLV_TSF_OS_slot = {
+					any_of = { 
+						MVLV_TSF_OS_normal_type
+						MVLV_TSF_OS_close_type
+						MVLV_TSF_OS_support_type
+					}
+					upgrade > current
+				}
+				MVLV_TSF_engine_slot  = {
+					any_of = { 
+						MVLV_TSF_engine_normal_type
+						MVLV_TSF_engine_maneuver_type
+						MVLV_TSF_engine_cruise_type
+					}
+					upgrade > current
+				}
+				MVLV_TSF_headUnit_slot = {
+					any_of = { 
+						MVLV_TSF_headUnit_nomal_type
+						MVLV_TSF_headUnit_aerial_type
+						MVLV_TSF_headUnit_heavy_type
+					}
+					upgrade > current
+				}
+				MVLV_TSF_right_hand_slot = {
+					module = MVLV_TSF_right_hand_type
+					upgrade > current
+				}
+				MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+				MVLV_TSF_head_slot = empty
+				MVLV_TSF_leftBackArm_slot = {
+					any_of = {
+						MVLV_TSF_add_assault_cannon_3
+						MVLV_TSF_add_assault_cannon_2
+						MVLV_TSF_add_assault_cannon_1
+						MVLV_TSF_add_basic_assault_cannon
+					}
+					upgrade > current
+				}
+				MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+				MVLV_TSF_leg_slot = empty
+				MVLV_TSF_sp_slot_1 = empty
+				#MVLV_TSF_arm_slot = empty
+				#MVLV_TSF_waist_slot = empty
+				#MVLV_TSF_sp_slot_2 = empty
+				#MVLV_TSF_shoulder_slot = empty
+
+			}
+
+		}
+		allowed_modules = {
+			MVLV_TSF_OS_normal_type
+			MVLV_TSF_OS_close_type
+			MVLV_TSF_OS_support_type
+			MVLV_TSF_basic_engine
+			MVLV_TSF_engine_normal_type
+			MVLV_TSF_engine_maneuver_type
+			MVLV_TSF_engine_cruise_type
+			MVLV_TSF_headUnit_nomal_type
+			MVLV_TSF_headUnit_aerial_type
+			MVLV_TSF_headUnit_heavy_type
+			MVLV_TSF_right_hand_type
+			MVLV_TSF_basic_assault_cannon
+			MVLV_TSF_assault_cannon_1
+			MVLV_TSF_assault_cannon_2
+			MVLV_TSF_assault_cannon_3
+			MVLV_TSF_support_gun
+			MVLV_TSF_shield
+			MVLV_TSF_add_basic_assault_cannon
+			MVLV_TSF_add_assault_cannon_1
+			MVLV_TSF_add_assault_cannon_2
+			MVLV_TSF_add_assault_cannon_3
+			MVLV_TSF_long_sword
+			MVLV_TSF_heavy_sword
+			MVLV_TSF_explosive_shell
+			MVLV_TSF_piercing_shell
+		}
+	}
+
+}
+generic_TSF_design = {
+	blocked_for = {}
+
+	available_for = { SOA }
+	roles = {
+		TSF_light_model
+	}
+	priority = {
+		factor = 2500
+	}
+	TSF_light_1_default_design = {
+		priority = {
+			factor = 250
+			modifier = {
+				OR = {
+					has_tech = MVLV_research_tsf_2_light_framework
+					has_tech = MVLV_research_tsf_2_heavy_framework
+				}
+				factor = 0 #let's not waste XP here
+			}
+		}
+		target_variant = {
+			match_value = 2000
+			type = MVLV_TSF_chassis_1_heavy
+			modules = {
+				MVLV_TSF_convert_module_slot = empty
+				MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+				MVLV_TSF_OS_slot = {
+					any_of = { 
+						MVLV_TSF_OS_normal_type
+						MVLV_TSF_OS_close_type
+						MVLV_TSF_OS_support_type
+					}
+					upgrade > current
+				}
+				MVLV_TSF_engine_slot  = {
+					any_of = { 
+						MVLV_TSF_engine_normal_type
+						MVLV_TSF_engine_maneuver_type
+						MVLV_TSF_engine_cruise_type
+					}
+					upgrade > current
+				}
+				MVLV_TSF_headUnit_slot = {
+					any_of = { 
+						MVLV_TSF_headUnit_nomal_type
+						MVLV_TSF_headUnit_aerial_type
+						MVLV_TSF_headUnit_heavy_type
+					}
+					upgrade > current
+				}
+				MVLV_TSF_right_hand_slot = {
+					module = MVLV_TSF_right_hand_type
+					upgrade > current
+				}
+				MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+				MVLV_TSF_head_slot = empty
+				MVLV_TSF_leftBackArm_slot = {
+					any_of = {
+						MVLV_TSF_add_assault_cannon_3
+						MVLV_TSF_add_assault_cannon_2
+						MVLV_TSF_add_assault_cannon_1
+						MVLV_TSF_add_basic_assault_cannon
+					}
+					upgrade > current
+				}
+				MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+				MVLV_TSF_leg_slot = empty
+				MVLV_TSF_sp_slot_1 = empty
+				#MVLV_TSF_arm_slot = empty
+				#MVLV_TSF_waist_slot = empty
+				#MVLV_TSF_sp_slot_2 = empty
+				#MVLV_TSF_shoulder_slot = empty
+
+			}
+
+		}
+		allowed_modules = {
+			MVLV_TSF_OS_normal_type
+			MVLV_TSF_OS_close_type
+			MVLV_TSF_OS_support_type
+			MVLV_TSF_basic_engine
+			MVLV_TSF_engine_normal_type
+			MVLV_TSF_engine_maneuver_type
+			MVLV_TSF_engine_cruise_type
+			MVLV_TSF_headUnit_nomal_type
+			MVLV_TSF_headUnit_aerial_type
+			MVLV_TSF_headUnit_heavy_type
+			MVLV_TSF_right_hand_type
+			MVLV_TSF_basic_assault_cannon
+			MVLV_TSF_assault_cannon_1
+			MVLV_TSF_assault_cannon_2
+			MVLV_TSF_assault_cannon_3
+			MVLV_TSF_support_gun
+			MVLV_TSF_shield
+			MVLV_TSF_add_basic_assault_cannon
+			MVLV_TSF_add_assault_cannon_1
+			MVLV_TSF_add_assault_cannon_2
+			MVLV_TSF_add_assault_cannon_3
+			MVLV_TSF_long_sword
+			MVLV_TSF_heavy_sword
+			MVLV_TSF_explosive_shell
+			MVLV_TSF_piercing_shell
+		}
+	}
+
+}
+
+

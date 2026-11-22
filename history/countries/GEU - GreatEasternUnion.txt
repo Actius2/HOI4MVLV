@@ -1,0 +1,390 @@
+﻿capital = 335 #首都
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		MVLV_research_basic_tsf_framework = 1
+		MVLV_research_tsf_1_light_framework = 1
+		MVLV_research_tsf_1_heavy_framework = 1
+		MVLV_research_tsf_2_light_framework = 1
+		MVLV_research_tsf_2_heavy_framework = 1
+		MVLV_research_engine_1 = 1
+		MVLV_research_OS_1 = 1
+		MVLV_research_head_normal_1 = 1
+		MVLV_research_armor_light = 1
+		MVLV_research_assault_cannon_1 = 1
+		MVLV_research_combat_sword = 1
+		MVLV_research_shield = 1
+		MVLV_research_add_sensor_1 = 1
+		MVLV_research_supplies = 1
+		MVLV_research_custom_shells = 1
+		MVLV_research_maintenance_team_3 = 1
+		MVLV_research_A6 = 1
+	}
+	create_equipment_variant = {
+		name = "F-4E（大東亜）"
+		type = MVLV_TSF_chassis_1_heavy
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_basic_head
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_add_assault_cannon_1
+		}
+		icon = "GFX_AFR_F-4E"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "F-5（大東亜）"
+		type = MVLV_TSF_chassis_1_light
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_light
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_add_basic_assault_cannon
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_add_basic_assault_cannon
+		}
+		icon = "GFX_F-5"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "F-16（大東亜）"
+		type = MVLV_TSF_chassis_2_light
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_cruise_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_add_assault_cannon_1
+		}
+		icon = "GFX_F-16"
+	}
+	create_equipment_variant = {
+		name = "F-18（大東亜）"
+		type = MVLV_TSF_chassis_2_heavy
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_add_basic_assault_cannon
+			MVLV_TSF_sp_slot_1 = MVLV_TSF_deta_link_1
+		}
+		icon = "GFX_F-18"
+	}
+	create_equipment_variant = {
+		name = "F-18EF（大東亜）"
+		type = MVLV_TSF_chassis_2_heavy
+		parent_version = 0
+		allow_without_tech = yes		#For tooltip purposes, doesn't affect anything really
+		modules = {
+			MVLV_TSF_armor_slot = MVLV_TSF_armor_light
+			MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+			MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+			MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+			MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+			MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+			MVLV_TSF_head_slot = MVLV_TSF_add_sensor_1
+			MVLV_TSF_shoulder_slot = MVLV_TSF_add_thruster_1
+			MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+			MVLV_TSF_leftBackArm_slot = MVLV_TSF_add_assault_cannon_1
+			MVLV_TSF_waist_slot = MVLV_TSF_supplie_armor
+		}
+		icon = "GFX_F-18EF"
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		UNI_basic_concept_research = 1
+		UNI_Assault_gun_improvement_1 = 1
+		UNI_Blade_improvement_1 = 1
+		UNI_Schurzen_1 = 1
+
+		UNI_Manipulator_improvement = 1
+
+		generic_F-5 = 1
+		generic_F-16 = 1
+		generic_F-15 = 1
+		generic_F-14 = 1
+		generic_F-18 = 1
+		generic_A-6 = 1
+		generic_F-4 = 1
+	}
+}
+
+
+1999.1.1 = {
+	oob = "GEU_1999"
+	load_oob = "MVLV_generic_templates"
+	load_oob = "MVLV_TSF"
+	load_oob = "MVLV_ASA"
+	load_oob = "MVLV_paratrooper"
+
+	add_to_war = { targeted_alliance = UNI enemy = BET } #戦争状態を設定
+	
+	set_technology = { #初期研究を定義
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		Mvlv_tech_support_pack = 1
+		
+		gw_artillery = 1
+		interwar_artillery = 1
+		artillery1 = 1
+		artillery2 = 1
+		rocket_artillery = 1
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_medium_tank = 1
+		improved_medium_tank = 1
+		AA_tankI = 1
+		AA_tankII = 1
+		early_destroyer = 1
+
+		fleet_in_being = 1
+		fighter = 1
+		CAS1 = 1
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		
+		improved_equipment_conversion = 1
+		advanced_equipment_conversion = 1
+
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+		
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+		construction5 = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		
+		interwar_antiair = 1
+		experimental_rockets = 1
+		rocket_engines = 1
+		
+		MVLV_shell_tech = 1
+		
+		###陸军ドクトリン###
+		
+		###TSF###
+		tech_special_forces = 1
+
+		
+		###军需・民需建築許可###
+		MVLV_EnableBuilding_arms_factory = 1
+		MVLV_EnableBuilding_industrial_complex = 1
+		MVLV_EnableBuilding_ammunition_plant = 1
+		MVLV_EnableBuilding_ammunition_silo = 1
+
+		###戦術###
+		human_combat_tactics = 1
+
+	}
+	
+	
+	add_ideas = { #初期国家精神を定義
+		limited_exports
+		limited_conscription
+		war_economy
+		mvlv_nuclear_winter
+		mvlv_prominence_problem
+		GEU_jp_support
+		GEU_ast_support
+		GEU_jacaruta
+		mvlv_license
+		GEU_KODA
+		MVLV_UNF
+	}
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_technology = {
+			muvluv_mtg_naval_pack = 1
+			muvluv_mtg_mtg_transport_pack = 1
+		}
+	}
+	if = {
+		limit = {
+			not = {
+				has_dlc = "Man the Guns"
+			}
+		}
+		set_technology = {
+			early_submarine = 1
+			basic_submarine = 1
+			improved_submarine = 1
+			advanced_submarine = 1
+			early_destroyer = 1
+			basic_destroyer = 1
+			improved_destroyer = 1
+			advanced_destroyer = 1
+			early_light_cruiser = 1
+			basic_light_cruiser = 1
+			improved_light_cruiser = 1
+			advanced_light_cruiser = 1
+			early_heavy_cruiser = 1
+			basic_heavy_cruiser = 1
+			improved_heavy_cruiser = 1
+			advanced_heavy_cruiser = 1
+			early_battleship = 1
+			basic_battleship = 1
+			improved_battleship = 1
+			advanced_battleship = 1
+			early_battlecruiser = 1
+			basic_battlecruiser = 1
+			heavy_battleship = 1
+			heavy_battleship2 = 1
+			early_carrier = 1
+			basic_carrier = 1
+			improved_carrier = 1
+			advanced_carrier = 1
+			transport = 1
+			landing_craft = 1
+			tank_landing_craft = 1
+		}
+	}
+	
+	set_convoys = 1500
+	starting_train_buffer = 100
+}
+set_stability = 0.5 #初期安定度を定義
+set_war_support = 0.5 #初期戦争協力度を定義
+
+set_research_slots = 3 #初期研究枠を定義
+
+army_experience = 350
+navy_experience = 100
+
+add_political_power = 0 #初期政治力を定義
+add_offsite_building = { type = arms_factory level = 5 } 
+add_offsite_building = { type = industrial_complex level = 5 } 
+add_offsite_building = { type = dockyard level = 5 } 
+add_offsite_building = { type = ammunition_plant level = 3 } 
+add_offsite_building = { type = ammunition_silo level = 2 } 
+
+set_politics = { 
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 50
+	democratic = 10
+	fascism = 10
+	communism = 30
+}
+
+###各政体における指導者を定義###
+create_country_leader = {
+	name = "大東亜連合理事会"
+	desc = ""
+	picture = "GEL.dds"
+	expire = "2040.3.1"
+	ideology = socialism #Marhaenism his own unique mix of stuff
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "大東亜連合理事会"
+	desc = ""
+	picture = "GEL.dds"
+	expire = "2040.3.1"
+	ideology = conservatism 
+	traits = {
+	}
+}
+
+
+create_country_leader = {
+	name = "大東亜連合理事会"
+	desc = ""
+	picture = "GEL.dds"
+	expire = "2040.3.1"
+	ideology = marxism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "大東亜連合理事会"
+	desc = ""
+	picture = "GEL.dds"
+	expire = "2040.3.1"
+	ideology = fascism_ideology 
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "大東亜連合理事会"
+	desc = ""
+	picture = "GEL.dds"
+	expire = "2040.3.1"
+	ideology = moderatism
+	traits = {
+	}
+}
+
+recruit_character = GEU_Jonathan
+recruit_character = GEU_Gwen
+recruit_character = GEU_Bian
+recruit_character = GEU_Toon
+recruit_character = GEU_Neelam
+recruit_character = GEU_KumiKouda
+recruit_character = GEU_Tarisa
+recruit_character = GEU_Knightley
+recruit_character = GEU_takamori
+recruit_character = GEU_akaru
+
+
+
+###初期将军及び元帥を定義###
+
+###初期提督を定義###
+create_navy_leader = {
+	name = "Herbert Fitzherbert"
+	picture = "25.dds"
+	traits = { old_guard_navy }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}

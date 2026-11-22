@@ -1,0 +1,502 @@
+units = {
+	####### NAVAL UNITS #######
+	##### ATRANTIC FLEET #####
+	fleet = {
+		name = "First Fleet"
+		naval_base = 788
+		task_force = {
+			name = "First Fleet"
+			location = 788
+			ship = {
+				name = "USS Montana"
+				pride_of_the_fleet = yes
+				definition = battleship
+				equipment = {
+					ship_hull_super_heavy_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Yamato Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Ohio"
+				definition = battleship
+				equipment = {
+					ship_hull_super_heavy_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Yamato Class"
+
+					}
+				}
+			}
+		}
+		task_force = {
+			name = "First Torpedo Fleet"
+			location = 788
+			#Flagship
+			ship = {
+				name = "USS Dewey"
+				definition = light_cruiser
+				equipment = {
+					ship_hull_cruiser_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Katori Class"
+					}
+				}
+			}
+			#第一駆逐隊
+			ship = {
+				name = "USS William Pratt"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Dahlgren"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Mahaman"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Currency"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			#第六駆逐隊
+			ship = {
+				name = "USS Quincy"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS McDonough"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Ruth"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Farragut"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			#第十一駆逐隊
+			ship = {
+				name = "USS Wilkinson"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Willis Lee"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS John McLaren"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Mitchell"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+		}
+	}
+	##### 第七艦隊 #####
+	fleet = {
+		name = "Seventh Fleet"
+		naval_base = 4180
+		task_force = {
+			name = "第五水雷船団"
+			location = 4180
+			#第十七駆逐隊
+			ship = {
+				name = "USS Arleigh Burke"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Mahan"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Cunningham"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Joseph Strauss"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			#第十駆逐隊
+			ship = {
+				name = "USS Burke"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Buchanan"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			#第十六駆逐隊
+			ship = {
+				name = "USS Ralph Johnson"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Mike Campbell"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Mastin"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Milius"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+		}
+	}
+	##### 第四艦隊 #####
+	fleet = {
+		name = "Fourth Fleet"
+		naval_base = 1562
+		task_force = {
+			name = "第二船団"
+			location = 1562
+			ship = {
+				name = "USS Maine"
+				definition = battleship
+				equipment = {
+					ship_hull_super_heavy_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Yamato Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS New Hampshire"
+				definition = battleship
+				equipment = {
+					ship_hull_super_heavy_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Yamato Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Louisiana"
+				definition = battleship
+				equipment = {
+					ship_hull_super_heavy_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Yamato Class"
+					}
+				}
+			}
+		}
+		task_force = {
+			name = "Second torpedo fleet"
+			location = 1562
+			#Flagship
+			ship = {
+				name = "USS YorkTown"
+				definition = light_cruiser
+				equipment = {
+					ship_hull_cruiser_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Sendai Class"
+					}
+				}
+			}
+			#第二駆逐隊
+			ship = {
+				name = "USS Fells"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Newman Perry"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Floyd Parks"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS John Craig"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			#第七駆逐隊
+			ship = {
+				name = "USS Olek"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Brinkley"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Steckel"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Ohha"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_1 = {
+						amount = 1
+						owner = USA
+						version_name = "Fubuki Class"
+					}
+				}
+			}
+			#第十二駆逐隊
+			ship = {
+				name = "USS Gonzalez"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Norio"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Antrim"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+			ship = {
+				name = "USS Glamorgan"
+				definition = destroyer
+				equipment = {
+					ship_hull_light_2 = {
+						amount = 1
+						owner = USA
+						version_name = "Kagero Class"
+					}
+				}
+			}
+		}
+	}
+}

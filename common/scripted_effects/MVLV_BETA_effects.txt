@@ -1,0 +1,29 @@
+
+
+
+population_cleaning_effect = {
+	while_loop_effect = {
+		limit = {
+			check_variable = {
+				state_population_k > 1000
+			}
+		}
+		add_manpower = -1000000
+
+	}
+	add_manpower = -1000000
+	set_state_category = betaland
+	#set_temp_variable = { temp_manpower = 0 }
+	#subtract_from_temp_variable = { temp_manpower = state_population }
+	#add_manpower = temp_manpower #var:temp_manpower
+}
+
+
+core_population_growth_effect = {
+	if = {
+		limit = {
+			is_capital = yes
+		}
+		add_manpower = 1000
+	}
+}

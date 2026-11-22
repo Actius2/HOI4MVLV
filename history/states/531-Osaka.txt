@@ -1,0 +1,57 @@
+
+state={
+	id=531
+	name="STATE_531" # Kansai
+	manpower = 11015000
+	state_category = metropolis
+	resources={
+		aluminium=58 # was: 6
+	}
+
+	history = {
+		owner = H20
+		1999.1.1 = { 
+			owner = H20
+			add_core_of = JAP
+
+		}
+
+		buildings = {
+			infrastructure = 4
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 0
+			1136 = {
+				naval_base = 6
+				bunker = 1
+
+			}
+			7072 = {
+				naval_base = 3
+				bunker = 1
+
+			}
+			11960 = {
+				bunker = 1
+			}
+
+		}
+		victory_points = {
+			7072 10
+		}
+		victory_points = {
+			11960 30
+		}
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 3
+				industrial_complex = 5
+			}
+		}
+
+	}
+
+	provinces={
+		1051 1067 1133 1136 4054 4142 7072 7113 9985 11960 12031 
+	}
+}

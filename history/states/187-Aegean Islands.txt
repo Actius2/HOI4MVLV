@@ -1,0 +1,27 @@
+
+state={
+	id=187
+	name="STATE_187"
+	manpower = 322600
+	
+	state_category = small_island
+	
+	resources={
+		chromium=7 # was: 10
+	}
+
+	history = {
+		owner = H11
+		remove_core_of = H11
+		add_core_of = EUR
+
+		buildings = {
+			infrastructure = 4
+			dockyard = 1
+		}
+	}
+
+	provinces={
+		3401 6550 8435 
+	}
+}

@@ -1,0 +1,28 @@
+JAP_political_restructuring_category = {
+	icon = generic_propaganda
+	priority = 20
+	allowed = {
+        tag = JAP
+	}
+	available = {
+		has_completed_focus = mvlv_jap_nf9
+	}
+
+	visible = {
+		has_completed_focus = mvlv_jap_nf9
+	}
+}
+JAP_core_change_decizion_category = {
+	icon = generic_propaganda
+	priority = 20
+	allowed = {
+        tag = JAP
+	}
+	available = {
+		always = no
+	}
+
+	visible = {
+		has_completed_focus = mvlv_jap_nf7
+	}
+}

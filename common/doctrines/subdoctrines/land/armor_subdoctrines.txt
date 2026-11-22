@@ -1,0 +1,240 @@
+#機動防御
+mobile_defense = {
+    track = armor
+    name = SUBDOCTRINE_MOBILE_DEFENCE
+    description = SUBDOCTRINE_MOBILE_DEFENCE_DESC
+    icon = GFX_doctrine_mobile_defense_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+    visible = {
+
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    # EFFECTS
+    #enable_tactic = tactic_breakthrough
+	dig_in_speed_factor = 0.20
+
+    rewards = {
+        force_concentration = {
+        #1
+            category_tanks = {
+                maximum_speed = 0.10
+            }
+        }
+        armored_breakthrough_exploits = {
+        #2
+            category_tanks = {
+                default_morale = 0.20
+            }
+        }
+        local_reserves = {
+        #3
+            category_tanks = {
+                defense = 0.1
+                breakthrough = 0.1
+            }
+        }
+        tactical_reconnaissance = {
+        #4
+            engineer = {
+				battalion_mult = {
+					category = category_tanks
+					entrenchment = 0.5			#0.50
+					add = yes
+				}
+            }
+        }
+        assault_detachments = {
+        #5
+             category_tanks = {
+                soft_attack = 0.10
+				hard_attack = 0.10
+            }
+        }
+    }
+}
+#漸減作戦
+attrition_strategy = {
+    track = armor
+    name = SUBDOCTRINE_ATTRITION_STRATEGY
+    description = SUBDOCTRINE_ATTRITION_STRATEGY_DESC
+    icon = GFX_doctrine_attrition_strategy_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+    visible = {
+
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    # EFFECTS
+    #enable_tactic = tactic_breakthrough
+	category_tanks = {
+		soft_attack = 0.05
+		hard_attack = 0.05
+		breakthrough = 0.1
+	}
+
+
+    rewards = {
+        force_concentration = {
+        #1
+            category_tanks = {
+                max_organisation = 5
+            }
+        }
+        armored_breakthrough_exploits = {
+        #2
+            category_tanks = {
+                breakthrough = 0.1
+            }
+        }
+        local_reserves = {
+        #3
+            category_tanks = {
+				initiative = 0.10
+			}
+
+        }
+        tactical_reconnaissance = {
+        #4
+            category_tanks = {
+                maximum_speed = 0.10
+            }
+        }
+        assault_detachments = {
+        #5
+			category_tanks = {
+				soft_attack = 0.05
+				hard_attack = 0.05
+				breakthrough = 0.1
+			}
+        }
+    }
+}
+#高回転運用
+high_rotation = {
+    track = armor
+    name = SUBDOCTRINE_HIGH_ROTATION
+    description = SUBDOCTRINE_HIGH_ROTATION_DESC
+    icon = GFX_doctrine_high_rotation_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+
+        base = 1
+
+    }
+
+    # EFFECTS
+    #enable_tactic = tactic_blitz
+	category_tanks = {
+		default_morale = 0.4
+	}	
+
+
+    rewards = {
+        mobile_reserves = {
+        #1
+            category_tanks = {
+                defense = 0.15
+            }
+        }
+        armored_cohorts = {
+        #2
+            category_tanks = {
+                maximum_speed = 0.10
+            }
+        }
+        maintenance_routines = {
+        #3
+			category_tanks = {
+				default_morale = 0.4
+			}	
+        }
+        fuel_rationing = {
+        #4
+			category_tanks = {
+				soft_attack = 0.10
+				hard_attack = 0.10
+			}
+        }
+        mobile_armored_strongpoints = {
+        #5
+			category_tanks = {
+				max_strength = 0.05
+			}
+        }
+    }
+}
+#諸兵科連携
+arms_cooperation = {
+    track = armor
+    name = SUBDOCTRINE_ARMS_COOPERATION
+    description = SUBDOCTRINE_ARMS_COOPERATION_DESC
+    icon = GFX_doctrine_arms_cooperation_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+
+    }
+	coordination_bonus = 0.05
+
+    rewards = {
+        flexible_armored_battalions = {
+            MVLV_combined_arms_battalion = {
+				breakthrough = 0.10
+			}
+        }
+        mechanized_wave = {
+            land_reinforce_rate = 0.10
+        }
+        tank_desant = {
+            MVLV_combined_arms_battalion = {
+                default_morale = 0.40
+            }
+        }
+        full_front_deployment = {
+            MVLV_combined_arms_battalion = {
+                max_strength = 0.10
+            }
+
+        }
+        continuous_offensives = {
+            MVLV_combined_arms_battalion = {
+                combat_width = -0.5
+            }
+        }
+    }
+
+
+}

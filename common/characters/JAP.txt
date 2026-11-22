@@ -1,0 +1,1335 @@
+characters = {
+
+	JAP_denka = {
+#煌武院・悠陽
+		name = JAP_denka
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_denka_pic
+				small = GFX_JAP_denka_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+				JAP_samurai_lineage
+				politically_connected
+				media_personality
+				tsf_officer
+				true_genius
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 4
+			
+			legacy_id = 991
+		}
+	}
+	
+	JAP_Kakka = {
+#斑鳩・崇継
+		name = JAP_Kakka
+		
+		portraits = {
+			army = {
+				large = GFX_JAP_Kakka_pic
+				small = GFX_JAP_Kakka_pic_small
+			}
+		}
+		
+		field_marshal = {
+			traits = {
+			
+				JAP_samurai_lineage
+				politically_connected
+				tsf_officer
+				brilliant_strategist
+				commander_aptitude
+				tsf_leader
+				tsf_commander
+				offensive_doctrine
+				inspirational_leader
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 8
+			logistics_skill = 6
+			
+			legacy_id = 992
+		}
+	}
+	
+	JAP_Yuihime = {
+#篁・唯依
+		name = JAP_Yuihime
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Yuihime_pic
+				small = GFX_JAP_Yuihime_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				tsf_officer
+				commander_aptitude
+				brilliant_strategist
+				politically_connected
+				tsf_leader
+				tsf_commander
+				trickster
+				trait_engineer
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 4
+			
+			legacy_id = 987
+		}
+	}
+	
+	JAP_Yuihime_XFJ = {
+##篁・唯依（イベント）
+		name = JAP_Yuihime_XFJ
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Yuihime_XFJ_pic
+				small = GFX_JAP_Yuihime_XFJ_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				JAP_samurai_lineage
+				tsf_officer
+				commander_aptitude
+				brilliant_strategist
+				politically_connected
+				tsf_leader
+				tsf_commander
+				trickster
+				trait_engineer
+				commander_aptitude
+				hive_attacker
+				commando
+				skilled_staffer
+				expert_delegator
+				organizer
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 9
+			defense_skill = 8
+			planning_skill = 7
+			logistics_skill = 8
+			
+			legacy_id = -1
+			
+			visible = {
+				has_character_flag = unlock_character_flag
+			}
+		}
+	}
+	
+	JAP_Sagiri = {
+#沙霧・尚哉
+		name = JAP_Sagiri
+		
+		portraits = {
+			army = {
+				large = GFX_JAP_Sagiri_pic
+				small = GFX_JAP_Sagiri_pic_small
+			}
+		}
+		
+		field_marshal = {
+			traits = {
+			
+				inflexible_strategist
+				offensive_doctrine
+				defensive_doctrine
+				tsf_officer
+				commander_aptitude
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 8
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 4
+			
+			legacy_id = 993
+			
+		}
+	}
+	
+	JAP_Mana = {
+#月詠・真那
+		name = JAP_Mana
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Mana_pic
+				small = GFX_JAP_Mana_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				tsf_officer
+				brilliant_strategist
+				harsh_leader
+				commander_aptitude
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 7
+			
+			attack_skill = 7
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 4
+			
+			legacy_id = 994
+			
+		}
+	}
+	
+	JAP_Kamiyo = {
+#神代・巽
+		name = JAP_Kamiyo
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Kamiyo_pic
+				small = GFX_JAP_Kamiyo_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				ambusher
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	JAP_Tomoe = {
+#巴・雪乃
+		name = JAP_Tomoe
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Tomoe_pic
+				small = GFX_JAP_Tomoe_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				trickster
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	JAP_Minagi = {
+#戎・美凪
+		name = JAP_Minagi
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Minagi_pic
+				small = GFX_JAP_Minagi_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				trait_reckless
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 2
+			defense_skill = 6
+			planning_skill = 2
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	JAP_Toshizo = {
+#真壁・清十郎
+		name = JAP_Toshizo
+		
+		
+		portraits = {
+			army = {
+				large = GFX_JAP_Toshizo_pic
+				small = GFX_JAP_Toshizo_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				brilliant_strategist
+				inflexible_strategist
+				tsf_officer
+				commander_aptitude
+				trickster
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = 9010
+		}
+	}
+	
+	JAP_Komaki = {
+#駒木・咲代子
+		name = JAP_Komaki
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Komaki_pic
+				small = GFX_JAP_Komaki_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				career_officer
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 2
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	JAP_Tatunami = {
+#龍浪・響
+		name = JAP_Tatunami
+		
+		portraits = {
+			army = {
+				large = GFX_JAP_Tatunami_pic
+				small = GFX_JAP_Tatunami_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				commando
+				commander_aptitude
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Yuzuka = {
+#千堂・柚香
+		name = JAP_Yuzuka
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Yuzuka_pic
+				small = GFX_JAP_Yuzuka_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				inflexible_strategist
+				trait_reckless
+				
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 1
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	JAP_Marika = {
+#伊隅・まりか
+		name = JAP_Marika
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Marika_pic
+				small = GFX_JAP_Marika_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				career_officer
+				tsf_officer
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	JAP_Akira = {
+#伊隅・あきら
+		name = JAP_Akira
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Akira_pic
+				small = GFX_JAP_Akira_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				career_officer
+				tsf_officer
+				
+			}
+			
+			skill = 2
+			
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Amamiya = {
+#雨宮・まりこ
+		name = JAP_Amamiya
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Amamiya_pic
+				small = GFX_JAP_Amamiya_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				old_guard
+				trait_reckless
+				tsf_officer
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+			
+			legacy_id = 986
+			
+		}
+	}
+	
+	JAP_Takatukasa = {
+#崇宰・恭子
+		name = JAP_Takatukasa
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Takatukasa_pic
+				small = GFX_JAP_Takatukasa_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				old_guard
+				politically_connected
+				war_hero
+				tsf_officer
+				commander_aptitude
+				
+				inflexible_strategist
+				
+				tsf_leader
+				tsf_commander
+				urban_assault_specialist
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 8
+			defense_skill = 8
+			planning_skill = 6
+			logistics_skill = 6
+			
+			legacy_id = 1002
+			
+		}
+	}
+	
+	JAP_Asagi = {
+#浅葱・みのり
+		name = JAP_Asagi
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Asagi_pic
+				small = GFX_JAP_Asagi_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				trait_cautious
+				politically_connected
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Iwaya = {
+#巌谷・榮二
+		name = JAP_Iwaya
+		
+		portraits = {
+			army = {
+				large = GFX_JAP_Iwaya_pic
+				small = GFX_JAP_Iwaya_pic_small
+			}
+		}
+		field_marshal = {
+		
+			traits = {
+			
+				career_officer
+				
+				inflexible_strategist
+				trait_reckless
+				harsh_leader
+				
+				tsf_officer
+				tsf_leader
+				
+				commander_aptitude
+				tsf_commander
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 7
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Maya = {
+#月詠・真耶
+		name = JAP_Maya
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Maya_pic
+				small = GFX_JAP_Maya_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				tsf_officer
+				inflexible_strategist
+				commander_aptitude
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 4
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	JAP_Oogami = {
+#大上・律子
+		name = JAP_Oogami
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Oogami_pic
+				small = GFX_JAP_Oogami_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				trickster
+				urban_assault_specialist
+				ranger
+				adaptable
+				tsf_leader
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Sizuku = {
+#美桜乃・雫
+		name = JAP_Sizuku
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Sizuku_pic
+				small = GFX_JAP_Sizuku_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				trait_cautious
+				tsf_leader
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	JAP_Kusumoto = {
+#楠本・さやか
+		name = JAP_Kusumoto
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Kusumoto_pic
+				small = GFX_JAP_Kusumoto_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				trait_engineer
+				fortress_buster
+				career_officer
+				politically_connected
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Matukaze = {
+#松風・諒一
+		name = JAP_Matukaze
+		
+		portraits = {
+			army = {
+				large = GFX_JAP_Matukaze_pic
+				small = GFX_JAP_Matukaze_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+			
+				career_officer
+				trait_cautious
+				tsf_officer
+				tsf_leader
+			}
+			
+			skill = 2
+			
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			
+			legacy_id = -1
+			
+		}
+	}
+	
+	JAP_Kamiya = {
+#神谷
+		name = JAP_Kamiya
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Kamiya_pic
+				small = GFX_JAP_Kamiya_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			traits = {
+			
+			brilliant_strategist
+			career_officer
+			armor_officer
+			commander_aptitude
+			trait_cautious
+			harsh_leader
+			
+			organizer
+			panzer_leader
+			panzer_expert
+			trait_engineer
+			commando
+			
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 4
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_NanaseAni = {
+#七瀬 大尉
+		name = JAP_NanaseAni
+		
+
+		portraits = {
+			army = {
+				large = GFX_JAP_NanaseAni_pic
+				small = GFX_JAP_NanaseAni_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				commander_aptitude
+				inflexible_strategist
+				career_officer
+				trait_cautious
+				
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_NanaseImouto = {
+#七瀬・凛
+		name = JAP_NanaseImouto
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_NanaseImouto_pic
+				small = GFX_JAP_NanaseImouto_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				commander_aptitude
+				true_genius
+				brilliant_strategist
+				trait_reckless
+				
+			}
+			
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Ootori = {
+#鳳 中佐
+		name = JAP_Ootori
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Ootori_pic
+				small = GFX_JAP_Ootori_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				tsf_officer
+
+				harsh_leader
+				trait_cautious
+				inflexible_strategist
+
+				tsf_leader
+				commando
+				urban_assault_specialist
+				hill_fighter
+				
+				adaptable
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Izumi = {
+#和泉中尉
+		name = JAP_Izumi
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Izumi_pic
+				small = GFX_JAP_Izumi_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				JAP_samurai_lineage
+				tsf_officer
+
+				trait_cautious
+				brilliant_strategist
+
+				tsf_leader
+				commando
+				urban_assault_specialist
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Takasuka = {
+#高須賀 訓練兵
+		name = JAP_Takasuka
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Takasuka_pic
+				small = GFX_JAP_Takasuka_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				harsh_leader
+
+				
+			}
+			
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Mitarai = {
+#御手洗 中尉
+		name = JAP_Mitarai
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Mitarai_pic
+				small = GFX_JAP_Mitarai_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				inflexible_strategist
+
+				tsf_leader
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Toyokawa = {
+#豊川訓練兵
+		name = JAP_Toyokawa
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Toyokawa_pic
+				small = GFX_JAP_Toyokawa_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				
+				tsf_officer
+				brilliant_strategist
+
+				
+			}
+			
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Siotani = {
+#塩谷訓練兵
+		name = JAP_Siotani
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Siotani_pic
+				small = GFX_JAP_Siotani_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				
+				tsf_officer
+
+				
+			}
+			
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Hanezawa = {
+#羽沢訓練兵
+		name = JAP_Hanezawa
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Hanezawa_pic
+				small = GFX_JAP_Hanezawa_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				
+				tsf_officer
+
+				
+			}
+			
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Nitta = {
+#新田少佐
+		name = JAP_Nitta
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Nitta_pic
+				small = GFX_JAP_Nitta_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				
+				tsf_officer
+				inflexible_strategist
+				
+				organizer
+				tsf_leader
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Simizu = {
+#清水大尉
+		name = JAP_Simizu
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Simizu_pic
+				small = GFX_JAP_Simizu_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				
+				tsf_officer
+				inflexible_strategist
+				
+				tsf_leader
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	JAP_Kawase = {
+#川瀬大尉
+		name = JAP_Kawase
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_JAP_Kawase_pic
+				small = GFX_JAP_Kawase_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				
+				tsf_officer
+				inflexible_strategist
+				career_officer
+				
+				tsf_leader
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+
+}

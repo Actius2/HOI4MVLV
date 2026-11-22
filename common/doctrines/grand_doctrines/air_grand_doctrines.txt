@@ -1,0 +1,286 @@
+human_doctrine = {
+    folder = air
+
+    name = HUMAN_DOCTRINE_NAME
+    description = GRAND_DOCTRINE_STRATEGIC_DESTRUCTION_DESC
+    icon = GFX_doctrine_strategic_destruction_medium
+    available = {
+        always = no
+    }
+
+    xp_cost = 9999
+    xp_type = air
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    tracks = {
+		fighter_aircraft
+		strike_aircraft
+		medium_aircraft
+		heavy_aircraft
+    }
+		enable_tactic = tactic_cc_withdraw
+		enable_tactic = tactic_tw_evade
+		enable_tactic = tactic_ambush
+		enable_tactic = tactic_cc_tactical_withdrawal
+		enable_tactic = tactic_human_hv_attack
+		enable_tactic = tactic_human_hv_defend
+		enable_tactic = tactic_human_hv_navy_attack
+		enable_tactic = tactic_human_hv_gate_attack
+		enable_tactic = tactic_human_hv_withdrawal_attack
+		enable_tactic = tactic_human_hv_arty_attack
+		enable_tactic = tactic_human_hv_gate_secure
+		enable_tactic = tactic_human_hvin_attack
+		enable_tactic = tactic_human_hvin_defend
+		enable_tactic = tactic_human_hvin_withdrawal
+		enable_tactic = tactic_human_hvin_move
+		enable_tactic = tactic_human_hvin_fire
+		enable_tactic = tactic_human_hvin_assault
+		enable_tactic = tactic_human_hvin_caution
+		enable_tactic = tactic_human_hvin_delay
+		enable_tactic = tactic_human_hvin_counterattack
+		enable_tactic = tactic_hm_amphibiousInvasion
+		enable_tactic = tactic_ab_hm_attack
+		enable_tactic = tactic_ab_hm_Reinforcements
+		enable_tactic = tactic_ab_hm_planedAttack
+		enable_tactic = tactic_ab_hm_navyAttack
+		enable_tactic = tactic_ab_hm_SecuringSpot
+		enable_tactic = tactic_iv_hm_attack
+		enable_tactic = tactic_iv_hm_maintain
+		enable_tactic = tactic_iv_hm_clinging
+		enable_tactic = tactic_iv_hm_delay
+		enable_tactic = tactic_iv_hm_navyAttack
+		enable_tactic = tactic_iv_hm_Loss
+		enable_tactic = tactic_iv_hm_withdrawal
+		enable_tactic = tactic_hm_amphibiousDefence
+		enable_tactic = tactic_ab_hm_deffence
+		enable_tactic = tactic_ab_hm_reconnaissance
+		enable_tactic = tactic_ab_hm_dlayDeffence
+		enable_tactic = tactic_ab_hm_navyDeffence
+		enable_tactic = tactic_iv_hm_deffence
+		enable_tactic = tactic_iv_hm_overwhelming_fire
+		enable_tactic = tactic_iv_hm_elastic_defense
+		enable_tactic = tactic_iv_hm_delay_defense
+		enable_tactic = tactic_iv_hm_AssaultCounter
+		enable_tactic = tactic_iv_hm_ClearUp
+		enable_tactic = tactic_iv_hm_navyFire
+		enable_tactic = tactic_human_diver_attack
+		enable_tactic = tactic_human_hive_diver_attack
+		enable_tactic = tactic_human_hv_diver_attack
+		enable_tactic = tactic_human_hv_in_diver_attack
+		enable_tactic = tactic_human_diver_defend
+		enable_tactic = tactic_human_hive_diver_defend
+		enable_tactic = tactic_human_hv_diver_defend
+		enable_tactic = tactic_human_hv_in_diver_defend
+    # EFFECTS
+
+	
+    milestones = {
+        {
+            #Capital Ships
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = capital_ships_milestone_var
+                        }
+                    }
+                    set_variable = { capital_ships_milestone_var = 0 }
+                }
+                else = {
+                    add_to_variable = { capital_ships_milestone_var = 0 }
+                }
+            }
+        }
+        {
+            #Capital Ships
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = capital_ships_milestone_var
+                        }
+                    }
+                    set_variable = { capital_ships_milestone_var = 0 }
+                }
+                else = {
+                    add_to_variable = { capital_ships_milestone_var = 0 }
+                }
+            }
+        }
+        {
+            #Capital Ships
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = capital_ships_milestone_var
+                        }
+                    }
+                    set_variable = { capital_ships_milestone_var = 0 }
+                }
+                else = {
+                    add_to_variable = { capital_ships_milestone_var = 0 }
+                }
+            }
+        }
+        {
+            #Capital Ships
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = capital_ships_milestone_var
+                        }
+                    }
+                    set_variable = { capital_ships_milestone_var = 0 }
+                }
+                else = {
+                    add_to_variable = { capital_ships_milestone_var = 0 }
+                }
+            }
+        }
+    }
+
+}
+beta_doctrine = {
+    folder = air
+
+    name = BETA_DOCTRINE_NAME
+    description = GRAND_DOCTRINE_STRATEGIC_DESTRUCTION_DESC
+    icon = GFX_doctrine_strategic_destruction_medium
+    available = {
+        always = no
+    }
+
+    xp_cost = 9999
+    xp_type = air
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    tracks = {
+		fighter_aircraft
+		strike_aircraft
+		medium_aircraft
+		heavy_aircraft
+    }
+		enable_tactic = tactic_tw_bt_Reinforce
+		enable_tactic = tactic_bt_DestroyerAttack
+		enable_tactic = tactic_bt_LargeOffensive
+		enable_tactic = tactic_bt_SporadicOffensive
+		enable_tactic = tactic_bt_CrushingCounter
+		enable_tactic = tactic_bt_LargeCounter
+		enable_tactic = tactic_bt_SporadicCounter
+		enable_tactic = tactic_beta_hv_attack
+		enable_tactic = tactic_beta_hv_defend
+		enable_tactic = tactic_beta_hv_reinforcements
+		enable_tactic = tactic_beta_hv_ambush_gate_attack
+		enable_tactic = tactic_beta_hv_counterattack
+		enable_tactic = tactic_beta_hv_High_counterattack
+		enable_tactic = tactic_beta_hvin_attack
+		enable_tactic = tactic_beta_hvin_defend
+		enable_tactic = tactic_beta_hvin_ambush_defend
+		enable_tactic = tactic_beta_hvin_cutoff
+		enable_tactic = tactic_beta_hvin_reinforcements_defend
+		enable_tactic = tactic_beta_hvin_ambush_drift
+		enable_tactic = tactic_beta_hvin_reinforcements
+		enable_tactic = tactic_beta_hvin_high_attack
+		enable_tactic = tactic_beta_hvin_encirclement
+		enable_tactic = tactic_beta_hvin_gushing
+		enable_tactic = tactic_bt_amphibiousInvasion
+		enable_tactic = tactic_ab_bt_attack
+		enable_tactic = tactic_ab_bt_LargeOffensive
+		enable_tactic = tactic_ab_bt_SporadicOffensive
+		enable_tactic = tactic_ab_bt_Invasion
+		enable_tactic = tactic_ab_bt_surpriseInvasion
+		enable_tactic = tactic_iv_bt_attack
+		enable_tactic = tactic_iv_bt_LargeOffensive
+		enable_tactic = tactic_iv_bt_surpriseOffensive
+		enable_tactic = tactic_iv_bt_SporadicOffensive
+		enable_tactic = tactic_bt_amphibiousDefence
+		enable_tactic = tactic_ab_bt_deffence
+		enable_tactic = tactic_ab_bt_LargeDeffencive
+		enable_tactic = tactic_iv_bt_counter
+		enable_tactic = tactic_iv_bt_LargeCounter
+		enable_tactic = tactic_iv_bt_encirclement
+		enable_tactic = tactic_iv_bt_SporadicDeffence
+		enable_tactic = tactic_cc_bt_suddenAttack
+		enable_tactic = tactic_cc_bt_RushingToPoint
+		enable_tactic = tactic_cc_bt_Interception
+		enable_tactic = tactic_cc_bt_WaveAttack
+		enable_tactic = tactic_cc_bt_LocalBreakthrough
+    # EFFECTS
+
+	
+    milestones = {
+         {
+            #Capital Ships
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = capital_ships_milestone_var
+                        }
+                    }
+                    set_variable = { capital_ships_milestone_var = 0 }
+                }
+                else = {
+                    add_to_variable = { capital_ships_milestone_var = 0 }
+                }
+            }
+        }
+        {
+            #Capital Ships
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = capital_ships_milestone_var
+                        }
+                    }
+                    set_variable = { capital_ships_milestone_var = 0 }
+                }
+                else = {
+                    add_to_variable = { capital_ships_milestone_var = 0 }
+                }
+            }
+        }
+        {
+            #Capital Ships
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = capital_ships_milestone_var
+                        }
+                    }
+                    set_variable = { capital_ships_milestone_var = 0 }
+                }
+                else = {
+                    add_to_variable = { capital_ships_milestone_var = 0 }
+                }
+            }
+        }
+        {
+            #Capital Ships
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = capital_ships_milestone_var
+                        }
+                    }
+                    set_variable = { capital_ships_milestone_var = 0 }
+                }
+                else = {
+                    add_to_variable = { capital_ships_milestone_var = 0 }
+                }
+            }
+        }
+    }
+
+}

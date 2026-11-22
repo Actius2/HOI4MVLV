@@ -1,0 +1,61 @@
+MVLV_decision_cost_calculation = {
+	if = {
+		limit = {
+			has_completed_focus = mvlv_jap_nf2
+		}
+		set_variable = { var = MVLV_decision_cost value = 10 }
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = mvlv_jap_nf2 }
+		}
+		set_variable = { var = MVLV_decision_cost value = 30 }
+	}
+}
+
+MVLV_decision_political_restructuring_effect = {
+	if = {
+		limit = {
+			has_idea = JAP_idea_political_excessive_5
+		}
+		remove_ideas = JAP_idea_political_excessive_5
+		add_political_power = 100
+		JAP = { set_country_flag = mvlv_jap_stable_government_flag }
+	}
+	if = {
+		limit = {
+			has_idea = JAP_idea_political_excessive_4
+		}
+		swap_ideas = {
+			remove_idea = JAP_idea_political_excessive_4
+			add_idea = JAP_idea_political_excessive_5
+		}
+	}
+	if = {
+		limit = {
+			has_idea = JAP_idea_political_excessive_3
+		}
+		swap_ideas = {
+			remove_idea = JAP_idea_political_excessive_3
+			add_idea = JAP_idea_political_excessive_4
+		}
+	}
+	if = {
+		limit = {
+			has_idea = JAP_idea_political_excessive_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_idea_political_excessive_2
+			add_idea = JAP_idea_political_excessive_3
+		}
+	}
+	if = {
+		limit = {
+			has_idea = JAP_idea_political_excessive
+		}
+		swap_ideas = {
+			remove_idea = JAP_idea_political_excessive
+			add_idea = JAP_idea_political_excessive_2
+		}
+	}
+}

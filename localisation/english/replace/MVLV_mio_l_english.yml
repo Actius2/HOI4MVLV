@@ -1,0 +1,74 @@
+﻿l_english:
+ generic_tsf_organization: "Tactical Surface Fighter company"
+ generic_mio_initial_trait_tsf_designer: "Tactical Surface Fighter Design Department"
+
+ mio_header_tsf_original: "Unique Design"
+ mio_header_tsf_basic: "Tactical Surface Fighter design"
+ mio_header_tsf_special: "Emergency Design"
+
+ generic_mio_trait_gun_fighter_tsf: "Emphasis on artillery battles"
+ generic_mio_trait_CQB_tsf: "Close-combat focused"
+ generic_mio_trait_reliabity_upgrade: "Improved reliability"
+ generic_mio_trait_ammo_package_upgrade: "Increased ammo capacity"
+ generic_mio_trait_base_production_upgrade: "Improving production line efficiency"
+ generic_mio_trait_armour_upgrade: "Defense-focused"
+ generic_mio_trait_gun_upgrade: "Attack Focus"
+ generic_mio_trait_production_upgrade: "Emphasis on productivity"
+ generic_mio_trait_armour_upgrade_2: "A shield that protects against everything"
+ generic_mio_trait_gun_upgrade_2: "A spear that pierces everything"
+ generic_mio_trait_production_upgrade_2: "Quantitative strategy"
+ generic_mio_trait_agility_upgrade: "Anti-BETA Combat Gear"
+ generic_mio_trait_antihuman_upgrade: "Anti-personnel combat equipment"
+ generic_mio_trait_cutting_resource_production_upgrade: "New Materials"
+ generic_mio_trait_resource_cutting: "Reduce costs"
+
+ JAP_generic_tsf_design_organization: "Fugaku Heavy Industries"
+ JAP_hard_controle_tsf_system: "Experienced Soldier Settings"
+
+ SOV_generic_tsf_design_organization: "Mikoyam Guluvich"
+ SOV_Efficient_Manufacturing: "Tactical Surface Fighter design by position"
+
+ USA_generic_tsf_design_organization: "Northrock Grunnan"
+ USA_Advanced_Tactical_Equipment: "Latest tactical equipment"
+
+ EUR_generic_tsf_design_organization: "Dass-Ault"
+ EUR_long_term_combat_capability: "Long-term combat ability"
+
+ AFR_generic_tsf_design_organization: "Modification-oriented Tactical Surface Fighter design"
+ AFR_Reinforcement_refurbishment_technology_1: "Upgrade of first generation Tactical Surface Fighter"
+ AFR_Reinforcement_refurbishment_technology_2: "Upgrade of second generation Tactical Surface Fighter"
+ AFR_Reinforcement_refurbishment_technology_3: "Upgrade of third generation Tactical Surface Fighter"
+
+ CHI_generic_tsf_design_organization: "Shengdu"
+ CHI_close_combat_capability: "Enhanced close-combat capabilities"
+
+USA_Boening_organization: "Boening"
+USA_General_Dynomics_organization: "General Dynomics"
+USA_General_Electronics_organization: "General Electronics"
+USA_Lockweed_Mardin_organization: "Lockweed Mardin"
+USA_Mcdaell_Doglam_organization: "McDaell Doglam"
+USA_Northrock_Grunnan_organization: "Northrock Grunnan"
+USA_Pratts_Whitney_organization: "Pratts & Whitney"
+
+EUR_Aero_Jet_organization: "Aero Jet"
+EUR_Dassault_organization: "Dass ault"
+EUR_Euro_Fightas_organization: "Euro Fightas"
+EUR_Saag_organization: "SAAG"
+
+JP_Fugaku_organization: "Fugaku Heavy Industries"
+JP_Kawazaki_organization: "Kawazaki"
+JP_Mitsuhishi_organization: "Mitsuhishi Heavy Industries"
+JP_onda_organization: "Onda"
+
+CHI_AVIC_Shengdu_organization: "AVIC Shengdu"
+AFR_IEI_organization: "IEI"
+
+SOV_Mikoyam_Guluvitch_organization: "Mikoyam Guluvitch"
+SOV_Sufoni_organization: "Sufoni"
+
+Gen_Markin_Berger_organization: "Markin Berger"
+Gen_North_Americana_organization: "North Americana"
+Gen_Northrock_organization: "Northrock"
+Gen_Firechild_organization: "Firechild Aircraft"
+Gen_Lockweed_organization: "Lockweed Corporation"
+Gen_Mcdaell_organization: "Mcdaell"

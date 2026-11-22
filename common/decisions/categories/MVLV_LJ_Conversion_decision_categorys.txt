@@ -1,0 +1,7 @@
+MVLV_LJ_Conversion_decision_category = {
+	priority = 20
+	icon = generic_propaganda
+	allowed = {
+		is_in_faction_with = UNI
+	}
+}

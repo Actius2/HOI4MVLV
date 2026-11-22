@@ -1,0 +1,275 @@
+MVLV_unicorns_decision_category = {
+	MVLV_unicorns_generate_decision_1 = {
+	
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MVLV_unicorns_generate_decision_1_tt		
+				check_variable = { ROOT.MVLV_unicorns_basic_point < 1000000 }
+				check_variable = { ROOT.MVLV_unicorns_improvement_point < 1000000 }
+			}
+		}
+		visible = {
+			any_character = {
+				has_trait = MVLV_1st_unicorns
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = MVLV_unicorns_basic_point_tt
+			hidden_effect = {
+				MVLV_unicorns_basic_point_script_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	MVLV_unicorns_generate_decision_2 = {
+	
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MVLV_unicorns_generate_decision_1_tt		
+				check_variable = { ROOT.MVLV_unicorns_basic_point < 1000000 }
+				check_variable = { ROOT.MVLV_unicorns_improvement_point < 1000000 }
+			}
+		}
+		visible = {
+			any_character = {
+				has_trait = MVLV_1st_unicorns
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = MVLV_unicorns_improvement_point_tt
+			hidden_effect = {
+				MVLV_unicorns_improvement_point_script_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	MVLV_unicorns_reinforcement_decision_1 = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MVLV_unicorns_reinforcement_decision_1_tt		
+				check_variable = { ROOT.MVLV_unicorns_basic_point > 500 }
+			}
+		}
+		visible = {
+			any_character = {
+				has_trait = MVLV_1st_unicorns
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = MVLV_unicorns_reinforcement_1_tt
+			hidden_effect = {
+				subtract_from_variable = { ROOT.MVLV_unicorns_basic_point = 500 }
+			}
+			every_character = {
+				limit = {
+					OR = {
+						has_trait = MVLV_1st_unicorns
+						has_trait = MVLV_1stx_unicorns
+					}
+				}
+				add_timed_unit_leader_trait = { trait = basics_element days = 180 }
+			}
+			every_character = {
+				limit = {
+					OR = {
+						has_trait = MVLV_2nd_unicorns
+						has_trait = MVLV_3rd_unicorns
+					}
+				}
+				add_timed_unit_leader_trait = { trait = basics_element2 days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	MVLV_unicorns_reinforcement_decision_2 = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MVLV_unicorns_reinforcement_decision_2_tt		
+				check_variable = { ROOT.MVLV_unicorns_basic_point > 1000 }
+			}
+		}
+		visible = {
+			any_character = {
+				has_trait = MVLV_1st_unicorns
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = MVLV_unicorns_reinforcement_2_tt
+			hidden_effect = {
+				subtract_from_variable = { ROOT.MVLV_unicorns_basic_point = 1000 }
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_1st_unicorns
+							has_trait = MVLV_1stx_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = basics_element days = 90 }
+				}
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_2nd_unicorns
+							has_trait = MVLV_3rd_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = basics_element2 days = 90 }
+				}
+			}
+			every_character = {
+				limit = {
+					OR = {
+						has_trait = MVLV_1st_unicorns
+						has_trait = MVLV_1stx_unicorns
+						has_trait = MVLV_2nd_unicorns
+						has_trait = MVLV_3rd_unicorns
+					}
+				}
+				add_timed_unit_leader_trait = { trait = improved_element days = 90 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	MVLV_unicorns_reinforcement_decision_3 = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MVLV_unicorns_reinforcement_decision_3_tt		
+				check_variable = { ROOT.MVLV_unicorns_improvement_point > 1000 }
+			}
+		}
+		visible = {
+			any_character = {
+				has_trait = MVLV_1st_unicorns
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = MVLV_unicorns_reinforcement_3_tt
+			hidden_effect = {
+				subtract_from_variable = { ROOT.MVLV_unicorns_improvement_point = 1000 }
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_1st_unicorns
+							has_trait = MVLV_1stx_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = basics_element days = 30 }
+				}
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_2nd_unicorns
+							has_trait = MVLV_3rd_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = basics_element2 days = 30 }
+				}
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_1st_unicorns
+							has_trait = MVLV_1stx_unicorns
+							has_trait = MVLV_2nd_unicorns
+							has_trait = MVLV_3rd_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = improved_element days = 30 }
+				}
+			}
+			every_character = {
+				limit = {
+					OR = {
+						has_trait = MVLV_1st_unicorns
+						has_trait = MVLV_1stx_unicorns
+						has_trait = MVLV_2nd_unicorns
+						has_trait = MVLV_3rd_unicorns
+					}
+				}
+				add_timed_unit_leader_trait = { trait = advanced_element days = 30 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	MVLV_unicorns_reinforcement_decision_4 = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MVLV_unicorns_reinforcement_decision_4_tt		
+				check_variable = { ROOT.MVLV_unicorns_improvement_point > 1000 }
+			}
+		}
+		visible = {
+			any_character = {
+				has_trait = MVLV_1st_unicorns
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = MVLV_unicorns_reinforcement_4_tt
+			hidden_effect = {
+				subtract_from_variable = { ROOT.MVLV_unicorns_improvement_point = 1000 }
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_1st_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = basics_element days = 7 }
+				}
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_2nd_unicorns
+							has_trait = MVLV_3rd_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = basics_element2 days = 7 }
+				}
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_1st_unicorns
+							has_trait = MVLV_2nd_unicorns
+							has_trait = MVLV_3rd_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = improved_element days = 7 }
+				}
+			}
+			every_character = {
+				limit = {
+					OR = {
+						has_trait = MVLV_1st_unicorns
+						has_trait = MVLV_2nd_unicorns
+						has_trait = MVLV_3rd_unicorns
+					}
+				}
+				add_timed_unit_leader_trait = { trait = special_element days = 7 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

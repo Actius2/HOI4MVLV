@@ -1,0 +1,3 @@
+jap_imperial_influence_inlay_window = {
+
+}

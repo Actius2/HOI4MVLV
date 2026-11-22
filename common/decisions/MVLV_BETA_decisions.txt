@@ -1,0 +1,1751 @@
+@set100 = 100
+@setF = 400
+@endF = 400
+
+BETA_decisions_category = {
+	#崇宰志望イベント
+	BETA_jap_mission = {
+		allowed = { tag = H20 }
+		activation = {
+			check_variable = { global.var_generalDeathMode = 1 }
+			H20 = {
+				NOT = { has_full_control_of_state = 529 }
+			}
+		}
+		visible = {
+			check_variable = { global.var_generalDeathMode = 1 }
+			H20 = {
+				NOT = { has_full_control_of_state = 529 }
+			}
+		}
+		available = {
+			always = no
+		}
+		days_mission_timeout = 1
+		fire_only_once = yes
+		timeout_effect = {
+			JAP = { country_event = mvlv_jap.22 }
+		}
+		
+	}
+	#高速pop用(nobroken)
+	BETA_pop_mission_1 = {
+		activation = {
+			is_in_faction_with = BET
+	 		check_variable = {
+				num_divisions < @set100
+	 		}
+			NOT = {
+				has_idea = mvlv_brokenhive
+			}
+			surrender_progress < 0.90
+		}
+		available = { always = no }
+		cancel_trigger = {
+			has_idea = mvlv_brokenhive
+			surrender_progress > 0.90
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+		}
+	}
+	#通常pop用(間引き・占領)
+	BETA_pop_mission_2 = {
+		activation = {
+			is_in_faction_with = BET
+	 		check_variable = {
+				num_divisions < @setF
+	 		}
+			BETA_stay_home_trigger = yes
+			NOT = {
+				OR = {
+					has_idea = mvlv_brokenhive
+					has_idea = hive_thinning_state
+					tag = H21
+					tag = H22
+				}
+			}
+			surrender_progress < 0.90
+		}
+		available = { always = no }
+		cancel_trigger = {
+			OR = {
+				has_idea = mvlv_brokenhive
+				has_idea = hive_thinning_state
+			}
+			surrender_progress > 0.90
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+			if = {
+				limit = {
+					OR = {
+						defficulty_hard_trigger = yes
+						defficulty_hell_trigger = yes
+					}
+				}
+				MVLV_BETA_weekly_deploy_effect = yes
+			}		
+		}
+	}
+	#高難易度用pop
+	BETA_pop_mission_3 = {
+		activation = {
+			is_in_faction_with = BET
+	 		check_variable = {
+				num_divisions < @setF
+	 		}
+			BETA_stay_home_trigger = yes
+			NOT = {
+				OR = {
+					has_idea = mvlv_brokenhive
+					tag = H21
+					tag = H22
+				}
+			}
+			OR = {
+				defficulty_hard_trigger = yes
+				defficulty_hell_trigger = yes
+			}
+			surrender_progress < 0.90
+		}
+		available = { always = no }
+		cancel_trigger = {
+			OR = {
+				has_idea = mvlv_brokenhive
+			}
+			surrender_progress > 0.90
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+		}
+	}
+	BETA_pop_mission_sado = {
+		activation = {
+			is_in_faction_with = BET
+	 		check_variable = {
+				num_divisions < @setF
+	 		}
+			tag = H21
+			H21 = { controls_state = 789 }
+		}
+		available = { always = no }
+		cancel_trigger = {
+			OR = {
+				has_idea = mvlv_brokenhive
+				has_idea = hive_thinning_state
+			}
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+		}
+	}
+	BETA_stay_home_decision = {
+		available = {
+			OR = {
+				defficulty_hard_trigger = yes
+				defficulty_hell_trigger = yes
+			}
+			NOT = { BETA_stay_home_trigger = yes }
+			NOT = { has_idea = mvlv_brokenhive }
+			NOT = { has_country_flag = mvlv_beta_stay_home_flag }
+		}
+		visible = {
+			is_in_faction_with = BET
+		}
+		cost = 0
+		fire_only_once = no
+		complete_effect = {
+			set_country_flag = mvlv_beta_stay_home_flag
+		}
+		ai_will_do = { base = 100 }
+	}
+	BETA_em_pop_decision = {
+		available = {
+			has_country_flag = mvlv_beta_stay_home_flag
+			BETA_stay_home_trigger = yes
+			OR = {
+				defficulty_hard_trigger = yes
+				defficulty_hell_trigger = yes
+			}
+			NOT = {
+				has_idea = mvlv_brokenhive				
+			}
+			check_variable = {
+				num_divisions < @setF
+			}
+		}
+		visible = {
+			is_in_faction_with = BET
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 14
+		complete_effect = {
+			MVLV_BETA_start_deploy100_effect = yes
+			clr_country_flag = mvlv_beta_stay_home_flag
+		}
+		ai_will_do = { base = 100 }
+	}
+	#緊急配備
+	BETA_gushing_decision = {
+		available = {
+			has_idea = mvlv_brokenhive
+			NOT = { has_country_flag = mvlv_gushing_beta_flag }
+			OR = {
+				defficulty_hard_trigger = yes
+				defficulty_hell_trigger = yes
+			}
+			NOT = {
+				OR = {
+					tag = BET
+					tag = H21
+					tag = H22
+				}
+			}
+		}
+		visible = {
+			is_in_faction_with = BET
+		}
+		cost = 0
+		fire_only_once = no
+		complete_effect = {
+			set_country_flag = mvlv_gushing_beta_flag
+			MVLV_BETA_gushing_effect = yes
+			every_enemy_country = {
+				limit = {
+					any_neighbor_country = {
+	 					tag = ROOT
+	 				}
+				}
+				country_event = mvlv_uni.40
+			}
+		}
+		ai_will_do = { base = 100 }
+	}
+	BETA_gushing_cool_down_mission = {
+		activation = {
+			has_country_flag = mvlv_gushing_beta_flag
+			NOT = { has_idea = mvlv_brokenhive }
+		}
+		available = { always = no }
+		cancel_trigger = {
+			has_idea = mvlv_brokenhive
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 35
+		timeout_effect = {
+			clr_country_flag = mvlv_gushing_beta_flag
+		}
+	}
+	#大規模攻勢の準備
+	BETA_aggressive_event_mission = {
+		activation = {
+			is_in_faction_with = BET
+	 		check_variable = {
+				num_divisions > @setF
+	 		}
+			NOT = {
+				OR = {
+					has_country_flag = mvlv_aggressive_beta_cool_down_flag
+					has_active_mission = BETA_aggressive_active_mission
+					has_idea = mvlv_aggressive_beta
+					has_idea = hive_thinning_state
+					has_idea = mvlv_brokenhive
+					defficulty_easy_trigger = yes
+					tag = BET
+				}
+	 		}
+		}
+		available = { always = no }
+		cancel_trigger = {
+			OR = {
+				check_variable = {
+					num_divisions < @setF
+	 			}
+				has_idea = hive_thinning_state
+				has_idea = mvlv_brokenhive
+				has_active_mission = BETA_aggressive_active_mission
+			}
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 1
+		timeout_effect = {
+			#占領状態更新
+			every_enemy_country = {
+				limit = {
+					any_neighbor_country = {
+	 					tag = ROOT
+	 				}
+				}
+				country_event = mvlv_generic.33
+			}
+			#通知
+			every_enemy_country = {
+				limit = {
+					any_neighbor_country = {
+	 					tag = ROOT
+	 				}
+					NOT = { has_country_flag = MVLV_underground_notice_flag }
+				}
+				country_event = mvlv_uni.32
+			}
+			every_enemy_country = {
+				limit = {
+					has_country_flag = MVLV_underground_notice_flag
+				}
+				country_event = mvlv_uni.32
+			}
+
+			set_country_flag = MVLV_aggressive_preparation_flag
+			activate_mission = BETA_aggressive_active_mission
+		}
+	}
+	#佐渡用大規模攻勢猶予
+	BETA_aggressive_event_mission_sado = {
+		activation = {
+			is_in_faction_with = BET
+	 		check_variable = {
+				num_divisions > @setF
+	 		}
+			NOT = {
+				OR = {
+					has_country_flag = mvlv_aggressive_beta_cool_down_flag
+					has_active_mission = BETA_aggressive_active_mission
+					has_idea = mvlv_aggressive_beta
+					has_idea = hive_thinning_state
+					has_idea = mvlv_brokenhive
+					has_idea = H21_sado
+				}
+	 		}
+			JAP = { is_ai = no }
+			tag = H21
+		}
+		available = { always = no }
+		cancel_trigger = {
+			OR = {
+				check_variable = {
+					num_divisions < @setF
+	 			}
+				has_idea = hive_thinning_state
+				has_idea = mvlv_brokenhive
+				has_idea = H21_sado
+				has_active_mission = BETA_aggressive_active_mission
+			}
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 1
+		timeout_effect = {
+			JAP = {
+				country_event = mvlv_uni.32
+			}
+			set_country_flag = MVLV_aggressive_preparation_flag
+			activate_mission = BETA_aggressive_active_mission
+		}
+	}
+	#大規模攻勢までの猶予
+	BETA_aggressive_active_mission = {
+		activation = {
+			always = no
+		}
+		available = { always = no }
+		cancel_trigger = {
+			OR = {
+				check_variable = {
+					num_divisions < @setF
+	 			}
+				has_idea = hive_thinning_state
+				has_idea = mvlv_brokenhive
+			}
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 14
+		cancel_effect = {
+			#必要ならイベント
+			set_country_flag = mvlv_aggressive_beta_cool_down_flag
+			clr_country_flag = MVLV_aggressive_preparation_flag
+			#初回強制地下侵攻
+			if = {
+				limit = {
+					has_global_flag = MVLV_underground_flag
+					has_global_flag = mvlv_alternative_hell_news_flag
+					NOT = { has_country_flag = MVLV_first_underground_flag }
+					NOT = { has_idea = mvlv_brokenhive }
+				}
+				set_country_flag = MVLV_first_underground_flag
+				activate_decision = BETA_underground_decision
+			}
+		}
+		timeout_effect = {
+			clr_country_flag = MVLV_aggressive_preparation_flag
+			every_enemy_country = {
+				limit = {
+					any_neighbor_country = {
+	 					tag = ROOT
+	 				}
+					NOT = { has_country_flag = MVLV_underground_notice_flag }
+				}
+				if = {
+					limit = {
+						defficulty_hell_trigger = yes
+					}
+					country_event = mvlv_uni.35
+				}
+				else = {
+					country_event = mvlv_uni.34
+				}
+			}
+			every_enemy_country = {
+				limit = {
+					has_country_flag = MVLV_underground_notice_flag
+				}
+				if = {
+					limit = {
+						defficulty_hell_trigger = yes
+					}
+					country_event = mvlv_uni.35
+				}
+				else = {
+					country_event = mvlv_uni.34
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = MVLV_underground_flag
+					NOT = { has_country_flag = MVLV_first_underground_flag }
+				}
+				set_country_flag = MVLV_first_underground_flag
+			}
+			add_ideas = { mvlv_aggressive_beta }
+		}
+	}
+	
+	#汎用大規模攻勢時の定期イベント(視線用衝撃突破戦術)
+	BETA_aggressive_event_decision = {
+		icon = generic_prepare_civil_war
+		available = {
+			is_in_faction_with = BET
+			has_idea = mvlv_aggressive_beta
+			NOT = { has_idea = mvlv_brokenhive  }
+			BETA_stay_home_trigger = yes
+			defficulty_hell_trigger = yes
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+			NOT = {
+				OR = {
+					tag = H21
+					tag = BET
+					tag = H00
+					tag = H22
+				}
+			}
+		}
+		visible = {
+			is_in_faction_with = BET
+		}
+		days_re_enable = 40
+		fire_only_once = no
+		cost = 0
+		modifier = {
+		}
+		complete_effect = {
+			add_timed_idea = { idea = mvlv_aggressive_beta_Shock_Awe days = 2 }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	###########
+	#佐渡用大規模攻勢中の定期イベント(汎用)
+	BETA_aggressive_event_sado_decision = {
+		icon = generic_prepare_civil_war
+		available = {
+			is_in_faction_with = BET
+			has_idea = mvlv_aggressive_beta
+			NOT = { has_idea = mvlv_brokenhive  }
+
+			JAP = { is_ai = no }
+			tag = H21
+		}
+		visible = {
+			is_in_faction_with = BET
+		}
+		days_re_enable = 40
+		fire_only_once = no
+		cost = 0
+		modifier = {
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					defficulty_hell_trigger = yes
+					has_global_flag = mvlv_alternative_hell_news_flag
+					has_global_flag = MVLV_underground_flag
+				}
+				add_timed_idea = { idea = mvlv_aggressive_beta_Shock_Awe days = 2 }
+			}
+			###補給
+			add_equipment_to_stockpile = {
+				type = laser_equipment
+				amount = 1000
+				producer = BET
+			}
+			add_equipment_to_stockpile = {
+				type = heavy_laser_equipment
+				amount = 200
+				producer = BET
+			}
+			if = {
+				limit = {
+					BETA_stay_home_trigger = yes
+					defficulty_hell_trigger = yes
+					has_full_control_of_state = 789
+					OR = {
+						controls_state = 539
+						controls_state = 535
+						controls_state = 282
+						controls_state = 792
+					}
+				}
+				activate_decision = BETA_underground_decision
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 789
+					NOT ={
+						OR = {
+							controls_state = 539
+							controls_state = 535
+							controls_state = 282
+							controls_state = 792
+						}
+					}
+				}
+				#佐渡上陸侵攻
+				country_event = BETA.10
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	BETA_underground_decision = {
+		icon = generic_prepare_civil_war
+		available = {
+			is_in_faction_with = BET
+			has_idea = mvlv_aggressive_beta
+			BETA_stay_home_trigger = yes
+			defficulty_hell_trigger = yes
+			has_global_flag = MVLV_underground_flag
+			NOT = {
+				OR = {
+					tag = H21
+					tag = BET
+					tag = H00
+					tag = H22
+				}
+			}
+		}
+		visible = {
+			is_in_faction_with = BET
+		}
+		cancel_trigger = {
+			NOT = { BETA_stay_home_trigger = yes }
+		}
+		days_remove = 5
+		days_re_enable = 40
+		fire_only_once = no
+		cost = 0
+		modifier = {
+		}
+		complete_effect = {
+			#占領状態更新
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = UNI
+				}
+				country_event = mvlv_generic.33
+			}
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { has_country_flag = MVLV_underground_notice_flag }
+				}
+				country_event = mvlv_uni.36
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					has_country_flag = MVLV_underground_notice_flag
+				}
+				country_event = mvlv_uni.36
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = MVLV_first_underground_flag }
+				}
+				set_country_flag = MVLV_first_underground_flag
+			}
+		}
+		remove_effect = {
+			#占領状態更新
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = UNI
+				}
+				country_event = mvlv_generic.33
+			}
+			#通知
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { has_country_flag = MVLV_underground_notice_flag }
+				}
+				country_event = mvlv_uni.37
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					has_country_flag = MVLV_underground_notice_flag
+				}
+				country_event = mvlv_uni.37
+			}
+			MVLV_underground_invasion_effect = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	
+	##通常大規模クールダウン
+	BETA_aggressive_timeout_mission = {
+		activation = {
+			has_idea = mvlv_aggressive_beta
+			NOT = { has_global_flag = mvlv_alternative_hell_news_flag }
+		}
+		available = { always = no }
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 35
+		timeout_effect = {
+			#必要ならイベント
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { has_country_flag = MVLV_underground_notice_flag }
+				}
+				country_event = mvlv_uni.39
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					has_country_flag = MVLV_underground_notice_flag
+				}
+				country_event = mvlv_uni.39
+			}
+			remove_ideas = { mvlv_aggressive_beta }
+			set_country_flag = mvlv_aggressive_beta_cool_down_flag
+		}
+	}
+########裏難易度用クールダウン
+	BETA_aggressive_timeout_mission_2 = {
+		activation = {
+			has_idea = mvlv_aggressive_beta
+			has_global_flag = mvlv_alternative_hell_news_flag
+			check_variable = {
+				num_divisions < @endF
+			}
+		}
+		available = { always = no }
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 35
+		timeout_effect = {
+			#必要ならイベント
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { has_country_flag = MVLV_underground_notice_flag }
+				}
+				country_event = mvlv_uni.39
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					has_country_flag = MVLV_underground_notice_flag
+				}
+				country_event = mvlv_uni.39
+			}
+			remove_ideas = { mvlv_aggressive_beta }
+			set_country_flag = mvlv_aggressive_beta_cool_down_flag
+		}
+	}
+
+	BETA_aggressive_cool_down_mission = {
+		activation = {
+			has_country_flag = mvlv_aggressive_beta_cool_down_flag
+		}
+		available = { always = no }
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 35
+		timeout_effect = {
+			clr_country_flag = mvlv_aggressive_beta_cool_down_flag
+			if = {
+				limit = {
+					NOT = {
+						has_idea = BET_broken_original_hive
+					}
+				}
+				add_to_variable = { global.BETA_tactical_improv = 0.008 }
+				if = {
+					limit = { has_global_flag = mvlv_alternative_hell_news_flag }
+					add_to_variable = { global.BETA_alternative_hell_improv = 0.001 }
+				}
+			}
+		}
+	}
+	BETA_destroy_the_arms_factory_decision = {
+		icon = generic_construction
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		visible = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+		}
+		cost = 0
+		fire_only_once = no
+		cancel_if_not_visible = yes
+		days_remove = 7
+		complete_effect = {
+		}
+		cancel_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = { arms_factory > 1 }
+					remove_building = {
+						type = arms_factory
+						level = 2
+					}
+				}
+				else_if = {
+					limit = { arms_factory < 2 }
+					set_building_level = {
+						type = arms_factory
+						level = 0
+						instant_build = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	BETA_destroy_the_industrial_complex_decision = {
+		icon = generic_construction
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		visible = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				industrial_complex > 0
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				industrial_complex > 0
+			}
+		}
+		cost = 0
+		fire_only_once = no
+		cancel_if_not_visible = yes
+		days_remove = 7
+		complete_effect = {
+		}
+		cancel_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = { industrial_complex > 1 }
+					remove_building = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+				else_if = {
+					limit = { industrial_complex < 2 }
+					set_building_level = {
+						type = industrial_complex
+						level = 0
+						instant_build = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	BETA_destroy_the_dockyard_decision = {
+		icon = generic_construction
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		visible = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				dockyard > 0
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				dockyard > 0
+			}
+		}
+		cost = 0
+		fire_only_once = no
+		cancel_if_not_visible = yes
+		days_remove = 7
+		complete_effect = {
+		}
+		cancel_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = { dockyard > 1 }
+					remove_building = {
+						type = dockyard
+						level = 2
+					}
+				}
+				else_if = {
+					limit = { dockyard < 2 }
+					set_building_level = {
+						type = dockyard
+						level = 0
+						instant_build = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	BETA_destroy_the_coastal_bunker_decision = {
+		icon = generic_construction
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		visible = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						limit_to_coastal = yes
+					}
+					building = coastal_bunker
+					level > 0
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						limit_to_coastal = yes
+					}
+					building = coastal_bunker
+					level > 0
+				}
+			}
+		}
+		cost = 0
+		fire_only_once = no
+		cancel_if_not_visible = yes
+		days_remove = 30
+		complete_effect = {
+		}
+		cancel_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = { 
+						any_province_building_level = {
+							province = {
+								all_provinces = yes
+								limit_to_border = no
+								limit_to_coastal = yes
+							}
+							building = coastal_bunker
+							level > 0
+						}
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 0
+						instant_build = yes
+						province = {
+							limit_to_coastal = yes
+							all_provinces = yes
+							level > 0
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	BETA_destroy_the_bunker_decision = {
+		icon = generic_construction
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		visible = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+					}
+					building = bunker
+					level > 0
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+					}
+					building = bunker
+					level > 0
+				}
+			}
+		}
+		cost = 0
+		fire_only_once = no
+		cancel_if_not_visible = yes
+		days_remove = 30
+		complete_effect = {
+		}
+		cancel_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = { 
+						any_province_building_level = {
+							province = {
+								all_provinces = yes
+								limit_to_border = no
+							}
+							building = bunker
+							level > 0
+						}
+					}
+					set_building_level = {
+						type = bunker
+						level = 0
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							level > 0
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	#0レベルの港が残るため暫定無効化
+	# BETA_destroy_the_naval_base_decision = {
+		# icon = generic_construction
+		# allowed = {
+			# always = yes
+		# }
+		# available = {
+			# always = yes
+		# }
+		# visible = {
+			# is_in_faction_with = BET
+			# FROM = {
+				# is_capital = no
+				# is_fully_controlled_by = ROOT
+						# any_province_building_level = {
+							# province = {
+								# all_provinces = yes
+								# limit_to_border = no
+								# limit_to_naval_base = yes
+							# }
+							# building = naval_base
+							# level > 0
+						# }
+			# }
+		# }
+		# state_target = yes
+		# on_map_mode = map_and_decisions_view
+		# target_trigger = {
+			# is_in_faction_with = BET
+			# FROM = {
+				# is_capital = no
+				# is_fully_controlled_by = ROOT
+						# any_province_building_level = {
+							# province = {
+								# all_provinces = yes
+								# limit_to_border = no
+								# limit_to_naval_base = yes
+							# }
+							# building = naval_base
+							# level > 0
+						# }
+			# }
+		# }
+		# cost = 0
+		# fire_only_once = no
+		# cancel_if_not_visible = yes
+		# days_remove = 3
+		# complete_effect = {
+		# }
+		# cancel_effect = {
+		# }
+		# remove_effect = {
+			# FROM = {
+				# if = {
+					# limit = { 
+						# any_province_building_level = {
+							# province = {
+								# all_provinces = yes
+								# limit_to_border = no
+								# limit_to_naval_base = yes
+							# }
+							# building = naval_base
+							# level > 0
+						# }
+					# }
+					# set_building_level = {
+						# type = naval_base
+						# level = 0
+						# instant_build = yes
+						# province = {
+							# limit_to_naval_base = yes
+							# all_provinces = yes
+							# level > 0
+						# }
+					# }
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# base = 0
+		# }
+	# }
+	#弾薬関連はまだ消してない
+	BETA_destroy_the_building_decision = {
+		icon = generic_construction
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		visible = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				OR = {
+					anti_air_building > 0
+					synthetic_refinery > 0
+					fuel_silo > 0
+					radar_station > 0
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			is_in_faction_with = BET
+			FROM = {
+				is_capital = no
+				is_fully_controlled_by = ROOT
+				OR = {
+					anti_air_building > 0
+					synthetic_refinery > 0
+					fuel_silo > 0
+					radar_station > 0
+				}
+			}
+		}
+		cost = 0
+		fire_only_once = no
+		cancel_if_not_visible = yes
+		days_remove = 30
+		complete_effect = {
+		}
+		cancel_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = { anti_air_building > 0 }
+					set_building_level = {
+						type = anti_air_building
+						level = 0
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = { synthetic_refinery > 0 }
+					set_building_level = {
+						type = synthetic_refinery
+						level = 0
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = { fuel_silo > 0 }
+					set_building_level = {
+						type = fuel_silo
+						level = 0
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = { radar_station > 0 }
+					set_building_level = {
+						type = radar_station
+						level = 0
+						instant_build = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	#on_acからこっちに変更
+	#ハイヴ人口も消し飛ぶけどテストでどうなるか確認
+	BETA_population_cleaning_decision = {
+		allowed = { always = yes }
+		available = {
+			is_in_faction_with = BET
+		}
+		visible = {
+			is_in_faction_with = BET
+			FROM = {
+				impassable = no
+				OR = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+				OR = {
+					NOT = { has_state_category = betaland }
+					state_population_k > 0
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			FROM = {
+				impassable = no
+				OR = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+				OR = {
+					NOT = { has_state_category = betaland }
+					state_population_k > 0
+				}
+				controller = { is_in_faction_with = BET }
+			}
+		}
+		cancel_trigger = {
+			FROM = { controller = { NOT = { is_in_faction_with = BET } } }
+		}
+		cost = 0
+		fire_only_once = no
+		days_remove = 3
+		complete_effect = {
+		}
+		cancel_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				population_cleaning_effect = yes
+				ROOT = { add_manpower = 100000 } #100K
+				add_dynamic_modifier = {
+					modifier = beta_no_pop_modifier
+				}
+			}
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	############
+		MVLV_BETA_srf_POP_decision = {
+		allowed = { always = yes }
+		available = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+			has_global_flag = mvlv_beta_srf_enable_flag
+			date > 2000.12.15
+
+			is_in_faction_with = BET
+			BETA_stay_home_trigger = yes
+			NOT = {
+				OR = {
+					has_idea = mvlv_brokenhive
+					tag = H21
+					tag = H22
+					tag = BET
+				}
+			}
+		}
+		visible = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+			has_global_flag = mvlv_beta_srf_enable_flag
+		}
+		cost = 0
+		days_re_enable = 120
+		fire_only_once = no
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = mvlv_beta_srf_pop_flag }
+				}
+				set_global_flag = mvlv_beta_srf_pop_flag
+				news_event = mvlv_news.13
+			}
+
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Г標的\" division_template = \"超重光線級\" start_experience_factor = 0.5"
+					owner = PREV
+				}
+			}
+		}
+		ai_will_do = { base = 1000 }
+	}
+
+	#大規模POP
+	MVLV_A_Enhancement_BETA_5_decision = {
+		allowed = { always = yes }
+		available = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+			NOT = { has_country_flag = mvlv_beta_stay_home_flag }
+			date > 2001.4.1
+		}
+		visible = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+			MVLV_BETA_weekly_deploy_effect = yes
+		}
+		ai_will_do = { base = 1000 }
+	}
+
+	#他所POP用
+	BETA_stay_home_pop_mission_1 = {
+		activation = {
+			is_in_faction_with = BET
+			has_global_flag = mvlv_alternative_hell_news_flag
+			NOT = { BETA_stay_home_trigger = yes }
+			NOT = {
+				OR = {
+					has_idea = mvlv_brokenhive
+					has_idea = hive_thinning_state
+					tag = H21
+					tag = H22
+				}
+			}
+			surrender_progress < 0.90
+		}
+		available = { always = no }
+		cancel_trigger = {
+			OR = {
+				has_idea = mvlv_brokenhive
+				has_idea = hive_thinning_state
+			}
+			surrender_progress > 0.90
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			random_neighbor_country = {
+				limit = {
+					is_in_faction_with = BET
+					BETA_stay_home_trigger = yes
+					NOT = {
+						OR = {
+							has_idea = mvlv_brokenhive
+							has_idea = hive_thinning_state
+							tag = H21
+							tag = H22
+						}
+					}
+					check_variable = {
+						num_divisions < @setF
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							num_divisions < @setF
+						}
+					}
+					ROOT = { set_country_flag = mvlv_beta_stay_home_pop_M1_flag }
+					MVLV_BETA_weekly_deploy_effect = yes
+					MVLV_BETA_weekly_deploy_effect = yes
+					MVLV_BETA_weekly_deploy_effect = yes
+					MVLV_BETA_weekly_deploy_effect = yes
+					MVLV_BETA_weekly_deploy_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = mvlv_beta_stay_home_pop_M1_flag }
+				}
+				random_country = {
+					limit = {
+						is_in_faction_with = BET
+						BETA_stay_home_trigger = yes
+						NOT = {
+							OR = {
+								has_idea = mvlv_brokenhive
+								has_idea = hive_thinning_state
+								tag = H21
+								tag = H22
+							}
+						}
+						check_variable = {
+							num_divisions < @setF
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								num_divisions < @setF
+							}
+						}
+						ROOT = { set_country_flag = mvlv_beta_stay_home_pop_M1_flag }
+						MVLV_BETA_weekly_deploy_effect = yes
+						MVLV_BETA_weekly_deploy_effect = yes
+						MVLV_BETA_weekly_deploy_effect = yes
+						MVLV_BETA_weekly_deploy_effect = yes
+						MVLV_BETA_weekly_deploy_effect = yes
+					}
+				}
+			}
+			if = {
+				limit = { has_country_flag = mvlv_beta_stay_home_pop_M1_flag }
+				clr_country_flag = mvlv_beta_stay_home_pop_M1_flag
+			}
+		}
+	}
+#####Г移動
+	BETA_stay_home_SHL_slide_decision = {
+		available = {
+			is_in_faction_with = BET
+			has_template = "超重光線級"
+			has_global_flag = MVLV_srf_first_pop_flag
+			NOT = { BETA_stay_home_trigger = yes }
+			NOT = {
+				check_variable = {
+					num_divisions < @setF
+				}
+			}
+			NOT = {
+				has_idea = mvlv_brokenhive
+			}
+			surrender_progress < 0.90
+		}
+		visible = {
+			is_in_faction_with = BET
+		}
+		cost = 0
+		days_remove = 1
+		fire_only_once = yes
+		complete_effect = {
+
+			set_temp_variable = { temp_divisions_var = ROOT.num_divisions }
+			set_temp_variable = { temp_count_var = 0 }
+			
+			delete_unit = {
+				division_template = "超重光線級"
+			}
+			if = {
+				limit = {
+					check_variable = { num_divisions < temp_divisions_var }
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Г標的\" division_template = \"超重光線級\" start_experience_factor = 0.5"
+						owner = PREV
+					}
+				}
+				add_to_temp_variable = { temp_count_var = temp_divisions_var }
+				subtract_from_temp_variable = { temp_count_var = ROOT.num_divisions }
+				if = {
+					limit = {
+						check_variable = {
+							temp_count_var > 0
+						}
+					}
+					random_neighbor_country = {
+						limit = {
+							is_in_faction_with = BET
+							BETA_stay_home_trigger = yes
+							NOT = {
+								OR = {
+									has_idea = mvlv_brokenhive
+									has_idea = hive_thinning_state
+									tag = H21
+									tag = H22
+								}
+							}
+						}
+						ROOT = { set_country_flag = mvlv_beta_slide_SHL_flag }
+						while_loop_effect = {
+							limit = {
+								check_variable = { temp_count_var > 0 }
+							}
+							subtract_from_temp_variable = { temp_count_var = 1 }
+							capital_scope = {
+								create_unit = {
+									division = "name = \"Г標的\" division_template = \"超重光線級\" start_experience_factor = 0.5"
+									owner = PREV
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_country_flag = mvlv_beta_slide_SHL_flag }
+						}
+						random_country = {
+							limit = {
+								is_in_faction_with = BET
+								BETA_stay_home_trigger = yes
+								NOT = {
+									OR = {
+										has_idea = mvlv_brokenhive
+										has_idea = hive_thinning_state
+										tag = H21
+										tag = H22
+									}
+								}
+
+							}
+							ROOT = { set_country_flag = mvlv_beta_slide_SHL_flag }
+							while_loop_effect = {
+								limit = {
+									check_variable = { temp_count_var > 0 }
+								}
+								subtract_from_temp_variable = { temp_count_var = 1 }
+								capital_scope = {
+									create_unit = {
+										division = "name = \"Г標的\" division_template = \"超重光線級\" start_experience_factor = 0.5"
+										owner = PREV
+									}
+								}
+							}
+						}
+					}
+					if = {
+						limit = { has_country_flag = mvlv_beta_slide_SHL_flag }
+						clr_country_flag = mvlv_beta_slide_SHL_flag
+					}
+				}
+
+
+			}
+		}
+		ai_will_do = { base = 100 }
+	}
+
+}
+
+MVLV_A_in_faction_decisions_category = {
+	
+	MVLV_A_in_faction_decision = {
+		allowed = { always = yes }
+		available = {
+			NOT = { is_in_faction_with = BET }
+			num_divisions < 1
+		}
+		visible = {
+			NOT = { is_in_faction_with = BET }
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			BET = { add_to_faction = H00 }
+			UNI = {
+				annex_country = {
+					target = H00
+					transfer_troops = no
+				}
+			}
+		}
+		ai_will_do = { base = 1000 }
+	}
+
+	MVLV_A_Enhancement_BETA_1_decision = {
+		allowed = { always = yes }
+		available = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+			date > 2000.4.1
+		}
+		visible = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = BET
+				}
+				set_technology = {
+					beta_doctrine2 = 1
+				}
+			}
+		}
+		ai_will_do = { base = 1000 }
+	}
+	MVLV_A_Enhancement_BETA_2_decision = {
+		allowed = { always = yes }
+		available = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+			date > 2000.6.1
+		}
+		visible = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = BET
+				}
+				set_technology = {
+					beta_doctrine3 = 1
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+				}
+				if = {
+					limit = { has_done_agency_upgrade = upgrade_form_department }
+					country_event = mvlv_generic.32
+				}
+			}
+		}
+		ai_will_do = { base = 1000 }
+	}
+	MVLV_A_Enhancement_BETA_3_decision = {
+		allowed = { always = yes }
+		available = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+			date > 2000.8.15
+		}
+		visible = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			set_global_flag = mvlv_beta_srf_enable_flag
+			news_event = mvlv_news.12
+			every_country = {
+				limit = {
+					is_in_faction_with = BET
+					NOT = { has_idea = mvlv_brokenhive }
+					NOT = {
+						tag = H22
+					}
+				}
+				division_template = {
+					name = "超重光線級"
+					is_locked = yes
+					division_names_group = BET_SRF_01
+					regiments = {
+						MVLV_beta_srf = {
+							x = 0
+							y = 0
+						}
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Г標的\" division_template = \"超重光線級\" start_experience_factor = 0.5"
+						owner = PREV
+					}
+				}
+				set_global_flag = MVLV_srf_first_pop_flag
+			}
+		}
+		ai_will_do = { base = 1000 }
+	}
+	MVLV_A_Enhancement_BETA_4_decision = {
+		allowed = { always = yes }
+		available = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+			date > 2000.12.1
+		}
+		visible = {
+			has_global_flag = mvlv_alternative_hell_news_flag
+			has_global_flag = MVLV_underground_flag
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = BET
+				}
+				set_technology = {
+					beta_doctrine4 = 1
+				}
+			}
+		}
+		ai_will_do = { base = 1000 }
+	}
+}

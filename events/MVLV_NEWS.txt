@@ -1,0 +1,329 @@
+add_namespace = mvlv_news
+
+#____________________________________________________________
+#用途
+#ニュース
+#
+#id:mvlv_news.1 effect:ハイヴ占領
+#id:mvlv_news.2 effect:ハイヴBETA占領
+#
+#
+#判定元が佐渡島である場合対象のユニット、および指揮官を削除
+#
+#____________________________________________________________
+
+news_event = {
+	id = mvlv_news.1
+	desc = mvlv_news.1.d
+	title = mvlv_news.1.t
+	picture = GFX_mvlv_hive_capitulation
+
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mvlv_news.1.a
+	}
+}
+
+news_event = {
+	id = mvlv_news.2
+	desc = mvlv_news.2.d
+	title = mvlv_news.2.t
+	picture = GFX_mvlv_hive_uncapitulation
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = mvlv_news.2.a
+	}
+}
+#佐渡陥落のニュース
+news_event = {
+	id = mvlv_news.3
+	desc = mvlv_news.3.d
+	title = mvlv_news.3.t
+	picture = GFX_mvlv_hive_uncapitulation
+	
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+
+	option = {
+		trigger = {
+			AND = {
+				H21 = { NOT = { has_completed_focus = BET_not_broken_hive } }
+				UNI = { has_completed_focus = UNI_sadogashima }
+				check_variable = { global.var_generalDeathMode = 1 }
+				tag = UNI
+			}
+		}
+		name = mvlv_news.3.a
+		effect_tooltip = {
+			retire_character = UNI_Kasiwagi
+			retire_character = UNI_Michiru
+			if = {
+				limit = { has_template = "A-02" }
+				delete_unit_template_and_units = {
+					division_template = "A-02"
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = {
+				AND = {
+					H21 = { NOT = { has_completed_focus = BET_not_broken_hive } }
+					UNI = { has_completed_focus = UNI_sadogashima }
+					check_variable = { global.var_generalDeathMode = 1 }
+					tag = UNI
+				}
+			}
+		}
+		name = mvlv_news.3.b
+	}
+	
+}
+
+
+
+
+news_event = {
+	id = mvlv_news.4
+	desc = mvlv_news.4.d
+	title = mvlv_news.4.t
+	picture = GFX_mvlv_G0
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+
+				delete_unit = {
+					state = 792
+					disband = no
+				}
+			}
+			USA = {
+				#old delete code
+				load_oob = USA_H22
+				load_oob = MVLV_generic_H22
+			}
+			JAP = {
+				add_stability = -0.1
+				add_war_support = 0.1
+				add_doctrine_cost_reduction = {
+					name = land_doctrine
+					cost_reduction = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+				set_state_owner = 792
+				set_state_controller = 792
+				
+				load_oob = MVLV_generic_H22
+			}
+			UNI = {
+				load_oob = MVLV_generic_H22
+			}
+			###
+
+			
+		}
+	}
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = mvlv_news.4.a
+	}
+}
+news_event = {
+	id = mvlv_news.5
+	desc = mvlv_news.5.d
+	title = mvlv_news.5.t
+	picture = GFX_mvlv_hive_uncapitulation
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = mvlv_news.5.a
+	}
+}
+
+news_event = {
+	id = mvlv_news.6
+	#desc = mvlv_news.6.d
+	title = mvlv_news.6.t
+	picture = GFX_news_event_020
+	desc = {
+		text = mvlv_news.6.d.a
+		trigger = {
+			tag = JAP
+		}
+	}
+	desc = {
+		text = mvlv_news.6.d.b
+		trigger = {
+			NOT = { tag = JAP }
+		}
+	}
+	
+	major = yes
+	is_triggered_only = yes
+	immediate = {
+		play_song_Alternative_05_effect = yes
+	}
+	option = {
+		name = mvlv_news.6.a
+		trigger = {
+			tag = JAP
+		}
+	}
+	option = {
+		name = mvlv_news.6.b
+		trigger = {
+			NOT = { tag = JAP }
+		}
+	}
+}
+
+news_event = {
+	id = mvlv_news.7
+	desc = mvlv_news.7.d
+	title = mvlv_news.7.t
+	picture = GFX_mvlv_hive_uncapitulation
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = mvlv_news.7.a
+	}
+}
+
+####佐渡島退避
+country_event = {
+	id = mvlv_news.8
+	desc = mvlv_news.8.d
+	title = mvlv_news.8.t
+	picture = GFX_mvlv_hive_capitulation
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+				}
+			}
+			789 = {
+				teleport_armies = { limit = { is_in_faction_with = UNI } to_state = 792 }
+			}
+			USA = {
+				set_global_flag = mvlv_sado_G_flag
+				add_nuclear_bombs = 1
+				launch_nuke = { province = 9952 }
+			}
+			news_event = {
+				id = mvlv_news.9
+				days = 1
+			}
+			UNI = {
+				if = {
+					limit = {
+						AND = {
+							check_variable = { global.var_generalDeathMode = 1 }
+							has_completed_focus = UNI_sadogashima
+						}
+					}
+					retire_character = UNI_Kasiwagi
+					retire_character = UNI_Michiru
+				}
+			}
+		}
+	}
+	option = {
+		name = mvlv_news.8.a
+	}
+}
+####佐渡島消滅
+country_event = {
+	id = mvlv_news.9
+	desc = mvlv_news.9.d
+	title = mvlv_news.9.t
+	picture = GFX_mvlv_G0
+	is_triggered_only = yes
+	immediate = {
+		#予備退避
+		hidden_effect = {
+			789 = {
+				teleport_armies = { limit = { is_in_faction_with = UNI } to_state = 792 }
+			}
+			H21 = {
+				delete_unit = {
+					state = 789
+					disband = no
+				}
+				transfer_state = 801
+				# country_event = {
+					# id = BETA.11
+					# days = 3
+				# }
+			}
+			#オンアクションで記述
+
+			SRD = {
+				transfer_state = 789
+				#set_state_owner = 789
+				#set_state_controller = 789
+				#set_province_name = { id = 789 name = LOC_KEY }
+				division_template = {
+					name = "Infantry Division"
+					is_locked = yes
+					division_cap = 3 
+					division_names_group = USA_INF_01
+					priority = 0
+					template_counter = 0
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+					}
+				}
+			}
+			789 = {
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5"
+					owner = SRD
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			SRD = {
+				delete_unit = {
+					state = 789
+					disband = no
+				}
+			}
+			set_province_name = { id = 9952 name = "Former site of Sado" }
+			789 = { set_state_name = "Former site of Sado" }
+			clr_global_flag = mvlv_sado_G_flag
+		}
+	}
+	option = {
+		name = mvlv_news.9.a
+	}
+}
+
+#set_province_name = { id = 325 name = LOC_KEY}
+#set_province_name = { id = 325 name = "New Name" }
+#goto_province = 325
+#launch_nuke = { province = 1234 }
+#G弾の投下は可能なら戦略研究部（戦争中じゃないから難しい？）
+#G弾関連のonacは国連側限定で発生するように変更する。
+

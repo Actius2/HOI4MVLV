@@ -1,0 +1,560 @@
+ideas = {
+	rationing_slot = {
+		law = yes
+		use_list_view = yes
+		no_rationing = {
+
+			available = { }
+			cancel = {
+				hidden_trigger = {
+					NOT = { is_in_faction_with = UNI }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						is_in_faction_with = UNI
+					}
+					set_variable = {
+						var = country_manpower
+						value = max_manpower_k
+					}
+				}
+				set_variable = {
+					var = country_army_manpower
+					value = deployed_army_manpower_k 
+				}
+				set_variable = {
+					var = country_navy_manpower
+					value = deployed_navy_manpower_k 
+				}
+				set_variable = {
+					var = country_airforce_manpower
+					value = deployed_airforce_manpower_k 
+				}
+				set_variable = {
+					var = need_food
+					value = 0
+				}
+				set_variable = {
+					var = need_food_military
+					value = 0
+				}
+				set_variable = {
+					var = eat_food
+					value = 0
+				}
+
+				multiply_variable = {
+					var = country_manpower
+					value = 0.001
+				}
+				add_to_variable = { 
+					var = need_food 
+					value = country_manpower 
+				}
+				multiply_variable = {
+					var = country_army_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_army_manpower
+				}
+				multiply_variable = {
+					var = country_navy_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_navy_manpower
+				}
+				multiply_variable = {
+					var = country_airforce_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_airforce_manpower
+				}
+				if = {
+					limit = {
+						has_idea = stop_rationing
+					}
+					set_variable = {
+						var = need_food
+						value = 0
+					}
+				}
+				if = {
+					limit = {
+						has_idea = subsistence_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 0.5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = war_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 0.75
+					}
+				}
+				if = {
+					limit = {
+						has_idea = no_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 1.35
+					}
+				}
+
+				subtract_from_variable = {
+					eat_food = need_food
+				}
+				subtract_from_variable = {
+					eat_food = need_food_military
+				}
+			}
+			cost = 0
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				monthly_population = 0.5
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.10
+				factory_energy_consumption = 0.2
+			}
+
+		}
+		
+		war_rationing = {
+
+			available = { }
+			cancel = {
+				hidden_trigger = {
+					NOT = { is_in_faction_with = UNI }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						is_in_faction_with = UNI
+					}
+					set_variable = {
+						var = country_manpower
+						value = max_manpower_k
+					}
+				}
+				set_variable = {
+					var = country_army_manpower
+					value = deployed_army_manpower_k 
+				}
+				set_variable = {
+					var = country_navy_manpower
+					value = deployed_navy_manpower_k 
+				}
+				set_variable = {
+					var = country_airforce_manpower
+					value = deployed_airforce_manpower_k 
+				}
+				set_variable = {
+					var = need_food
+					value = 0
+				}
+				set_variable = {
+					var = need_food_military
+					value = 0
+				}
+				set_variable = {
+					var = eat_food
+					value = 0
+				}
+
+				multiply_variable = {
+					var = country_manpower
+					value = 0.001
+				}
+				add_to_variable = { 
+					var = need_food 
+					value = country_manpower 
+				}
+				multiply_variable = {
+					var = country_army_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_army_manpower
+				}
+				multiply_variable = {
+					var = country_navy_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_navy_manpower
+				}
+				multiply_variable = {
+					var = country_airforce_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_airforce_manpower
+				}
+				if = {
+					limit = {
+						has_idea = stop_rationing
+					}
+					set_variable = {
+						var = need_food
+						value = 0
+					}
+				}
+				if = {
+					limit = {
+						has_idea = subsistence_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 0.5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = war_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 0.75
+					}
+				}
+				if = {
+					limit = {
+						has_idea = no_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 1.35
+					}
+				}
+
+				subtract_from_variable = {
+					eat_food = need_food
+				}
+				subtract_from_variable = {
+					eat_food = need_food_military
+				}
+			}
+			cost = 0
+			default = yes
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		subsistence_rationing = {
+
+			available = { }
+			cancel = {
+				hidden_trigger = {
+					NOT = { is_in_faction_with = UNI }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						is_in_faction_with = UNI
+					}
+					set_variable = {
+						var = country_manpower
+						value = max_manpower_k
+					}
+				}
+				set_variable = {
+					var = country_army_manpower
+					value = deployed_army_manpower_k 
+				}
+				set_variable = {
+					var = country_navy_manpower
+					value = deployed_navy_manpower_k 
+				}
+				set_variable = {
+					var = country_airforce_manpower
+					value = deployed_airforce_manpower_k 
+				}
+				set_variable = {
+					var = need_food
+					value = 0
+				}
+				set_variable = {
+					var = need_food_military
+					value = 0
+				}
+				set_variable = {
+					var = eat_food
+					value = 0
+				}
+
+				multiply_variable = {
+					var = country_manpower
+					value = 0.001
+				}
+				add_to_variable = { 
+					var = need_food 
+					value = country_manpower 
+				}
+				multiply_variable = {
+					var = country_army_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_army_manpower
+				}
+				multiply_variable = {
+					var = country_navy_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_navy_manpower
+				}
+				multiply_variable = {
+					var = country_airforce_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_airforce_manpower
+				}
+				if = {
+					limit = {
+						has_idea = stop_rationing
+					}
+					set_variable = {
+						var = need_food
+						value = 0
+					}
+				}
+				if = {
+					limit = {
+						has_idea = subsistence_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 0.5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = war_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 0.75
+					}
+				}
+				if = {
+					limit = {
+						has_idea = no_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 1.35
+					}
+				}
+
+				subtract_from_variable = {
+					eat_food = need_food
+				}
+				subtract_from_variable = {
+					eat_food = need_food_military
+				}
+			}
+			cost = 0
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				monthly_population = -1
+				factory_energy_consumption = -0.1
+			}
+		}
+
+		stop_rationing = {
+
+			available = { }
+			cancel = {
+				hidden_trigger = {
+					NOT = { is_in_faction_with = UNI }
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						is_in_faction_with = UNI
+					}
+					set_variable = {
+						var = country_manpower
+						value = max_manpower_k 
+					}
+				}
+				set_variable = {
+					var = country_army_manpower
+					value = deployed_army_manpower_k 
+				}
+				set_variable = {
+					var = country_navy_manpower
+					value = deployed_navy_manpower_k 
+				}
+				set_variable = {
+					var = country_airforce_manpower
+					value = deployed_airforce_manpower_k 
+				}
+				set_variable = {
+					var = need_food
+					value = 0
+				}
+				set_variable = {
+					var = need_food_military
+					value = 0
+				}
+				set_variable = {
+					var = eat_food
+					value = 0
+				}
+
+				multiply_variable = {
+					var = country_manpower
+					value = 0.001
+				}
+				add_to_variable = { 
+					var = need_food 
+					value = country_manpower 
+				}
+				multiply_variable = {
+					var = country_army_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_army_manpower
+				}
+				multiply_variable = {
+					var = country_navy_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_navy_manpower
+				}
+				multiply_variable = {
+					var = country_airforce_manpower
+					value = 0.1
+				}
+				add_to_variable = {
+					var = need_food_military
+					value = country_airforce_manpower
+				}
+				if = {
+					limit = {
+						has_idea = stop_rationing
+					}
+					set_variable = {
+						var = need_food
+						value = 0
+					}
+				}
+				if = {
+					limit = {
+						has_idea = subsistence_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 0.5
+					}
+				}
+				if = {
+					limit = {
+						has_idea = war_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 0.75
+					}
+				}
+				if = {
+					limit = {
+						has_idea = no_rationing
+					}
+					multiply_variable = {
+						var = need_food
+						value = 1.35
+					}
+				}
+
+				subtract_from_variable = {
+					eat_food = need_food
+				}
+				subtract_from_variable = {
+					eat_food = need_food_military
+				}
+			}
+			cost = 0
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				monthly_population = -2
+				factory_energy_consumption = -0.4
+			}
+		}
+		BETA_rationing = {
+
+			available = { NOT = { is_in_faction_with = UNI } }
+			allowed = {
+				NOT = { is_in_faction_with = UNI }
+			}
+			visible = {
+				NOT = { is_in_faction_with = UNI }
+			}
+			cancel = {
+				hidden_trigger = {
+					is_in_faction_with = UNI
+				}
+			}
+			on_remove = {
+
+
+			}
+			cost = 0
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+
+		}
+	}
+
+
+}

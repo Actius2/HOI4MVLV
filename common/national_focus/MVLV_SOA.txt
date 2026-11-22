@@ -1,0 +1,1332 @@
+focus_tree = {
+	id = SOA_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = SOA
+			
+		}
+		modifier = {
+			add = 100
+			tag = CEA
+			
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 2150
+		y = 700
+	}
+	reset_on_civilwar = no
+	# shared_focus = common_refugee_tech_sharing
+	# shared_focus = common_adopt_powered_suits
+	# shared_focus = common_experience_of_BETA_war
+	# shared_focus = common_refugee_support_request
+	#####
+	#ソロ
+	#救世主ルート
+	focus = {
+		id = SOA_The_Savior_is_Here
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		x = 4
+		y = 0
+		mutually_exclusive = {
+			focus = SOA_Living_within_the_treaty
+			focus = SOA_As_one_country
+		}
+		cost = 5
+		available = {
+			all_allied_country = {
+				is_ai = yes
+			}
+			has_idea = mvlv_difficulty_unlimited
+		}
+		completion_reward = {
+			set_technology = {
+				MVLV_research_tsf_1_heavy_framework = 1
+				MVLV_research_engine_1 = 1
+				MVLV_research_OS_1 = 1
+				MVLV_research_assault_cannon_1 = 1
+				MVLV_research_shield = 1
+			}
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_What_is_the_best
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = -1
+		y = 1
+		relative_position_id = SOA_The_Savior_is_Here
+		prerequisite = {
+			focus = SOA_The_Savior_is_Here
+		}
+		cost = 5
+		completion_reward = {
+			remove_ideas = mvlv_saast
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Experience_in_another_country
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 0
+		y = 1
+		relative_position_id = SOA_What_is_the_best
+		prerequisite = {
+			focus = SOA_What_is_the_best
+		}
+		cost = 10
+		completion_reward = {
+			add_political_power = 500
+			add_command_power = 300
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Things_necessary
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		relative_position_id = SOA_Experience_in_another_country
+		prerequisite = {
+			focus = SOA_Experience_in_another_country
+		}
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 5
+				category = MVLV_tsf_tech
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	##
+	focus = {
+		id = SOA_Get_to_the_point
+		icon = GFX_focus_jap_cast_the_die_2
+		x = 1
+		y = 1
+		relative_position_id = SOA_The_Savior_is_Here
+		prerequisite = {
+			focus = SOA_The_Savior_is_Here
+		}
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = SOA_Get_to_the_point_tt
+			hidden_effect = {
+				load_oob = SOA_load_solo
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Gain_experience
+		icon = GFX_focus_SOV_penal_battalions
+		x = 0
+		y = 1
+		relative_position_id = SOA_Get_to_the_point
+		prerequisite = {
+			focus = SOA_Get_to_the_point
+		}
+		cost = 5
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Defend_the_Line
+		icon = GFX_focus_ARG_bastion_of_peace
+		x = 0
+		y = 1
+		relative_position_id = SOA_Gain_experience
+		prerequisite = {
+			focus = SOA_Gain_experience
+		}
+		cost = 10
+		completion_reward = {
+			if = {
+				limit = {
+					tag = SOA
+				}
+			
+				custom_effect_tooltip = SOA_Defend_the_Line_tt
+				685 = {
+					set_building_level = {
+						type = bunker
+						level = 10
+						province = {
+							id = 7617
+						}
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 10
+						province = {
+							id = 7617
+						}
+					}
+				}
+				702 = {
+					set_building_level = {
+						type = bunker
+						level = 10
+						province = {
+							id = 13014
+						}
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 10
+						province = {
+							id = 13014
+						}
+					}
+				}
+				720 = {
+					set_building_level = {
+						type = bunker
+						level = 10
+						province = {
+							id = 10995
+						}
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 10
+						province = {
+							id = 10995
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CEA
+				}
+				add_timed_idea = { idea = CEA_idea_prepare_for_the_worse days = 100 }
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Lonely_All_Out_War
+		icon = GFX_focus_BRA_international_crisis
+		x = -1
+		y = 1
+		relative_position_id = SOA_Defend_the_Line
+		prerequisite = {
+			focus = SOA_Defend_the_Line
+		}
+		prerequisite = {
+			focus = SOA_Things_necessary
+		}
+		cost = 5
+		completion_reward = {
+			army_experience = 50
+			remove_ideas = SOA_happy
+			add_ideas = SOA_idea_Lonely_All_Out_War
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_After_Repeating
+		icon = GFX_goal_generic_attack_allies
+		x = 0
+		y = 1
+		relative_position_id = SOA_Lonely_All_Out_War
+		prerequisite = {
+			focus = SOA_Lonely_All_Out_War
+		}
+		cost = 10
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOA_idea_Lonely_All_Out_War
+				add_idea = SOA_idea_Lonely_All_Out_War_2
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_One_last_push
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 0
+		y = 1
+		relative_position_id = SOA_After_Repeating
+		prerequisite = {
+			focus = SOA_After_Repeating
+		}
+		cost = 10
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOA_idea_Lonely_All_Out_War_2
+				add_idea = SOA_idea_Lonely_All_Out_War_3
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	#####
+	#アメリカルート
+	focus = {
+		id = SOA_Living_within_the_treaty
+		icon = GFX_focus_ARG_the_american_push
+		x = 10
+		y = 0
+		mutually_exclusive = {
+			focus = SOA_The_Savior_is_Here
+			focus = SOA_As_one_country
+		}
+		cost = 5
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 10
+				tag = CEA
+			}
+		}
+	}
+	focus = {
+		id = SOA_Relationships_and_Contributions
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		x = 0
+		y = 1
+		relative_position_id = SOA_Living_within_the_treaty
+		prerequisite = {
+			focus = SOA_Living_within_the_treaty
+		}
+		available = {
+		}
+		cost = 5
+		completion_reward = {
+			add_political_power = 100
+			add_command_power = 50
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Strengthening_Roles
+		icon = GFX_focus_CHL_work_on_the_panamerican_highway
+		x = 0
+		y = 1
+		relative_position_id = SOA_Relationships_and_Contributions
+		prerequisite = {
+			focus = SOA_Relationships_and_Contributions
+		}
+		available = {
+			OR = {
+				USA = {
+					OR = {
+						has_attache_from = ROOT
+						has_opinion = {
+							target = ROOT
+							value > 99
+						}
+					}
+				}
+				is_ai = yes
+			}
+		}
+		cost = 5
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = mvlv_saast
+				add_idea = SOA_idea_strenrth_role
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Vigilance_and_assistance
+		icon = GFX_focus_chi_army_reform
+		x = -1
+		y = 1
+		relative_position_id = SOA_Strengthening_Roles
+		prerequisite = {
+			focus = SOA_Strengthening_Roles
+		}
+		cost = 10
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			swap_ideas = {
+				remove_idea = SOA_idea_strenrth_role
+				add_idea = SOA_idea_strenrth_role_2
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Peaceful_Development
+		icon = GFX_focus_ARG_universidad_de_buenos_aires
+		x = 0
+		y = 1
+		relative_position_id = SOA_Vigilance_and_assistance
+		prerequisite = {
+			focus = SOA_Vigilance_and_assistance
+		}
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#
+	focus = {
+		id = SOA_transaction_usa
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 1
+		y = 1
+		relative_position_id = SOA_Strengthening_Roles
+		prerequisite = {
+			focus = SOA_Strengthening_Roles
+		}
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = MVLV_tsf_tech
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_old_supply
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		relative_position_id = SOA_transaction_usa
+		prerequisite = {
+			focus = SOA_transaction_usa
+		}
+		cost = 10
+		completion_reward = {
+			add_ideas = SOA_idea_tsf_industrial
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Together_with_America
+		icon = GFX_focus_chi_mission_to_the_us
+		x = -1
+		y = 1
+		relative_position_id = SOA_old_supply
+		prerequisite = {
+			focus = SOA_old_supply
+		}
+		prerequisite = {
+			focus = SOA_Peaceful_Development
+		}
+		cost = 5
+		completion_reward = {
+			USA = {
+				puppet = {
+					target = ROOT
+					end_wars = no
+				}
+			}
+			army_experience = 50
+			swap_ideas = {
+				remove_idea = SOA_idea_strenrth_role_2
+				add_idea = SOA_idea_strenrth_role_3
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Joint_research
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 0
+		y = 1
+		relative_position_id = SOA_Together_with_America
+		prerequisite = {
+			focus = SOA_Together_with_America
+		}
+		cost = 5
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = SOA_idea_strenrth_role_3
+				add_idea = SOA_idea_america_research
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Same_as_America
+		icon = GFX_focus_ARG_align_with_the_monroe_doctrine
+		x = 0
+		y = 1
+		relative_position_id = SOA_Joint_research
+		prerequisite = {
+			focus = SOA_Joint_research
+		}
+		cost = 10
+		completion_reward = {
+			army_experience = 100
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = MVLV_tsf_tech
+			}
+			add_offsite_building = { type = arms_factory level = 5 }
+			add_offsite_building = { type = industrial_complex level = 5 }
+			swap_ideas = {
+				remove_idea = SOA_idea_america_research
+				add_idea = SOA_idea_same_as_america
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	######
+	#独立ルート
+	focus = {
+		id = SOA_As_one_country
+		icon = GFX_focus_BRA_us_of_south_america
+		x = 16
+		y = 0
+		mutually_exclusive = {
+			focus = SOA_The_Savior_is_Here
+			focus = SOA_Living_within_the_treaty
+		}
+		cost = 5
+		available = {
+
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_timed_idea = { idea = SOA_idea_Secret_Diplomacy days = 250 }
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 10
+				tag = SOA
+			}
+		}
+	}
+	focus = {
+		id = SOA_For_trading
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = 0
+		y = 1
+		relative_position_id = SOA_As_one_country
+		prerequisite = {
+			focus = SOA_As_one_country
+		}
+		cost = 10
+		completion_reward = {
+			add_political_power = 200
+			add_command_power = 100
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Experiences_and_Relationships
+		icon = GFX_focus_CHL_invite_french_aristocracy
+		x = 0
+		y = 1
+		available = {
+			OR = {
+				EUR = {
+					OR = {
+						has_attache_from = ROOT
+						has_opinion = {
+							target = ROOT
+							value > 99
+						}
+					}
+				}
+				is_ai = yes
+			}
+		}
+		relative_position_id = SOA_For_trading
+		prerequisite = {
+			focus = SOA_For_trading
+		}
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = MVLV_tsf_tech
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Ready_for_independence
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = 0
+		y = 1
+		relative_position_id = SOA_Experiences_and_Relationships
+		prerequisite = {
+			focus = SOA_Experiences_and_Relationships
+		}
+		cost = 5
+		completion_reward = {
+			remove_ideas = {
+				mvlv_saast
+				SOA_happy
+			}
+			add_ideas = SOA_idea_cost_to_future
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Requesting_Assistance
+		icon = GFX_focus_BRA_the_polaca
+		x = -1
+		y = 1
+		relative_position_id = SOA_Ready_for_independence
+		prerequisite = {
+			focus = SOA_Ready_for_independence
+		}
+		cost = 10
+		completion_reward = {
+			add_political_power = -100
+			swap_ideas = {
+				remove_idea = SOA_idea_cost_to_future
+				add_idea = SOA_idea_cost_to_future_2
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Offering_something_in_return
+		icon = GFX_focus_ARG_the_buenos_aires_conference
+		x = 0
+		y = 1
+		relative_position_id = SOA_Requesting_Assistance
+		prerequisite = {
+			focus = SOA_Requesting_Assistance
+		}
+		cost = 5
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = -5 }
+			add_offsite_building = { type = industrial_complex level = -5 }
+			AFR = {
+				add_offsite_building = { type = arms_factory level = 5 }
+			}
+			EUR = {
+				add_offsite_building = { type = arms_factory level = 5 }
+			}
+			swap_ideas = {
+				remove_idea = SOA_idea_cost_to_future_2
+				add_idea = SOA_idea_cost_to_future_3
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Looking_to_tomorrow
+		icon = GFX_focus_ARG_union_nacional_fascista
+		x = 0
+		y = 1
+		relative_position_id = SOA_Offering_something_in_return
+		prerequisite = {
+			focus = SOA_Offering_something_in_return
+		}
+		cost = 10
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOA_idea_cost_to_future_3
+				add_idea = SOA_idea_cost_to_future_4
+			}
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_True_Happiness
+		icon = GFX_focus_ARG_the_old_enemy
+		x = 0
+		y = 1
+		relative_position_id = SOA_Looking_to_tomorrow
+		prerequisite = {
+			focus = SOA_Looking_to_tomorrow
+		}
+		cost = 15
+		completion_reward = {
+			remove_ideas = SOA_idea_cost_to_future_4
+			add_ideas = SOA_idea_True_Happiness
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Frontline_experience
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		x = 2
+		y = 1
+		available = {
+			OR = {
+				SOV = {
+					has_attache_from = ROOT
+				}
+				is_ai = yes
+			}
+		}
+		relative_position_id = SOA_Experiences_and_Relationships
+		prerequisite = {
+			focus = SOA_Experiences_and_Relationships
+		}
+		cost = 10
+		completion_reward = {
+			army_experience = 70
+			add_ideas = SOA_idea_Overseas_experience
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Hive_Information
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		x = 0
+		y = 1
+		available = {
+			OR = {
+				JAP = {
+					has_attache_from = ROOT
+				}
+				is_ai = yes
+			}
+		}
+		relative_position_id = SOA_Frontline_experience
+		prerequisite = {
+			focus = SOA_Frontline_experience
+		}
+		prerequisite = {
+			focus = SOA_Ready_for_independence
+		}
+		cost = 10
+		completion_reward = {
+			army_experience = 70
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = MVLV_tsf_tech
+			}
+			swap_ideas = {
+				remove_idea = SOA_idea_Overseas_experience
+				add_idea = SOA_idea_Overseas_experience_2
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_UN_Volunteer_Mission
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
+		x = 0
+		y = 1
+		available = {
+			OR = {
+				UNI = {
+					has_attache_from = ROOT
+				}
+				is_ai = yes
+			}
+		}
+		relative_position_id = SOA_Hive_Information
+		prerequisite = {
+			focus = SOA_Hive_Information
+		}
+		cost = 10
+		completion_reward = {
+			army_experience = 70
+			swap_ideas = {
+				remove_idea = SOA_idea_Overseas_experience_2
+				add_idea = SOA_idea_Overseas_experience_3
+			} 
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	
+	
+	
+	
+	
+	##
+	focus = {
+		id = SOA_not_elses_problem
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		x = -3
+		y = 1
+		relative_position_id = SOA_For_trading
+		prerequisite = {
+			focus = SOA_For_trading
+			focus = SOA_Relationships_and_Contributions
+		}
+		cost = 5
+		completion_reward = {
+			add_political_power = 100
+			add_command_power = 50
+			AFR = {
+				add_offsite_building = { type = arms_factory level = 5 }
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		id = SOA_Sand_and_the_Arms
+		icon = GFX_focus_ARG_the_war_machine
+		x = 0
+		y = 1
+		available = {
+			OR = {
+				AFR = {
+					has_attache_from = ROOT
+				}
+				is_ai = yes
+			}
+		}
+		relative_position_id = SOA_not_elses_problem
+		prerequisite = {
+			focus = SOA_not_elses_problem
+		}
+		cost = 10
+		completion_reward = {
+			army_experience = 100
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	
+
+##########
+	focus = {
+		id = SOA_Unity
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 1
+		available = {
+			OR = {
+				AFR = {
+					NOT = {
+						controls_state = 462
+						controls_state = 275
+					}
+				}
+				EUR = {
+					NOT = {
+						controls_state = 101
+					}
+				}
+				USA = {
+					NOT = {
+						controls_state = 632
+					}
+				}
+			}
+		}
+		x = 24
+		y = 1
+		completion_reward = {
+			SOA = { country_event = mvlv_soa.3 }
+			CEA = { country_event = mvlv_soa.3 }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		# id = 紧急动员
+		id = SOA_EmergencyMobilization
+		icon = GFX_goal_generic_production2
+		x = -2
+		y = 1
+		relative_position_id = SOA_Unity
+		prerequisite = {
+			focus = SOA_Unity
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		cost = 1
+		completion_reward = {
+			add_stability = -0.1
+			add_manpower = 1000000
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		# id = 购买退役战术机
+		id = SOA_PurchaseRetiredTSF
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		relative_position_id = SOA_Unity
+		prerequisite = {
+			focus = SOA_Unity
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		cost = 2
+		completion_reward = {
+			add_political_power = -300
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = MVLV_TSF_chassis_1_heavy
+					amount = 600
+					producer = UNI
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = tsf_equipment_T94
+					amount = 600
+					producer = UNI
+				}
+				add_equipment_to_stockpile = {
+					type = tsf_equipment_F-15E
+					amount = 600
+					producer = USA
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		# id = 吸收流亡卫士
+		id = SOA_AbsorbExiledPilots
+		icon = GFX_goal_generic_production2
+		x = 2
+		y = 1
+		relative_position_id = SOA_Unity
+		prerequisite = {
+			focus = SOA_Unity
+		}
+		cost = 2
+		completion_reward = {
+			add_political_power = -300
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					producer = UNI
+					type = MVLV_TSF_chassis_1_heavy
+					variant_name = "F-4E"
+					amount = 1000
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					producer = UNI
+					type = tsf_equipment_F-5EADV
+					amount = 1000
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		# id = 要求战术机生产许可
+		id = SOA_DemandTSFProductionLicense
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		relative_position_id = SOA_PurchaseRetiredTSF
+		prerequisite = {
+			focus = SOA_PurchaseRetiredTSF
+		}
+		cost = 4
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = mvlv_license
+				add_idea = MVLV_unconditional_tsf_license
+			}
+
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		# id = 接收科研机构转移
+		id = SOA_AcceptExternalResearchers
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		relative_position_id = SOA_DemandTSFProductionLicense
+		prerequisite = {
+			focus = SOA_DemandTSFProductionLicense
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		cost = 4
+		completion_reward = {
+			add_ideas = MVLV_gathered_researchers
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		# id = 修筑防卫线
+		id = SOA_ConstructDefenceLine
+		icon = GFX_goal_generic_production2
+		x = 4
+		y = 1
+		relative_position_id = SOA_Unity
+		prerequisite = {
+			focus = SOA_Unity
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		cost = 4
+		completion_reward = {
+			484 = {
+				add_building_construction = {
+					type = bunker
+					province = 12461
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 13215
+					level = 4
+					instant_build = yes
+				}
+			}
+			483 = {
+				add_building_construction = {
+					type = bunker
+					province = 12833
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 2069
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 8012
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 5071
+					level = 4
+					instant_build = yes
+				}
+			}
+			482 = {
+				add_building_construction = {
+					type = bunker
+					province = 10809
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 8097
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 2037
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12897
+					level = 4
+					instant_build = yes
+				}
+			}
+			480 = {
+				add_building_construction = {
+					type = bunker
+					province = 2104
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12811
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 2060
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 10769
+					level = 4
+					instant_build = yes
+				}
+			}
+			479 = {
+				add_building_construction = {
+					type = bunker
+					province = 5015
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		# id = 加固节点
+		id = SOA_ReinforceStrategicStrongholds
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		relative_position_id = SOA_ConstructDefenceLine
+		prerequisite = {
+			focus = SOA_ConstructDefenceLine
+		}
+		cost = 4
+		completion_reward = {
+			512 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 12952
+					level = 6
+					instant_build = yes
+				}
+			}
+			498 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 2227
+					level = 6
+					instant_build = yes
+				}
+			}
+			484 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 12736
+					level = 6
+					instant_build = yes
+				}
+			}
+			685 = {
+				add_building_construction = {
+					type = bunker
+					province = 7617
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = {
+		# id = 紧急转化军工
+		id = SOA_EmergencyCivilianFactoryConscription
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		relative_position_id = SOA_EmergencyMobilization
+		prerequisite = {
+			focus = SOA_EmergencyMobilization
+		}
+		cost = 4
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	focus = {
+		# id = 三班倒
+		id = SOA_AllInProduction
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		relative_position_id = SOA_EmergencyCivilianFactoryConscription
+		prerequisite = {
+			focus = SOA_EmergencyCivilianFactoryConscription
+		}
+		cost = 4
+		completion_reward = {
+			add_stability = -0.1
+			add_ideas = MVLV_three_shift_system
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+}

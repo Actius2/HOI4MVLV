@@ -1,0 +1,87 @@
+JAP = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_JAP_small_plane_airframe_5_medium
+			}
+			models = {
+				JAP_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_JAP_small_plane_airframe_5_medium
+			}
+			models = {
+				JAP_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+SOV = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_SOV_small_plane_airframe_5_medium
+			}
+			models = {
+				SOV_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_SOV_small_plane_airframe_5_medium
+			}
+			models = {
+				SOV_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+USA = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+
+
+##########################################################################
+
+
+#BLEGIUM #########################################################################
+
+
+#ENGLAND #########################################################################

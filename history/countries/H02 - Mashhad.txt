@@ -1,0 +1,81 @@
+capital = 416#首都
+
+1999.1.1 = {
+	#oob = "H02_1999"
+	load_oob = "MVLV_BETA_template"
+	add_to_war = {
+		targeted_alliance = BET
+		enemy = UNI
+	}	#戦争状態を設定
+	set_technology = {
+		#初期研究を定義
+		###陸軍ドクトリン###
+		pocket_defence = 1
+		defence_in_depth = 1
+		peoples_army = 1
+		human_infantry_offensive = 1
+		large_front_offensive = 1
+		beta_combat_tactics = 1
+		MVLV_beta_tec = 1
+	}
+	add_ideas = {
+		#初期国家精神を定義
+		hive_phase_4
+		limited_exports
+		limited_conscription
+		partial_economic_mobilisation
+	}
+	set_convoys = 0	#初期輸送船数を定義
+}
+
+set_stability = 1#初期安定度を定義
+set_war_support = 1#初期戦争協力度を定義
+
+set_politics = {
+	#初期政体を定義
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	#初期支持率を定義
+	fascism = 100
+}
+
+###各政体における指導者を定義###
+create_country_leader = {
+	name = "頭脳級"
+	desc = "POLITICS_Hirohito_DESC"
+	picture = "GFX_BET_zunou_pic"
+	expire = "2040.1.1"
+	ideology = fascism_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "頭脳級"
+	desc = "POLITICS_Hirohito_DESC"
+	picture = "GFX_BET_zunou_pic"
+	expire = "2040.1.1"
+	ideology = marxism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "頭脳級"
+	desc = "POLITICS_Hirohito_DESC"
+	picture = "GFX_BET_zunou_pic"
+	expire = "2040.1.1"
+	ideology = centrism
+	traits = {
+	}
+}
+
+###初期将軍及び元帥を定義###
+
+
+###初期提督を定義###

@@ -1,0 +1,57 @@
+spriteTypes = {
+
+	#ユリウス
+	spriteType = {
+		name = "GFX_SRD_Julius_pic"
+		textureFile = "gfx/leaders/SRD/SRD_Julius_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SRD_Julius_pic_small"
+		textureFile = "gfx/leaders/SRD/SRD_Julius_pic_small.dds"
+	}
+	#ローザ
+	spriteType = {
+		name = "GFX_SRD_Roza_pic"
+		textureFile = "gfx/leaders/SRD/SRD_Roza_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SRD_Roza_pic_small"
+		textureFile = "gfx/leaders/SRD/SRD_Roza_pic_small.dds"
+	}
+	#ニーナ
+	spriteType = {
+		name = "GFX_SRD_Nina_pic"
+		textureFile = "gfx/leaders/SRD/SRD_Nina_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SRD_Nina_pic_small"
+		textureFile = "gfx/leaders/SRD/SRD_Nina_pic_small.dds"
+	}
+	#ルイアベリア
+	spriteType = {
+		name = "GFX_SRD_Louiabelia_pic"
+		textureFile = "gfx/leaders/SRD/SRD_Louiabelia_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SRD_Louiabelia_pic_small"
+		textureFile = "gfx/leaders/SRD/SRD_Louiabelia_pic_small.dds"
+	}
+	#ザイーナ
+	spriteType = {
+		name = "GFX_SRD_Zaina_pic"
+		textureFile = "gfx/leaders/SRD/SRD_Zaina_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SRD_Zaina_pic_small"
+		textureFile = "gfx/leaders/SRD/SRD_Zaina_pic_small.dds"
+	}
+	#ニーシャ
+	spriteType = {
+		name = "GFX_SRD_Nisha_pic"
+		textureFile = "gfx/leaders/SRD/SRD_Nisha_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_SRD_Nisha_pic_small"
+		textureFile = "gfx/leaders/SRD/SRD_Nisha_pic_small.dds"
+	}
+}

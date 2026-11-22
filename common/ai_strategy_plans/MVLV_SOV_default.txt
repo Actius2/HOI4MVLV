@@ -1,0 +1,14 @@
+SOV_default = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		date > 1998.12.31
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+		# Remove debuff first
+
+	}
+}

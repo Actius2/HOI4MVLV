@@ -1,0 +1,17 @@
+cross_map = {
+	army_speed_factor = 40
+}
+
+#AL_drop_modifier = {
+#	cas_damage_reduction = 0.8
+#	coordination_bonus = -0.5
+#	air_superiority_bonus_in_combat = -0.8
+#}
+
+# SOV_Defend_to_the_last = {
+	# targeted_modifier = {
+		# tag = SOV
+		# attack_bonus_against = 0.4
+		# defense_bonus_against = 0.4
+	# }
+# }

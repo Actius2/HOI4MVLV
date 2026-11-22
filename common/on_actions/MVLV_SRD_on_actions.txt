@@ -1,0 +1,33 @@
+#他mod渡し用汎用要素
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_1st_unicorns
+							has_trait = MVLV_1stx_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = basics_element days = 180 }
+				}
+				every_character = {
+					limit = {
+						OR = {
+							has_trait = MVLV_2nd_unicorns
+							has_trait = MVLV_3rd_unicorns
+						}
+					}
+					add_timed_unit_leader_trait = { trait = basics_element2 days = 180 }
+				}
+			}
+			every_country = {
+				limit = {
+					has_character = SRD_Julius 
+				}
+				set_variable = { THIS.MVLV_unicorns_basic_point = 501 }
+			}
+		}
+	}
+}

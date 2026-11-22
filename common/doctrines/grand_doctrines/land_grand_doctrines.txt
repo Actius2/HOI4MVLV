@@ -1,0 +1,442 @@
+#高次元打撃ドクトリン
+high_level_warfare = {
+    folder = land
+    #翻訳用タグおよびアイコン
+    #後ほど変更
+    name = GRAND_DOCTRINE_HIGH_LEVEL_WARFARE
+    description = GRAND_DOCTRINE_HIGH_LEVEL_WARFARE_DESC
+    icon = GFX_doctrine_high_level_warfare_medium
+    available = {
+        NOT = { is_in_faction_with = BET }
+    }
+    #基礎コストと経験値タイプ
+    xp_cost = 0
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+    }
+    #サブドクトリンの大枠
+    tracks = {
+        infantry_support
+        armor
+	    tsf
+        operations
+    }
+    # 即時効果
+    # EFFECTS
+	# planning_speed = 0.20
+	# army_speed_factor = 0.10
+    # enable_tactic = tactic_unexpected_thrust
+
+    max_planning = 0.1
+    planning_speed = 0.2
+
+
+    #各サブ完成時効果と成長計算？
+    milestones = {
+        {
+            #Infantry_Support
+	        # org_loss_when_moving = -0.15
+            # land_reinforce_rate = 0.02
+            #enable_tactic = tactic_delay
+			enable_tactic = tactic_ab_hm_barrage
+            category_support_battalions = {
+                soft_attack = 0.10
+                hard_attack = 0.10
+                defense = 0.10
+                breakthrough = 0.10
+            }
+
+            #後で変更する
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = { infantry_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { infantry_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Armor
+	        #planning_speed = 0.1
+            #org_loss_at_low_org_factor = -0.1
+            #enable_tactic = tactic_overwhelming_fire
+
+            #連携ボーナス
+            coordination_bonus = 0.2
+            planning_speed = 0.1
+			enable_tactic = tactic_ab_hm_decoy
+			enable_tactic = tactic_iv_hm_decoy
+            #後で変更する
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = { support_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { support_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Tsf
+	        #additional_brigade_column_size = 1
+            #enable_tactic = tactic_blitz
+
+            planning_decay_rate_factor = -0.2
+            #後で変更する
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = { armor_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { armor_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Operations
+	        #planning_speed = 0.2
+            #enable_tactic = tactic_backhand_blow   
+
+            max_planning = 0.2
+			enable_tactic = tactic_hm_jointTactics
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = { operations_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { operations_milestone_var = 1 }
+                }
+            }
+        }
+    }
+}
+
+all_tsf = {
+    folder = land
+
+    #後で変更する
+    name = GRAND_DOCTRINE_ALL_TSF
+    description = GRAND_DOCTRINE_ALL_TSF_DESC
+    icon = GFX_doctrine_all_tsf_medium
+    available = {
+        NOT = { is_in_faction_with = BET }
+    }
+
+    xp_cost = 0
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+    }
+
+    tracks = {
+        infantry_support
+        armor
+	    tsf
+        operations
+    }
+
+
+
+    # EFFECTS
+    #enable_tactic = tactic_overwhelming_fire
+    #category_MVLV_tsf_except_family
+    #category_MVLV_tsf
+    category_MVLV_tsf_family = {
+		soft_attack = 0.05
+		hard_attack = 0.05
+    }
+    category_MVLV_tsf_except_family = {
+        default_morale = 0.2
+    }
+
+    milestones = {
+        {
+            #Infantry
+            #enable_tactic = tactic_elastic_defense
+            # supply_consumption_factor = -0.1
+            #増援確立
+            #land_reinforce_rate = 0.3
+            army_morale = 0.2
+			attrition = -0.1
+
+            #後で変更する
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = { infantry_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { infantry_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Armor
+            #additional_brigade_column_size = 1
+            #category_support_battalions = {
+            #    max_organisation = 10
+            #}
+            #計画値減衰係数
+            #planning_decay_rate_factor = -0.1
+            #enable_tactic = tactic_barrage
+
+            coordination_bonus = 0.15
+			land_reinforce_rate = 0.05
+
+            #後で変更する
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = { support_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { support_milestone_var = 1 }
+                }
+            }
+
+        }
+        {
+            #Tsf
+            #enable_tactic = tactic_delay
+            #category_army = {
+            #    default_morale = 0.2
+            #}
+		    MVLV_tsf_battalion = { combat_width = -0.2 }
+		    MVLV_tsa_battalion = { combat_width = -0.2 }
+		    MVLV_asa_battalion = { combat_width = -0.2 }
+			MVLV_tsf_specialForces_battalion = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+				defense = 0.1
+				breakthrough = 0.1
+			}
+			category_MVLV_tsf_support_family = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+			}
+			enable_tactic = tactic_human_hv_combat_assault
+            #後で変更する
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = { armor_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { armor_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Operations
+            #enable_tactic = tactic_tactical_withdrawal
+            #category_army = {
+            #    default_morale = 0.4
+            #}
+            #planning_decay_rate_factor = -0.1
+
+            army_speed_factor = 0.2
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = { operations_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { operations_milestone_var = 1 }
+                }
+            }
+        }
+
+    }
+}
+
+#総力戦ドクトリン
+trench_warfare = {
+    folder = land
+
+    #後で変更する
+    name = GRAND_DOCTRINE_TRENCH_WARFARE
+    description = GRAND_DOCTRINE_TRENCH_WARFARE_DESC
+    icon = GFX_doctrine_trench_warfare_medium
+    available = {
+        NOT = { is_in_faction_with = BET }
+    }
+
+    xp_cost = 0
+    xp_type = army
+
+    ai_will_do = {
+        base = 2
+    }
+
+    tracks = {
+        infantry_support
+        armor
+	    tsf
+        operations
+    }
+
+    # EFFECTS
+    #enable_tactic = tactic_planned_attack
+    #max_planning = 0.1
+    #command_power_gain = 0.25
+
+	dig_in_speed_factor = 0.30 #30% bonus
+	land_reinforce_rate = 0.10
+	minimum_training_level = -0.3
+
+    milestones = {
+        {
+            #Infantry 
+            #additional_brigade_column_size = 1
+            #enable_tactic = tactic_elastic_defense
+            # max_dig_in_factor = 0.05
+            land_reinforce_rate = 0.10
+			enable_tactic = tactic_ab_hm_barrage
+			enable_tactic = tactic_hm_guerrillaDeffence
+			artillery_brigade = {
+				combat_width = -0.5
+				air_attack = 3.0
+			}
+			rocket_artillery_brigade = {
+				combat_width = -0.5
+				air_attack = 3.0
+			}
+
+            #後で変更する
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = { infantry_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { infantry_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Armor
+            #連携ボーナス
+            #coordination_bonus = 0.1
+            #enable_tactic = tactic_overwhelming_fire
+            MVLV_combined_arms_battalion = {
+                combat_width = -0.5
+                max_organisation = 10
+                default_morale = 0.2
+            }
+            medium_armor = {
+                combat_width = -0.4
+                max_organisation = 10
+                default_morale = 0.2
+                maximum_speed = 0.1
+            }
+            modern_sp_anti_air_brigade = {
+                combat_width = -0.2
+                max_organisation = 10
+                default_morale = 0.2
+                maximum_speed = 0.1
+            }
+
+            #後で変更する
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = { support_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { support_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Tsf
+            #land_reinforce_rate = 0.02
+            #enable_tactic = tactic_breakthrough
+            max_planning = 0.1
+
+            #後で変更する
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = { armor_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { armor_milestone_var = 1 }
+                }
+            }
+            
+        }
+        {
+            #Operations
+            max_dig_in_factor = 0.2
+            dig_in_speed_factor = 0.2
+			land_night_attack = 0.1
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = { operations_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { operations_milestone_var = 1 }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,35 @@
+
+state={
+	id=500
+	name="STATE_500"
+	manpower = 6665500
+	
+	state_category = city
+	resources={
+		coal = 5
+	}
+	history={
+
+		add_core_of = SOA
+		owner = SOA
+
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 4
+			dockyard = 2
+			air_base = 7
+			10980 = {
+				naval_base = 10
+				naval_supply_hub = 1
+			}
+		}
+		victory_points = {
+			10980 40
+		}
+	}
+
+	provinces={
+		5172 8190 10980 12996 
+	}
+}

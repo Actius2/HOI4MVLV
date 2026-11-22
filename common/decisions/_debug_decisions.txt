@@ -1,0 +1,768 @@
+debug_decisions = {
+	SOV_Test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			activate_decision = SOV_psi_deploy_decision
+		}
+	}
+	BETA_underground_decision_Test = {
+		icon = generic_prepare_civil_war
+		available = {
+			is_in_faction_with = BET
+			#has_idea = mvlv_aggressive_beta
+			#BETA_stay_home_trigger = yes
+			#defficulty_hell_trigger = yes
+			#has_global_flag = MVLV_underground_flag
+			NOT = {
+				OR = {
+					tag = H21
+					tag = BET
+					tag = H00
+					tag = H22
+				}
+			}
+		}
+		visible = {
+			is_in_faction_with = BET
+		}
+		days_remove = 5
+		days_re_enable = 40
+		fire_only_once = no
+		cost = 0
+		modifier = {
+		}
+		complete_effect = {
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { has_country_flag = MVLV_underground_notice_flag }
+				}
+				country_event = mvlv_uni.36
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					has_country_flag = MVLV_underground_notice_flag
+				}
+				country_event = mvlv_uni.36
+			}
+		}
+		remove_effect = {
+			#占領状態更新
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = UNI
+				}
+				country_event = mvlv_generic.33
+			}
+			#通知
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = UNI
+					NOT = { has_country_flag = MVLV_underground_notice_flag }
+				}
+				country_event = mvlv_uni.37
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+					has_country_flag = MVLV_underground_notice_flag
+				}
+				country_event = mvlv_uni.37
+			}
+			MVLV_underground_invasion_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	MVLV_AI_buff_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = UNI
+				}
+				add_ideas = MVLV_debug_buff_idea
+			}
+		}
+
+	}
+	SF_test_decision = {
+		available = {
+			always = yes
+			has_done_agency_upgrade = upgrade_form_department
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_specialForces_chassis
+				amount = 200
+				producer = UNI
+			}
+		}
+	}
+	LYL1_test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_Laser_Jagd_L_equipment_1
+				amount = 100
+				producer = SRD
+			}
+		}
+	}
+	LYH1_test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_Laser_Jagd_H_equipment_1
+				amount = 100
+				producer = SRD
+			}
+		}
+	}
+	LYL2_test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_Laser_Jagd_L_equipment_2
+				amount = 100
+				producer = SRD
+			}
+		}
+	}
+	LYH2_test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_Laser_Jagd_H_equipment_2
+				amount = 100
+				producer = SRD
+			}
+		}
+	}
+	LYM2_test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_Laser_Jagd_M_equipment_2
+				amount = 100
+				producer = SRD
+			}
+		}
+	}
+	LYL3_test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_Laser_Jagd_L_equipment_3
+				amount = 100
+				producer = SRD
+			}
+		}
+	}
+	LYH3_test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_Laser_Jagd_H_equipment_3
+				amount = 100
+				producer = SRD
+			}
+		}
+	}
+	LYM3_test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_Laser_Jagd_M_equipment_3
+				amount = 100
+				producer = SRD
+			}
+		}
+	}
+	AL_test_decision = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = MVLV_AL_shell_equipment_1
+				amount = 10000
+				producer = SRD
+			}
+		}
+	}
+	teleport_armies_BETA = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+		H20 = {
+				527 = {
+					teleport_armies = {
+						limit = {
+							tag = H20
+						}
+						to_state = 536
+					}
+				}
+			}
+		}
+	}
+
+
+	switch_idea_brokenhive_frontlinehive = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			every_country = {
+				if = {
+					limit = {
+						or = {
+							tag = H09
+							tag = H11
+							tag = H12
+							tag = H13
+							tag = H16
+							tag = H17
+							tag = H19
+							tag = H20
+							tag = H21
+							tag = H26
+						}
+						not = {
+							has_idea = mvlv_brokenhive
+						}
+					}
+					add_ideas = mvlv_brokenhive
+				}
+				else_if = {
+					limit = {
+						or = {
+							tag = H09
+							tag = H11
+							tag = H12
+							tag = H13
+							tag = H16
+							tag = H17
+							tag = H19
+							tag = H20
+							tag = H21
+							tag = H26
+						}
+						has_idea = mvlv_brokenhive
+					}
+					remove_ideas = mvlv_brokenhive
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	switch_idea_brokenhive_allhive = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			every_country = {
+				if = {
+					limit = {
+						is_in_faction_with = BET
+						not = {
+							has_idea = mvlv_brokenhive
+						}
+					}
+					add_ideas = mvlv_brokenhive
+				}
+				else_if = {
+					limit = {
+						is_in_faction_with = BET
+						has_idea = mvlv_brokenhive
+					}
+					remove_ideas = mvlv_brokenhive
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	switch_idea_thinning_state_frontlinehive = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			every_country = {
+				if = {
+					limit = {
+						or = {
+							tag = H09
+							tag = H11
+							tag = H12
+							tag = H13
+							tag = H16
+							tag = H17
+							tag = H19
+							tag = H20
+							tag = H21
+							tag = H26
+						}
+						not = {
+							has_idea = hive_thinning_state
+						}
+					}
+					add_ideas = hive_thinning_state
+				}
+				else_if = {
+					limit = {
+						or = {
+							tag = H09
+							tag = H11
+							tag = H12
+							tag = H13
+							tag = H16
+							tag = H17
+							tag = H19
+							tag = H20
+							tag = H21
+							tag = H26
+						}
+						has_idea = hive_thinning_state
+					}
+					remove_ideas = hive_thinning_state
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	switch_idea_thinning_state_allhive = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			every_country = {
+				if = {
+					limit = {
+						is_in_faction_with = BET
+						not = {
+							has_idea = hive_thinning_state
+						}
+					}
+					add_ideas = hive_thinning_state
+				}
+				else_if = {
+					limit = {
+						is_in_faction_with = BET
+						has_idea = hive_thinning_state
+					}
+					remove_ideas = hive_thinning_state
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	lunch_nf_operation_sado = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			UNI = {
+				complete_national_focus = UNI_207
+				complete_national_focus = UNI_xmos
+				complete_national_focus = UNI_00_unit
+				complete_national_focus = UNI_sadogashima
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	lunch_nf_operation_ouka = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			UNI = {
+				complete_national_focus = UNI_207
+				complete_national_focus = UNI_xmos
+				complete_national_focus = UNI_00_unit
+				complete_national_focus = UNI_sadogashima
+				complete_national_focus = UNI_operation_ouka
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	create_unit_on_kashgar = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			UNI = {
+				load_oob = UNI_A04_unlock_test
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	create_unit_on_kashgar_sw115 = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			UNI = {
+				load_oob = UNI_A04_unlock_SW115
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	lunch_nf_blue_flag = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			UNI = {
+				complete_national_focus = UNI_blue_flag
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	lunch_nf_yukon_base = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			UNI = {
+				complete_national_focus = UNI_yukon_base
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	lunch_nf_red_storm = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			SOV = {
+				complete_national_focus = SOV_ForMotherRussia
+				complete_national_focus = SOV_RestatePartyAndArmyRelationship
+				complete_national_focus = SOV_EnsureRevolutionariesPositionInArmy
+				complete_national_focus = SOV_TotalWar
+				complete_national_focus = SOV_GuardianOfTheMotherland
+				complete_national_focus = SOV_FloodOfSteel
+				complete_national_focus = SOV_TacticalPerfection
+				complete_national_focus = SOV_ProjectP3Completion
+				complete_national_focus = SOV_OperationRedStorm
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	play_song_Carryon = {
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			play_Carryon_effect = yes
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	create_operative_debug = {
+		icon = generic_research
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			create_operative_leader = {
+				bypass_recruitment = yes
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	create_recruitable_operative_not_to_spy_master_debug = {
+		icon = generic_research
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			create_operative_leader = {
+				bypass_recruitment = no
+				available_to_spy_master = no
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	create_recruitable_operative_debug = {
+		icon = generic_research
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			create_operative_leader = {
+				bypass_recruitment = no
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	add_random_nationality = {
+		available = {
+			num_of_operatives > 0
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			random_country = {
+				limit = {
+					NOT = {
+						tag = FROM
+					}
+				}
+				FROM = {
+					random_operative = {
+						add_nationality = PREV.PREV
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	slot_machine = {
+		# we pegi 18 now
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		days_remove = 777
+		modifier = {
+			operative_slot = 99
+		}
+	}
+	decryption_tech_1 = {
+		days_remove = 100
+		modifier = {
+			decryption = 1
+		}
+	}
+	decryption_tech_2 = {
+		days_remove = 100
+		modifier = {
+			decryption = 1
+		}
+	}
+	decryption_tech_3 = {
+		days_remove = 100
+		modifier = {
+			decryption = 1
+		}
+	}
+	encryption_tech_1 = {
+		days_remove = 100
+		modifier = {
+			encryption = 1
+		}
+	}
+	encryption_tech_2 = {
+		days_remove = 100
+		modifier = {
+			encryption = 1
+		}
+	}
+	encryption_tech_3 = {
+		days_remove = 100
+		modifier = {
+			encryption = 1
+		}
+	}
+}

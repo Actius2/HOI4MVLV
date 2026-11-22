@@ -1,0 +1,41 @@
+state = {
+	id = 447
+	name = "STATE_447"
+	manpower = 3859239
+	resources = {
+		oil = 1
+		coal = 10
+	}
+	state_category = town
+	history = {
+		owner = AFR
+		1999.1.1 = {
+			owner = AFR
+			add_core_of = AFR
+		}
+		victory_points = {
+			4076 10
+		}
+		victory_points = {
+			1071 1
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 20
+			air_base = 6
+			4076 = {
+				naval_base = 10
+				naval_supply_hub = 1
+				bunker = 5
+			}
+			1071 = {
+				bunker = 3
+			}
+		}
+		#add_core_of = EGY
+	}
+	provinces = {
+		1071 4076 4145 7164 992 7117 10031 1068 4055 3996
+	}
+}

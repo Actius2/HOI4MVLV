@@ -1,0 +1,25 @@
+
+state={
+	id=811
+	name="STATE_811" # Okhotsk
+	manpower = 350000
+	state_category = rural
+
+	history = {
+		1999.1.1 = {
+			owner = H26
+		}
+		owner = SOV
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = { 12592 1 }
+		victory_points = { 11607 1 }
+		add_core_of = SOV
+		add_core_of = H26
+	}
+
+	provinces={
+		1865 4455 11607 12551 12592 12683 13219
+	}
+}

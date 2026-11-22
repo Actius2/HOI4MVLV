@@ -1,0 +1,679 @@
+###汎用ツリー へ ようこそ ###
+shared_focus = {
+	id = common_refugee_tech_sharing
+	icon = GFX_goal_generic_national_unity
+	x = 33
+	y = 0
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		add_tech_bonus = {
+			name = "shared focus bonus"
+			bonus = 0.75
+			uses = 3
+			category = industry
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_civilian_preparing
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_refugee_tech_sharing
+	prerequisite = {
+		focus = common_refugee_tech_sharing
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+				type = industrial_complex
+				level = 5
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_national_reconstruction_plan
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_civilian_preparing
+	prerequisite = {
+		focus = common_civilian_preparing
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_adopt_powered_suits
+	icon = GFX_goal_generic_national_unity
+	x = 2
+	y = 0
+	relative_position_id = common_refugee_tech_sharing
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		add_tech_bonus = {
+			name = "shared focus bonus"
+			bonus = 0.5
+			uses = 2
+			category = infantry_weapons
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_construct_tsf_factory
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_adopt_powered_suits
+	prerequisite = {
+		focus = common_adopt_powered_suits
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+				type = arms_factory
+				level = 5
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_boost_supply_capacity
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_construct_tsf_factory
+	prerequisite = {
+		focus = common_construct_tsf_factory
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+				type = dockyard
+				level = 5
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_a_step_for_tomorrow
+	icon = GFX_goal_generic_national_unity
+	x = 1
+	y = 1
+	relative_position_id = common_national_reconstruction_plan
+	prerequisite = {
+		focus = common_national_reconstruction_plan
+		focus = common_boost_supply_capacity
+	}
+	cancel_if_invalid = yes
+	cost = 10
+	completion_reward = {
+		add_research_slot = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_war_of_men_with_no_gun
+	icon = GFX_goal_generic_national_unity
+	x = -1
+	y = 1
+	relative_position_id = common_a_step_for_tomorrow
+	prerequisite = {
+		focus = common_a_step_for_tomorrow
+	}
+	mutually_exclusive = {
+		focus = common_preparing_massive_counterattack
+	}
+	cancel_if_invalid = yes
+	cost = 10
+	completion_reward = {
+		every_owned_state = {
+			limit = {
+				is_fully_controlled_by = owner
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_preparing_massive_counterattack
+	icon = GFX_goal_generic_national_unity
+	x = 1
+	y = 1
+	relative_position_id = common_a_step_for_tomorrow
+	prerequisite = {
+		focus = common_a_step_for_tomorrow
+	}
+	mutually_exclusive = {
+		focus = common_war_of_men_with_no_gun
+	}
+	cancel_if_invalid = yes
+	cost = 10
+	completion_reward = {
+		every_owned_state = {
+			limit = {
+				is_fully_controlled_by = owner
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#_______________________________________________
+#研究ツリー
+shared_focus = {
+	id = common_experience_of_BETA_war
+	icon = GFX_goal_generic_national_unity
+	x = 2
+	y = 0
+	relative_position_id = common_adopt_powered_suits
+	cancel_if_invalid = yes
+	cost = 10
+	completion_reward = {
+		army_experience = 100
+		navy_experience = 100
+		air_experience = 100
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_develop_counter_BETA_tactics
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_experience_of_BETA_war
+	prerequisite = {
+		focus = common_experience_of_BETA_war
+	}
+	cancel_if_invalid = yes
+	cost = 10
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = land_doctrine
+			cost_reduction = 0.33
+			uses = 5
+			category = land_doctrine
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_establish_supply_line
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_develop_counter_BETA_tactics
+	prerequisite = {
+		focus = common_develop_counter_BETA_tactics
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		add_tech_bonus = {
+			name = "shared focus bonus"
+			bonus = 0.5
+			uses = 1
+			category = MVLV_tsf_tech
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_use_battle_experience_in_research
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_establish_supply_line
+	prerequisite = {
+		focus = common_establish_supply_line
+	}
+	cancel_if_invalid = yes
+	cost = 10
+	completion_reward = {
+		add_research_slot = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#_______________________________________________
+#政治ツリー
+shared_focus = {
+	id = common_refugee_support_request
+	icon = GFX_goal_generic_national_unity
+	x = 3
+	y = 0
+	relative_position_id = common_experience_of_BETA_war
+	cancel_if_invalid = yes
+	cost = 10
+	completion_reward = {
+		add_political_power = 300
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_refugee_job_mediation
+	icon = GFX_goal_generic_national_unity
+	x = -1
+	y = 1
+	relative_position_id = common_refugee_support_request
+	prerequisite = {
+		focus = common_refugee_support_request
+	}
+	mutually_exclusive = {
+		focus = common_mobilize_refugee
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		from = {
+			swap_ideas = {
+				remove_idea = MVLV_UNF
+				add_idea = MVLV_UNF_1
+			}
+		}
+		UNI = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 5
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_resource_exploit_in_backyard_countries
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_refugee_job_mediation
+	prerequisite = {
+		focus = common_refugee_job_mediation
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		add_stability = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_support_tsf_production
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_resource_exploit_in_backyard_countries
+	prerequisite = {
+		focus = common_resource_exploit_in_backyard_countries
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 5
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_mobilize_refugee
+	icon = GFX_goal_generic_national_unity
+	x = 1
+	y = 1
+	relative_position_id = common_refugee_support_request
+	prerequisite = {
+		focus = common_refugee_support_request
+	}
+	mutually_exclusive = {
+		focus = common_refugee_job_mediation
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		from = {
+			swap_ideas = {
+				remove_idea = MVLV_UNF
+				add_idea = MVLV_UNF_2
+			}
+		}
+		UNI = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 5
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_refugee_conscription
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_mobilize_refugee
+	prerequisite = {
+		focus = common_mobilize_refugee
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		add_war_support = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_support_UNI_forces
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_refugee_conscription
+	prerequisite = {
+		focus = common_refugee_conscription
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 5
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_provide_XM3
+	icon = GFX_goal_generic_national_unity
+	x = 2
+	y = 1
+	relative_position_id = common_support_UNI_forces
+	prerequisite = {
+		focus = common_support_tsf_production
+		focus = common_support_UNI_forces
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		add_equipment_to_stockpile = {
+			type = MVLV_TSF_chassis
+			amount = 360
+			producer = UNI
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_self_determination
+	icon = GFX_goal_generic_national_unity
+	x = -2
+	y = 1
+	relative_position_id = common_support_UNI_forces
+	prerequisite = {
+		focus = common_support_tsf_production
+		focus = common_support_UNI_forces
+	}
+	mutually_exclusive = {
+		focus = common_human_unification
+	}
+	mutually_exclusive = {
+		focus = common_cooperation_agreement
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = MVLV_UNF
+			}
+			remove_ideas = MVLV_UNF
+		}
+		if = {
+			limit = {
+				has_idea = MVLV_UNF_1
+			}
+			remove_ideas = MVLV_UNF_1
+		}
+		if = {
+			limit = {
+				has_idea = MVLV_UNF_2
+			}
+			remove_ideas = MVLV_UNF_2
+		}
+		add_timed_idea = {
+			idea = MVLV_UNF_out
+			days = 280
+		}
+		add_war_support = 0.2
+		UNI = {
+			add_stability = -0.1
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = common_human_unification
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	relative_position_id = common_support_UNI_forces
+	prerequisite = {
+		focus = common_support_tsf_production
+		focus = common_support_UNI_forces
+	}
+	mutually_exclusive = {
+		focus = common_self_determination
+	}
+	mutually_exclusive = {
+		focus = common_cooperation_agreement
+	}
+	available = {
+		is_subject = no
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		UNI = {
+			puppet = {
+				target = ROOT
+				end_wars = no
+			}
+		}
+		add_stability = 0.1
+		add_war_support = 0.1
+		UNI = {
+			add_stability = 0.1
+		}
+		if = {
+			limit = {
+				has_idea = MVLV_UNF
+			}
+			remove_ideas = MVLV_UNF
+		}
+		if = {
+			limit = {
+				has_idea = MVLV_UNF_1
+			}
+			remove_ideas = MVLV_UNF_1
+		}
+		if = {
+			limit = {
+				has_idea = MVLV_UNF_2
+			}
+			remove_ideas = MVLV_UNF_2
+		}
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			add = 100
+			UNI = {
+				is_ai = no
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = common_cooperation_agreement
+	icon = GFX_goal_generic_national_unity
+	x = -4
+	y = 1
+	relative_position_id = common_support_UNI_forces
+	prerequisite = {
+		focus = common_support_tsf_production
+		focus = common_support_UNI_forces
+	}
+	mutually_exclusive = {
+		focus = common_human_unification
+	}
+	mutually_exclusive = {
+		focus = common_self_determination
+	}
+	cancel_if_invalid = yes
+	cost = 5
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = MVLV_UNF
+			}
+			remove_ideas = MVLV_UNF
+		}
+		if = {
+			limit = {
+				has_idea = MVLV_UNF_1
+			}
+			remove_ideas = MVLV_UNF_1
+		}
+		if = {
+			limit = {
+				has_idea = MVLV_UNF_2
+			}
+			remove_ideas = MVLV_UNF_2
+		}
+		add_ideas = MVLV_UNF_with
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

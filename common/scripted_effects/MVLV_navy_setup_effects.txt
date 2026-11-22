@@ -1,0 +1,40 @@
+mvlv_navy_setup_effect = {
+
+	create_ship = {
+		type = ship_hull_super_heavy_1
+		equipment_variant = "SuperBB Class"
+		name = "Battle ship"
+		creator = UNI
+	}
+	create_ship = {
+		type = ship_hull_light_4
+		equipment_variant = "EscortDD Class"
+		name = "Escort ship"
+		creator = UNI
+	}
+	create_ship = {
+		type = ship_hull_light_4
+		equipment_variant = "EscortDD Class"
+		name = "Escort ship"
+		creator = UNI
+	}
+	create_ship = {
+		type = ship_hull_light_4
+		equipment_variant = "EscortDD Class"
+		name = "Escort ship"
+		creator = UNI
+	}
+	create_ship = {
+		type = ship_hull_light_4
+		equipment_variant = "EscortDD Class"
+		name = "Escort ship"
+		creator = UNI
+	}
+	create_ship = {
+		type = ship_hull_light_4
+		equipment_variant = "EscortDD Class"
+		name = "Escort ship"
+		creator = UNI
+	}
+
+}

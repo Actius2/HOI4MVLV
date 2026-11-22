@@ -1,0 +1,74 @@
+#BETA_controle_area = {
+#	enable = {
+#		always = yes
+#	}
+#
+#	icon = GFX_modifiers_demilitarize_zone
+#
+#	army_speed_factor_for_controller = 6.0
+#	pocket_penalty = -2
+#	supply_consumption_factor = -2
+#	supply_factor = 2
+#	local_supplies = 50
+#	disable_strategic_redeployment = 1
+#}
+MVLV_cross_map_modifier = {
+	enable = {
+		always = yes
+	}
+	disable_strategic_redeployment = 1
+}
+
+Supply_Drop_area = {
+	enable = {
+		always = yes
+	}
+
+	local_supplies = 20
+
+	icon = GFX_modifiers_generic_supply
+}
+Nuclear_Explosion_Strait = {
+	enable = {
+		always = yes
+	}
+	attrition = 1
+	army_attack_factor = -0.5
+	army_defence_factor = -0.5
+	army_speed_factor = -0.9
+	state_production_speed_buildings_factor = -1
+
+	icon = GFX_modifiers_demilitarize_zone
+}
+
+MVLV_CAN_nuclear_explosion_strait = {
+	enable = {
+		always = yes
+	}
+	state_production_speed_industrial_complex_factor = -1.0
+	state_production_speed_arms_factory_factor = -1.0
+
+	icon = GFX_modifiers_radiation_state_modifier_X
+}
+
+MVLV_G_Lancher_modifier = {
+	enable = {
+		always = yes
+	}
+	stability_factor = ROOT.MVLV_G_Lancher_modifier_value
+	war_support_factor = ROOT.MVLV_G_Lancher_modifier_value
+	political_power_gain = ROOT.MVLV_G_Lancher_modifier_value
+
+	icon = GFX_idea_anti_soviet_pact
+}
+MVLV_effect_G_Lancher_modifier = {
+	enable = {
+		always = yes
+	}
+	army_attack_factor = global.MVLV_effect_G_Lancher_modifier_value
+	army_defence_factor = global.MVLV_effect_G_Lancher_modifier_value
+	industrial_capacity_factory = global.MVLV_effect_G_Lancher_modifier_value
+
+	icon = GFX_MVLV_effect_G_Lancher_modifier
+}
+

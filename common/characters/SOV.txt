@@ -1,0 +1,581 @@
+characters = {
+
+	SOV_Latroi = {
+#フィカーツィア・ラトロワ
+		name = SOV_Latroi
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Latroi_pic
+				small = GFX_SOV_Latroi_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				winter_specialist
+				armor_officer
+				commander_aptitude
+				tsf_officer
+				media_personality
+				war_hero
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 6
+			
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+			
+			legacy_id = 410
+		}
+	}
+	
+	SOV_Vasilisa = {
+#ヴァシリーサ・ティモフェエヴナ・ヤゾフ（ドミトリー・ティモフェヴィッチ・ヤゾフ）
+		name = SOV_Vasilisa
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Vasilisa_pic
+				small = GFX_SOV_Vasilisa_pic_small
+			}
+		}
+		
+		field_marshal = {
+		
+			 traits = {
+			 
+			 	brilliant_strategist
+				war_hero
+				career_officer
+				trait_cautious
+				media_personality
+				harsh_leader
+				
+				infantry_officer
+				cavalry_officer
+				
+				unyielding_defender
+				
+				
+				
+			 }
+			 
+			skill = 6
+			
+			attack_skill = 6
+			defense_skill = 8
+			planning_skill = 2
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	SOV_Viktoriya = {
+#ヴィクトーリヤ・ニコラエヴナ・ロボフ（ウラジーミル・ニコライェヴィチ・ロボフ）
+		name = SOV_Viktoriya
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Viktoriya_pic
+				small = GFX_SOV_Viktoriya_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			 traits = {
+			 
+			 	inflexible_strategist
+				war_hero
+				career_officer
+				trait_cautious
+				harsh_leader
+				
+				infantry_officer
+				armor_officer
+				
+				trickster
+				commando
+				
+			 }
+			 
+			skill = 6
+			
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	SOV_Litvinenko = {
+#リトヴィネンコ
+		name = SOV_Litvinenko
+		
+		portraits = {
+			army = {
+				large = GFX_SOV_Litvinenko_pic
+				small = GFX_SOV_Litvinenko_pic_small
+			}
+		}
+		
+		field_marshal = {
+			traits = {
+			
+				offensive_doctrine
+				brilliant_strategist
+				career_officer
+				infantry_officer
+				trait_reckless
+				
+			}
+			
+			skill = 8
+			
+			attack_skill = 6
+			defense_skill = 7
+			planning_skill = 7
+			logistics_skill = 5
+			
+			legacy_id = 401
+		}
+	}
+	
+	SOV_Crisca = {
+#クリスカ・ビャーチェノワ
+		name = SOV_Crisca
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Crisca_pic
+				small = GFX_SOV_Crisca_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				trait_cautious
+				brilliant_strategist
+				tsf_leader
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+			
+			legacy_id = 402
+		}
+	}
+	
+	SOV_Martica = {
+#マーティカ・ビャーチェノワ
+		name = SOV_Martica
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Martica_pic
+				small = GFX_SOV_Martica_pic_small
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+			
+				tsf_officer
+				politically_connected
+				tsf_leader
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = 407
+		}
+	}
+	
+	SOV_Inia = {
+#イーニア・シェスチナ
+		name = SOV_Inia
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Inia_pic
+				small = GFX_SOV_Inia_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				trickster
+				trait_cautious
+				career_officer
+				true_genius
+				tsf_officer
+				tsf_leader
+				
+			}
+			
+			skill = 3
+			
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			
+			legacy_id = 969
+		}
+	}
+	
+	SOV_Nastassya = {
+#ナスターシャ・イヴァノヴァ
+		name = SOV_Nastassya
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Nastassya_pic
+				small = GFX_SOV_Nastassya_pic_small
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+			
+				tsf_officer
+				tsf_leader
+				
+				trait_reckless
+				
+				commander_aptitude
+				brilliant_strategist
+
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	SOV_Tonya = {
+#トーニャ・ウペンスコナ
+		name = SOV_Tonya
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Tonya_pic
+				small = GFX_SOV_Tonya_pic_small
+			}
+		}
+		corps_commander = {
+		
+			traits = {
+			
+				tsf_officer
+				tsf_leader
+				
+				trait_reckless
+				
+			}
+			
+			skill = 2
+			
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	SOV_Gnessin = {
+#グネーシン
+		name = SOV_Gnessin
+		
+		portraits = {
+			army = {
+				large = GFX_SOV_Gnessin_pic
+				small = GFX_SOV_Gnessin_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				brilliant_strategist
+				trait_cautious
+				trait_reckless
+				
+			}
+			
+			skill = 4
+			
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	SOV_Rogowski = {
+#ロゴフスキー
+		name = SOV_Rogowski
+		
+		portraits = {
+			army = {
+				large = GFX_SOV_Rogowski_pic
+				small = GFX_SOV_Rogowski_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+			}
+			
+			skill = 3
+			
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			
+			legacy_id = -1
+		}
+	}
+	
+	SOV_Belyaev = {
+#ベリャーエフ
+		name = SOV_Belyaev
+		
+		portraits = {
+			army = {
+				large = GFX_SOV_Belyaev_pic
+				small = GFX_SOV_Belyaev_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+				politically_connected
+			}
+			
+			skill = 3
+			
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+	SOV_Sandark = {
+#イェージ・サンダーク
+		name = SOV_Sandark
+		
+		portraits = {
+			army = {
+				large = GFX_SOV_Sandark_pic
+				small = GFX_SOV_Sandark_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				old_guard
+				politically_connected
+				inflexible_strategist
+				commander_aptitude
+				tsf_officer
+				tsf_leader
+				tsf_commander
+				
+			}
+			
+			skill = 5
+			
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 3
+			
+			legacy_id = 405
+		}
+	}
+	
+	
+	SOV_Yuya = {
+#ユウヤ・ブリッジス（イベント）
+		name = SOV_Yuya
+		
+		portraits = {
+			army = {
+				large = GFX_UNI_Yuya_pic
+				small = GFX_UNI_Yuya_pic_small
+			}
+		}
+		corps_commander = {
+			traits = {
+			
+				trickster
+				panzer_leader
+				panzer_expert
+				trait_reckless
+				trait_engineer
+				fortress_buster
+				inflexible_strategist
+				tsf_officer
+				expert_improviser
+				tsf_leader
+				trickster
+				inspirational_leader
+				war_hero
+				hill_fighter
+				
+			}
+			
+			skill = 9
+			
+			attack_skill = 8
+			defense_skill = 6
+			planning_skill = 8
+			logistics_skill = 6
+			
+			legacy_id = -1
+			
+			#visible = {
+			#	has_character_flag = 勇哉叛逃
+			#}
+		}
+	}
+	
+	
+	SOV_Yelena = {
+#エレーナ・モロゾワ
+		name = SOV_Yelena
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Yelena_pic
+				small = GFX_SOV_Yelena_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			 traits = {
+			 
+			 	tsf_officer
+				true_genius
+				
+				jaeger
+				
+			 }
+			 
+			skill = 1
+			
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+			legacy_id = -1
+		}
+	}
+	
+	SOV_Bogdanov = {
+#アルセニー・ボグダーノフ
+		name = SOV_Bogdanov
+		
+		gender = female
+		portraits = {
+			army = {
+				large = GFX_SOV_Bogdanov_pic
+				small = GFX_SOV_Bogdanov_pic_small
+			}
+		}
+		
+		corps_commander = {
+		
+			traits = {
+			
+				trait_reckless
+				harsh_leader
+				media_personality
+				tsf_officer
+				
+				commander_aptitude
+				
+				tsf_leader
+				
+				skilled_staffer
+				
+				winter_specialist
+				winter_expert
+				
+				
+				
+			
+			}
+			
+			skill = 4
+			
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			
+			legacy_id = -1
+		}
+	}
+	
+}

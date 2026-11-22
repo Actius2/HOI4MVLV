@@ -1,0 +1,474 @@
+MVLV_AI_design_decisions_category = {
+	#########AI
+	MVLV_AI_TSF_design_4_decision = {
+		available = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_4_design_flag }
+			has_tech = MVLV_research_tsf_4_framework
+			has_tech = MVLV_research_engine_3
+			has_tech = MVLV_research_OS_XM3
+			has_tech = MVLV_research_head_normal_3
+			has_tech = MVLV_research_assault_cannon_3
+			has_tech = MVLV_research_combat_sword
+			has_tech = MVLV_research_shield
+		}
+		visible = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_4_design_flag }
+			has_tech = MVLV_research_tsf_4_framework
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Maneuver4th_AI"
+				type = MVLV_TSF_chassis_4
+				parent_version = 0
+				show_position = no
+				mark_older_equipment_obsolete  = yes
+				modules = {
+					MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+					MVLV_TSF_OS_slot = MVLV_TSF_OS_XM3
+					MVLV_TSF_engine_slot = MVLV_TSF_engine_3
+					MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_3
+					MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_3
+					MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+					MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				}
+				icon = "GFX_XF-2000A"
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis_4
+				amount = 100
+				variant_name = "Maneuver4th_AI"
+			}
+			set_country_flag = MVLV_tsf_4_design_flag
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	MVLV_AI_TSF_design_M3_decision = {
+		available = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_3_design_flag }
+			has_tech = MVLV_research_tsf_3_maneuver_framework
+			has_tech = MVLV_research_engine_maneuver_2
+			has_tech = MVLV_research_OS_close_2
+			has_tech = MVLV_research_head_normal_1
+			has_tech = MVLV_research_assault_cannon_2
+			has_tech = MVLV_research_combat_sword
+			has_tech = MVLV_research_shield
+		}
+		visible = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_3_design_flag }
+			has_tech = MVLV_research_tsf_3_maneuver_framework
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Maneuver3rd_AI"
+				type = MVLV_TSF_chassis_3_maneuver
+				parent_version = 0
+				show_position = no
+				mark_older_equipment_obsolete  = yes
+				modules = {
+					MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+					MVLV_TSF_OS_slot = MVLV_TSF_OS_2_close
+					MVLV_TSF_engine_slot = MVLV_TSF_engine_maneuver_2
+					MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+					MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_2
+					MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+					MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				}
+				icon = "GFX_Su-47"
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis_3_maneuver
+				amount = 100
+				variant_name = "Maneuver3rd_AI"
+			}
+			set_country_flag = MVLV_tsf_3_design_flag
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	MVLV_AI_TSF_design_H3_decision = {
+		available = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_3_design_flag }
+			has_tech = MVLV_research_tsf_3_heavy_framework
+			has_tech = MVLV_research_engine_2
+			has_tech = MVLV_research_OS_2
+			has_tech = MVLV_research_head_normal_1
+			has_tech = MVLV_research_assault_cannon_3
+			has_tech = MVLV_research_combat_sword
+			has_tech = MVLV_research_shield
+		}
+		visible = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_3_design_flag }
+			has_tech = MVLV_research_tsf_3_heavy_framework
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Heavy3rd_AI"
+				type = MVLV_TSF_chassis_3_heavy
+				parent_version = 0
+				show_position = no
+				mark_older_equipment_obsolete  = yes
+				modules = {
+					MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+					MVLV_TSF_OS_slot = MVLV_TSF_OS_2_normal
+					MVLV_TSF_engine_slot = MVLV_TSF_engine_2
+					MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+					MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_2
+					MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+					MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				}
+				icon = "GFX_F-22"
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis_3_heavy
+				amount = 100
+				variant_name = "Heavy3rd_AI"
+			}
+			set_country_flag = MVLV_tsf_3_design_flag
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	MVLV_AI_TSF_design_L3_decision = {
+		available = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_3_design_flag }
+			has_tech = MVLV_research_tsf_3_light_framework
+			has_tech = MVLV_research_engine_2
+			has_tech = MVLV_research_OS_2
+			has_tech = MVLV_research_head_normal_1
+			has_tech = MVLV_research_assault_cannon_2
+			has_tech = MVLV_research_combat_sword
+			has_tech = MVLV_research_shield
+		}
+		visible = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_3_design_flag }
+			has_tech = MVLV_research_tsf_3_light_framework
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Light3rd_AI"
+				type = MVLV_TSF_chassis_3_light
+				parent_version = 0
+				show_position = no
+				mark_older_equipment_obsolete  = yes
+				modules = {
+					MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+					MVLV_TSF_OS_slot = MVLV_TSF_OS_2_normal
+					MVLV_TSF_engine_slot = MVLV_TSF_engine_2
+					MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+					MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_2
+					MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+					MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				}
+				icon = "GFX_F-35"
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis_3_light
+				amount = 100
+				variant_name = "Light3rd_AI"
+			}
+			set_country_flag = MVLV_tsf_3_design_flag
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+############
+	MVLV_AI_TSF_design_M2_decision = {
+		available = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_2_design_flag }
+			has_tech = MVLV_research_tsf_2_maneuver_framework
+			has_tech = MVLV_research_engine_maneuver_1
+			has_tech = MVLV_research_OS_close_1
+			has_tech = MVLV_research_head_normal_1
+			has_tech = MVLV_research_assault_cannon_2
+			has_tech = MVLV_research_combat_sword
+			has_tech = MVLV_research_shield
+		}
+		visible = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_2_design_flag }
+			has_tech = MVLV_research_tsf_2_maneuver_framework
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Maneuver2rd_AI"
+				type = MVLV_TSF_chassis_2_maneuver
+				parent_version = 0
+				show_position = no
+				mark_older_equipment_obsolete  = yes
+				modules = {
+					MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+					MVLV_TSF_OS_slot = MVLV_TSF_OS_1_close
+					MVLV_TSF_engine_slot = MVLV_TSF_engine_maneuver_1
+					MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+					MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_2
+					MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+					MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				}
+				icon = "GFX_T-94"
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis_2_maneuver
+				amount = 100
+				variant_name = "Maneuver2rd_AI"
+			}
+			set_country_flag = MVLV_tsf_2_design_flag
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	MVLV_AI_TSF_design_H2_decision = {
+		available = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_2_design_flag }
+			has_tech = MVLV_research_tsf_2_heavy_framework
+			has_tech = MVLV_research_engine_1
+			has_tech = MVLV_research_OS_1
+			has_tech = MVLV_research_head_normal_1
+			has_tech = MVLV_research_assault_cannon_2
+			has_tech = MVLV_research_combat_sword
+			has_tech = MVLV_research_shield
+		}
+		visible = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_2_design_flag }
+			has_tech = MVLV_research_tsf_2_heavy_framework
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Heavy2rd_AI"
+				type = MVLV_TSF_chassis_2_heavy
+				parent_version = 0
+				show_position = no
+				mark_older_equipment_obsolete  = yes
+				modules = {
+					MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+					MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+					MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+					MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+					MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_2
+					MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+					MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				}
+				icon = "GFX_F-15"
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis_2_heavy
+				amount = 100
+				variant_name = "Heavy2rd_AI"
+			}
+			set_country_flag = MVLV_tsf_2_design_flag
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	MVLV_AI_TSF_design_L2_decision = {
+		available = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_2_design_flag }
+			has_tech = MVLV_research_tsf_2_light_framework
+			has_tech = MVLV_research_engine_1
+			has_tech = MVLV_research_OS_1
+			has_tech = MVLV_research_head_normal_1
+			has_tech = MVLV_research_assault_cannon_2
+			has_tech = MVLV_research_combat_sword
+			has_tech = MVLV_research_shield
+		}
+		visible = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_2_design_flag }
+			has_tech = MVLV_research_tsf_2_light_framework
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Light2rd_AI"
+				type = MVLV_TSF_chassis_2_light
+				parent_version = 0
+				show_position = no
+				mark_older_equipment_obsolete  = yes
+				modules = {
+					MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+					MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+					MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+					MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+					MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_2
+					MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+					MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				}
+				icon = "GFX_F-16"
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis_2_light
+				amount = 100
+				variant_name = "Light2rd_AI"
+			}
+			set_country_flag = MVLV_tsf_2_design_flag
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+###########
+	MVLV_AI_TSF_design_H1_decision = {
+		available = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_1_design_flag }
+			has_tech = MVLV_research_tsf_1_heavy_framework
+			has_tech = MVLV_research_engine_1
+			has_tech = MVLV_research_OS_1
+			has_tech = MVLV_research_head_normal_1
+			has_tech = MVLV_research_assault_cannon_1
+			has_tech = MVLV_research_combat_sword
+			has_tech = MVLV_research_shield
+		}
+		visible = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_1_design_flag }
+			has_tech = MVLV_research_tsf_1_heavy_framework
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Heavy1rd_AI"
+				type = MVLV_TSF_chassis_1_heavy
+				parent_version = 0
+				show_position = no
+				mark_older_equipment_obsolete  = yes
+				modules = {
+					MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+					MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+					MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+					MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+					MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+					MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+					MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				}
+				icon = "GFX_F-4"
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis_1_heavy
+				amount = 100
+				variant_name = "Heavy1rd_AI"
+			}
+			set_country_flag = MVLV_tsf_1_design_flag
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	MVLV_AI_TSF_design_L1_decision = {
+		available = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_1_design_flag }
+			has_tech = MVLV_research_tsf_1_light_framework
+			has_tech = MVLV_research_engine_1
+			has_tech = MVLV_research_OS_1
+			has_tech = MVLV_research_head_normal_1
+			has_tech = MVLV_research_assault_cannon_1
+			has_tech = MVLV_research_combat_sword
+			has_tech = MVLV_research_shield
+		}
+		visible = {
+			is_ai = yes
+			is_in_faction_with = UNI
+			NOT = { has_country_flag = MVLV_tsf_1_design_flag }
+			has_tech = MVLV_research_tsf_1_light_framework
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Light1rd_AI"
+				type = MVLV_TSF_chassis_1_light
+				parent_version = 0
+				show_position = no
+				mark_older_equipment_obsolete  = yes
+				modules = {
+					MVLV_TSF_armor_slot = MVLV_TSF_armor_nomal
+					MVLV_TSF_OS_slot = MVLV_TSF_OS_1_normal
+					MVLV_TSF_engine_slot = MVLV_TSF_engine_1
+					MVLV_TSF_headUnit_slot = MVLV_TSF_head_normal_1
+					MVLV_TSF_right_hand_slot = MVLV_TSF_assault_cannon_1
+					MVLV_TSF_left_hand_slot = MVLV_TSF_shield
+					MVLV_TSF_rigtBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_leftBackArm_slot = MVLV_TSF_long_sword
+					MVLV_TSF_arm_slot = MVLV_TSF_sub_sword
+				}
+				icon = "GFX_F-5"
+			}
+			add_equipment_to_stockpile = {
+				type = MVLV_TSF_chassis_1_light
+				amount = 100
+				variant_name = "Light1rd_AI"
+			}
+			set_country_flag = MVLV_tsf_1_design_flag
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

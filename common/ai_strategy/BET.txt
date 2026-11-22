@@ -1,0 +1,16 @@
+
+BET_defend_home = {
+	enable = {
+		original_tag = BET
+		date > 1998.12.31
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 10
+		states = {
+			287
+		}
+		subtract_fronts_from_need = no
+	}
+}

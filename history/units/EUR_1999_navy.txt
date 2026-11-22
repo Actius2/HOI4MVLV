@@ -1,0 +1,86 @@
+﻿
+units = {
+
+	##### 本国艦隊 #####
+	fleet = {
+		name = "Second Fleet" 
+		naval_base = 540 
+		task_force = {
+			name = "1st Squadron" 
+			location = 540 
+			ship = { name = "HMS thunderer" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "HMS conqueror" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "HMS vanguard" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "HMS Temeraire" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+		}
+		task_force = {					
+			name = "1st escort squadron" 
+			location = 540 
+			#Flagship
+			ship = { name = "HMS bristol" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			#第十駆逐隊
+			ship = { name = "HMS sheffield" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS birmingham" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "HMS newcastle" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "HMS glasgow" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第十二駆逐隊
+			ship = { name = "HMS cardiff" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS coventry" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "HMS Exeter" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "HMS southampton" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			#第十六駆逐隊
+			ship = { name = "HMS Grafton" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS sutherland" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "HMS somerset" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "HMS kent" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+		}
+		task_force = {					
+			name = "2nd escort squadron" 
+			location = 540 
+			#Flagship
+			ship = { name = "HMS break" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			#第十七駆逐隊
+			ship = { name = "HMS nottingham" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS liverpool" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS manchester" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS gloucester" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			#第十六駆逐隊
+			ship = { name = "HMS edinburgh" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }			
+			ship = { name = "HMS yoke" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS northumberland" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS richmond" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			#第十六駆逐隊
+			ship = { name = "HMS iron duke" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS monmouth" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS montrose" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS westminster" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+		}			
+	}
+
+	##### 地中海艦隊 #####
+	fleet = {
+		name = "mediterranean fleet" 
+		naval_base = 4076 
+		task_force = {
+			name = "2nd squadron" 
+			location = 4076 
+			ship = { name = "HMS Howe" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+			ship = { name = "HMS Anson" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato Class" } } }
+		}
+		task_force = {					
+			name = "3rd escort squadron" 
+			location = 4076 
+			#Flagship
+			ship = { name = "HMS tiger" definition = light_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			#第十七駆逐隊
+			ship = { name = "HMS cornwall" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class" } } }		
+			ship = { name = "HMS campbeltown" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class" } } }
+			ship = { name = "HMS chatham" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class" } } }
+			ship = { name = "HMS cumberland" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class" } } }
+			#第十駆逐隊
+			ship = { name = "HMS norfolk" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }		
+			ship = { name = "HMS lancaster" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+			ship = { name = "HMS marlborough" definition = destroyer equipment = { ship_hull_light_2 = {amount = 1 owner = JAP version_name = "Kagero Class"} } }
+		}			
+	}
+}
